@@ -13,5 +13,5 @@ exports.q = (q, aa...) ->
 exports.a = (a, post, unexpected...) ->
   assert not unexpected.length, "a=#{a}, post=#{post}, unexpected=#{unexpected}"
   assert a and typeof a in ['string', 'function'], "a=#{a}"
-  assert not post or 'function' is typeof post, "a=#{a} post=#{post}"
+  assert not post or 'function' is typeof post or 'q' of post, "a=#{a} post=#{post}"
   {a, post}
