@@ -44,8 +44,9 @@ exports.qq = qq [
       else if 12 <= h < 17 then 'afternoon'
       else 'evening'
       "Good #{time}, #{@ln}!  Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing."),
+
     a "Velar",       # c in cap, g in gap, h in hot, ng in sing, w in wet
-      q "Excellent!  Choose one of the following.  Don't overthink it!",
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "a cog"
         a "a hag"
         a "a wick"
@@ -53,8 +54,9 @@ exports.qq = qq [
         a "a wookie"
         a "a hacking gang"
         a "a wigging keg king"
+
     a "Venatic",     # hunting-related
-      q "Excellent!  Choose one of the following.  Don't overthink it!",
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "Antelope"
         a "Bison"
         a "Duck"
@@ -70,8 +72,9 @@ exports.qq = qq [
         a "Tiger"
         a "Whale"
         a "Wolf"
+
     a "Vetitive",    # grammar term for wishing something won't happen
-      q "Excellent!  Choose one of the following.  Don't overthink it!",
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "anger"
         a "crash"
         a "gas"
@@ -82,8 +85,9 @@ exports.qq = qq [
         a "smell"
         a "toast"
         a "wallet"
+
     a "Vexatious",   # annoying, teasing, troublesome
-      q "Excellent!  Choose one of the following.  Don't overthink it!",
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "advertising"
         a "beeping"
         a "children"
@@ -101,8 +105,9 @@ exports.qq = qq [
         a "smell"
         a "sunburn"
         a "traffic"
+
     a "Vigesimal",   # base 20
-      q "Excellent!  Choose one of the following.  Don't overthink it!",
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "ABC"
         a "aluminum"
         a "Andorra"
@@ -115,13 +120,129 @@ exports.qq = qq [
         a "questions"
         a "score"
         a "vision"
-    a "Volucrine"    # bird-related
-    a "Viparious"    # life-producing or life-renewing
-    a "Voluptuous"   # luxurious, sensuality-related, curvacious/attractive
-    a "Vallecular"   # groovy
-    a "Vecordious"   # mad, crazy, senseless
-    a "Veriloquent"  # truthful
-    a "Vertiginous"  # spinning, dizzy, vertigo-inducing, or changing/unstable
-    a "Viaggiatory"  # travelling
+
+    a "Volucrine",   # bird-related
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "asity"
+        a "boobook"
+        a "chachalaca"
+        a "drongo"
+        a "emerald"
+        a "fulvetta"
+        a "gallinule"
+        a "hoopoe"
+        a "inca"
+        a "jacamar"
+        a "knot"
+        a "megapode"
+        a "noddy"
+        a "potoo"
+        a "rhea"
+        a "saltator"
+        a "tapaculo"
+        a "vanga"
+        a "wigeon"
+        a "xenops"
+
+    a "Viparious",   # life-producing or life-renewing
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "qi"
+        a "egg"
+        a "mana"
+        a "lipid"
+        a "coffee"
+        a "energon"
+        a "platypus"
+        a "vibration"
+
+    a "Voluptuous",  # luxurious, sensuality-related, curvacious/attractive
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "silk"
+        a "satin"
+        a "alpaca"
+        a "spandex"
+        a "cashmere"
+        a "lambswool"
+        a "chinchilla"
+        a "microfleece"
+
+    a "Vallecular",  # groovy
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "Army of Darkness"
+        a "circlip"
+        a "Enceladus"
+        a "Jon St. John"
+        a "JSR 241"
+        a "Mike Myers"
+        a "Protectobots"
+        a "stopped"
+        a "tongue"
+        a "vinyl"
+        a "Zune"
+
+    a "Vecordious",  # mad, crazy, senseless
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "burrito.nyc.us.gov"
+        a "flight 93"
+        a "grassy knoll"
+        a "hypergraphia"
+        a "layer mask"
+        a "P3X-797"
+        a "pusher robot"
+        a "SCP-1733"
+        a "time cube"
+        a "topkek"
+
+    a "Veriloquent", # truthful
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "Cassandra"
+        a "Colbert"
+        a "Dawkins"
+        a "Galahad"
+        a "Lennon"
+        a "Limbaugh"
+        a "Plato"
+        a "Rand"
+        a "Snowden"
+        a "Sojourner"
+
+    a "Vertiginous", # spinning, dizzy, vertigo-inducing, or changing/unstable
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "Cabrio Bahn"
+        a "Caminito del Rey"
+        a "Coit Tower"
+        a "Gaztelugatxe"
+        a "Hakone"
+        a "Half Dome"
+        a "High Roller"
+        a "Horseshoe Bend"
+        a "Huangshan"
+        a "London Eye"
+        a "Meteora"
+        a "Outlaw Run"
+        a "Royal Gorge"
+        a "Trolltunga"
+        a "Verrückt"
+
+    a "Viaggiatory", # travelling
+      q "Excellent!  Now choose one of the following.  Don't overthink it!",
+        a "Cleveland"
+        a "Cusco"
+        a "Elqui"
+        a "Goreme"
+        a "Harare"
+        a "Havana"
+        a "Jeddah"
+        a "Marrakech"
+        a "McMurdo"
+        a "Orlando"
+        a "Petra"
+        a "Qaqortoq"
+        a "Rome"
+        a "Siem Reap"
+        a "Tallinn"
+        a "Ubud"
+        a "Zermatt"
+
   )
 ]
