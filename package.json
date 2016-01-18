@@ -10,8 +10,8 @@
     ]
   },
   "scripts": {
-    "prepublish": "gribbl index.jade",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "coffee test.coffee && gribbl index.jade",
+    "test": "coffee test.coffee"
   },
   "author": "Jacques Frechet",
   "license": "MIT",
