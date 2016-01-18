@@ -44,20 +44,18 @@ exports.qq = qq [
       else if 12 <= h < 17 then 'afternoon'
       else 'evening'
       "Welcome, #{@name}!  What sort of game are you in the mood for this #{time}?"),
-    a "Vallecular"
-    a "Vecordious"
-    a "Velar"
-    a "Venatic"
-    a "Ventose"
-    a "Veriloquent"
-    a "Vertiginous"
-    a "Vetitive"
-    a "Vexatious"
-    a "Viaggiatory"
-    a "Vigesimal"
-    a "Viparious"
-    a "Vitilitigate"
-    a "Volucrine"
-    a "Voluptuous"
+    a "Vallecular"   # groovy
+    a "Vecordious"   # mad, crazy, senseless
+    a "Velar"        # c in cap, g in gap, h in hot, ng in sing, w in wet
+    a "Venatic"      # hunting-related
+    a "Veriloquent"  # truthful
+    a "Vertiginous"  # spinning, dizzy, vertigo-inducing, or changing/unstable
+    a "Vetitive"     # grammar term for wishing something won't happen
+    a "Vexatious"    # annoying, teasing, troublesome
+    a "Viaggiatory"  # travelling
+    a "Vigesimal"    # base 20
+    a "Viparious"    # life-producing or life-renewing
+    a "Volucrine"    # bird-related
+    a "Voluptuous"   # luxurious, sensuality-related, curvacious/attractive
   )
 ]
