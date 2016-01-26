@@ -1,12 +1,13 @@
-{qq, q, a} = require './dsl'
+{qq, q, a} = require './dsl.coffee'
 
-exports.qq = qq [
+module.exports = qq [
   q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.",
     a("Okay."),
     a("Sure."),
     a("Great."),
     a("Sounds good."),
   ),
+
   q("What's your name?",
     a("Emily",
       q((-> @fn = 'Emily'; "And your last name?"),
@@ -40,8 +41,8 @@ exports.qq = qq [
 
   q((->
       hh = new Date().getHours()
-      time = if 3 <= h < 12 then 'morning'
-      else if 12 <= h < 17 then 'afternoon'
+      time = if 3 <= hh < 12 then 'morning'
+      else if 12 <= hh < 17 then 'afternoon'
       else 'evening'
       "Good #{time}, #{@ln}!  Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing."),
 
@@ -245,4 +246,6 @@ exports.qq = qq [
         a "Zermatt"
 
   )
+
+  q 'THE END'
 ]

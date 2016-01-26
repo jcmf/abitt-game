@@ -10,7 +10,23 @@ html(lang='en')
           line-height 1.5
 
   body
-    :marked
-      # A Brief Introduction To This Game
+    #home.pane
+      :marked
+        # A Brief Introduction To This Game
 
-      Hello, World
+        [START](#!)
+
+    #loading(style='display: none;')
+      :marked
+        Loading!
+
+    #404.pane(style='display: none;')
+      :marked
+        ## 404
+
+        Page not found.
+
+        [start over](#)
+
+    #questions.pane(style='display: none;')
+      #question-container
