@@ -13,13 +13,24 @@ html(lang='en')
           font-family Quicksand
           src url(fonts/Quicksand-Regular.woff)
         body
-          line-height 1.5
           font-family Cutive, serif
+          line-height 1.6
+          margin 1em
         h1, h2
           font-family Quicksand, sans-serif
           font-weight normal
+        a[href]
+          text-decoration inherit
+          color inherit
         .answer
           display block
+        .cursor
+          width 0.7em
+          height 1.2em
+          animation blink 2s linear infinite
+        @keyframes blink
+          60%
+            background-color black
 
   body
     #home.pane

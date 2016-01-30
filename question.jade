@@ -1,7 +1,10 @@
 .question= q
 .answers
   each a in aa
-    a.answer(href=a.href)
-      span.letter=a.letter
-      span.separator='. '
-      span.text=a.a
+    .answer
+      a(href=a.href)
+        span.letter=a.letter
+        span.separator='. '
+        span.a-text=a.a
+if aa.length
+  .cursor
