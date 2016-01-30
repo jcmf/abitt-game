@@ -11350,7 +11350,10 @@ showQuestion = function(letters) {
       run(answer.a);
     }
     code = letter.charCodeAt(0) - code0;
-    if ((!0 <= code && code < prev.aa.length)) {
+    if (!((0 <= code && code < prev.aa.length))) {
+      console.log(prev);
+      console.log(prev.aa);
+      console.log(prev.aa.length);
       return notFound("letters=" + letters + " li=" + li + " letter=" + letter + " " + code);
     }
     answer = prev.aa[code];

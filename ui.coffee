@@ -28,7 +28,7 @@ showQuestion = (letters) ->
     for answer in prev.aa
       run answer.a
     code = letter.charCodeAt(0) - code0
-    if not 0 <= code < prev.aa.length
+    unless 0 <= code < prev.aa.length
       return notFound "letters=#{letters} li=#{li} letter=#{letter} #{code}"
     answer = prev.aa[code]
     next = run answer.post
