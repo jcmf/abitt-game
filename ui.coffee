@@ -19,6 +19,7 @@ showQuestion = (letters) ->
   stack.reverse()
   state = {}
   run = (x) -> if 'function' is typeof x then x.call state else x
+  render = (x) -> run(x).replace "'", '\u2019'
   code0 = 'a'.charCodeAt 0
   code0_altcase = 'A'.charCodeAt 0
   for letter, li in letters
@@ -35,15 +36,16 @@ showQuestion = (letters) ->
     if next and next.q then stack.push next
   if not stack.length then return notFound "letters=#{letters} end"
   current = stack.pop()
-  hrefify = (ai) -> "#!#{letters}#{String.fromCharCode code0 + ai}"
+  letterify = (ai) -> String.fromCharCode code0 + ai
+  hrefify = (ai) -> "#!#{letters}#{letterify ai}"
   keyboard = {}
   for a, ai in current.aa
     keyboard[code0_altcase + ai] = hrefify ai
   for a, ai in current.aa
     keyboard[code0 + ai] = hrefify ai
   vars =
-    q: run current.q
-    aa: ({a: run(a.a), href: hrefify ai} for a, ai in current.aa)
+    q: render current.q
+    aa: ({a: render(a.a), href: hrefify(ai), letter: letterify(ai)} for a, ai in current.aa)
   template = require './question.jade'
   html = template vars
   $container = $ '#question-container'

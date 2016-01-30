@@ -6,8 +6,20 @@ html(lang='en')
     script(src='ui.coffee')
     style
       :stylus
+        @font-face
+          font-family Cutive
+          src url(fonts/Cutive-Regular.woff)
+        @font-face
+          font-family Quicksand
+          src url(fonts/Quicksand-Regular.woff)
         body
           line-height 1.5
+          font-family Cutive, serif
+        h1, h2
+          font-family Quicksand, sans-serif
+          font-weight normal
+        .answer
+          display block
 
   body
     #home.pane
