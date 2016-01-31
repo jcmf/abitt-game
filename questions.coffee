@@ -110,6 +110,15 @@ module.exports = qq [
                           q "Good!",
                             a "Yep!"
                     a "Fine, if you insist."
+        a "Who wrote this game?",
+          q "Are you sure you want to know?",
+            a "Yes.",
+              q "You're not trying to trick me, are you?",
+                a "Of course not."
+                a "Why yes, actually, I am trying to trick you."
+            a "No.",
+              q "Then I won't tell you.",
+                a "Phew!"
 
   q("What's your name?",
     a("Emily",
