@@ -4,13 +4,20 @@ questions = require './questions.coffee'
 
 notFound = (debug) ->
   console.log "404 not found: #{debug}"
-  $('#404').show()
+  return showPane '404', true
   return
 
-showPane = (name) ->
+showPane = (name, force) ->
+  console.log "XXX showing pane #{name}"
   $targets = $("##{name}-pane")
-  if not $targets.length then return notFound "pane=#{name}"
+  if not $targets.length and not force then return notFound "pane=#{name}"
   $targets.show()
+  console.log "XXX hi pane #{name}"
+  enterLink = $("##{name}-pane.enter-key a[href]").attr 'href'
+  if enterLink
+    console.log "XXX enterLink=#{enterLink}"
+    keyboard[13] = enterLink
+  return
 
 keyboard = {}
 
@@ -38,7 +45,6 @@ showQuestion = (letters) ->
   current = stack.pop()
   letterify = (ai) -> String.fromCharCode code0 + ai
   hrefify = (ai) -> "#!#{letters}#{letterify ai}"
-  keyboard = {}
   for a, ai in current.aa
     keyboard[code0_altcase + ai] = hrefify ai
   for a, ai in current.aa
@@ -59,9 +65,10 @@ hashchange = ->
   hash = window.location.hash.replace /^#/, ''
   if hash is prevHash then return
   prevHash = hash
+  keyboard = {}
   $('#loading').show()
   $('.pane').hide()
-  if not hash then $('#home').show()
+  if not hash then showPane 'home'
   else if m = /^!(.*)$/.exec hash then showQuestion m[1]
   else if m = /\/(\w+)$/.exec hash then showPane m[1]
   else notFound "hash=#{hash}"

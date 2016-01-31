@@ -23,34 +23,45 @@ html(lang='en')
         a[href]
           text-decoration inherit
           color inherit
+        .pane
+          max-width 40em
         .answer
-          display block
+          padding-left 2em
+          text-indent -2em
+        p, .answers
+          margin-top 1em
+          margin-bottom 0
         .cursor
+          display inline-block
           width 0.7em
           height 1.2em
           animation blink 2s linear infinite
         @keyframes blink
-          60%
+          25%, 50%
             background-color black
 
   body
-    #home.pane
+    #home-pane.pane.enter-key
       :marked
         # A Brief Introduction To This Game
 
-        [START](#!)
+        by REDACTED
+
+        [Press Enter or click here to begin.](#!)
+
+      .cursor
 
     #loading(style='display: none;')
       :marked
-        Loading!
+        Loading....
 
-    #404.pane(style='display: none;')
+    #404-pane.pane.enter-key(style='display: none;')
       :marked
-        ## 404
+        ## Page Not Found
 
-        Page not found.
+        [Press Enter or click here to start over.](#)
 
-        [start over](#)
+      .cursor
 
     #questions.pane(style='display: none;')
       #question-container

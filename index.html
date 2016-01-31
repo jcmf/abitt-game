@@ -11252,7 +11252,7 @@ var a, q, qq, ref;
 ref = require('./dsl.coffee'), qq = ref.qq, q = ref.q, a = ref.a;
 
 module.exports = qq([
-  q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.", a("Okay."), a("Sure."), a("Great."), a("Sounds good.")), q("What's your name?", a("Emily", q((function() {
+  q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.", a("Okay."), a("Sounds good."), a("I consent to this."), a("Hold on, I have a question!", q("What is your question?", a("How should I indicate which answer I wish to choose?", q("Choose an answer by clicking or tapping it, or by typing the appropriate letter.", a("Thanks!"), a("Wait, there's a problem.", q("What seems to be the problem?", a("Clicking doesn't work.", q("Are you using a mouse?", a("Yes.", q("Is the mouse you are using connected to the device that is displaying these words?", a("Yes.", q("Try clicking harder.", a("Wow, that totally worked, thanks!"))), a("No.", q("Is the mouse you are using hot-swappable?", a("Yes.", q("Try plugging the mouse into whatever thing you're reading these words on.", a("Wow, that totally worked, thanks!"))), a("No.", q("Then I'm afraid you're out of luck.", a("Oh well."))), a("What?", q("Never mind, it's not important.", a("If you say so."))))))), a("No.", q("Try using a mouse.", a("Sounds good, thanks!"), a("Maybe later."))))), a("Tapping doesn't work.", q("Is the screen you are tapping touch-sensitive?", a("Yes.", q("Are you sure?", a("No."))), a("No.", q("Try clicking or typing instead.", a("Well, okay."), a("But you said....", q("Let's move on, shall we?", a("Understood."), a("I hear and obey."), a("Your wish is my command."))))), a("I'm not sure.", q("Look closely.  Does it look... glossy?", a("Yes.", q("Have you tried using one of those polarizing filters?", a("Yes.", q("How was it?", a("Pretty good I guess?"), a("It was so great, I could hardly believe it."), a("Terrible."))), a("No.", q("You should totally try one.", a("Great idea!"))))), a("No.", q("Have you considered polishing it?", a("Yes.", q("But you didn't actually do it?", a("No."))), a("No.", q("Well, are you going to do it now?", a("Nah, I'm good."))), a("With what?", q("Screen polish, I suppose?", a("That sounds reasonable."))))))), a("Screen?  What screen?", q("You don't have a screen?", a("I used to, but I lost it.", q("That is very sad!", a("Yes."))), a("Why would I have a screen?", q("Oh, uh... no reason....", a("Okay."))), a("Oh wait, there it is, never mind."), a("I mean I do, but it isn't, like, here.", q("Do you want to go get it?", a("Nah, I'm good."))))))), a("Typing doesn't work.", q("Is the device you are using equipped with a physical keyboard?", a("Yes."), a("No.", q("Then I suggest you go with tapping instead.", a("Well, okay."), a("Awww, but I wanted to type things!", q("Too bad.", a("You're no fun."))))))))))), a("What if I choose the wrong answer?", q("There are no wrong answers.", a("That's very reassuring, thanks!"), a("No, I mean, what if I meant to choose one answer but choose a different one by mistake?", q("Does the Backspace key work?", a("Wow, yes, it totally does."), a("It, uh, doesn't seem to, no.", q("Well, it's supposed to.", a("Well, it doesn't.", q("I'm sorry.", a("It's okay, I'll manage somehow."))))), a("What are you even talking about?  I don't have a backspace key!", q("Then try using your browser's Back button.", a("But I don't wanna.", q("Then don't.", a("Okay, I won't!", q("Good!", a("Yep!"))))), a("Fine, if you insist.")))))))))), q("What's your name?", a("Emily", q((function() {
     this.fn = 'Emily';
     return "And your last name?";
   }), a("Boegheim", function() {
@@ -11313,16 +11313,23 @@ questions = require('./questions.coffee');
 
 notFound = function(debug) {
   console.log("404 not found: " + debug);
-  $('#404').show();
+  return showPane('404', true);
 };
 
-showPane = function(name) {
-  var $targets;
+showPane = function(name, force) {
+  var $targets, enterLink;
+  console.log("XXX showing pane " + name);
   $targets = $("#" + name + "-pane");
-  if (!$targets.length) {
+  if (!$targets.length && !force) {
     return notFound("pane=" + name);
   }
-  return $targets.show();
+  $targets.show();
+  console.log("XXX hi pane " + name);
+  enterLink = $("#" + name + "-pane.enter-key a[href]").attr('href');
+  if (enterLink) {
+    console.log("XXX enterLink=" + enterLink);
+    keyboard[13] = enterLink;
+  }
 };
 
 keyboard = {};
@@ -11376,7 +11383,6 @@ showQuestion = function(letters) {
   hrefify = function(ai) {
     return "#!" + letters + (letterify(ai));
   };
-  keyboard = {};
   ref1 = current.aa;
   for (ai = k = 0, len2 = ref1.length; k < len2; ai = ++k) {
     a = ref1[ai];
@@ -11421,10 +11427,11 @@ hashchange = function() {
     return;
   }
   prevHash = hash;
+  keyboard = {};
   $('#loading').show();
   $('.pane').hide();
   if (!hash) {
-    $('#home').show();
+    showPane('home');
   } else if (m = /^!(.*)$/.exec(hash)) {
     showQuestion(m[1]);
   } else if (m = /\/(\w+)$/.exec(hash)) {
@@ -11473,38 +11480,48 @@ a[href] {
   text-decoration: inherit;
   color: inherit;
 }
+.pane {
+  max-width: 40em;
+}
 .answer {
-  display: block;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+p,
+.answers {
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 .cursor {
+  display: inline-block;
   width: 0.7em;
   height: 1.2em;
   animation: blink 2s linear infinite;
 }
 @-moz-keyframes blink {
-  60% {
+  25%, 50% {
     background-color: #000;
   }
 }
 @-webkit-keyframes blink {
-  60% {
+  25%, 50% {
     background-color: #000;
   }
 }
 @-o-keyframes blink {
-  60% {
+  25%, 50% {
     background-color: #000;
   }
 }
 @keyframes blink {
-  60% {
+  25%, 50% {
     background-color: #000;
   }
 }
-</style></head><body><div id="home" class="pane"><h1 id="a-brief-introduction-to-this-game">A Brief Introduction To This Game</h1>
-<p><a href="#!">START</a></p>
-</div><div id="loading" style="display: none;"><p>Loading!</p>
-</div><div id="404" style="display: none;" class="pane"><h2 id="404">404</h2>
-<p>Page not found.</p>
-<p><a href="#">start over</a></p>
-</div><div id="questions" style="display: none;" class="pane"><div id="question-container"></div></div></body></html>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1 id="a-brief-introduction-to-this-game">A Brief Introduction To This Game</h1>
+<p>by REDACTED</p>
+<p><a href="#!">Press Enter or click here to begin.</a></p>
+<div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
+</div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
+<p><a href="#">Press Enter or click here to start over.</a></p>
+<div class="cursor"></div></div><div id="questions" style="display: none;" class="pane"><div id="question-container"></div></div></body></html>
