@@ -1,12 +1,115 @@
 {qq, q, a} = require './dsl.coffee'
 
 module.exports = qq [
-  q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.",
-    a("Okay."),
-    a("Sure."),
-    a("Great."),
-    a("Sounds good."),
-  ),
+  q "Welcome to this game!  Before we can get started, you'll need to answer a few questions.",
+    a "Okay."
+    a "Sounds good."
+    a "I consent to this."
+    a "Hold on, I have a question!",
+      q "What is your question?",
+        a "How should I indicate which answer I wish to choose?",
+          q "Choose an answer by clicking or tapping it, or by typing the appropriate letter.",
+            a "Thanks!"
+            a "Wait, there's a problem.",
+              q "What seems to be the problem?",
+                a "Clicking doesn't work.",
+                  q "Are you using a mouse?",
+                    a "Yes.",
+                      q "Is the mouse you are using connected to the device that is displaying these words?",
+                        a "Yes.",
+                          q "Try clicking harder.",
+                            a "Wow, that totally worked, thanks!"
+                        a "No.",
+                          q "Is the mouse you are using hot-swappable?",
+                            a "Yes.",
+                              q "Try plugging the mouse into whatever thing you're reading these words on.",
+                                a "Wow, that totally worked, thanks!"
+                            a "No.",
+                              q "Then I'm afraid you're out of luck.",
+                                a "Oh well."
+                            a "What?",
+                              q "Never mind, it's not important.",
+                                a "If you say so."
+                    a "No.",
+                      q "Try using a mouse.",
+                        a "Sounds good, thanks!"
+                        a "Maybe later."
+                a "Tapping doesn't work.",
+                  q "Is the screen you are tapping touch-sensitive?",
+                    a "Yes.",
+                      q "Are you sure?",
+                        a "No."
+                    a "No.",
+                      q "Try clicking or typing instead.",
+                        a "Well, okay."
+                        a "But you said....",
+                          q "Let's move on, shall we?",
+                            a "Understood."
+                            a "I hear and obey."
+                            a "Your wish is my command."
+                    a "I'm not sure.",
+                      q "Look closely.  Does it look... glossy?",
+                        a "Yes.",
+                          q "Have you tried using one of those polarizing filters?",
+                            a "Yes.",
+                              q "How was it?",
+                                a "Pretty good I guess?"
+                                a "It was so great, I could hardly believe it."
+                                a "Terrible."
+                            a "No.",
+                              q "You should totally try one.",
+                                a "Great idea!"
+                        a "No.",
+                          q "Have you considered polishing it?",
+                            a "Yes.",
+                              q "But you didn't actually do it?",
+                                a "No."
+                            a "No.",
+                              q "Well, are you going to do it now?",
+                                a "Nah, I'm good."
+                            a "With what?",
+                              q "Screen polish, I suppose?",
+                                a "That sounds reasonable."
+                    a "Screen?  What screen?",
+                      q "You don't have a screen?",
+                        a "I used to, but I lost it.",
+                          q "That is very sad!",
+                            a "Yes."
+                        a "Why would I have a screen?",
+                          q "Oh, uh... no reason....",
+                            a "Okay."
+                        a "Oh wait, there it is, never mind."
+                        a "I mean I do, but it isn't, like, here.",
+                          q "Do you want to go get it?",
+                            a "Nah, I'm good."
+                a "Typing doesn't work.",
+                  q "Is the device you are using equipped with a physical keyboard?",
+                    a "Yes."
+                    a "No.",
+                      q "Then I suggest you go with tapping instead.",
+                        a "Well, okay."
+                        a "Awww, but I wanted to type things!",
+                          q "Too bad.",
+                            a "You're no fun."
+        a "What if I choose the wrong answer?",
+          q "There are no wrong answers.",
+            a "That's very reassuring, thanks!"
+            a "No, I mean, what if I meant to choose one answer but choose a different one by mistake?",
+              q "Does the Backspace key work?",
+                a "Wow, yes, it totally does."
+                a "It, uh, doesn't seem to, no.",
+                  q "Well, it's supposed to.",
+                    a "Well, it doesn't.",
+                      q "I'm sorry.",
+                        a "It's okay, I'll manage somehow."
+                a "What are you even talking about?  I don't have a backspace key!",
+                  q "Then try using your browser's Back button.",
+                    a "But I don't wanna.",
+                      q "Then don't.",
+                        a "Okay, I won't!",
+                          q "Good!",
+                            a "Yep!"
+                    a "Fine, if you insist."
 
   q("What's your name?",
     a("Emily",
