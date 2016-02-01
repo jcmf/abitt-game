@@ -549,5 +549,15 @@ module.exports = qq [
     a "Wait."
     a "Run."
 
+  q "Do you know CPR?",
+    a "Yes"
+    a "No"
+    a "Kinda?"
+
+  q "Do you have friends?",
+    a "Yes."
+    a "No."
+    a "Kinda?"
+
   q "THE END"
 ]
