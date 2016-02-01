@@ -28,12 +28,34 @@ module.exports = qq [
                               q "Then I'm afraid you're out of luck.",
                                 a "Oh well."
                             a "What?",
-                              q "Never mind, it's not important.",
-                                a "If you say so."
+                              q "Does the mouse feel hot to the touch?",
+                                a "Yes.",
+                                  q "Try immersing it in ice water.",
+                                    a "Done!",
+                                      q "Better?",
+                                        a "Much!",
+                                          q "Excellent.",
+                                            a "Thanks!"
+                                a "No.",
+                                  q "Try rubbing it vigorously.",
+                                    a "It's working! It's working!"
+                                    a "It's not working.",
+                                      q "You're not rubbing vigorously enough, are you?",
+                                        a "Am too."
+                                a "Maybe?",
+                                  q "If you had to guess, would you say that the mouse's temperature is more or less than 293 degrees Kelvin?",
+                                    a "Yes.",
+                                      q "Then it should be within normal operating parameters.",
+                                        a "Thank goodness!"
+                                    a "No.",
+                                      q "A wise decision!",
+                                        a "Huh?"
                     a "No.",
                       q "Try using a mouse.",
                         a "Sounds good, thanks!"
-                        a "Maybe later."
+                        a "Maybe later.",
+                          q "Let me know when you're ready to continue.",
+                            a "I am ready now!"
                 a "Tapping doesn't work.",
                   q "Is the screen you are tapping touch-sensitive?",
                     a "Yes.",
@@ -53,9 +75,24 @@ module.exports = qq [
                           q "Have you tried using one of those polarizing filters?",
                             a "Yes.",
                               q "How was it?",
-                                a "Pretty good I guess?"
-                                a "It was so great, I could hardly believe it."
-                                a "Terrible."
+                                a "Pretty good I guess?",
+                                  q "Would you recommend it to a friend?",
+                                    a "Yes."
+                                    a "No."
+                                a "It was so great, I could hardly believe it.",
+                                  q "Can I borrow it later?",
+                                    a "Yes.",
+                                      q "Thanks!",
+                                        a "You're welcome!"
+                                    a "No.",
+                                      q "Please?",
+                                        a "Forget it."
+                                a "Terrible.",
+                                  q "I'm sorry.",
+                                    a "Don't say that.  It's not your fault.",
+                                      q "Isn't it?",
+                                        a "Yes, it isn't."
+                                        a "No, it isn't."
                             a "No.",
                               q "You should totally try one.",
                                 a "Great idea!"
