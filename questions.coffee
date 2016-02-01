@@ -437,6 +437,7 @@ module.exports = qq [
         a "Full justification vs ragged right."
 
   q "How much bigger than one tenth is one ninth?",
+    a "About 1%."
     a "About 9%."
     a "About 10%."
     a "About 11%."
