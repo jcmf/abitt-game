@@ -396,5 +396,158 @@ module.exports = qq [
 
   )
 
-  q 'THE END'
+  q "Which country has the highest lowest point?",
+    a "Andorra"
+    a "Burundi"
+    a "Lesotho"
+    a "Rwanda"
+
+  q "What is an apocalypse?",
+    a "An Oscar winner."
+    a "A revelation from God."
+    a "A disaster of epic proportions."
+    a "A language design document of mainly historical interest."
+
+  q "Which of these would you rather be?",
+    a "a cowboy"
+    a "a hammer than a nail"
+    a "able to fly"
+    a "drinking"
+    a "eating"
+    a "invisible"
+    a "sleeping"
+    a "with someone I love"
+
+  q "Which country has the lowest lowest point?",
+    a "Djibouti"
+    a "Israel"
+    a "Jordan"
+    a "Syria"
+
+  q "What goes between two sentences?",
+    a "no space."
+    a "One space."
+    a "Two spaces."
+    a "U+200F WIDENED SPACE"
+    a "It depends.",
+      q "On what?",
+        a "The medium."
+        a "Monospaced vs proportional."
+        a "The specific typesetting system."
+        a "Full justification vs ragged right."
+
+  q "How much bigger than one tenth is one ninth?",
+    a "About 9%."
+    a "About 10%."
+    a "About 11%."
+
+  q 'To what does the word "grue" refer?',
+    a "A device for preventing adventurers from wandering in the dark."
+    a 'An alternate pronunciation of "glue."'
+    a "An imaginary color that flouts Occam's razor."
+    a 'The root noun from which "gruesome" is derived.'
+
+  q "Which country has the lowest highest point?",
+    a "Cocos Islands"
+    a "Maldives"
+    a "Tokelau"
+    a "Tuvalu"
+
+  q "What do you think of these geography questions?",
+    a "They're interesting."
+    a "They're amusing."
+    a "They're boring."
+    a "They're terrible."
+
+  q "Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?",
+    a "Heads and tails are equally likely.",
+      q "Why do you say that?",
+        a "Because I don't care."
+        a "Because you said it was a fair coin."
+        a "Because there's no way to know what will happen."
+    a "Heads is much more likely than tails.",
+      q "Why do you say that?",
+        a "Because you rigged this game somehow."
+        a "Because I don't care how I answer this."
+        a "Because you were wrong about it being a fair coin."
+    a "Tails is much more likely than heads.",
+      q "Why do you say that?",
+        a "Because tails is overdue now."
+        a "Because that's how a fair coin works."
+        a "Because I'm not even paying attention anymore."
+    a "I don't know.",
+      q "Why do you say that?",
+        a "Because that question is unanswerable."
+        a "Because that question is complicated."
+        a "Because that question is difficult."
+        a "Because that question is boring."
+        a "Because that question is bad."
+
+  q "Which country has the highest highest point?",
+    a "Bhutan"
+    a "China"
+    a "Nepal"
+    a "Tibet"
+
+  q "How do you respond to stress?",
+    a "Fight."
+    a "Flee."
+    a "Freeze."
+    a "Dissociate."
+
+  q "About how strong is gravity?",
+    a "6.674*10^-11 N (m/kg)^2" # MKS in terms of force, easier to understand
+    a "6.674*10^-11 m^3 kg^-1 s^-2" # MKS, more practical
+    a "6.674*10^-8 cm^3 g^-1 s^-2" # CGS, more theoretical
+    a "4.302x10^-3 pc M_☉^-1 (km/s)^2" # astronomical
+    a "0.01720209895" # Gauss's astronomical, applies to the planets
+    a "9.8 m/s^2" # at Earth's surface
+    a "1" # natural units
+
+  q "Lorem ipsum dolor sit...",
+    a "...amah."
+    a "...aman."
+    a "...amen."
+    a "...amet."
+    a "...amin."
+    a "...emim."
+    a "...imam."
+    a "...uman."
+
+  q "Grumpy wizards make a toxic brew for the jovial...",
+    a "...bishop."
+    a "...duchess."
+    a "...duke."
+    a "...earl."
+    a "...fool."
+    a "...footman."
+    a "...joker."
+    a "...king."
+    a "...knave."
+    a "...knight."
+    a "...lady."
+    a "...lord."
+    a "...pawn."
+    a "...prince."
+    a "...queen."
+    a "...rook."
+    a "...squire."
+
+  q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
+    a "...Venezuela."
+    a "...Samoa."
+    a "...Yemen."
+    a "...South Africa."
+    a "...Zambia."
+    a "...Zimbabwe."
+
+  q "You're driving along the highway, next to some railroad tracks, and its getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?",
+    a "See what the other drivers are doing."
+    a "Try to start the car again."
+    a "Turn on the radio."
+    a "Find my phone."
+    a "Wait."
+    a "Run."
+
+  q "THE END"
 ]
