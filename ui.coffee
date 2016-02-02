@@ -37,6 +37,11 @@ showQuestion = (letters) ->
   $container = $ '#question-container'
   $container.empty()
   $container.append html
+  if current.aa.length
+    $('#end').hide()
+  else
+    $('#end').show()
+    keyboard[13] = '#'
   $('#questions').show()
   return
 
