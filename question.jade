@@ -3,8 +3,7 @@
   each a in aa
     .answer
       a(href=a.href)
-        span.letter=a.letter
-        span.separator='. '
+        span.a-prefix=a.letter + '. '
         span.a-text=a.a
 if aa.length
   .cursor

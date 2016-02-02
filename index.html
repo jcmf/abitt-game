@@ -11226,7 +11226,7 @@ buf.push("<div class=\"question\">" + (jade.escape(null == (jade_interp = q) ? "
     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
       var a = $$obj[$index];
 
-buf.push("<div class=\"answer\"><a" + (jade.attr("href", a.href, true, false)) + "><span class=\"letter\">" + (jade.escape(null == (jade_interp = a.letter) ? "" : jade_interp)) + "</span><span class=\"separator\">" + (jade.escape(null == (jade_interp = '. ') ? "" : jade_interp)) + "</span><span class=\"a-text\">" + (jade.escape(null == (jade_interp = a.a) ? "" : jade_interp)) + "</span></a></div>");
+buf.push("<div class=\"answer\"><a" + (jade.attr("href", a.href, true, false)) + "><span class=\"a-prefix\">" + (jade.escape(null == (jade_interp = a.letter + '. ') ? "" : jade_interp)) + "</span><span class=\"a-text\">" + (jade.escape(null == (jade_interp = a.a) ? "" : jade_interp)) + "</span></a></div>");
     }
 
   } else {
@@ -11234,7 +11234,7 @@ buf.push("<div class=\"answer\"><a" + (jade.attr("href", a.href, true, false)) +
     for (var $index in $$obj) {
       $$l++;      var a = $$obj[$index];
 
-buf.push("<div class=\"answer\"><a" + (jade.attr("href", a.href, true, false)) + "><span class=\"letter\">" + (jade.escape(null == (jade_interp = a.letter) ? "" : jade_interp)) + "</span><span class=\"separator\">" + (jade.escape(null == (jade_interp = '. ') ? "" : jade_interp)) + "</span><span class=\"a-text\">" + (jade.escape(null == (jade_interp = a.a) ? "" : jade_interp)) + "</span></a></div>");
+buf.push("<div class=\"answer\"><a" + (jade.attr("href", a.href, true, false)) + "><span class=\"a-prefix\">" + (jade.escape(null == (jade_interp = a.letter + '. ') ? "" : jade_interp)) + "</span><span class=\"a-text\">" + (jade.escape(null == (jade_interp = a.a) ? "" : jade_interp)) + "</span></a></div>");
     }
 
   }
@@ -11492,10 +11492,11 @@ p,
   padding-left: 2em;
   text-indent: -2em;
 }
-.letter {
+.a-prefix {
   display: inline-block;
-  min-width: 1em;
-  text-align: right;
+  min-width: 1.63em;
+  padding-left: 0;
+  text-indent: 0;
 }
 .cursor {
   display: inline-block;
