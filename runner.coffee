@@ -21,10 +21,12 @@ exports.run = (letters, cb, error) ->
       codes = [code0+ai, code0_uc+ai]
       al = String.fromCharCode codes[0]
       ai += 1
-      if letter is al then next = a
-      {a: text, codes, letter: String.fromCharCode codes[0]}
-    cb {q, aa}
-    if li is letters.length then return
+      selected = letter is al
+      if selected then next = a
+      {a: text, codes, selected, next, letter: String.fromCharCode codes[0]}
+    current = li is letters.length
+    cb {q, aa, current}
+    if current then return
     if not next then return error "no match: letters=#{letters} li=#{li}"
     post = run next.post
     if post and post.q then stack.push post

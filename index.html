@@ -11310,7 +11310,7 @@ questions = require('./questions.coffee');
 assert = require('assert');
 
 exports.run = function(letters, cb, error) {
-  var a, aa, ai, al, code0, code0_uc, codes, frame, i, len, letter, li, next, post, q, ref, run, stack, state, text;
+  var a, aa, ai, al, code0, code0_uc, codes, current, frame, i, len, letter, li, next, post, q, ref, run, selected, stack, state, text;
   stack = require('./questions.coffee').slice(0);
   stack.reverse();
   state = {};
@@ -11349,22 +11349,27 @@ exports.run = function(letters, cb, error) {
         codes = [code0 + ai, code0_uc + ai];
         al = String.fromCharCode(codes[0]);
         ai += 1;
-        if (letter === al) {
+        selected = letter === al;
+        if (selected) {
           next = a;
         }
         results.push({
           a: text,
           codes: codes,
+          selected: selected,
+          next: next,
           letter: String.fromCharCode(codes[0])
         });
       }
       return results;
     })();
+    current = li === letters.length;
     cb({
       q: q,
-      aa: aa
+      aa: aa,
+      current: current
     });
-    if (li === letters.length) {
+    if (current) {
       return;
     }
     if (!next) {
