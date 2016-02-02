@@ -1,6 +1,8 @@
 $ = require 'jquery'
 assert = require 'assert'
-questions = require './questions.coffee'
+{run} = require './runner.coffee'
+
+keyboard = {}
 
 notFound = (debug) ->
   console.log "404 not found: #{debug}"
@@ -8,52 +10,30 @@ notFound = (debug) ->
   return
 
 showPane = (name, force) ->
-  console.log "XXX showing pane #{name}"
   $targets = $("##{name}-pane")
   if not $targets.length and not force then return notFound "pane=#{name}"
   $targets.show()
-  console.log "XXX hi pane #{name}"
   enterLink = $("##{name}-pane.enter-key a[href]").attr 'href'
   if enterLink
-    console.log "XXX enterLink=#{enterLink}"
     keyboard[13] = enterLink
   return
 
-keyboard = {}
-
 showQuestion = (letters) ->
-  stack = questions[..]
-  stack.reverse()
-  state = {}
-  run = (x) -> if 'function' is typeof x then x.call state else x
-  render = (x) -> run(x).replace "'", '\u2019'
-  code0 = 'a'.charCodeAt 0
-  code0_altcase = 'A'.charCodeAt 0
-  for letter, li in letters
-    if not stack.length then return notFound "letters=#{letters} li=#{li} end"
-    prev = stack.pop()
-    run prev.q
-    for answer in prev.aa
-      run answer.a
-    code = letter.charCodeAt(0) - code0
-    unless 0 <= code < prev.aa.length
-      return notFound "letters=#{letters} li=#{li} letter=#{letter} #{code}"
-    answer = prev.aa[code]
-    next = run answer.post
-    if next and next.q then stack.push next
-  if not stack.length then return notFound "letters=#{letters} end"
-  current = stack.pop()
-  letterify = (ai) -> String.fromCharCode code0 + ai
-  hrefify = (ai) -> "#!#{letters}#{letterify ai}"
-  for a, ai in current.aa
-    keyboard[code0_altcase + ai] = hrefify ai
-  for a, ai in current.aa
-    keyboard[code0 + ai] = hrefify ai
-  vars =
-    q: render current.q
-    aa: ({a: render(a.a), href: hrefify(ai), letter: letterify(ai)} for a, ai in current.aa)
+  current = null
+  cb = (x) -> current = x
+  run letters, cb, (debug) ->
+    current = null
+    notFound debug
+  if not current then return
+  render = (text) -> text.replace "'", '\u2019'
+  current.q = render current.q
+  for a in current.aa
+    a.a = render a.a
+    a.href = "#!#{letters}#{a.letter}"
+    for code in a.codes
+      keyboard[code] = a.href
   template = require './question.jade'
-  html = template vars
+  html = template current
   $container = $ '#question-container'
   $container.empty()
   $container.append html

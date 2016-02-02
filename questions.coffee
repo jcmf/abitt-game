@@ -551,8 +551,8 @@ module.exports = qq [
     a "Run."
 
   q "Do you know CPR?",
-    a "Yes"
-    a "No"
+    a "Yes."
+    a "No."
     a "Kinda?"
 
   q "Do you have friends?",
