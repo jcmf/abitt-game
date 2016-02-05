@@ -423,7 +423,7 @@ module.exports = qq [
                                     meet 'Mr.', 'Ryan', 'Veeder'
                     a "No.", figured
         a "No.",
-          q (-> "So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> #{@fn} #{@ln}?  Is that it?"),
+          q (-> "So what you're saying is that you were telling the truth about... wait... so... you're just <em>#{if /^[AEIOU]/.test @fn then 'an' else 'a'}</em> #{@fn} #{@ln}?  Is that it?"),
             a "Yes.",
               q (-> "Well but so um, gosh, can't I just, like, <em>pretend</em> that you're the real #{@fn} #{@ln}?"),
                 a "Yes.",

@@ -11328,7 +11328,7 @@ module.exports = qq([
       return meet('Mr.', 'Ryan', 'Veeder');
     }
   })))))), a("No.", figured))))))), a("No.", q((function() {
-    return "So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> " + this.fn + " " + this.ln + "?  Is that it?";
+    return "So what you're saying is that you were telling the truth about... wait... so... you're just <em>" + (/^[AEIOU]/.test(this.fn) ? 'an' : 'a') + "</em> " + this.fn + " " + this.ln + "?  Is that it?";
   }), a("Yes.", q((function() {
     return "Well but so um, gosh, can't I just, like, <em>pretend</em> that you're the real " + this.fn + " " + this.ln + "?";
   }), a("Yes.", cool = q((function() {
