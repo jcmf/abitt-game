@@ -157,44 +157,31 @@ module.exports = qq [
               q "Then I won't tell you.",
                 a "Phew!"
 
-  q("What's your name?",
-    a("Emily",
-      q((-> @fn = 'Emily'; "And your last name?"),
-        a("Boegheim", -> @ln = 'Ms. Boegheim')
-        a("Carroll", -> @ln = 'Ms. Carroll')
-        a("Ryan", -> @ln = 'Ms. Ryan')
-        a("Short", -> @ln = 'Ms. Short')
-      ),
-    ),
-    a("Jenni",
-      q((-> @fn = 'Jenni'; "And your last name?"),
-        a("Earl", -> @ln = 'Ms. Earl')
-        a("Jorgensen", -> @ln = 'Ms. Jorgensen')
-        a("Maddox", -> @ln = 'Ms. Maddox')
-        a("Polodna", -> @ln = 'Ms. Polodna')
-        a("Vedenoja", -> @ln = 'Ms. Vedenoja')
-      ),
-    ),
-    a("Ryan",
-      q((-> @fn = 'Ryan'; "And your last name?"),
-        a("Burrus", -> @ln = 'Mr. Burrus')
-        a("Freebern", -> @ln = 'Mr. Freebern')
-        a("Holman", -> @ln = 'Mr. Holman')
-        a("Kinsman", -> @ln = 'Mr. Kinsman')
-        a("Weisenberger", -> @ln = 'Mr. Weisenberger')
-        a("Stevens", -> @ln = 'Mr. Stevens')
-        a("Veeder", -> @ln = 'Mr. Veeder')
-      ),
-    ),
-  ),
+  q "What's your name?",
+    a "Emily",
+      q "And your last name?",
+        a "Boegheim", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Boegheim']
+        a "Carroll", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Carroll']
+        a "Ryan", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Ryan']
+        a "Short", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Short']
+    a "Jenni",
+      q "And your last name?",
+        a "Earl", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Earl']
+        a "Jorgensen", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Jorgensen']
+        a "Maddox", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Maddox']
+        a "Polodna", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Polodna']
+        a "Vedenoja", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Vedenoja']
+    a "Ryan",
+      q "And your last name?",
+        a "Burrus", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Burrus']
+        a "Freebern", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Freebern']
+        a "Holman", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Holman']
+        a "Kinsman", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Kinsman']
+        a "Weisenberger", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Weisenberger']
+        a "Stevens", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Stevens']
+        a "Veeder", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
 
-  q((->
-      hh = new Date().getHours()
-      time = if 3 <= hh < 12 then 'morning'
-      else if 12 <= hh < 17 then 'afternoon'
-      else 'evening'
-      "Good #{time}, #{@ln}!  Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing."),
-
+  q "Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing.",
     a "Velar",       # c in cap, g in gap, h in hot, ng in sing, w in wet
       q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "a cog"
@@ -393,8 +380,6 @@ module.exports = qq [
         a "Tallinn"
         a "Ubud"
         a "Zermatt"
-
-  )
 
   q "Which country has the highest lowest point?",
     a "Andorra"
