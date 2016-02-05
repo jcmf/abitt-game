@@ -9,7 +9,7 @@ exports.qq = (qq, unexpected...) ->
 exports.q = (q, aa...) ->
   assert q and typeof q in ['string', 'function'], "q=#{q}"
   for a, i in aa
-    assert 'a' of a, "q=#{q} i=#{i} a=#{a}"
+    assert not a or 'function' is typeof a or 'a' of a, "q=#{q} i=#{i} a=#{a}"
   {q, aa}
 exports.a = (a, post, unexpected...) ->
   assert not unexpected.length, "a=#{a}, post=#{post}, unexpected=#{unexpected}"

@@ -413,7 +413,9 @@ module.exports = qq [
                                   -> [@title, @fn, @ln] = ['Mr.', 'Teddy', 'Ruxpin']
                                 a "...Hillary Clinton.",
                                   -> [@title, @fn, @ln] = ['Ms.', 'Hillary', 'Clinton']
-                                a "...Anastasia Romanov.", ->
+                                a "...Anastasia Romanov.",
+                                  -> [@title, @fn, @ln] = ['Ms.', 'Anastasia', 'Romanov']
+                                ->
                                   if @fn is 'Ryan'
                                     a "...Jenni Polodna.",
                                       -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Polodna']

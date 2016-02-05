@@ -27,7 +27,7 @@ exports.q = function() {
   assert(q && ((ref = typeof q) === 'string' || ref === 'function'), "q=" + q);
   for (i = j = 0, len = aa.length; j < len; i = ++j) {
     a = aa[i];
-    assert('a' in a, "q=" + q + " i=" + i + " a=" + a);
+    assert(!a || 'function' === typeof a || 'a' in a, "q=" + q + " i=" + i + " a=" + a);
   }
   return {
     q: q,
@@ -11322,6 +11322,9 @@ module.exports = qq([
     var ref1;
     return ref1 = ['Ms.', 'Hillary', 'Clinton'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
   }), a("...Anastasia Romanov.", function() {
+    var ref1;
+    return ref1 = ['Ms.', 'Anastasia', 'Romanov'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
+  }), function() {
     if (this.fn === 'Ryan') {
       return a("...Jenni Polodna.", function() {
         var ref1;
@@ -11333,7 +11336,7 @@ module.exports = qq([
         return ref1 = ['Mr.', 'Ryan', 'Veeder'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
       });
     }
-  }))))))), a("No.", figured))))))), a("No.", q((function() {
+  })))))), a("No.", figured))))))), a("No.", q((function() {
     return "So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> " + this.fn + " " + this.ln + "?  Is that it?";
   }), a("Yes.", q((function() {
     return "Well but so um, gosh, can't I just, like, <em>pretend</em> that you're the real " + this.fn + " " + this.ln + "?";
