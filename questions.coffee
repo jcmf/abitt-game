@@ -409,19 +409,18 @@ module.exports = qq [
                           q "Yes?",
                             a "I'm actually...",
                               q "Yes???",
-                                a "...Teddy Ruxpin.",
-                                  -> [@title, @fn, @ln] = ['Mr.', 'Teddy', 'Ruxpin']
-                                a "...Hillary Clinton.",
-                                  -> [@title, @fn, @ln] = ['Ms.', 'Hillary', 'Clinton']
-                                a "...Anastasia Romanov.",
-                                  -> [@title, @fn, @ln] = ['Ms.', 'Anastasia', 'Romanov']
+                                (meet = (t, f, l) ->
+                                  a "...#{f} #{l}.",
+                                    q (-> [@title, @fn, @ln] = [t, f, l]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
+                                      a "Such as...?"
+                                )('Mr.', 'Teddy', 'Ruxpin'),
+                                meet 'Ms.', 'Hillary', 'Clinton'
+                                meet 'Ms.', 'Anastasia', 'Romanov'
                                 ->
                                   if @fn is 'Ryan'
-                                    a "...Jenni Polodna.",
-                                      -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Polodna']
+                                    meet 'Ms.', 'Jenni', 'Polodna'
                                   else
-                                    a "...Ryan Veeder.",
-                                      -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
+                                    meet 'Mr.', 'Ryan', 'Veeder'
                     a "No.", figured
         a "No.",
           q (-> "So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> #{@fn} #{@ln}?  Is that it?"),

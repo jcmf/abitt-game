@@ -11252,7 +11252,7 @@ buf.push("<div class=\"cursor\"></div>");
 }}.call(this,"aa" in locals_for_with?locals_for_with.aa:typeof aa!=="undefined"?aa:undefined,"q" in locals_for_with?locals_for_with.q:typeof q!=="undefined"?q:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
 },{"jade/runtime":8}],11:[function(require,module,exports){
-var SKIP, a, cool, figured, q, qq, ref;
+var SKIP, a, cool, figured, meet, q, qq, ref;
 
 ref = require('./dsl.coffee'), qq = ref.qq, q = ref.q, a = ref.a;
 
@@ -11315,26 +11315,17 @@ module.exports = qq([
     return "So you <em>are</em> " + this.fn + " " + this.ln + "!  I knew it!";
   }), a("Yep, you figured it out all right."))), a("No.", q("Well... can you prove it?", a("Prove what?", q((function() {
     return "Can you prove that you're not " + this.fn + " " + this.ln + "!";
-  }), a("Yes.", q("How?", a("Well...", q("Yes?", a("I'm actually...", q("Yes???", a("...Teddy Ruxpin.", function() {
-    var ref1;
-    return ref1 = ['Mr.', 'Teddy', 'Ruxpin'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
-  }), a("...Hillary Clinton.", function() {
-    var ref1;
-    return ref1 = ['Ms.', 'Hillary', 'Clinton'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
-  }), a("...Anastasia Romanov.", function() {
-    var ref1;
-    return ref1 = ['Ms.', 'Anastasia', 'Romanov'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
-  }), function() {
+  }), a("Yes.", q("How?", a("Well...", q("Yes?", a("I'm actually...", q("Yes???", (meet = function(t, f, l) {
+    return a("..." + f + " " + l + ".", q((function() {
+      var ref1;
+      ref1 = [t, f, l], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2];
+      return "Oh my goodness!  It's such an honor to finally meet you, " + this.title + " " + this.ln + "!  I have so many questions!";
+    }), a("Such as...?")));
+  })('Mr.', 'Teddy', 'Ruxpin'), meet('Ms.', 'Hillary', 'Clinton'), meet('Ms.', 'Anastasia', 'Romanov'), function() {
     if (this.fn === 'Ryan') {
-      return a("...Jenni Polodna.", function() {
-        var ref1;
-        return ref1 = ['Ms.', 'Jenni', 'Polodna'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
-      });
+      return meet('Ms.', 'Jenni', 'Polodna');
     } else {
-      return a("...Ryan Veeder.", function() {
-        var ref1;
-        return ref1 = ['Mr.', 'Ryan', 'Veeder'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], ref1;
-      });
+      return meet('Mr.', 'Ryan', 'Veeder');
     }
   })))))), a("No.", figured))))))), a("No.", q((function() {
     return "So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> " + this.fn + " " + this.ln + "?  Is that it?";
