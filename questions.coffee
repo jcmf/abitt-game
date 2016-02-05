@@ -382,6 +382,18 @@ module.exports = qq [
         a "Ubud"
         a "Zermatt"
 
+  q "You're driving along the highway, next to some railroad tracks, and its getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?",
+    a "See what the other drivers are doing."
+    a "Try to start the car again."
+    a "Turn on the radio."
+    a "Find my phone."
+    a "Wait."
+    a "Run."
+
+  q (-> "Wait.  Are you the REAL #{@fn} #{@ln}?"),
+    a "Yes."
+    a "No."
+
   q "Which country has the highest lowest point?",
     a "Andorra"
     a "Burundi"
@@ -527,14 +539,6 @@ module.exports = qq [
     a "...South Africa."
     a "...Zambia."
     a "...Zimbabwe."
-
-  q "You're driving along the highway, next to some railroad tracks, and its getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?",
-    a "See what the other drivers are doing."
-    a "Try to start the car again."
-    a "Turn on the radio."
-    a "Find my phone."
-    a "Wait."
-    a "Run."
 
   q "Do you know CPR?",
     a "Yes."
