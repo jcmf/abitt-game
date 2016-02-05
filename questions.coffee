@@ -1,4 +1,5 @@
 {qq, q, a} = require './dsl.coffee'
+SKIP = ->
 
 module.exports = qq [
   q "Welcome to this game!  Before we can get started, you'll need to answer a few questions.",
@@ -181,7 +182,7 @@ module.exports = qq [
         a "Stevens", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Stevens']
         a "Veeder", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
 
-  q "Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing.",
+  SKIP q "Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing.",
     a "Velar",       # c in cap, g in gap, h in hot, ng in sing, w in wet
       q "Excellent!  Now choose one of the following.  Don't overthink it!",
         a "a cog"
