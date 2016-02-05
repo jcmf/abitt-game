@@ -390,9 +390,65 @@ module.exports = qq [
     a "Wait."
     a "Run."
 
-  q (-> "Wait.  Are you the REAL #{@fn} #{@ln}?"),
-    a "Yes."
-    a "No."
+  q (-> "Wait.  Are you the <em>real</em> #{@fn} #{@ln}?"),
+    a "Yes.", -> @real = true
+    a "No.",
+      q "So you were just lying to my face earlier?",
+        a "Yes.",
+          q "But what about just now?  Were you lying just now?",
+            a "Yes.",
+              figured = q (-> "So you <em>are</em> #{@fn} #{@ln}!  I knew it!"),
+                a "Yep, you figured it out all right."
+            a "No.",
+              q "Well... can you prove it?",
+                a "Prove what?",
+                  q (-> "Can you prove that you're not #{@fn} #{@ln}!"),
+                    a "Yes.",
+                      q "How?",
+                        a "Well...",
+                          q "Yes?",
+                            a "I'm actually...",
+                              q "Yes???",
+                                a "...Teddy Ruxpin.",
+                                  -> [@title, @fn, @ln] = ['Mr.', 'Teddy', 'Ruxpin']
+                                a "...Hillary Clinton.",
+                                  -> [@title, @fn, @ln] = ['Ms.', 'Hillary', 'Clinton']
+                                a "...Anastasia Romanov.", ->
+                                  if @fn is 'Ryan'
+                                    a "...Jenni Polodna.",
+                                      -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Polodna']
+                                  else
+                                    a "...Ryan Veeder.",
+                                      -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
+                    a "No.", figured
+        a "No.",
+          q (-> "So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> #{@fn} #{@ln}?  Is that it?"),
+            a "Yes.",
+              q (-> "Well but so um, gosh, can't I just, like, <em>pretend</em> that you're the real #{@fn} #{@ln}?"),
+                a "Yes.",
+                  cool = q (-> "Cool!  Thanks #{@fn}!  Uh... can I call you #{@fn}?"),
+                    a "Yes.",
+                      q (-> "Thanks #{@fn}!"),
+                        a "You're welcome!"
+                    a "No.",
+                      q (-> "Sorry #{@title} #{@ln}!  Sorry!  My mistake!"),
+                        a "Don't worry about it."
+                        a "Don't let it happen again!"
+                a "No.",
+                  q "Please?",
+                    a "Yes.", cool
+                    a "No.",
+                      q "Pretty please???",
+                        a "No!",
+                          q (-> "Oh please #{@title} #{@fn}, please please please, it would mean sooooo much to me, please won't you please find it in your heart to just let me have this one small thing?"),
+                            a "All right, if you insist.", cool
+                            a "Forget it.",
+                              q "Aw man!",
+                                a "Can we move on here?",
+                                  q "Yes.  Sorry.",
+                                    a "Thank you."
+                        a "Fine.", cool
+            a "No.", figured
 
   q "Which country has the highest lowest point?",
     a "Andorra"

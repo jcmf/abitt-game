@@ -1,9 +1,9 @@
-.question= q
+.question!=q
 .answers
   each a in aa
     .answer
       a(href=a.href)
         span.a-prefix=a.letter + '. '
-        span.a-text=a.a
+        span.a-text!=a.a
 if aa.length
   .cursor
