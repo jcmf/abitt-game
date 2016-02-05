@@ -11392,7 +11392,7 @@ exports.run = function(letters, cb, error) {
       results = [];
       for (j = 0, len1 = ref1.length; j < len1; j++) {
         a = ref1[j];
-        text = run(a.a);
+        text = run(run(a).a);
         if (!text) {
           continue;
         }

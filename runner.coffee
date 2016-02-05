@@ -16,7 +16,7 @@ exports.run = (letters, cb, error) ->
     ai = 0
     next = null
     aa = for a in frame.aa
-      text = run a.a
+      text = run run(a).a
       if not text then continue
       codes = [code0+ai, code0_uc+ai]
       al = String.fromCharCode codes[0]
