@@ -5,7 +5,7 @@ exports.run = (letters, cb, error) ->
   stack = require('./questions.coffee')[..]
   stack.reverse()
   state = {}
-  run = (x) ->
+  evaluate = (x) ->
     for i in [0..99]
       if 'function' != typeof x then return x
       x = x.call state
@@ -13,15 +13,16 @@ exports.run = (letters, cb, error) ->
   code0 = 'a'.charCodeAt 0
   code0_uc = 'A'.charCodeAt 0
   for letter, li in letters + '\u0000'
-    if not stack.length then return error "end: letters=#{letters} li=#{li}"
-    frame = stack.pop()
-    q = run frame.q
-    if not q then continue
+    q = null
+    while not q
+      if not stack.length then return error "end: letters=#{letters} li=#{li}"
+      frame = evaluate stack.pop()
+      q = evaluate frame?.q
     ai = 0
     next = null
     aa = for a in frame.aa
-      cur = run a
-      text = run cur.a
+      cur = evaluate a
+      text = evaluate cur.a
       if not text then continue
       codes = [code0+ai, code0_uc+ai]
       al = String.fromCharCode codes[0]
@@ -33,6 +34,6 @@ exports.run = (letters, cb, error) ->
     cb {q, aa, current}
     if current then return
     if not next then return error "no match: letters=#{letters} li=#{li}"
-    post = run next.post
+    post = evaluate next.post
     if post and post.q then stack.push post
   assert false

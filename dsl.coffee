@@ -4,7 +4,7 @@ exports.qq = (qq, unexpected...) ->
   assert qq and 'length' of qq, "qq=#{qq}"
   for q, i in qq
     if not q then continue
-    assert 'q' of q, "i=#{i} q=#{q}"
+    assert 'function' is typeof q or 'q' of q, "i=#{i} q=#{q}"
     q
 exports.q = (q, aa...) ->
   assert q and typeof q in ['string', 'function'], "q=#{q}"

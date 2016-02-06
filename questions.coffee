@@ -182,206 +182,6 @@ module.exports = qq [
         a "Stevens", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Stevens']
         a "Veeder", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
 
-  SKIP q "Which kind of game sounds best right now?  Don't think too hard, just choose the answer that seems the most appealing.",
-    a "Velar",       # c in cap, g in gap, h in hot, ng in sing, w in wet
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "a cog"
-        a "a hag"
-        a "a wick"
-        a "a wing"
-        a "a wookie"
-        a "a hacking gang"
-        a "a wigging keg king"
-
-    a "Venatic",     # hunting-related
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "Antelope"
-        a "Bison"
-        a "Duck"
-        a "Elephant"
-        a "Falcon"
-        a "Fox"
-        a "Grouse"
-        a "Hare"
-        a "Hound"
-        a "Mink"
-        a "Pheasant"
-        a "Stag"
-        a "Tiger"
-        a "Whale"
-        a "Wolf"
-
-    a "Vetitive",    # grammar term for wishing something won't happen
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "anger"
-        a "crash"
-        a "gas"
-        a "gun"
-        a "keys"
-        a "oven"
-        a "sleet"
-        a "smell"
-        a "toast"
-        a "wallet"
-
-    a "Vexatious",   # annoying, teasing, troublesome
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "advertising"
-        a "beeping"
-        a "children"
-        a "cough"
-        a "drunk"
-        a "Facebook"
-        a "gum"
-        a "hair"
-        a "in-laws"
-        a "neighbors"
-        a "orange"
-        a "password"
-        a "politics"
-        a "slow"
-        a "smell"
-        a "sunburn"
-        a "traffic"
-
-    a "Vigesimal",   # base 20
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "ABC"
-        a "aluminum"
-        a "Andorra"
-        a "calcium"
-        a "Egypt"
-        a "Jackson"
-        a "jiggit"
-        a "Pareto"
-        a "place"
-        a "questions"
-        a "score"
-        a "vision"
-
-    a "Volucrine",   # bird-related
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "asity"
-        a "boobook"
-        a "chachalaca"
-        a "drongo"
-        a "emerald"
-        a "fulvetta"
-        a "gallinule"
-        a "hoopoe"
-        a "inca"
-        a "jacamar"
-        a "knot"
-        a "megapode"
-        a "noddy"
-        a "potoo"
-        a "rhea"
-        a "saltator"
-        a "tapaculo"
-        a "vanga"
-        a "wigeon"
-        a "xenops"
-
-    a "Viparious",   # life-producing or life-renewing
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "qi"
-        a "egg"
-        a "mana"
-        a "lipid"
-        a "coffee"
-        a "energon"
-        a "platypus"
-        a "vibration"
-
-    a "Voluptuous",  # luxurious, sensuality-related, curvacious/attractive
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "silk"
-        a "satin"
-        a "alpaca"
-        a "spandex"
-        a "cashmere"
-        a "lambswool"
-        a "chinchilla"
-        a "microfleece"
-
-    a "Vallecular",  # groovy
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "Army of Darkness"
-        a "circlip"
-        a "Enceladus"
-        a "Jon St. John"
-        a "JSR 241"
-        a "Mike Myers"
-        a "Protectobots"
-        a "stopped"
-        a "tongue"
-        a "vinyl"
-        a "Zune"
-
-    a "Vecordious",  # mad, crazy, senseless
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "burrito.nyc.us.gov"
-        a "flight 93"
-        a "grassy knoll"
-        a "hypergraphia"
-        a "layer mask"
-        a "P3X-797"
-        a "pusher robot"
-        a "SCP-1733"
-        a "time cube"
-        a "topkek"
-
-    a "Veriloquent", # truthful
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "Cassandra"
-        a "Colbert"
-        a "Dawkins"
-        a "Galahad"
-        a "Lennon"
-        a "Limbaugh"
-        a "Plato"
-        a "Rand"
-        a "Snowden"
-        a "Sojourner"
-
-    a "Vertiginous", # spinning, dizzy, vertigo-inducing, or changing/unstable
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "Cabrio Bahn"
-        a "Caminito del Rey"
-        a "Coit Tower"
-        a "Gaztelugatxe"
-        a "Hakone"
-        a "Half Dome"
-        a "High Roller"
-        a "Horseshoe Bend"
-        a "Huangshan"
-        a "London Eye"
-        a "Meteora"
-        a "Outlaw Run"
-        a "Royal Gorge"
-        a "Trolltunga"
-        a "Verrückt"
-
-    a "Viaggiatory", # travelling
-      q "Excellent!  Now choose one of the following.  Don't overthink it!",
-        a "Cleveland"
-        a "Cusco"
-        a "Elqui"
-        a "Goreme"
-        a "Harare"
-        a "Havana"
-        a "Jeddah"
-        a "Marrakech"
-        a "McMurdo"
-        a "Orlando"
-        a "Petra"
-        a "Qaqortoq"
-        a "Rome"
-        a "Siem Reap"
-        a "Tallinn"
-        a "Ubud"
-        a "Zermatt"
-
   q "You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?",
     a "See what the other drivers are doing."
     a "Try to start the car again."
@@ -452,19 +252,27 @@ module.exports = qq [
                         a "Fine.", cool
             a "No.", figured
 
-  q "Which country has the highest lowest point?",
-    a "Andorra"
-    a "Burundi"
-    a "Lesotho"
-    a "Rwanda"
+  q "So.  What's the capital of Canada?",
+    a "Saskatchewan"
+    a "Manitoba"
+    a "Toronto"
+    a "Nunavut"
+    a "Ottawa", -> @geo = true
+    a "Skullport"
 
-  q "What is an apocalypse?",
+  q "And what is an apocalypse?",
     a "An Oscar winner."
     a "A revelation from God."
     a "A disaster of epic proportions."
     a "A language design document of mainly historical interest."
 
-  q "Which of these would you rather be?",
+  q 'All right, in that case... what does "grue" mean to you?',
+    a "It's an alternate pronunciation of \"glue.\""
+    a "It's an imaginary color that flouts Occam's razor."
+    a "It's the root noun from which \"gruesome\" is derived."
+    a "It's a device for preventing adventurers from wandering in the dark."
+
+  q "Very good!  Now, which of these would you rather be?",
     a "a cowboy"
     a "a hammer than a nail"
     a "able to fly"
@@ -474,11 +282,40 @@ module.exports = qq [
     a "sleeping"
     a "with someone I love"
 
-  q "Which country has the lowest lowest point?",
-    a "Djibouti"
-    a "Israel"
-    a "Jordan"
-    a "Syria"
+  q "Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?",
+    a "Heads and tails are equally likely.",
+      q "Why do you say that?",
+        a "Because I don't care."
+        a "Because you said it was a fair coin.", -> @premath = true
+        a "Because there's no way to decide between the two."
+    a "Heads is much more likely than tails.",
+      q "Why do you say that?",
+        a "Because you rigged this game somehow.", -> @premath = true
+        a "Because I don't care how I answer this."
+        a "Because you were wrong about it being a fair coin.", -> @premath = true
+    a "Tails is much more likely than heads.",
+      q "Why do you say that?",
+        a "Because tails is overdue now."
+        a "Because that's how a fair coin works."
+        a "Because I'm not even paying attention anymore."
+    a "I don't know.",
+      q "Why do you say that?",
+        a "Because that question is unanswerable."
+        a "Because that question is complicated."
+        a "Because that question is difficult."
+        a "Because that question is boring."
+        a "Because that question is bad."
+  q "Hmm, yes... maybe we can come back to this later....",
+    a "Okay."
+    a "What if I want to talk about it now?",
+      q "Then I guess you're going to be disappointed, aren't you?",
+        a "I guess.",
+          q "Sorry, that came out... I didn't mean to... just bear with me, okay?  We'll get through this.",
+            surewhatevs = a "Sure, whatever.",
+              q "No, seriously.  This will be good!  Just a few more questions, okay?",
+                a "I'm listening."
+        a "Am I?",
+          q "Well, no, I mean... no, that's not what... just bear with me, okay?  We'll get through this.", surewhatevs
 
   q "What goes between two sentences?",
     a "no space."
@@ -492,17 +329,97 @@ module.exports = qq [
         a "The specific typesetting system."
         a "Full justification vs ragged right."
 
-  q "How much bigger than one tenth is one ninth?",
-    a "About 1%."
-    a "About 9%."
-    a "About 10%."
-    a "About 11%."
+  -> if @premath then q "Bear with me here.  How much bigger than one tenth is one ninth?",
+    a "About 1%.",
+      q "And why is that?",
+        a "You just, uh, add together, the, like....", mathend = (x) ->
+          return ->
+            if x then @math = true
+            q "Mmm, yes, I see... sorry, I just need to make a note here....",
+              a "Okay....",
+                therewego = q "Ah yes, there we go.  Where were we?",
+                  a "You, uh, were asking me questions?",
+                    q "Indeed I was!  Shall we get back to that?",
+                      a "Okay."
+              a "Are you done?", therewego
+        a "It, uh, I mean, if you subtract, um....", mathend true
+        a "I think you can, like, multiply them and, er....", mathend
+        a "Well you just, er, divide one by the, uh....", mathend
+        a "Pass!  Can I pass?",
+          q "Sure.",
+            a "Thank you!"
+    a "About 9%.",
+      q "Is it?  Why do you think that?",
+        a "It's, um... wait....", mathend
+        a "I'm, uh, not sure if....", mathend
+        a "I'm sorry, I take it back, I take it back!",
+          q "Oh, it's far too late for that.",
+            a "Oh no!  What do I do?  What do I <em>do</em>???",
+              q "Please remain calm and continue to answer questions.",
+                a "yes yes I will do this yes"
+        a "Please forgive me.",
+          q "Do you promise not to do it again?",
+            a "Yes.",
+              q "Then I forgive you.",
+                a "Thank you!"
+            a "No.",
+              q "But you expect me to forgive you anyway?",
+                a "Yes.",
+                  q "Well... you're right!",
+                    a "Thanks!",
+                      q "I don't mean about the original question, I mean....",
+                        a "No no, I get it.",
+                          goodcanigo = q "Good",
+                            a "Can I go now?",
+                              q "Sure, just... I need to ask just a few more questions....",
+                                a "Okay...."
+                        a "Wait, what do you mean?",
+                          q "I mean that I forgive you.",
+                            a "Oh.  Thanks!",
+                              q "You're welcome.",
+                                a "So... are we done here?",
+                                  q "Well, no, I have more questions....",
+                                    a "Okay...."
+                a "No.",
+                  q "Then I believe we have an understanding.",
+                    a "Yes.", goodcanigo
+    a "About 10%.",
+      q "And what led you to choose <em>that</em> option?",
+        a "Well, it... it seemed like....", mathend
+        a "Well I mean it's clearly <em>close</em> to that, because it's not the other one, because otherwise there's no decoy, and, uh, it's got fewer significant figures than... so I mean... you see where I'm going with this, right?", mathend
+        a "Oh yeah, yeah!  That one!  B!  I choose B!  That sounds good.", mathend
+        a "Wait, no, B is bullshit, isn't it?", mathend
+    a "About 11%.",
+      q "Can you explain why that is?",
+        a "Sure, it's just... one over nine is point one repeating, and then you just move the decimal and subtract one and....", mathend true
+        a "Well, it's, like, the ratio is clearly just a little bit bigger than one tenth itself, so....", mathend true
+        a "I totally could, if these answers didn't suck so much.", mathend true
+        a "No, not really.", mathend
+        a "Eleven is my favorite number!",
+          q "OMG mine too!",
+            a "High five!",
+              q "High five!",
+                a "Awesome.",
+                  q "Ready for more questions?",
+                    a "Totally ready!"
 
-  q 'To what does the word "grue" refer?',
-    a "A device for preventing adventurers from wandering in the dark."
-    a 'An alternate pronunciation of "glue."'
-    a "An imaginary color that flouts Occam's razor."
-    a 'The root noun from which "gruesome" is derived.'
+  q "How do you typically respond to stress?",
+    a "Fight."
+    a "Flee."
+    a "Freeze."
+    a "Dissociate."
+
+  q "Which country has the highest lowest point?",
+    a "Andorra"
+    a "Burundi"
+    a "Lesotho"
+    a "Rwanda"
+
+  q "Which country has the lowest lowest point?",
+    a "Djibouti"
+    a "Israel"
+    a "Jordan"
+    a "Syria"
 
   q "Which country has the lowest highest point?",
     a "Cocos Islands"
@@ -516,50 +433,11 @@ module.exports = qq [
     a "They're boring."
     a "They're terrible."
 
-  q "Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?",
-    a "Heads and tails are equally likely.",
-      q "Why do you say that?",
-        a "Because I don't care."
-        a "Because you said it was a fair coin."
-        a "Because there's no way to know what will happen."
-    a "Heads is much more likely than tails.",
-      q "Why do you say that?",
-        a "Because you rigged this game somehow."
-        a "Because I don't care how I answer this."
-        a "Because you were wrong about it being a fair coin."
-    a "Tails is much more likely than heads.",
-      q "Why do you say that?",
-        a "Because tails is overdue now."
-        a "Because that's how a fair coin works."
-        a "Because I'm not even paying attention anymore."
-    a "I don't know.",
-      q "Why do you say that?",
-        a "Because that question is unanswerable."
-        a "Because that question is complicated."
-        a "Because that question is difficult."
-        a "Because that question is boring."
-        a "Because that question is bad."
-
   q "Which country has the highest highest point?",
     a "Bhutan"
     a "China"
     a "Nepal"
     a "Tibet"
-
-  q "How do you respond to stress?",
-    a "Fight."
-    a "Flee."
-    a "Freeze."
-    a "Dissociate."
-
-  q "About how strong is gravity?",
-    a "6.674*10^-11 N (m/kg)^2" # MKS in terms of force, easier to understand
-    a "6.674*10^-11 m^3 kg^-1 s^-2" # MKS, more practical
-    a "6.674*10^-8 cm^3 g^-1 s^-2" # CGS, more theoretical
-    a "4.302x10^-3 pc M_☉^-1 (km/s)^2" # astronomical
-    a "0.01720209895" # Gauss's astronomical, applies to the planets
-    a "9.8 m/s^2" # at Earth's surface
-    a "1" # natural units
 
   q "Lorem ipsum dolor sit...",
     a "...amah."
@@ -589,6 +467,15 @@ module.exports = qq [
     a "...queen."
     a "...rook."
     a "...squire."
+
+  q "About how strong is gravity?",
+    a "6.674\u00d710<sup>-11</sup> N (m/kg)<sup>2</sup>" # MKS in terms of force, easier to understand
+    a "6.674\u00d710<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>" # MKS, more practical
+    a "6.674\u00d710<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>" # CGS, more theoretical
+    a "4.302\u00d710<sup>-3</sup> pc <i>M</i><sub>\u2609</sub><sup>-1</sup> (km/s)<sup>2</sup>" # astronomical
+    a "0.01720209895" # Gauss's astronomical, applies to the planets
+    a "9.8 m/s<sup>2</sup>" # at Earth's surface
+    a "1" # natural units
 
   q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
     a "...Venezuela."
