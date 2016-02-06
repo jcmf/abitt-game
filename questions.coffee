@@ -413,8 +413,9 @@ module.exports = qq [
                                   a "...#{f} #{l}.",
                                     q (-> [@title, @fn, @ln] = [t, f, l]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
                                       a "Such as...?"
-                                )('Mr.', 'Teddy', 'Ruxpin'),
+                                )('Mr.', 'Graham', 'Nelson'),
                                 meet 'Ms.', 'Hillary', 'Clinton'
+                                meet 'Mr.', 'Teddy', 'Ruxpin'
                                 meet 'Ms.', 'Anastasia', 'Romanov'
                                 ->
                                   if @fn is 'Ryan'

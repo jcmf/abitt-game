@@ -8,18 +8,16 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
 What's your name?
 
   a. Emily
-  b. Jenni
-> c. Ryan
+> b. Jenni
+  c. Ryan
 
 And your last name?
 
-  a. Burrus
-  b. Freebern
-> c. Holman
-  d. Kinsman
-  e. Weisenberger
-  f. Stevens
-  g. Veeder
+  a. Earl
+  b. Jorgensen
+  c. Maddox
+> d. Polodna
+  e. Vedenoja
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?
 
@@ -30,7 +28,7 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
-Wait.  Are you the <em>real</em> Ryan Holman?
+Wait.  Are you the <em>real</em> Jenni Polodna?
 
   a. Yes.
 > b. No.
@@ -49,7 +47,7 @@ Well... can you prove it?
 
 > a. Prove what?
 
-Can you prove that you're not Ryan Holman!
+Can you prove that you're not Jenni Polodna!
 
 > a. Yes.
   b. No.
@@ -64,14 +62,11 @@ Yes?
 
 Yes???
 
-  a. ...Teddy Ruxpin.
+  a. ...Graham Nelson.
   b. ...Hillary Clinton.
-> c. ...Anastasia Romanov.
-  d. ...Jenni Polodna.
-
-Oh my goodness!  It's such an honor to finally meet you, Ms. Romanov!  I have so many questions!
-
-> a. Such as...?
+  c. ...Teddy Ruxpin.
+  d. ...Anastasia Romanov.
+> e. ...Ryan Veeder.
 
 Which country has the highest lowest point?
 
