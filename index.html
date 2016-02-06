@@ -11471,7 +11471,8 @@ showQuestion = function(letters) {
     return;
   }
   render = function(text) {
-    return text.replace("'", '\u2019');
+    text = text.replace("'", '\u2019');
+    return text = text.replace(/"([^']+)"/, '\u201c$1\u201d');
   };
   current.q = render(current.q);
   ref = current.aa;
