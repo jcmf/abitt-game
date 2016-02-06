@@ -11351,7 +11351,7 @@ questions = require('./questions.coffee');
 assert = require('assert');
 
 exports.run = function(letters, cb, error) {
-  var a, aa, ai, al, code0, code0_uc, codes, current, frame, j, len, letter, li, next, post, q, ref, run, selected, stack, state, text;
+  var a, aa, ai, al, code0, code0_uc, codes, cur, current, frame, j, len, letter, li, next, post, q, ref, run, selected, stack, state, text;
   stack = require('./questions.coffee').slice(0);
   stack.reverse();
   state = {};
@@ -11386,7 +11386,8 @@ exports.run = function(letters, cb, error) {
       results = [];
       for (k = 0, len1 = ref1.length; k < len1; k++) {
         a = ref1[k];
-        text = run(run(a).a);
+        cur = run(a);
+        text = run(cur.a);
         if (!text) {
           continue;
         }
@@ -11395,7 +11396,7 @@ exports.run = function(letters, cb, error) {
         ai += 1;
         selected = letter === al;
         if (selected) {
-          next = a;
+          next = cur;
         }
         results.push({
           a: text,

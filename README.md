@@ -3,5 +3,3 @@ anyone!  I'm not allowed to publish it until after.  I guess I'll
 update this before publishing?  We'll see what happens!!!
 
 BUG LIST:
-
-- Why isn't accababaaaad excited to meet Jenni?

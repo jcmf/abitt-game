@@ -20,13 +20,14 @@ exports.run = (letters, cb, error) ->
     ai = 0
     next = null
     aa = for a in frame.aa
-      text = run run(a).a
+      cur = run a
+      text = run cur.a
       if not text then continue
       codes = [code0+ai, code0_uc+ai]
       al = String.fromCharCode codes[0]
       ai += 1
       selected = letter is al
-      if selected then next = a
+      if selected then next = cur
       {a: text, codes, selected, next, letter: String.fromCharCode codes[0]}
     current = li is letters.length
     cb {q, aa, current}
