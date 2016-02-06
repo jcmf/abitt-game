@@ -1,7 +1,7 @@
 {run} = require './runner.coffee'
 fs = require 'fs'
 
-testdir = "#{__dirname}/test"
+testdir = "#{__dirname}/t"
 for name in fs.readdirSync testdir
   path = "#{testdir}/#{name}"
   pieces = []

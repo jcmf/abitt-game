@@ -11351,21 +11351,24 @@ questions = require('./questions.coffee');
 assert = require('assert');
 
 exports.run = function(letters, cb, error) {
-  var a, aa, ai, al, code0, code0_uc, codes, current, frame, i, len, letter, li, next, post, q, ref, run, selected, stack, state, text;
+  var a, aa, ai, al, code0, code0_uc, codes, current, frame, j, len, letter, li, next, post, q, ref, run, selected, stack, state, text;
   stack = require('./questions.coffee').slice(0);
   stack.reverse();
   state = {};
   run = function(x) {
-    if ('function' === typeof x) {
-      return x.call(state);
-    } else {
-      return x;
+    var i, j;
+    for (i = j = 0; j <= 99; i = ++j) {
+      if ('function' !== typeof x) {
+        return x;
+      }
+      x = x.call(state);
     }
+    throw new Error("too many layers: " + x);
   };
   code0 = 'a'.charCodeAt(0);
   code0_uc = 'A'.charCodeAt(0);
   ref = letters + '\u0000';
-  for (li = i = 0, len = ref.length; i < len; li = ++i) {
+  for (li = j = 0, len = ref.length; j < len; li = ++j) {
     letter = ref[li];
     if (!stack.length) {
       return error("end: letters=" + letters + " li=" + li);
@@ -11378,11 +11381,11 @@ exports.run = function(letters, cb, error) {
     ai = 0;
     next = null;
     aa = (function() {
-      var j, len1, ref1, results;
+      var k, len1, ref1, results;
       ref1 = frame.aa;
       results = [];
-      for (j = 0, len1 = ref1.length; j < len1; j++) {
-        a = ref1[j];
+      for (k = 0, len1 = ref1.length; k < len1; k++) {
+        a = ref1[k];
         text = run(run(a).a);
         if (!text) {
           continue;

@@ -5,7 +5,11 @@ exports.run = (letters, cb, error) ->
   stack = require('./questions.coffee')[..]
   stack.reverse()
   state = {}
-  run = (x) -> if 'function' is typeof x then x.call state else x
+  run = (x) ->
+    for i in [0..99]
+      if 'function' != typeof x then return x
+      x = x.call state
+    throw new Error "too many layers: #{x}"
   code0 = 'a'.charCodeAt 0
   code0_uc = 'A'.charCodeAt 0
   for letter, li in letters + '\u0000'
