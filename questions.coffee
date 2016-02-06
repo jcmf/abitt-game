@@ -253,12 +253,13 @@ module.exports = qq [
             a "No.", figured
 
   q "So.  What's the capital of Canada?",
-    a "Saskatchewan"
     a "Manitoba"
-    a "Toronto"
     a "Nunavut"
     a "Ottawa", -> @geo = true
+    a "Saskatchewan"
     a "Skullport"
+    a "Toronto"
+    a "Vancouver"
 
   q "And what is an apocalypse?",
     a "An Oscar winner."
