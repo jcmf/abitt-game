@@ -274,14 +274,58 @@ module.exports = qq [
     a "It's a device for preventing adventurers from wandering in the dark."
 
   q "Very good!  Now, which of these would you rather be?",
-    a "a cowboy"
-    a "a hammer than a nail"
+    a "a cowboy",
+      likesong = q "Like the song?",
+        a "Yes, like the song!"
+        a "No, I didn't even realize that was a song."
+        a "No, I know the song but that's not why I chose that answer."
+    a "a hammer than a nail", likesong
     a "able to fly"
-    a "drinking"
+    a "drinking",
+      q "Like drinking alcohol?",
+        a "Yes."
+        a "No."
     a "eating"
     a "invisible"
-    a "sleeping"
-    a "with someone I love"
+    a "sleeping",
+      q "Are you tired right now?",
+        a "Yes."
+        a "No."
+    a "with someone I love",
+      q "Think of a person you love.  How would you quantify your love for that person?",
+        a "0 -- I can't think of any such person.",
+          q "Why not?",
+            a "Because I'm depressed and it's hard to feel things.",
+              soundshard = q "Gosh.  That sounds hard.",
+                a "It is hard."
+                a "Nah, it's fine."
+            a "Because I'm very lonely and there is no one special in my life.",
+              soundshard
+            a "All of the above.", soundshard
+            a "None of the above."
+        a "1 -- Meh.",
+          theyloveyoumore = q "Do you feel like they love you more than you love them?",
+            a "Yes, absolutely!",
+              howdoyoufeel = q "How do you feel about this state of affairs?",
+                a "It's pretty good, actually!"
+                a "It kinda sucks, actually!"
+                a "Eh, it's okay I guess."
+                a "Eh, it's not the best, but you know, whatever."
+            a "No way, definitely not.", howdoyoufeel
+            a "Eh, maybe kinda mostly.", howdoyoufeel
+            a "Not really, no?", howdoyoufeel
+        a "2 -- Pretty okay.", theyloveyoumore
+        a "3 -- Yep, lots.",
+          normalamount = q "So like a normal amount?",
+            a "Yes.", theyloveyoumore
+            a "No, more than normal.",
+              theyloveyouless = q "Do you feel like they love you less than you love them?",
+                a "Yep, no question.", howdoyoufeel
+                a "No way, in fact they love me even more!", howdoyoufeel
+                a "Eh, about the same amount.", howdoyoufeel
+                a "No, less than normal.", theyloveyoumore
+        a "4 -- OMG so much!", normalamount
+        a "5 -- Impossibly much!!!", theyloveyouless
 
   q "Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?",
     a "Heads and tails are equally likely.",

@@ -28,6 +28,7 @@ showQuestion = (letters) ->
   render = (text) ->
     text = text.replace "'", '\u2019'
     text = text.replace /"([^']+)"/, '\u201c$1\u201d'
+    text = text.replace '--', '\u2014'
   current.q = render current.q
   for a in current.aa
     a.a = render a.a
