@@ -1,0 +1,247 @@
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+  a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+> d. Hold on, I have a question!
+
+What is your question?
+
+  a. How should I indicate which answer I wish to choose?
+  b. What if I choose the wrong answer?
+> c. Who wrote this game?
+
+Are you sure you want to know?
+
+> a. Yes.
+  b. No.
+
+You're not trying to trick me, are you?
+
+> a. Of course not.
+  b. Why yes, actually, I am trying to trick you.
+
+So the judging period is over?
+
+  a. Yes.
+  b. No.
+> c. Uh... judging period?  What?
+
+You know, for the exposition thing.
+
+  a. Oh right, the exposition thing!
+> b. What exposition thing?
+
+Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
+
+  a. Oh, <em>that</em>!
+> b. Never heard of it.
+
+Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
+
+> a. Uh... sure... whatever you say.
+
+What's your name?
+
+  a. Emily
+  b. Jenni
+> c. Ryan
+
+And your last name?
+
+  a. Burrus
+  b. Freebern
+  c. Holman
+  d. Kinsman
+  e. Weisenberger
+  f. Stevens
+> g. Veeder
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+Wait.  Are you the <em>real</em> Ryan Veeder?
+
+> a. Yes.
+  b. No.
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+Why do you say that?
+
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+Hmm, yes... maybe we can come back to this later....
+
+> a. Okay.
+  b. What if I want to talk about it now?
+
+What goes between two sentences?
+
+> a. no space.
+  b. One space.
+  c. Two spaces.
+  d. U+200F WIDENED SPACE
+  e. It depends.
+
+How do you typically respond to stress?
+
+> a. Fight.
+  b. Flee.
+  c. Freeze.
+  d. Dissociate.
+
+Which country has the highest lowest point?
+
+> a. Andorra
+  b. Burundi
+  c. Lesotho
+  d. Rwanda
+
+Which country has the lowest lowest point?
+
+> a. Djibouti
+  b. Israel
+  c. Jordan
+  d. Syria
+
+Which country has the lowest highest point?
+
+> a. Cocos Islands
+  b. Maldives
+  c. Tokelau
+  d. Tuvalu
+
+What do you think of these geography questions?
+
+> a. They're interesting.
+  b. They're amusing.
+  c. They're boring.
+  d. They're terrible.
+
+Which country has the highest highest point?
+
+> a. Bhutan
+  b. China
+  c. Nepal
+  d. Tibet
+
+Lorem ipsum dolor sit...
+
+> a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+Grumpy wizards make a toxic brew for the jovial...
+
+> a. ...bishop.
+  b. ...duchess.
+  c. ...duke.
+  d. ...earl.
+  e. ...fool.
+  f. ...footman.
+  g. ...joker.
+  h. ...king.
+  i. ...knave.
+  j. ...knight.
+  k. ...lady.
+  l. ...lord.
+  m. ...pawn.
+  n. ...prince.
+  o. ...queen.
+  p. ...rook.
+  q. ...squire.
+
+About how strong is gravity?
+
+> a. 6.674×10<sup>-11</sup> N (m/kg)<sup>2</sup>
+  b. 6.674×10<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>
+  c. 6.674×10<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>
+  d. 4.302×10<sup>-3</sup> pc <i>M</i><sub>☉</sub><sup>-1</sup> (km/s)<sup>2</sup>
+  e. 0.01720209895
+  f. 9.8 m/s<sup>2</sup>
+  g. 1
+
+Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...
+
+> a. ...Venezuela.
+  b. ...Samoa.
+  c. ...Yemen.
+  d. ...South Africa.
+  e. ...Zambia.
+  f. ...Zimbabwe.
+
+Do you know CPR?
+
+> a. Yes.
+  b. No.
+  c. Kinda?
+
+Do you have friends?
+
+> a. Yes.
+  b. No.
+  c. Kinda?
+
+THE END
+
+

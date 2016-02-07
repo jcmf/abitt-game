@@ -122,7 +122,19 @@ module.exports = qq [
                             a "Nah, I'm good."
                 a "Typing doesn't work.",
                   q "Is the device you are using equipped with a physical keyboard?",
-                    a "Yes."
+                    a "Yes.",
+                      q "Maybe the keyboard focus is elsewhere?  Try, like, clicking somewhere in this window.",
+                        a "What do you think I've been doing this whole time?",
+                          q "Great, you're way ahead of me!  Now if you try typing again, does it work?",
+                            a "Yes.",
+                              q "Cool.",
+                                a "Thanks!"
+                            a "No.",
+                              q "Well, hmm.  Have you cleaned the keyboard recently?",
+                                a "Yes.",
+                                  probablywhy = q "That's probably why, then.",
+                                    a "Okay."
+                                a "No.", probablywhy
                     a "No.",
                       q "Then I suggest you go with tapping instead.",
                         a "Well, okay."
@@ -152,8 +164,50 @@ module.exports = qq [
           q "Are you sure you want to know?",
             a "Yes.",
               q "You're not trying to trick me, are you?",
-                a "Of course not."
-                a "Why yes, actually, I am trying to trick you."
+                a "Of course not.",
+                  q "So the judging period is over?",
+                    a "Yes.", ->
+                      now = new Date()
+                      if now.getTime() < 1460617200000
+                        q "Then why does your clock say #{now}?",
+                          a "Uhhhh... whatever, never mind."
+                      else
+                        author_name = (String.fromCharCode x for x in [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116]).join ''
+                        q "You're sure you want me to reveal this?",
+                          a "Eh... I changed my mind."
+                          a "Yes, for the last time, I am telling you that I actually want you to tell me the name of the person who wrote this game.",
+                            q "This game was written by #{author_name}.",
+                              a "Thank you."
+                    a "No.",
+                      betternottell = q "Then I guess I'd better not tell you!",
+                        a "Well, I respect your decision, even though I disagree with it.",
+                          q "Thanks!  That's very big of you.",
+                            a "Aw shucks."
+                        a "Aw cmon.",
+                          q "Nope, my mind's made up.",
+                            a "Well shoot."
+                            a "Drat."
+                            a "Curses!"
+                            a "Zut alors."
+                            a "Fiddlesticks."
+                    a "Uh... judging period?  What?",
+                      q "You know, for the exposition thing.",
+                        a "Oh right, the exposition thing!",
+                          q "Yes.  That.",
+                            a "Okay."
+                        a "What exposition thing?",
+                          q "Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!",
+                            a "Oh, <em>that</em>!",
+                              q "So you understand my position?",
+                                a "Totally."
+                                a "No, I'm just trying to change the subject.  Can't you take a hint?",
+                                  q "Oh, sorry!  We can talk about something else now.",
+                                    a "Thanks!"
+                            a "Never heard of it.",
+                              q "Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.",
+                                a "Uh... sure... whatever you say.",
+                                  -> @neverheardofexpo = true
+                a "Why yes, actually, I am trying to trick you.", betternottell
             a "No.",
               q "Then I won't tell you.",
                 a "Phew!"
@@ -161,7 +215,7 @@ module.exports = qq [
   q "What's your name?",
     a "Emily",
       q "And your last name?",
-        a "Boegheim", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Boegheim']
+        a "Boegheim", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Boegheim']; @expo = true
         a "Carroll", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Carroll']
         a "Ryan", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Ryan']
         a "Short", -> [@title, @fn, @ln] = ['Ms.', 'Emily', 'Short']
@@ -170,7 +224,7 @@ module.exports = qq [
         a "Earl", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Earl']
         a "Jorgensen", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Jorgensen']
         a "Maddox", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Maddox']
-        a "Polodna", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Polodna']
+        a "Polodna", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Polodna']; @expo = true
         a "Vedenoja", -> [@title, @fn, @ln] = ['Ms.', 'Jenni', 'Vedenoja']
     a "Ryan",
       q "And your last name?",
@@ -180,7 +234,7 @@ module.exports = qq [
         a "Kinsman", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Kinsman']
         a "Weisenberger", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Weisenberger']
         a "Stevens", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Stevens']
-        a "Veeder", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
+        a "Veeder", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']; @expo = true
 
   q "You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?",
     a "See what the other drivers are doing."
@@ -209,9 +263,9 @@ module.exports = qq [
                           q "Yes?",
                             a "I'm actually...",
                               q "Yes???",
-                                (meet = (t, f, l) ->
+                                (meet = (t, f, l, expo) ->
                                   a "...#{f} #{l}.",
-                                    q (-> [@title, @fn, @ln] = [t, f, l]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
+                                    q (-> [@title, @fn, @ln, @expo] = [t, f, l, expo]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
                                       a "Such as...?"
                                 )('Mr.', 'Graham', 'Nelson'),
                                 meet 'Ms.', 'Hillary', 'Clinton'
@@ -219,9 +273,9 @@ module.exports = qq [
                                 meet 'Ms.', 'Anastasia', 'Romanov'
                                 ->
                                   if @fn is 'Ryan'
-                                    meet 'Ms.', 'Jenni', 'Polodna'
+                                    meet 'Ms.', 'Jenni', 'Polodna', true
                                   else
-                                    meet 'Mr.', 'Ryan', 'Veeder'
+                                    meet 'Mr.', 'Ryan', 'Veeder', true
                     a "No.", figured
         a "No.",
           q (-> "So what you're saying is that you were telling the truth about... wait... so... you're just <em>#{if /^[AEIOU]/.test @fn then 'an' else 'a'}</em> #{@fn} #{@ln}?  Is that it?"),
@@ -453,6 +507,10 @@ module.exports = qq [
     a "Flee."
     a "Freeze."
     a "Dissociate."
+
+  ->
+    if not (@expo and @neverheardofexpo) then return
+    # XXX do something with this
 
   q "Which country has the highest lowest point?",
     a "Andorra"
