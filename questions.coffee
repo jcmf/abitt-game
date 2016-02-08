@@ -582,6 +582,11 @@ module.exports = qq [
     a "9.8 m/s<sup>2</sup>" # at Earth's surface
     a "1" # natural units
 
+  q "Do you have friends?",
+    a "Yes."
+    a "No."
+    a "Kinda?"
+
   q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
     a "...Venezuela."
     a "...Samoa."
@@ -592,13 +597,82 @@ module.exports = qq [
 
   q "Do you know CPR?",
     a "Yes."
-    a "No."
-    a "Kinda?"
+    a "No.",
+      q "Would you like to learn?",
+        a "Sure."
+        a "No thanks.",
+          q "Why not?",
+            a "Sounds boring.",
+              q "It's pretty exciting, actually!",
+                a "Oh well, in that case, let's do this!",
+            a "I mean I already kinda know some things, I'm just not, like, certified or anything."
+            a "Are you seriously offering to teach me CPR right now?",
+              q "Yes.",
+                a "Huh.  All right.",
+    a "What is CPR?",
+      q "Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!",
+        a "Wow, sounds awesome!  Tell me more!"
 
-  q "Do you have friends?",
-    a "Yes."
-    a "No."
-    a "Kinda?"
+  q "Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?",
+    a "Call 911.",
+      q "Nice!  That is exactly correct!  Okay, so you dial and it's ringing and you're getting a recording about being transferred and not to hang up and what are you doing in the meantime?",
+        a "Begin CPR.",
+          q "Actually, if you're in a movie theater, there's a good chance that there's an AED in the lobby.  You might want to grab that first.",
+            a "What's an AED?",
+              q "It's an Automatic External Defribrillator.  It's a little doodad that can sense when a heart is malfunctioning and shock it back into its normal rhythm.",
+                a "Wow, that sounds super handy!  I would totally go look for one.",
+                  q "Okay!  You run into the lobby and... what are you looking for exactly?",
+                    a "A red heart with a spark in the middle.",
+                      redorgreen = q "Could be red or green.",
+                        rggotit = a "Got it.",
+                          q "Cool.  You find it and bring it back and open it up and it starts talking.  What now?",
+                            a "Stick the electrodes on the victim's chest.",
+                              q "Sure, there's a little diagram on there, and... wait, these go under the clothes, don't they?",
+                                a "Nope!  We're not doing this.  Sorry.",
+                                  q "That is okay!  Nobody is going to make you do anything you don't feel comfortable doing.",
+                                    a "Thank you."
+                                    a "Aren't you supposed to, like, tell me that they might die if I don't do this?",
+                                      q "Do you want me to tell you that?",
+                                        a "Yes.",
+                                          q "Why?",
+                                            a "Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it.",
+                                              q "It's true that someone might die, and it's true that I might like to convince you of something, but...." # XXX
+                                            a "Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me." # XXX
+                                            a "Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?" # XXX
+                                        a "No.",
+                                          q "Then I won't.",
+                                            a "Okay."
+                                        a "Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?" # XXX
+                                a "No problem, I pull their shirt up." # XXX
+                                a "Wow, this is intense.  Maybe I should pay attention to what the voice is saying." # XXX
+                            a "Wait and listen to what the AED is telling me to do." # XXX
+                    a "A green heart with a lightning bolt in it.", redorgreen
+                    a "A little placard that says AED on it.",
+                      q "Yep, and it'll almost certainly have the symbol too, either the red or the green one.", rggotit
+                    a "Any of the above.",
+                      q "Yep, it'll likely have both the letters AED and the red or green symbol.", rggotit
+                a "Yeah, thanks, I'm gonna leave that stuff for the professionals!",
+                  q "Actually, AEDs are designed to be used by anyone.  Professional paramedics have way fancier gear.",
+                    a "Yeah but I have no idea how to use one." # XXX
+                    a "Also isn't it super dangerous to shock someone's heart just because they fell down?  That's just stupid." # XXX
+            a "Good idea, I'll go look for it!" # XXX
+            a "Good idea, I'll send someone to fetch it and do CPR in the meantime!" # XXX
+        a "Go find an employee." # XXX
+        a 'Shout "OMG, does anybody know CPR?"' # XXX
+        a "Run around in circles." # XXX
+        a "Scream." # XXX
+        a "Shout." # XXX
+        a "Sit quietly." # XXX
+        a "Panic." # XXX
+    a 'Shout "OMG, does anybody know CPR?"' # XXX
+    a "Go find an employee." # XXX
+    a "Hide." # XXX
+    a "Run." # XXX
+    a "Look for an AED." # XXX
+    a "Stand around doing nothing." # XXX
+    a "Panic." # XXX
+    a "Give CPR." # XXX
+    a "Don't give CPR." # XXX
 
   q "THE END"
 ]
