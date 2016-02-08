@@ -535,14 +535,15 @@ module.exports = qq [
   q "What do you think of these geography questions?",
     a "They're interesting."
     a "They're amusing."
-    a "They're boring."
-    a "They're terrible."
+    a "They're boring.", -> @nogeo = true
+    a "They're terrible.", -> @nogeo = true
 
-  q "Which country has the highest highest point?",
-    a "Bhutan"
-    a "China"
-    a "Nepal"
-    a "Tibet"
+  -> if not @nogeo
+    q "Which country has the highest highest point?",
+      a "Bhutan"
+      a "China"
+      a "Nepal"
+      a "Tibet"
 
   q "Lorem ipsum dolor sit...",
     a "...amah."
@@ -587,13 +588,14 @@ module.exports = qq [
     a "No."
     a "Kinda?"
 
-  q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
-    a "...Venezuela."
-    a "...Samoa."
-    a "...Yemen."
-    a "...South Africa."
-    a "...Zambia."
-    a "...Zimbabwe."
+  -> if not @nogeo
+    q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
+      a "...Venezuela."
+      a "...Samoa."
+      a "...Yemen."
+      a "...South Africa."
+      a "...Zambia."
+      a "...Zimbabwe."
 
   q "Do you know CPR?",
     a "Yes."
