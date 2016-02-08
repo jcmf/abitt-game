@@ -329,6 +329,7 @@ module.exports = qq [
 
   q "Very good!  Now, which of these would you rather be?",
     a "a cowboy",
+      # XXX offer to sing the song, multiple choice lyrics
       likesong = q "Like the song?",
         a "Yes, like the song!"
         a "No, I didn't even realize that was a song."
@@ -428,6 +429,7 @@ module.exports = qq [
         a "The specific typesetting system."
         a "Full justification vs ragged right."
 
+  # XXX start explaining the solution
   -> if @premath then q "Bear with me here.  How much bigger than one tenth is one ninth?",
     a "About 1%.",
       q "And why is that?",
