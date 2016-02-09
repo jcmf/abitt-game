@@ -531,6 +531,12 @@ module.exports = qq [
     a "Freeze."
     a "Dissociate."
 
+  -> if @geo then q "Which country has the highest lowest point?",
+    a "Andorra"
+    a "Burundi"
+    a "Lesotho"
+    a "Rwanda"
+
   -> if @expo and @neverheardofexpo
     q "Something's been bothering me about some of your earlier answers.",
       a "Oh?  What is it?",
@@ -629,12 +635,6 @@ module.exports = qq [
                 a "What's that supposed to mean?",
                   q "You chose poorly.",
                     a "I thought that might have been what you were implying."
-
-  -> if @geo then q "Which country has the highest lowest point?",
-    a "Andorra"
-    a "Burundi"
-    a "Lesotho"
-    a "Rwanda"
 
   -> if @geo then q "Which country has the lowest lowest point?",
     a "Djibouti"
