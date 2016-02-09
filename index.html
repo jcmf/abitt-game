@@ -11259,11 +11259,79 @@ ref = require('./dsl.coffee'), qq = ref.qq, q = ref.q, a = ref.a;
 SKIP = function() {};
 
 module.exports = qq([
-  q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.", a("Okay."), a("Sounds good."), a("I consent to this."), a("Hold on, I have a question!", q("What is your question?", a("How should I indicate which answer I wish to choose?", q("Choose an answer by clicking or tapping it, or by typing the appropriate letter.", a("Thanks!"), a("Wait, there's a problem.", q("What seems to be the problem?", a("Clicking doesn't work.", q("Are you using a mouse?", a("Yes.", q("Is the mouse you are using connected to the device that is displaying these words?", a("Yes.", q("Try clicking harder.", a("Wow, that totally worked, thanks!"))), a("No.", q("Is the mouse you are using hot-swappable?", a("Yes.", q("Try plugging the mouse into whatever thing you're reading these words on.", a("Wow, that totally worked, thanks!"))), a("No.", q("Then I'm afraid you're out of luck.", a("Oh well."))), a("What?", q("Does the mouse feel hot to the touch?", a("Yes.", q("Try immersing it in ice water.", a("Done!", q("Better?", a("Much!", q("Excellent.", a("Thanks!"))))))), a("No.", q("Try rubbing it vigorously.", a("It's working! It's working!"), a("It's not working.", q("You're not rubbing vigorously enough, are you?", a("Am too."))))), a("Maybe?", q("If you had to guess, would you say that the mouse's temperature is more or less than 293 degrees Kelvin?", a("Yes.", q("Then it should be within normal operating parameters.", a("Thank goodness!"))), a("No.", q("A wise decision!", a("Huh?"))))))))))), a("No.", q("Try using a mouse.", a("Sounds good, thanks!"), a("Maybe later.", q("Let me know when you're ready to continue.", a("I am ready now!"))))))), a("Tapping doesn't work.", q("Is the screen you are tapping touch-sensitive?", a("Yes.", q("Are you sure?", a("No."))), a("No.", q("Try clicking or typing instead.", a("Well, okay."), a("But you said....", q("Let's move on, shall we?", a("Understood."), a("I hear and obey."), a("Your wish is my command."))))), a("I'm not sure.", q("Look closely.  Does it look... glossy?", a("Yes.", q("Have you tried using one of those polarizing filters?", a("Yes.", q("How was it?", a("Pretty good I guess?", q("Would you recommend it to a friend?", a("Yes."), a("No."))), a("It was so great, I could hardly believe it.", q("Can I borrow it later?", a("Yes.", q("Thanks!", a("You're welcome!"))), a("No.", q("Please?", a("Forget it."))))), a("Terrible.", q("I'm sorry.", a("Don't say that.  It's not your fault.", q("Isn't it?", a("Yes, it isn't."), a("No, it isn't."))))))), a("No.", q("You should totally try one.", a("Great idea!"))))), a("No.", q("Have you considered polishing it?", a("Yes.", q("But you didn't actually do it?", a("No."))), a("No.", q("Well, are you going to do it now?", a("Nah, I'm good."))), a("With what?", q("Screen polish, I suppose?", a("That sounds reasonable."))))))), a("Screen?  What screen?", q("You don't have a screen?", a("I used to, but I lost it.", q("That is very sad!", a("Yes."))), a("Why would I have a screen?", q("Oh, uh... no reason....", a("Okay."))), a("Oh wait, there it is, never mind."), a("I mean I do, but it isn't, like, here.", q("Do you want to go get it?", a("Nah, I'm good."))))))), a("Typing doesn't work.", q("Is the device you are using equipped with a physical keyboard?", a("Yes.", q("Maybe the keyboard focus is elsewhere?  Try, like, clicking somewhere in this window.", a("What do you think I've been doing this whole time?", q("Great, you're way ahead of me!  Now if you try typing again, does it work?", a("Yes.", q("Cool.", a("Thanks!"))), a("No.", q("Well, hmm.  Have you cleaned the keyboard recently?", a("Yes.", probablywhy = q("That's probably why, then.", a("Okay."))), a("No.", probablywhy))))))), a("No.", q("Then I suggest you go with tapping instead.", a("Well, okay."), a("Awww, but I wanted to type things!", q("Too bad.", a("You're no fun."))))))))))), a("What if I choose the wrong answer?", q("There are no wrong answers.", a("That's very reassuring, thanks!"), a("No, I mean, what if I meant to choose one answer but choose a different one by mistake?", q("Does the Backspace key work?", a("Wow, yes, it totally does."), a("It, uh, doesn't seem to, no.", q("Well, it's supposed to.", a("Well, it doesn't.", q("I'm sorry.", a("It's okay, I'll manage somehow."))))), a("What are you even talking about?  I don't have a backspace key!", q("Then try using your browser's Back button.", a("But I don't wanna.", q("Then don't.", a("Okay, I won't!", q("Good!", a("Yep!"))))), a("Fine, if you insist."))))))), a("Who wrote this game?", q("Are you sure you want to know?", a("Yes.", q("You're not trying to trick me, are you?", a("Of course not.", q("So the judging period is over?", a("Yes.", function() {
+  q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.", a("Okay."), a("Sounds good."), a("I consent to this."), a("Hold on, I have a question!", q("What is your question?", a("How should I indicate which answer I wish to choose?", q("Choose an answer by clicking or tapping it, or by typing the appropriate letter.", a("Thanks!"), a("Wait, there's a problem.", q("What seems to be the problem?", a("Clicking doesn't work.", q("Are you using a mouse?", a("Yes.", q("Is the mouse you are using connected to the device that is displaying these words?", a("Yes.", q("Try clicking harder.", a("Wow, that totally worked, thanks!", function() {
+    return this.mindgame = "Like when you said to try clicking harder on the mouse.";
+  }))), a("No.", q("Is the mouse you are using hot-swappable?", a("Yes.", q("Try plugging the mouse into whatever thing you're reading these words on.", a("Wow, that totally worked, thanks!", function() {
+    return this.mindgame = "Like when you asked about whether the mouse was hot-swappable.";
+  }))), a("No.", q("Then I'm afraid you're out of luck.", a("Oh well.", function() {
+    return this.mindgame = "Like when you said you were afraid I was out of luck.";
+  }))), a("What?", q("Does the mouse feel hot to the touch?", a("Yes.", q("Try immersing it in ice water.", a("Done!", q("Better?", a("Much!", q("Excellent.", a("Thanks!", function() {
+    return this.mindgame = "Like when you forced me to dunk my mouse in a bucket of ice water.";
+  }))))))), a("No.", q("Try rubbing it vigorously.", a("It's working! It's working!", q("Keep going!", a("OMG this is AMAZING!", function() {
+    return this.mindgame = "Like that rubbing vigorously thing.";
+  }))), a("It's not working.", q("You're not rubbing vigorously enough, are you?", a("Am too.", q("Are so.", a("Is not.", function() {
+    return this.mindgame = "Like that rubbing vigorously thing.";
+  }))))))), a("Maybe?", q("If you had to guess, would you say that the mouse's temperature is more or less than 300 degrees Kelvin?", a("Yes.", q("Then it should be within normal operating parameters.", a("Thank goodness!", function() {
+    return this.mindgame = "Like the thing where my mouse was within normal operating parameters.";
+  }))), a("No.", q("A wise decision!", a("Huh?", function() {
+    return this.mindgame = "Like when you asked if it was more or less but the choices were yes and no and then you said it was a wise decision.";
+  }))))))))))), a("No.", q("Try using a mouse.", a("Sounds good, thanks!"), a("Maybe later.", q("Let me know when you're ready to continue.", a("I am ready now!", function() {
+    return this.mindgame = "Like the thing where... I think you were supposed to be waiting for me to go get a mouse?";
+  }))))))), a("Tapping doesn't work.", q("Is the screen you are tapping touch-sensitive?", a("Yes.", q("Are you sure?", a("No.", function() {
+    return this.mindgame = "Like when I told you the screen was touch-sensitive but then you made me say it wasn't.";
+  }))), a("No.", q("Try clicking or typing instead.", a("Well, okay.", function() {
+    return this.mindgame = "Like when you said to try clicking or... actually that was pretty reasonable advice, never mind.";
+  }), a("But you said....", function() {
+    this.mindgame = "Like when you said let's move on and gave me three increasingly obsequious choices.";
+    return q("Let's move on, shall we?", a("Understood.", a("I hear and obey.")), a("Your wish is my command."));
+  }))), a("I'm not sure.", q("Look closely.  Does it look... glossy?", a("Yes.", q("Have you tried using one of those polarizing filters?", a("Yes.", q("How was it?", a("Pretty good I guess?", function() {
+    this.mindgame = "Like when you asked me whether I would recommend the polarizing filter to a friend.";
+    return q("Would you recommend it to a friend?", a("Yes."), a("No."));
+  }), a("It was so great, I could hardly believe it.", function() {
+    this.mindgame = "Like when you asked to borrow my polarizing filter.";
+    return q("Can I borrow it later?", a("Yes.", q("Thanks!", a("You're welcome!"))), a("No.", q("Please?", a("Forget it."))));
+  }), a("Terrible.", function() {
+    this.mindgame = "Like when you apologized about the polarizing filter and my only option was to say that it wasn't your fault.";
+    return q("I'm sorry.", a("Don't say that.  It's not your fault.", q("Isn't it?", a("Yes, it isn't."), a("No, it isn't."))));
+  }))), a("No.", q("You should totally try one.", a("Great idea!", function() {
+    return this.mindgame = "Like when you said I should try a polarizing filter and then made me agree with you.";
+  }))))), a("No.", function() {
+    this.mindgame = "Like that thing about polishing the screen to make it look glossy.";
+    return q("Have you considered polishing it?", a("Yes.", q("But you didn't actually do it?", a("No."))), a("No.", q("Well, are you going to do it now?", a("Nah, I'm good."))), a("With what?", q("Screen polish, I suppose?", a("That sounds reasonable.", function() {
+      return this.mindgame = "Like that thing about screen polish.  I don't think that's even a real thing!";
+    }))));
+  }))), a("Screen?  What screen?", q("You don't have a screen?", a("I used to, but I lost it.", q("That is very sad!", a("Yes.", function() {
+    return this.mindgame = "Like that thing about losing my screen.";
+  }))), a("Why would I have a screen?", q("Oh, uh... no reason....", a("Okay.", function() {
+    return this.mindgame = "Like that thing about me having a screen.  Why would I have a screen?";
+  }))), a("Oh wait, there it is, never mind.", function() {
+    return this.mindgame = "Like that thing about me losing my screen and then finding it again.";
+  }), a("I mean I do, but it isn't, like, here.", q("Do you want to go get it?", a("Nah, I'm good.", function() {
+    return this.mindgame = "Like that thing about me not wanting to go get my screen.";
+  }))))))), a("Typing doesn't work.", q("Is the device you are using equipped with a physical keyboard?", a("Yes.", q("Maybe the keyboard focus is elsewhere?  Try, like, clicking somewhere in this window.", a("What do you think I've been doing this whole time?", q("Great, you're way ahead of me!  Now if you try typing again, does it work?", a("Yes.", q("Cool.", a("Thanks!", function() {
+    return this.mindgame = "Like that thing about the keyboard focus and then typing worked again.";
+  }))), a("No.", q("Well, hmm.  Have you cleaned the keyboard recently?", a("Yes.", probablywhy = function() {
+    this.mindgame = "Like that thing about whether I'd cleaned the keyboard recently.";
+    return q("That's probably why, then.", a("Okay."));
+  }), a("No.", probablywhy))))))), a("No.", q("Then I suggest you go with tapping instead.", a("Well, okay.", function() {
+    return this.mindgame = "Like that thing with tapping instead of typing.";
+  }), a("Awww, but I wanted to type things!", q("Too bad.", a("You're no fun.", function() {
+    return this.mindgame = "Like that thing where I wanted to type things but you said I couldn't.";
+  }))))))))))), a("What if I choose the wrong answer?", q("There are no wrong answers.", a("Thanks, that's very reassuring!", function() {
+    return this.mindgame = "Like that thing you said about there being no wrong answers.";
+  }), a("No, I mean, what if I meant to choose one answer but choose a different one by mistake?", q("Does the Backspace key work?", a("Wow, yes, it totally does."), a("It, uh, doesn't seem to, no.", q("Well, it's supposed to.", a("Well, it doesn't.", q("I'm sorry.", a("It's okay, I'll manage somehow.", function() {
+    return this.mindgame = "Like that thing where my Backspace key doesn't work.";
+  }))))), a("What are you even talking about?  I don't have a backspace key!", q("Then try using your browser's Back button.", a("But I don't wanna.", q("Then don't.", a("Okay, I won't!", q("Good!", a("Yep!", function() {
+    return this.mindgame = "Like that thing where you were trying to get me to use the stupid back button in my stupid browser.";
+  }))))), a("Fine, if you insist.", function() {
+    return this.mindgame = "Like that thing where I had to use the back button in my browser instead of the backspace key.";
+  }))))))), a("Who wrote this game?", q("Are you sure you want to know?", a("Yes.", q("You're not trying to trick me, are you?", a("Of course not.", q("So the judging period is over?", a("Yes.", function() {
     var author_name, now, x;
     now = new Date();
     if (now.getTime() < 1460617200000) {
-      return q("Then why does your clock say " + now + "?", a("Uhhhh... whatever, never mind."));
+      return q("Then why does your clock say " + now + "?", a("Uhhhh... whatever, never mind.", function() {
+        return this.mindgame = "Like that thing where you told me the current date and time.";
+      }));
     } else {
       author_name = ((function() {
         var i, len, ref1, results;
@@ -11275,11 +11343,29 @@ module.exports = qq([
         }
         return results;
       })()).join('');
-      return q("You're sure you want me to reveal this?", a("Eh... I changed my mind."), a("Yes, for the last time, I am telling you that I actually want you to tell me the name of the person who wrote this game.", q("This game was written by " + author_name + ".", a("Thank you."))));
+      return q("You're sure you want me to reveal this?", a("Eh... I changed my mind.", function() {
+        return this.mindgame = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off.";
+      }), a("Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.", q("This game was written by " + author_name + ".", a("Thank you.", function() {
+        return this.mindgame = "Like that thing where you took sooooo much convincing to tell me who wrote this.";
+      }))));
     }
-  }), a("No.", betternottell = q("Then I guess I'd better not tell you!", a("Well, I respect your decision, even though I disagree with it.", q("Thanks!  That's very big of you.", a("Aw shucks."))), a("Aw cmon.", q("Nope, my mind's made up.", a("Well shoot."), a("Drat."), a("Curses!"), a("Zut alors."), a("Fiddlesticks."))))), a("Uh... judging period?  What?", q("You know, for the exposition thing.", a("Oh right, the exposition thing!", q("Yes.  That.", a("Okay."))), a("What exposition thing?", q("Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!", a("Oh, <em>that</em>!", q("So you understand my position?", a("Totally."), a("No, I'm just trying to change the subject.  Can't you take a hint?", q("Oh, sorry!  We can talk about something else now.", a("Thanks!"))))), a("Never heard of it.", q("Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.", a("Uh... sure... whatever you say.", function() {
+  }), a("No.", betternottell = q("Then I guess I'd better not tell you!", a("Well, I respect your decision, even though I disagree with it.", q("Thanks!  That's very big of you.", a("Aw shucks.", function() {
+    return this.mindgame = "Like that thing where I had to respect your decision even though I disagreed with it.";
+  }))), a("Aw cmon.", function() {
+    this.mindgame = "Like that thing where you refused to tell me who wrote this game just because the judging period wasn't up yet!";
+    return q("Nope, my mind's made up.", a("Well shoot."), a("Drat."), a("Curses!"), a("Zut alors."), a("Fiddlesticks."));
+  }))), a("Uh... judging period?  What?", q("You know, for the exposition thing.", a("Oh right, the exposition thing!", q("Yes.  That.", a("Okay.", function() {
+    return this.mindgame = "Like the thing with the judging period and the exposition thing.";
+  }))), a("What exposition thing?", q("Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!", a("Oh, <em>that</em>!", q("So you understand my position?", a("Totally.", function() {
+    return this.mindgame = "Like the thing where you were explaining about the First Quadrennial whatever it is.";
+  }), a("No, I'm just trying to change the subject.  Can't you take a hint?", q("Oh, sorry!  We can talk about something else now.", a("Thanks!", function() {
+    return this.mindgame = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!";
+  }))))), a("Never heard of it.", q("Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.", a("Uh... sure... whatever you say.", function() {
+    this.mindgame = "Like that thing about repeated credible threats.";
     return this.neverheardofexpo = true;
-  }))))))))), a("Why yes, actually, I am trying to trick you.", betternottell))), a("No.", q("Then I won't tell you.", a("Phew!")))))))), q("What's your name?", a("Emily", q("And your last name?", a("Boegheim", function() {
+  }))))))))), a("Why yes, actually, I am trying to trick you.", betternottell))), a("No.", q("Then I won't tell you.", a("Phew!", function() {
+    return this.mindgame = "Like that thing where I was trying to ask an innocent question about who wrote this game and you got all defensive.";
+  })))))))), q("What's your name?", a("Emily", q("And your last name?", a("Boegheim", function() {
     var ref1;
     ref1 = ['Ms.', 'Emily', 'Boegheim'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2];
     return this.expo = true;
@@ -11331,7 +11417,7 @@ module.exports = qq([
     ref1 = ['Mr.', 'Ryan', 'Veeder'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2];
     return this.expo = true;
   })))), q("You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?", a("See what the other drivers are doing."), a("Try to start the car again."), a("Turn on the radio."), a("Find my phone."), a("Wait."), a("Run.")), q((function() {
-    return "Wait.  Are you the <em>real</em> " + this.fn + " " + this.ln + "?";
+    return "Hold on.  Are you the <em>real</em> " + this.fn + " " + this.ln + "?";
   }), a("Yes.", function() {
     return this.real = true;
   }), a("No.", q("So you were just lying to my face earlier?", a("Yes.", q("But what about just now?  Were you lying just now?", a("Yes.", figured = q((function() {
@@ -11373,7 +11459,7 @@ module.exports = qq([
   }))), a("Tails is much more likely than heads.", q("Why do you say that?", a("Because tails is overdue now."), a("Because that's how a fair coin works."), a("Because I'm not even paying attention anymore."))), a("I don't know.", q("Why do you say that?", a("Because that question is unanswerable."), a("Because that question is complicated."), a("Because that question is difficult."), a("Because that question is boring."), a("Because that question is bad.")))), q("Hmm, yes... maybe we can come back to this later....", a("Okay."), a("What if I want to talk about it now?", q("Then I guess you're going to be disappointed, aren't you?", a("I guess.", q("Sorry, that came out... I didn't mean to... just bear with me, okay?  We'll get through this.", surewhatevs = a("Sure, whatever.", q("No, seriously.  This will be good!  Just a few more questions, okay?", a("I'm listening."))))), a("Am I?", q("Well, no, I mean... no, that's not what... just bear with me, okay?  We'll get through this.", surewhatevs))))), q("What goes between two sentences?", a("no space."), a("One space."), a("Two spaces."), a("U+200F WIDENED SPACE"), a("It depends.", q("On what?", a("The medium."), a("Monospaced vs proportional."), a("The specific typesetting system."), a("Full justification vs ragged right.")))), function() {
     var goodcanigo, mathend;
     if (this.premath) {
-      return q("Bear with me here.  How much bigger than one tenth is one ninth?", a("About 1%.", q("And why is that?", a("You just, uh, add together, the, like....", mathend = function(x) {
+      return q("How much bigger than one tenth is one ninth?", a("About 1%.", q("And why is that?", a("You just, uh, add together, the, like....", mathend = function(x) {
         return function() {
           var therewego;
           if (x) {
@@ -11381,21 +11467,46 @@ module.exports = qq([
           }
           return q("Mmm, yes, I see... sorry, I just need to make a note here....", a("Okay....", therewego = q("Ah yes, there we go.  Where were we?", a("You, uh, were asking me questions?", q("Indeed I was!  Shall we get back to that?", a("Okay."))))), a("Are you done?", therewego));
         };
-      }), a("It, uh, I mean, if you subtract, um....", mathend(true)), a("I think you can, like, multiply them and, er....", mathend), a("Well you just, er, divide one by the, uh....", mathend), a("Pass!  Can I pass?", q("Sure.", a("Thank you!"))))), a("About 9%.", q("Is it?  Why do you think that?", a("It's, um... wait....", mathend), a("I'm, uh, not sure if....", mathend), a("I'm sorry, I take it back, I take it back!", q("Oh, it's far too late for that.", a("Oh no!  What do I do?  What do I <em>do</em>???", q("Please remain calm and continue to answer questions.", a("yes yes I will do this yes"))))), a("Please forgive me.", q("Do you promise not to do it again?", a("Yes.", q("Then I forgive you.", a("Thank you!"))), a("No.", q("But you expect me to forgive you anyway?", a("Yes.", q("Well... you're right!", a("Thanks!", q("I don't mean about the original question, I mean....", a("No no, I get it.", goodcanigo = q("Good", a("Can I go now?", q("Sure, just... I need to ask just a few more questions....", a("Okay...."))))), a("Wait, what do you mean?", q("I mean that I forgive you.", a("Oh.  Thanks!", q("You're welcome.", a("So... are we done here?", q("Well, no, I have more questions....", a("Okay...."))))))))))), a("No.", q("Then I believe we have an understanding.", a("Yes.", goodcanigo))))))))), a("About 10%.", q("And what led you to choose <em>that</em> option?", a("Well, it... it seemed like....", mathend), a("Well I mean it's clearly <em>close</em> to that, because it's not the other one, because otherwise there's no decoy, and, uh, it's got fewer significant figures than... so I mean... you see where I'm going with this, right?", mathend), a("Oh yeah, yeah!  That one!  B!  I choose B!  That sounds good.", mathend), a("Wait, no, B is bullshit, isn't it?", mathend))), a("About 11%.", q("Can you explain why that is?", a("Sure, it's just... one over nine is point one repeating, and then you just move the decimal and subtract one and....", mathend(true)), a("Well, it's, like, the ratio is clearly just a little bit bigger than one tenth itself, so....", mathend(true)), a("I totally could, if these answers didn't suck so much.", mathend(true)), a("No, not really.", mathend), a("Eleven is my favorite number!", q("OMG mine too!", a("High five!", q("High five!", a("Awesome.", q("Ready for more questions?", a("Totally ready!"))))))))));
+      }), a("It, uh, I mean, if you subtract, um....", mathend(true)), a("I think you can, like, multiply them and, er....", mathend), a("Well you just, er, divide one by the, uh....", mathend), a("Pass!  Can I pass?", q("Sure.", a("Thank you!"))))), a("About 9%.", q("Is it?  Why do you think that?", a("It's, um... wait....", mathend), a("I'm, uh, not sure if....", mathend), a("I'm sorry, I take it back, I take it back!", q("Oh, it's far too late for that.", a("Oh no!  What do I do?  What do I <em>do</em>???", q("Please remain calm and continue to answer questions.", a("yes yes I will do this yes"))))), a("Please forgive me.", q("Do you promise not to do it again?", a("Yes.", q("Then I forgive you.", a("Thank you!"))), a("No.", q("But you expect me to forgive you anyway?", a("Yes.", q("Well... you're right!", a("Thanks!", q("I don't mean about the original question, I mean....", a("No no, I get it.", goodcanigo = q("Good", a("Can I go now?", q("Sure, just... I need to ask just a few more questions....", a("Okay...."))))), a("Wait, what do you mean?", q("I mean that I forgive you.", a("Oh.  Thanks!", q("You're welcome.", a("So... are we done here?", q("Well, no, I have more questions....", a("Okay...."))))))))))), a("No.", q("Then I believe we have an understanding.", a("Yes.", goodcanigo))))))))), a("About 10%.", q("And what led you to choose <em>that</em> option?", a("Well, it... it seemed like....", mathend), a("Well I mean it's clearly <em>close</em> to that, because it's not the other one, because otherwise there's no decoy, and, uh, it's got fewer significant figures than... so I mean... you see where I'm going with this, right?", mathend), a("Oh yeah, yeah!  That one!  B!  I choose B!  That sounds good.", mathend), a("Wait, no, B is bullshit, isn't it?", mathend))), a("About 11%.", q("Can you explain why that is?", a("Sure, it's just... one over nine is point one repeating, and then you just move the decimal and subtract one and....", mathend(true)), a("Well, it's, like, the ratio is clearly just a little bit bigger than one tenth itself, so....", mathend(true)), a("I totally could, if these answers didn't suck so much.", mathend(true)), a("No, not really.", mathend), a("Eleven is my favorite number!", q("OMG mine too!", a("High five!", q("High five!", a("Awesome.", q("Ready for more questions?", a("Totally ready!", function() {
+        return this.math = true;
+      }))))))))));
     }
   }, q("How do you typically respond to stress?", a("Fight."), a("Flee."), a("Freeze."), a("Dissociate.")), function() {
-    if (!(this.expo && this.neverheardofexpo)) {
-
+    var besilent, huh, neversay, wellkinda;
+    if (this.expo && this.neverheardofexpo) {
+      return q("Something's been bothering me about some of your earlier answers.", a("Oh?  What is it?", q("Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!", a("So?", q("So?  You're " + this.fn + " " + this.ln + "!", a("So?", this.fn === 'Ryan' ? q("You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?", a("What an impertinent question!", q("I thought it was a pretty good question, actually!", besilent = a("Be silent, or face the consequences!", q("What consequences might those be?", a("I'll kick your ass!", neversay = q("Ha!  The <em>real</em> @{fn} @{ln} would <em>never</em> say that!", a("Omigosh, you're right!  I've been living a lie!", q("Confess, traitor!  What is your true name?", (meet = function(t, f, l) {
+        return a(f + " " + l, function() {
+          var ref1;
+          ref1 = [t, f, l], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2];
+          return q("Holy moly!  I've always wanted to meet you, " + t + " " + l + "!  If I could just ask you a few questions....", a("Certainly!"));
+        });
+      })('Mr.', 'Jim', 'Crawford'), meet('Mr.', 'Doug', 'Egan'), meet('Mr.', 'Jeremy', 'Freese'), meet('Mr.', 'Jason', 'McIntosh'), meet('Mr.', 'Hamish', 'McIntyre'), meet('Mr.', 'Carl', 'Muckenhoupt'), meet('Mr.', 'Dan', 'Ravipinto'), meet('Ms.', 'Emily', 'Short'))))), a("A $271 dollar fine!", neversay), a("I'll drive you out of business!", neversay), a("Pain of forfeit!", q("Wow, you passed my test!  Truly, you are the real " + this.fn + " " + this.ln + " after all!", a("Yes.  Yes I am."))), a("I'll stick paperclips up your toenails!", neversay), a("Swarms of angry cyber-bees!", neversay))))), a("I'm a very busy man.", q("Hmm, yes... the real @{fn} @{ln} would never waste time playing such a trivial game as this!  Isn't he more into, like, parser stuff?  You couldn't possibly be....", besilent))) : q("You're supposed to be one of the fricking <em>stewards</em>!  How can you not have heard of the competition that you yourself are... uhhh....", a("...stewing?", huh = q("...huh.  Okay, maybe you <em>are</em> @{fn} @{ln}.", a("Told you so!"))), a("...stewarding?", huh), a("...stewardessing?", huh), a("...stewardinessing?", huh), a("...stewardlinessing?", huh), a("...stewardshiplikenessing?", huh), a("...stewardsnesslishippagelikelifallityinessaging?", huh))))))), a("It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.", q("Great idea!", a("I know, right?"))), a("OMG did I screw up the math question?  I hate math.", q("The one ninth one?", !this.premath ? a("Wait, what?  I don't remember....", q("Oh hey, that's right, I decided not to ask you that one.  Never mind!", a("Just as well."), a("Are you just making this up?", q("No, no!  It's a real question that I ask sometimes.  Just... not this time.", a("Oh, okay then."))))) : a("Yeah, that one!", this.math ? q("Oh, no, you did fine on that one.", a("Phew!"), a("Darn!"), a("You're not just trying to trick me?", q("Why would I want to trick you?", a("I guess you're right."))), a("You're not just saying that to make me feel better?", q("No, it's true!  You totally destroyed that question.", a("Awww, thanks!")))) : wellkinda = q("Well, kinda?  I mean I was sort of planning on skipping the follow-up question.  Just, you know, I didn't want to, like, annoy you.", a("That's very considerate of you!", q("Thanks!", a("You're welcome!", q("You are also welcome!"), a("Thanks!")))), a("I'm kind of annoyed now, but I would probably be even more annoyed if you'd asked me more questions like that, so maybe it's just as well."), a("No way, you HAVE to ask me the follow-up question!", q("Well, okay.  But not right away.", a("All right.", function() {
+        return this.math = true;
+      }))))), a("No no, the one with the 99 heads.", this.premath ? q("Oh, that one!  You did fine on that one.", a("But not the other one?", !this.math ? wellkinda : q("No no, you did great on both of those!  All of them.  You're awesome.", a("Gosh, thanks!")))) : q("Yeah, well, I think we probably saw that one differently.", a("Sure, okay."), a("What's that supposed to mean?", q("You chose poorly.", a("I thought that might have been what you were implying."))))))));
     }
-  }, q("Which country has the highest lowest point?", a("Andorra"), a("Burundi"), a("Lesotho"), a("Rwanda")), q("Which country has the lowest lowest point?", a("Djibouti"), a("Israel"), a("Jordan"), a("Syria")), q("Which country has the lowest highest point?", a("Cocos Islands"), a("Maldives"), a("Tokelau"), a("Tuvalu")), q("What do you think of these geography questions?", a("They're interesting."), a("They're amusing."), a("They're boring.", function() {
-    return this.nogeo = true;
+  }, function() {
+    if (this.geo) {
+      return q("Which country has the highest lowest point?", a("Andorra"), a("Burundi"), a("Lesotho"), a("Rwanda"));
+    }
+  }, this.geo ? q("Which country has the lowest lowest point?", a("Djibouti"), a("Israel"), a("Jordan"), a("Syria")) : void 0, this.geo ? q("Which country has the lowest highest point?", a("Cocos Islands"), a("Maldives"), a("Tokelau"), a("Tuvalu")) : void 0, this.geo ? q("What do you think of these geography questions?", a("They're interesting."), a("They're amusing."), a("They're boring.", function() {
+    return this.geo = false;
   }), a("They're terrible.", function() {
-    return this.nogeo = true;
-  })), function() {
-    if (!this.nogeo) {
+    return this.geo = false;
+  })) : void 0, function() {
+    if (this.geo) {
       return q("Which country has the highest highest point?", a("Bhutan"), a("China"), a("Nepal"), a("Tibet"));
     }
-  }, q("Lorem ipsum dolor sit...", a("...amah."), a("...aman."), a("...amen."), a("...amet."), a("...amin."), a("...emim."), a("...imam."), a("...uman.")), q("Grumpy wizards make a toxic brew for the jovial...", a("...bishop."), a("...duchess."), a("...duke."), a("...earl."), a("...fool."), a("...footman."), a("...joker."), a("...king."), a("...knave."), a("...knight."), a("...lady."), a("...lord."), a("...pawn."), a("...prince."), a("...queen."), a("...rook."), a("...squire.")), q("About how strong is gravity?", a("6.674\u00d710<sup>-11</sup> N (m/kg)<sup>2</sup>"), a("6.674\u00d710<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>"), a("6.674\u00d710<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>"), a("4.302\u00d710<sup>-3</sup> pc <i>M</i><sub>\u2609</sub><sup>-1</sup> (km/s)<sup>2</sup>"), a("0.01720209895"), a("9.8 m/s<sup>2</sup>"), a("1")), q("Do you have friends?", a("Yes."), a("No."), a("Kinda?")), function() {
+  }, q("Lorem ipsum dolor sit...", a("...amah."), a("...aman."), a("...amen."), a("...amet.", function() {
+    return this.lorem = true;
+  }), a("...amin."), a("...emim."), a("...imam."), a("...uman.")), function() {
+    if (this.math) {
+      return q("About how strong is gravity?", a("6.674\u00d710<sup>-11</sup> N (m/kg)<sup>2</sup>"), a("6.674\u00d710<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>"), a("6.674\u00d710<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>"), a("4.302\u00d710<sup>-3</sup> pc <i>M</i><sub>\u2609</sub><sup>-1</sup> (km/s)<sup>2</sup>"), a("0.01720209895"), a("9.8 m/s<sup>2</sup>"), a("1"));
+    }
+  }, function() {
+    if (this.lorem) {
+      return q("Grumpy wizards make a toxic brew for the jovial...", a("...bishop."), a("...duchess."), a("...duke."), a("...earl."), a("...fool."), a("...footman."), a("...jack.", q("No, you're thinking of the other one.  Try harder next time.", a("Will do!"))), a("...joker."), a("...king."), a("...knave."), a("...knight."), a("...lady."), a("...lord."), a("...pawn."), a("...prince."), a("...queen.", function() {}), a("...rook."), a("...squire."));
+    }
+  }, q("Do you have friends?", a("Yes."), a("No."), a("Kinda?")), function() {
     if (!this.nogeo) {
       return q("Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...", a("...Venezuela."), a("...Samoa."), a("...Yemen."), a("...South Africa."), a("...Zambia."), a("...Zimbabwe."));
     }
