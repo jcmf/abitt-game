@@ -11474,7 +11474,7 @@ module.exports = qq([
   }, q("How do you typically respond to stress?", a("Fight."), a("Flee."), a("Freeze."), a("Dissociate.")), function() {
     var besilent, huh, neversay, wellkinda;
     if (this.expo && this.neverheardofexpo) {
-      return q("Something's been bothering me about some of your earlier answers.", a("Oh?  What is it?", q("Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!", a("So?", q("So?  You're " + this.fn + " " + this.ln + "!", a("So?", this.fn === 'Ryan' ? q("You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?", a("What an impertinent question!", q("I thought it was a pretty good question, actually!", besilent = a("Be silent, or face the consequences!", q("What consequences might those be?", a("I'll kick your ass!", neversay = q("Ha!  The <em>real</em> @{fn} @{ln} would <em>never</em> say that!", a("Omigosh, you're right!  I've been living a lie!", q("Confess, traitor!  What is your true name?", (meet = function(t, f, l) {
+      return q("Something's been bothering me about some of your earlier answers.", a("Oh?  What is it?", q("Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!", a("So?", q("So?  You're " + this.fn + " " + this.ln + "!", a("So?", this.fn === 'Ryan' ? q("You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?", a("What an impertinent question!", q("I thought it was a pretty good question, actually!", besilent = a("Be silent, or face the consequences!", q("What consequences might those be?", a("I'll kick your ass!", neversay = q("Ha!  The <em>real</em> " + this.fn + " " + this.ln + " would <em>never</em> say that!", a("Omigosh, you're right!  I've been living a lie!", q("Confess, traitor!  What is your true name?", (meet = function(t, f, l) {
         return a(f + " " + l, function() {
           var ref1;
           ref1 = [t, f, l], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2];
@@ -11488,11 +11488,23 @@ module.exports = qq([
     if (this.geo) {
       return q("Which country has the highest lowest point?", a("Andorra"), a("Burundi"), a("Lesotho"), a("Rwanda"));
     }
-  }, this.geo ? q("Which country has the lowest lowest point?", a("Djibouti"), a("Israel"), a("Jordan"), a("Syria")) : void 0, this.geo ? q("Which country has the lowest highest point?", a("Cocos Islands"), a("Maldives"), a("Tokelau"), a("Tuvalu")) : void 0, this.geo ? q("What do you think of these geography questions?", a("They're interesting."), a("They're amusing."), a("They're boring.", function() {
-    return this.geo = false;
-  }), a("They're terrible.", function() {
-    return this.geo = false;
-  })) : void 0, function() {
+  }, function() {
+    if (this.geo) {
+      return q("Which country has the lowest lowest point?", a("Djibouti"), a("Israel"), a("Jordan"), a("Syria"));
+    }
+  }, function() {
+    if (this.geo) {
+      return q("Which country has the lowest highest point?", a("Cocos Islands"), a("Maldives"), a("Tokelau"), a("Tuvalu"));
+    }
+  }, function() {
+    if (this.geo) {
+      return q("What do you think of these geography questions?", a("They're interesting."), a("They're amusing."), a("They're boring.", function() {
+        return this.geo = false;
+      }), a("They're terrible.", function() {
+        return this.geo = false;
+      }));
+    }
+  }, function() {
     if (this.geo) {
       return q("Which country has the highest highest point?", a("Bhutan"), a("China"), a("Nepal"), a("Tibet"));
     }
@@ -11749,8 +11761,8 @@ p,
   margin-bottom: 0;
 }
 .answer {
-  padding-left: 2em;
-  text-indent: -2em;
+  padding-left: 1.15em;
+  text-indent: -1.15em;
 }
 .a-prefix {
   display: inline-block;

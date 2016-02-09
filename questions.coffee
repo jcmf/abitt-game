@@ -545,7 +545,7 @@ module.exports = qq [
                         besilent = a "Be silent, or face the consequences!",
                           q "What consequences might those be?",
                             a "I'll kick your ass!",
-                              neversay = q "Ha!  The <em>real</em> @{fn} @{ln} would <em>never</em> say that!",
+                              neversay = q "Ha!  The <em>real</em> #{@fn} #{@ln} would <em>never</em> say that!",
                                 a "Omigosh, you're right!  I've been living a lie!",
                                   q "Confess, traitor!  What is your true name?",
                                     (meet = (t, f, l) ->
@@ -636,19 +636,19 @@ module.exports = qq [
     a "Lesotho"
     a "Rwanda"
 
-  if @geo then q "Which country has the lowest lowest point?",
+  -> if @geo then q "Which country has the lowest lowest point?",
     a "Djibouti"
     a "Israel"
     a "Jordan"
     a "Syria"
 
-  if @geo then q "Which country has the lowest highest point?",
+  -> if @geo then q "Which country has the lowest highest point?",
     a "Cocos Islands"
     a "Maldives"
     a "Tokelau"
     a "Tuvalu"
 
-  if @geo then q "What do you think of these geography questions?",
+  -> if @geo then q "What do you think of these geography questions?",
     a "They're interesting."
     a "They're amusing."
     a "They're boring.", -> @geo = false
