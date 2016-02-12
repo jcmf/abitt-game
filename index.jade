@@ -40,6 +40,10 @@ html(lang='en')
           min-width 1.15em
           padding-left 0
           text-indent 0
+        .author
+          font-style italic
+        .redacted
+          background-color black
         .cursor
           display inline-block
           width 0.7em
@@ -51,12 +55,12 @@ html(lang='en')
 
   body
     #home-pane.pane.enter-key
+      h1 A Brief Introduction To This Game
+
+      .author by #[span.redacted REDACTED]
+      .copyright &copy; 2016
+
       :marked
-        # A Brief Introduction To This Game
-
-        by REDACTED  
-        &copy; 2016
-
         [Press Enter or click here to begin.](#!)
 
       .cursor
