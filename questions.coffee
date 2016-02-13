@@ -20,15 +20,15 @@ module.exports = qq [
                         a "Yes.",
                           q "Try clicking harder.",
                             a "Wow, that totally worked, thanks!",
-                              -> @mindgame = "Like when you said to try clicking harder on the mouse."
+                              -> @amusing = "Like when you said to try clicking harder on the mouse."
                         a "No.",
                           q "Is the mouse you are using hot-swappable?",
                             a "Yes.",
                               q "Try plugging the mouse into whatever thing you're reading these words on.",
-                                a "Wow, that totally worked, thanks!", -> @mindgame = "Like when you asked about whether the mouse was hot-swappable."
+                                a "Wow, that totally worked, thanks!", -> @amusing = "Like when you asked about whether the mouse was hot-swappable."
                             a "No.",
                               q "Then I'm afraid you're out of luck.",
-                                a "Oh well.", -> @mindgame = "Like when you said you were afraid I was out of luck."
+                                a "Oh well.", -> @amusing = "Like when you said you were afraid I was out of luck."
                             a "What?",
                               q "Does the mouse feel hot to the touch?",
                                 a "Yes.",
@@ -37,42 +37,42 @@ module.exports = qq [
                                       q "Better?",
                                         a "Much!",
                                           q "Excellent.",
-                                            a "Thanks!", -> @mindgame = "Like when you forced me to dunk my mouse in a bucket of ice water."
+                                            a "Thanks!", -> @amusing = "Like when you forced me to dunk my mouse in a bucket of ice water."
                                 a "No.",
                                   q "Try rubbing it vigorously.",
                                     a "It's working! It's working!",
                                       q "Keep going!",
-                                        a "OMG this is AMAZING!", -> @mindgame = "Like that rubbing vigorously thing."
+                                        a "OMG this is AMAZING!", -> @amusing = "Like that rubbing vigorously thing."
                                     a "It's not working.",
                                       q "You're not rubbing vigorously enough, are you?",
                                         a "Am too.",
                                           q "Are so.",
-                                            a "Is not.", -> @mindgame = "Like that rubbing vigorously thing."
+                                            a "Is not.", -> @amusing = "Like that rubbing vigorously thing."
                                 a "Maybe?",
                                   q "If you had to guess, would you say that the mouse's temperature is more or less than 300 degrees Kelvin?",
                                     a "Yes.",
                                       q "Then it should be within normal operating parameters.",
-                                        a "Thank goodness!", -> @mindgame = "Like the thing where my mouse was within normal operating parameters."
+                                        a "Thank goodness!", -> @amusing = "Like the thing where my mouse was within normal operating parameters."
                                     a "No.",
                                       q "A wise decision!",
-                                        a "Huh?", -> @mindgame = "Like when you asked if it was more or less but the choices were yes and no and then you said it was a wise decision."
+                                        a "Huh?", -> @amusing = "Like when you asked if it was more or less but the choices were yes and no and then you said it was a wise decision."
                     a "No.",
                       q "Try using a mouse.",
                         a "Sounds good, thanks!"
                         a "Maybe later.",
                           q "Let me know when you're ready to continue.",
-                            a "I am ready now!", -> @mindgame = "Like the thing where... I think you were supposed to be waiting for me to go get a mouse?"
+                            a "I am ready now!", -> @amusing = "Like the thing where... I think you were supposed to be waiting for me to go get a mouse?"
                 a "Tapping doesn't work.",
                   q "Is the screen you are tapping touch-sensitive?",
                     a "Yes.",
                       q "Are you sure?",
-                        a "No.", -> @mindgame = "Like when I told you the screen was touch-sensitive but then you made me say it wasn't."
+                        a "No.", -> @amusing = "Like when I told you the screen was touch-sensitive but then you made me say it wasn't."
                     a "No.",
                       q "Try clicking or typing instead.",
-                        a "Well, okay.", -> @mindgame = "Like when you said to try clicking or... actually that was pretty reasonable advice, never mind."
+                        a "Well, okay.", -> @amusing = "Like when you said to try clicking or... actually that was pretty reasonable advice, never mind."
                         a "But you said....",
                           ->
-                            @mindgame = "Like when you said let's move on and gave me three increasingly obsequious choices."
+                            @amusing = "Like when you said let's move on and gave me three increasingly obsequious choices."
                             q "Let's move on, shall we?",
                               a "Understood.",
                               a "I hear and obey."
@@ -85,13 +85,13 @@ module.exports = qq [
                               q "How was it?",
                                 a "Pretty good I guess?",
                                   ->
-                                    @mindgame = "Like when you asked me whether I would recommend the polarizing filter to a friend."
+                                    @amusing = "Like when you asked me whether I would recommend the polarizing filter to a friend."
                                     q "Would you recommend it to a friend?",
                                       a "Yes."
                                       a "No."
                                 a "It was so great, I could hardly believe it.",
                                   ->
-                                    @mindgame = "Like when you asked to borrow my polarizing filter."
+                                    @amusing = "Like when you asked to borrow my polarizing filter."
                                     q "Can I borrow it later?",
                                       a "Yes.",
                                         q "Thanks!",
@@ -101,7 +101,7 @@ module.exports = qq [
                                           a "Forget it."
                                 a "Terrible.",
                                   ->
-                                    @mindgame = "Like when you apologized about the polarizing filter and my only option was to say that it wasn't your fault."
+                                    @amusing = "Like when you apologized about the polarizing filter and my only option was to say that it wasn't your fault."
                                     q "I'm sorry.",
                                       a "Don't say that.  It's not your fault.",
                                         q "Isn't it?",
@@ -109,10 +109,10 @@ module.exports = qq [
                                           a "No, it isn't."
                             a "No.",
                               q "You should totally try one.",
-                                a "Great idea!", -> @mindgame = "Like when you said I should try a polarizing filter and then made me agree with you."
+                                a "Great idea!", -> @amusing = "Like when you said I should try a polarizing filter and then made me agree with you."
                         a "No.",
                           ->
-                            @mindgame = "Like that thing about polishing the screen to make it look glossy."
+                            @amusing = "Like that thing about polishing the screen to make it look glossy."
                             q "Have you considered polishing it?",
                               a "Yes.",
                                 q "But you didn't actually do it?",
@@ -122,19 +122,19 @@ module.exports = qq [
                                   a "Nah, I'm good."
                               a "With what?",
                                 q "Screen polish, I suppose?",
-                                  a "That sounds reasonable.", -> @mindgame = "Like that thing about screen polish.  I don't think that's even a real thing!"
+                                  a "That sounds reasonable.", -> @amusing = "Like that thing about screen polish.  I don't think that's even a real thing!"
                     a "Screen?  What screen?",
                       q "You don't have a screen?",
                         a "I used to, but I lost it.",
                           q "That is very sad!",
-                            a "Yes.", -> @mindgame = "Like that thing about losing my screen."
+                            a "Yes.", -> @amusing = "Like that thing about losing my screen."
                         a "Why would I have a screen?",
                           q "Oh, uh... no reason....",
-                            a "Okay.", -> @mindgame = "Like that thing about me having a screen.  Why would I have a screen?"
-                        a "Oh wait, there it is, never mind.", -> @mindgame = "Like that thing about me losing my screen and then finding it again."
+                            a "Okay.", -> @amusing = "Like that thing about me having a screen.  Why would I have a screen?"
+                        a "Oh wait, there it is, never mind.", -> @amusing = "Like that thing about me losing my screen and then finding it again."
                         a "I mean I do, but it isn't, like, here.",
                           q "Do you want to go get it?",
-                            a "Nah, I'm good.", -> @mindgame = "Like that thing about me not wanting to go get my screen."
+                            a "Nah, I'm good.", -> @amusing = "Like that thing about me not wanting to go get my screen."
                 a "Typing doesn't work.",
                   q "Is the device you are using equipped with a physical keyboard?",
                     a "Yes.",
@@ -143,24 +143,24 @@ module.exports = qq [
                           q "Great, you're way ahead of me!  Now if you try typing again, does it work?",
                             a "Yes.",
                               q "Cool.",
-                                a "Thanks!", -> @mindgame = "Like that thing about the keyboard focus and then typing worked again."
+                                a "Thanks!", -> @amusing = "Like that thing about the keyboard focus and then typing worked again."
                             a "No.",
                               q "Well, hmm.  Have you cleaned the keyboard recently?",
                                 a "Yes.",
                                   probablywhy = ->
-                                    @mindgame = "Like that thing about whether I'd cleaned the keyboard recently."
+                                    @amusing = "Like that thing about whether I'd cleaned the keyboard recently."
                                     q "That's probably why, then.",
                                       a "Okay."
                                 a "No.", probablywhy
                     a "No.",
                       q "Then I suggest you go with tapping instead.",
-                        a "Well, okay.", -> @mindgame = "Like that thing with tapping instead of typing."
+                        a "Well, okay.", -> @amusing = "Like that thing with tapping instead of typing."
                         a "Awww, but I wanted to type things!",
                           q "Too bad.",
-                            a "You're no fun.", -> @mindgame = "Like that thing where I wanted to type things but you said I couldn't."
+                            a "You're no fun.", -> @amusing = "Like that thing where I wanted to type things but you said I couldn't."
         a "What if I choose the wrong answer?",
           q "There are no wrong answers.",
-            a "Thanks, that's very reassuring!", -> @mindgame = "Like that thing you said about there being no wrong answers."
+            a "Thanks, that's very reassuring!", -> @amusing = "Like that thing you said about there being no wrong answers."
             a "No, I mean, what if I meant to choose one answer but choose a different one by mistake?",
               q "Does the Backspace key work?",
                 a "Wow, yes, it totally does."
@@ -168,15 +168,15 @@ module.exports = qq [
                   q "Well, it's supposed to.",
                     a "Well, it doesn't.",
                       q "I'm sorry.",
-                        a "It's okay, I'll manage somehow.", -> @mindgame = "Like that thing where my Backspace key doesn't work."
+                        a "It's okay, I'll manage somehow.", -> @amusing = "Like that thing where my Backspace key doesn't work."
                 a "What are you even talking about?  I don't have a backspace key!",
                   q "Then try using your browser's Back button.",
                     a "But I don't wanna.",
                       q "Then don't.",
                         a "Okay, I won't!",
                           q "Good!",
-                            a "Yep!", -> @mindgame = "Like that thing where you were trying to get me to use the stupid back button in my stupid browser."
-                    a "Fine, if you insist.", -> @mindgame = "Like that thing where I had to use the back button in my browser instead of the backspace key."
+                            a "Yep!", -> @amusing = "Like that thing where you were trying to get me to use the stupid back button in my stupid browser."
+                    a "Fine, if you insist.", -> @amusing = "Like that thing where I had to use the back button in my browser instead of the backspace key."
         a "Who wrote this game?",
           q "Are you sure you want to know?",
             a "Yes.",
@@ -187,22 +187,24 @@ module.exports = qq [
                       now = new Date()
                       if now.getTime() < 1460617200000
                         q "Then why does your clock say #{now}?",
-                          a "Uhhhh... whatever, never mind.", -> @mindgame = "Like that thing where you told me the current date and time."
+                          a "Uhhhh... whatever, never mind.", -> @amusing = "Like that thing where you told me the current date and time."
                       else
-                        author_name = (String.fromCharCode x for x in [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116]).join ''
                         q "You're sure you want me to reveal this?",
-                          a "Eh... I changed my mind.", -> @mindgame = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off."
+                          a "Eh... I changed my mind.", -> @amusing = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off."
                           a "Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.",
-                            q "This game was written by #{author_name}.",
-                              a "Thank you.", -> @mindgame = "Like that thing where you took sooooo much convincing to tell me who wrote this."
+                            ->
+                              @author = (String.fromCharCode x for x in [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116]).join ''
+                              @amusing = "Like that thing where you took sooooo much convincing to tell me who wrote this."
+                              q "This game was written by #{@author}.",
+                                a "Thank you."
                     a "No.",
                       betternottell = q "Then I guess I'd better not tell you!",
                         a "Well, I respect your decision, even though I disagree with it.",
                           q "Thanks!  That's very big of you.",
-                            a "Aw shucks.", -> @mindgame = "Like that thing where I had to respect your decision even though I disagreed with it."
+                            a "Aw shucks.", -> @amusing = "Like that thing where I had to respect your decision even though I disagreed with it."
                         a "Aw cmon.",
                           ->
-                            @mindgame = "Like that thing where you refused to tell me who wrote this game just because the judging period wasn't up yet!"
+                            @amusing = "Like that thing where you refused to tell me who wrote this game just because the judging period wasn't up yet!"
                             q "Nope, my mind's made up.",
                               a "Well shoot."
                               a "Drat."
@@ -213,27 +215,27 @@ module.exports = qq [
                       q "You know, for the exposition thing.",
                         a "Oh right, the exposition thing!",
                           q "Yes.  That.",
-                            a "Okay.", -> @mindgame = "Like the thing with the judging period and the exposition thing."
+                            a "Okay.", -> @amusing = "Like the thing with the judging period and the exposition thing."
                         a "What exposition thing?",
                           ->
                             @whatexpo = true
                             q "Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!",
                               a "Oh, <em>that</em>!",
                                 q "So you understand my position?",
-                                  a "Totally.", -> @mindgame = "Like the thing where you were explaining about the First Quadrennial whatever it is."
+                                  a "Totally.", -> @amusing = "Like the thing where you were explaining about the First Quadrennial whatever it is."
                                   a "No, I'm just trying to change the subject.  Can't you take a hint?",
                                     q "Oh, sorry!  We can talk about something else now.",
-                                      a "Thanks!", -> @mindgame = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!"
+                                      a "Thanks!", -> @amusing = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!"
                               a "Never heard of it.",
                                 q "Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.",
                                   a "Uh... sure... whatever you say.",
                                     ->
-                                      @mindgame = "Like that thing about repeated credible threats."
+                                      @amusing = "Like that thing about repeated credible threats."
                                       @neverheardofexpo = true
                 a "Why yes, actually, I am trying to trick you.", betternottell
             a "No.",
               q "Then I won't tell you.",
-                a "Phew!", -> @mindgame = "Like that thing where I was trying to ask an innocent question about who wrote this game and you got all defensive."
+                a "Phew!", -> @amusing = "Like that thing where I was trying to ask an innocent question about who wrote this game and you got all defensive."
 
   q "What's your name?",
     a "Emily",
@@ -1050,6 +1052,146 @@ module.exports = qq [
     a "Panic." # XXX
     a "Give CPR." # XXX
     a "Don't give CPR." # XXX
+
+  q "[XXX more stuff goes here]",
+    a "[XXX okay?]"
+
+  -> q "Okay, looks like that's it.  Thank you for playing this game, #{@fn}.",
+    a "My pleasure."
+    a "You're welcome."
+    a "What a satisfying conclusion!",
+      q "I know, right?",
+        a "Totally.",
+          q "Yep!",
+            a "Uh-huh."
+    a "Hold on, I have a question!",
+      q "What is your question?",
+        a "Is that all there is?",
+          q "Because if that's all there is, my friend...",
+            a "Then let's keep dancing...",
+              q "Who is that from, anyway?",
+                a "Alan Price",
+                  (youtube = (id, aa...) ->
+                    if aa.length is 0 then aa = [a "Nice."]
+                    q """<iframe width="420" height="315" src="https://www.youtube.com/embed/#{id}?rel=0" frameborder="0" allowfullscreen></iframe>""", aa...
+                  )("Dyg420eUvok")
+                a "Bette Midler", youtube 'Fpn_xu81ySo'
+                a "The Bobs", youtube 'DoEuRa6YyoU'
+                a "Chaka Khan", youtube 'tTVv-ktbvpg'
+                a "Cristina Monet", youtube 'AybvLztacFM'
+                a "Giant Sand", youtube '1w6bHzvikl8'
+                a "Firewater", youtube 'YTrWOPaCax0'
+                a "Hecate, goddess of witchcraft",
+                  q "Oh man.  Were you there for that?",
+                    a "I was.",
+                      q "So good, right?",
+                        a "YES.",
+                          q "Did she...?",
+                            a "Yes.",
+                              q "OMG I'm so jealous!",
+                                a "I know, right?  I can hardly believe it!"
+                            a "No.",
+                              q "Still!",
+                                a "Yeah."
+                    a "No, but I heard about it.",
+                      q "And are you gonna...?",
+                        a "Yes."
+                        a "No."
+                    a "Actually I have no idea what you're talking about.",
+                      q "I am talking about <em>Sleep No More</em>.",
+                        a "Okay."
+                a "Lindsay Anderson", youtube 'yCgWJqcOQhA'
+                a "Liz Gillies", youtube 'HNnTQbLbtWI'
+                a "PJ Harvey", youtube 'O0ZUAorP0b4'
+                a "Peggy Lee", youtube 'LCRZZC-DH7M'
+                a "Sandra Bernhard", youtube 'ru6d318UlOQ'
+                a "Tony Bennett", youtube 'xr3CcBp6aw0'
+                a "Uncle Yo", youtube 'hu18YKjijEo'
+            a "No seriously, wtf" # XXX
+        a "What is my score?",
+          yourscore = q "Your score?  There is no score in this game.",
+            a "Oh, okay."
+            a "I want a score dammit.",
+              q "Your score is 0 out of a total of 0 possible points.  This is the only possible score and gives you no rank in particular.  Would you like to RESTORE, RESTART, UNDO the last command, look at the CREDITS, see a list of AMUSING things to do, or QUIT?",
+                a "RESTORE",
+                  q "Okay, go ahead and edit the URL now.  Or use a bookmark.  Or your browser's history function.",
+                    a "Eh, never mind."
+                a "RESTART"
+                a "UNDO",
+                  ->
+                    if not @undo
+                      @undo = true
+                      yourscore
+                    else
+                      q "Again?!",
+                        a "Yes, again!",
+                          q "But we just did this.",
+                            a "Oh right, I forgot, never mind."
+                            a "But I want to see if something different will happen this time!",
+                              q "Nothing different will happen.",
+                                a "Well never mind then."
+                                a "But I still want to do it!",
+                                  q "No.",
+                                    a "Boooo!"
+                        a "No, forget it."
+                a "CREDITS",
+                  q """This game was written by #{@author or "<span class='redacted'>REDACTED</span>"}.""",
+                    a "Thanks!"
+                    a "Hey, what about beta-testers?",
+                      ->
+                        if not @author
+                          q "Sorry, you haven't unlocked that achievement in this playthrough, so I can't say anything more.",
+                            a "Oh well!"
+                            a "Wait, how do I unlock it?",
+                              q "Oh, it's way back at the beginning.  You have to get me to tell you who wrote this game first.",
+                                a "Got it, thanks!"
+                        else
+                          q "No beta-testers yet!  Unless... wait, are <em>you</em> a beta tester?",
+                            a "Yes.",
+                              q "Then be sure to remind me to add your name here!",
+                                a "Okay, will do!"
+                            a "No.",
+                              q "Then I guess that's it!",
+                                a "Thanks!"
+                a "AMUSING",
+                  q "Amusing?  Like what?",
+                    -> if @amusing then a @amusing,
+                      q "Oh yeah!  That was pretty okay I guess!",
+                        a "Agreed."
+                    a "I guess I can't think of anything.",
+                      q "Yeah, me either.",
+                        a "Too bad."
+                a "QUIT"
+        a "What about that thing with the fog and the railroad tracks and the car's engine stalls?",
+          q "Oh right!  Did I ever explain what was supposed to be going on with that?",
+            a "No.",
+              goingon = q "Oh man, it was gonna be so good... see, the fog was actually going to turn out to be chlorine gas....",
+                a "Wait, what?!" # XXX
+                a "Isn't that poisonous?" # XXX
+                a "Doesn't chlorine have a distinctive smell?" # XXX
+                a "Wait but so why were all the car engines dying?",
+                  q "Well, you know, they've got internal combustion engines, and if the air intake stops getting oxygen, it can't burn the fuel so the engine conks out.",
+                    a "Oh, that makes sense."
+                    a "But I drive an electric car.",
+                      q "Wait, really?",
+                        a "Yeah, really." # XXX
+                        a "No not really but how would you even know if I did or not, I mean it's not like you even asked.",
+                          q "But aren't you #{@fn} #{@ln}?" # XXX ok I need to account for the cases where they changed their story....
+            a "Definitely not.", goingon
+        a "Can I play again?",
+          q "No, unfortunately it's only ever possible to play this game once.",
+            a "Oh well."
+            a "What's so unfortunate about that?",
+              q "Just that you'll only ever get to read a tiny fraction of the text contained within this game?  It seems like such a waste.",
+                a "Huh, I guess so."
+                a "I disagree.",
+                  q "Why is that?",
+                    a "Because it's better to quit after having a somewhat positive experience than to persist until the magic is spoiled.",
+                      q "Good point.",
+                        a "Thanks!" # XXX can I do something good here?
+                    a "Because this game sucks, dude.",
+                      q "Well, good thing it's over, right?",
+                        a "Thank goodness!"
 
   q "THE END"
 ]

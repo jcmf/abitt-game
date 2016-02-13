@@ -11252,7 +11252,8 @@ buf.push("<div class=\"cursor\"></div>");
 }}.call(this,"aa" in locals_for_with?locals_for_with.aa:typeof aa!=="undefined"?aa:undefined,"q" in locals_for_with?locals_for_with.q:typeof q!=="undefined"?q:undefined,"undefined" in locals_for_with?locals_for_with.undefined:typeof undefined!=="undefined"?undefined:undefined));;return buf.join("");
 };
 },{"jade/runtime":8}],11:[function(require,module,exports){
-var SKIP, a, betternottell, butactually, cool, figured, howdoyoufeel, likesong, meandifferent, meet, normalamount, probablywhy, q, qq, redorgreen, ref, rggotit, samegame, soundshard, surewhatevs, theyloveyouless, theyloveyoumore, waitreallygsw;
+var SKIP, a, betternottell, butactually, cool, figured, howdoyoufeel, likesong, meandifferent, meet, normalamount, probablywhy, q, qq, redorgreen, ref, rggotit, samegame, soundshard, surewhatevs, theyloveyouless, theyloveyoumore, waitreallygsw,
+  slice = [].slice;
 
 ref = require('./dsl.coffee'), qq = ref.qq, q = ref.q, a = ref.a;
 
@@ -11260,114 +11261,116 @@ SKIP = function() {};
 
 module.exports = qq([
   q("Welcome to this game!  Before we can get started, you'll need to answer a few questions.", a("Okay."), a("Sounds good."), a("I consent to this."), a("Hold on, I have a question!", q("What is your question?", a("How should I indicate which answer I wish to choose?", q("Choose an answer by clicking or tapping it, or by typing the appropriate letter.", a("Thanks!"), a("Wait, there's a problem.", q("What seems to be the problem?", a("Clicking doesn't work.", q("Are you using a mouse?", a("Yes.", q("Is the mouse you are using connected to the device that is displaying these words?", a("Yes.", q("Try clicking harder.", a("Wow, that totally worked, thanks!", function() {
-    return this.mindgame = "Like when you said to try clicking harder on the mouse.";
+    return this.amusing = "Like when you said to try clicking harder on the mouse.";
   }))), a("No.", q("Is the mouse you are using hot-swappable?", a("Yes.", q("Try plugging the mouse into whatever thing you're reading these words on.", a("Wow, that totally worked, thanks!", function() {
-    return this.mindgame = "Like when you asked about whether the mouse was hot-swappable.";
+    return this.amusing = "Like when you asked about whether the mouse was hot-swappable.";
   }))), a("No.", q("Then I'm afraid you're out of luck.", a("Oh well.", function() {
-    return this.mindgame = "Like when you said you were afraid I was out of luck.";
+    return this.amusing = "Like when you said you were afraid I was out of luck.";
   }))), a("What?", q("Does the mouse feel hot to the touch?", a("Yes.", q("Try immersing it in ice water.", a("Done!", q("Better?", a("Much!", q("Excellent.", a("Thanks!", function() {
-    return this.mindgame = "Like when you forced me to dunk my mouse in a bucket of ice water.";
+    return this.amusing = "Like when you forced me to dunk my mouse in a bucket of ice water.";
   }))))))), a("No.", q("Try rubbing it vigorously.", a("It's working! It's working!", q("Keep going!", a("OMG this is AMAZING!", function() {
-    return this.mindgame = "Like that rubbing vigorously thing.";
+    return this.amusing = "Like that rubbing vigorously thing.";
   }))), a("It's not working.", q("You're not rubbing vigorously enough, are you?", a("Am too.", q("Are so.", a("Is not.", function() {
-    return this.mindgame = "Like that rubbing vigorously thing.";
+    return this.amusing = "Like that rubbing vigorously thing.";
   }))))))), a("Maybe?", q("If you had to guess, would you say that the mouse's temperature is more or less than 300 degrees Kelvin?", a("Yes.", q("Then it should be within normal operating parameters.", a("Thank goodness!", function() {
-    return this.mindgame = "Like the thing where my mouse was within normal operating parameters.";
+    return this.amusing = "Like the thing where my mouse was within normal operating parameters.";
   }))), a("No.", q("A wise decision!", a("Huh?", function() {
-    return this.mindgame = "Like when you asked if it was more or less but the choices were yes and no and then you said it was a wise decision.";
+    return this.amusing = "Like when you asked if it was more or less but the choices were yes and no and then you said it was a wise decision.";
   }))))))))))), a("No.", q("Try using a mouse.", a("Sounds good, thanks!"), a("Maybe later.", q("Let me know when you're ready to continue.", a("I am ready now!", function() {
-    return this.mindgame = "Like the thing where... I think you were supposed to be waiting for me to go get a mouse?";
+    return this.amusing = "Like the thing where... I think you were supposed to be waiting for me to go get a mouse?";
   }))))))), a("Tapping doesn't work.", q("Is the screen you are tapping touch-sensitive?", a("Yes.", q("Are you sure?", a("No.", function() {
-    return this.mindgame = "Like when I told you the screen was touch-sensitive but then you made me say it wasn't.";
+    return this.amusing = "Like when I told you the screen was touch-sensitive but then you made me say it wasn't.";
   }))), a("No.", q("Try clicking or typing instead.", a("Well, okay.", function() {
-    return this.mindgame = "Like when you said to try clicking or... actually that was pretty reasonable advice, never mind.";
+    return this.amusing = "Like when you said to try clicking or... actually that was pretty reasonable advice, never mind.";
   }), a("But you said....", function() {
-    this.mindgame = "Like when you said let's move on and gave me three increasingly obsequious choices.";
+    this.amusing = "Like when you said let's move on and gave me three increasingly obsequious choices.";
     return q("Let's move on, shall we?", a("Understood.", a("I hear and obey.")), a("Your wish is my command."));
   }))), a("I'm not sure.", q("Look closely.  Does it look... glossy?", a("Yes.", q("Have you tried using one of those polarizing filters?", a("Yes.", q("How was it?", a("Pretty good I guess?", function() {
-    this.mindgame = "Like when you asked me whether I would recommend the polarizing filter to a friend.";
+    this.amusing = "Like when you asked me whether I would recommend the polarizing filter to a friend.";
     return q("Would you recommend it to a friend?", a("Yes."), a("No."));
   }), a("It was so great, I could hardly believe it.", function() {
-    this.mindgame = "Like when you asked to borrow my polarizing filter.";
+    this.amusing = "Like when you asked to borrow my polarizing filter.";
     return q("Can I borrow it later?", a("Yes.", q("Thanks!", a("You're welcome!"))), a("No.", q("Please?", a("Forget it."))));
   }), a("Terrible.", function() {
-    this.mindgame = "Like when you apologized about the polarizing filter and my only option was to say that it wasn't your fault.";
+    this.amusing = "Like when you apologized about the polarizing filter and my only option was to say that it wasn't your fault.";
     return q("I'm sorry.", a("Don't say that.  It's not your fault.", q("Isn't it?", a("Yes, it isn't."), a("No, it isn't."))));
   }))), a("No.", q("You should totally try one.", a("Great idea!", function() {
-    return this.mindgame = "Like when you said I should try a polarizing filter and then made me agree with you.";
+    return this.amusing = "Like when you said I should try a polarizing filter and then made me agree with you.";
   }))))), a("No.", function() {
-    this.mindgame = "Like that thing about polishing the screen to make it look glossy.";
+    this.amusing = "Like that thing about polishing the screen to make it look glossy.";
     return q("Have you considered polishing it?", a("Yes.", q("But you didn't actually do it?", a("No."))), a("No.", q("Well, are you going to do it now?", a("Nah, I'm good."))), a("With what?", q("Screen polish, I suppose?", a("That sounds reasonable.", function() {
-      return this.mindgame = "Like that thing about screen polish.  I don't think that's even a real thing!";
+      return this.amusing = "Like that thing about screen polish.  I don't think that's even a real thing!";
     }))));
   }))), a("Screen?  What screen?", q("You don't have a screen?", a("I used to, but I lost it.", q("That is very sad!", a("Yes.", function() {
-    return this.mindgame = "Like that thing about losing my screen.";
+    return this.amusing = "Like that thing about losing my screen.";
   }))), a("Why would I have a screen?", q("Oh, uh... no reason....", a("Okay.", function() {
-    return this.mindgame = "Like that thing about me having a screen.  Why would I have a screen?";
+    return this.amusing = "Like that thing about me having a screen.  Why would I have a screen?";
   }))), a("Oh wait, there it is, never mind.", function() {
-    return this.mindgame = "Like that thing about me losing my screen and then finding it again.";
+    return this.amusing = "Like that thing about me losing my screen and then finding it again.";
   }), a("I mean I do, but it isn't, like, here.", q("Do you want to go get it?", a("Nah, I'm good.", function() {
-    return this.mindgame = "Like that thing about me not wanting to go get my screen.";
+    return this.amusing = "Like that thing about me not wanting to go get my screen.";
   }))))))), a("Typing doesn't work.", q("Is the device you are using equipped with a physical keyboard?", a("Yes.", q("Maybe the keyboard focus is elsewhere?  Try, like, clicking somewhere in this window.", a("What do you think I've been doing this whole time?", q("Great, you're way ahead of me!  Now if you try typing again, does it work?", a("Yes.", q("Cool.", a("Thanks!", function() {
-    return this.mindgame = "Like that thing about the keyboard focus and then typing worked again.";
+    return this.amusing = "Like that thing about the keyboard focus and then typing worked again.";
   }))), a("No.", q("Well, hmm.  Have you cleaned the keyboard recently?", a("Yes.", probablywhy = function() {
-    this.mindgame = "Like that thing about whether I'd cleaned the keyboard recently.";
+    this.amusing = "Like that thing about whether I'd cleaned the keyboard recently.";
     return q("That's probably why, then.", a("Okay."));
   }), a("No.", probablywhy))))))), a("No.", q("Then I suggest you go with tapping instead.", a("Well, okay.", function() {
-    return this.mindgame = "Like that thing with tapping instead of typing.";
+    return this.amusing = "Like that thing with tapping instead of typing.";
   }), a("Awww, but I wanted to type things!", q("Too bad.", a("You're no fun.", function() {
-    return this.mindgame = "Like that thing where I wanted to type things but you said I couldn't.";
+    return this.amusing = "Like that thing where I wanted to type things but you said I couldn't.";
   }))))))))))), a("What if I choose the wrong answer?", q("There are no wrong answers.", a("Thanks, that's very reassuring!", function() {
-    return this.mindgame = "Like that thing you said about there being no wrong answers.";
+    return this.amusing = "Like that thing you said about there being no wrong answers.";
   }), a("No, I mean, what if I meant to choose one answer but choose a different one by mistake?", q("Does the Backspace key work?", a("Wow, yes, it totally does."), a("It, uh, doesn't seem to, no.", q("Well, it's supposed to.", a("Well, it doesn't.", q("I'm sorry.", a("It's okay, I'll manage somehow.", function() {
-    return this.mindgame = "Like that thing where my Backspace key doesn't work.";
+    return this.amusing = "Like that thing where my Backspace key doesn't work.";
   }))))), a("What are you even talking about?  I don't have a backspace key!", q("Then try using your browser's Back button.", a("But I don't wanna.", q("Then don't.", a("Okay, I won't!", q("Good!", a("Yep!", function() {
-    return this.mindgame = "Like that thing where you were trying to get me to use the stupid back button in my stupid browser.";
+    return this.amusing = "Like that thing where you were trying to get me to use the stupid back button in my stupid browser.";
   }))))), a("Fine, if you insist.", function() {
-    return this.mindgame = "Like that thing where I had to use the back button in my browser instead of the backspace key.";
+    return this.amusing = "Like that thing where I had to use the back button in my browser instead of the backspace key.";
   }))))))), a("Who wrote this game?", q("Are you sure you want to know?", a("Yes.", q("You're not trying to trick me, are you?", a("Of course not.", q("So the judging period is over?", a("Yes.", function() {
-    var author_name, now, x;
+    var now;
     now = new Date();
     if (now.getTime() < 1460617200000) {
       return q("Then why does your clock say " + now + "?", a("Uhhhh... whatever, never mind.", function() {
-        return this.mindgame = "Like that thing where you told me the current date and time.";
+        return this.amusing = "Like that thing where you told me the current date and time.";
       }));
     } else {
-      author_name = ((function() {
-        var i, len, ref1, results;
-        ref1 = [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116];
-        results = [];
-        for (i = 0, len = ref1.length; i < len; i++) {
-          x = ref1[i];
-          results.push(String.fromCharCode(x));
-        }
-        return results;
-      })()).join('');
       return q("You're sure you want me to reveal this?", a("Eh... I changed my mind.", function() {
-        return this.mindgame = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off.";
-      }), a("Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.", q("This game was written by " + author_name + ".", a("Thank you.", function() {
-        return this.mindgame = "Like that thing where you took sooooo much convincing to tell me who wrote this.";
-      }))));
+        return this.amusing = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off.";
+      }), a("Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.", function() {
+        var x;
+        this.author = ((function() {
+          var i, len, ref1, results;
+          ref1 = [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116];
+          results = [];
+          for (i = 0, len = ref1.length; i < len; i++) {
+            x = ref1[i];
+            results.push(String.fromCharCode(x));
+          }
+          return results;
+        })()).join('');
+        this.amusing = "Like that thing where you took sooooo much convincing to tell me who wrote this.";
+        return q("This game was written by " + this.author + ".", a("Thank you."));
+      }));
     }
   }), a("No.", betternottell = q("Then I guess I'd better not tell you!", a("Well, I respect your decision, even though I disagree with it.", q("Thanks!  That's very big of you.", a("Aw shucks.", function() {
-    return this.mindgame = "Like that thing where I had to respect your decision even though I disagreed with it.";
+    return this.amusing = "Like that thing where I had to respect your decision even though I disagreed with it.";
   }))), a("Aw cmon.", function() {
-    this.mindgame = "Like that thing where you refused to tell me who wrote this game just because the judging period wasn't up yet!";
+    this.amusing = "Like that thing where you refused to tell me who wrote this game just because the judging period wasn't up yet!";
     return q("Nope, my mind's made up.", a("Well shoot."), a("Drat."), a("Curses!"), a("Zut alors."), a("Fiddlesticks."));
   }))), a("Uh... judging period?  What?", q("You know, for the exposition thing.", a("Oh right, the exposition thing!", q("Yes.  That.", a("Okay.", function() {
-    return this.mindgame = "Like the thing with the judging period and the exposition thing.";
+    return this.amusing = "Like the thing with the judging period and the exposition thing.";
   }))), a("What exposition thing?", function() {
     this.whatexpo = true;
     return q("Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!", a("Oh, <em>that</em>!", q("So you understand my position?", a("Totally.", function() {
-      return this.mindgame = "Like the thing where you were explaining about the First Quadrennial whatever it is.";
+      return this.amusing = "Like the thing where you were explaining about the First Quadrennial whatever it is.";
     }), a("No, I'm just trying to change the subject.  Can't you take a hint?", q("Oh, sorry!  We can talk about something else now.", a("Thanks!", function() {
-      return this.mindgame = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!";
+      return this.amusing = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!";
     }))))), a("Never heard of it.", q("Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.", a("Uh... sure... whatever you say.", function() {
-      this.mindgame = "Like that thing about repeated credible threats.";
+      this.amusing = "Like that thing about repeated credible threats.";
       return this.neverheardofexpo = true;
     }))));
   }))))), a("Why yes, actually, I am trying to trick you.", betternottell))), a("No.", q("Then I won't tell you.", a("Phew!", function() {
-    return this.mindgame = "Like that thing where I was trying to ask an innocent question about who wrote this game and you got all defensive.";
+    return this.amusing = "Like that thing where I was trying to ask an innocent question about who wrote this game and you got all defensive.";
   })))))))), q("What's your name?", a("Emily", q("And your last name?", a("Boegheim", function() {
     var ref1;
     ref1 = ['Ms.', 'Emily', 'Boegheim'], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2];
@@ -11547,7 +11550,34 @@ module.exports = qq([
     if (this.geo) {
       return q("Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...", a("...Venezuela."), a("...Samoa."), a("...Yemen."), a("...South Africa."), a("...Zambia."), a("...Zimbabwe."));
     }
-  }, q("Do you know CPR?", a("Yes."), a("No.", q("Would you like to learn?", a("Sure."), a("No thanks.", q("Why not?", a("Sounds boring.", q("It's pretty exciting, actually!", a("Oh well, in that case, let's do this!"))), a("I mean I already kinda know some things, I'm just not, like, certified or anything."), a("Are you seriously offering to teach me CPR right now?", q("Yes.", a("Huh.  All right."))))))), a("What is CPR?", q("Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!", a("Wow, sounds awesome!  Tell me more!"), a("I don't think that's an accurate description.", q("I thought you said you didn't know what CPR was?", a("Good point!  I withdraw my objection."), a("I said no such thing!  I merely asked what it was.", q("Okay so which part of my description is wrong?", a("The bit about somebody being dead.", q("Wait, <em>that's</em> your objection?  People do die, you know.", a("No they don't."), a("I think you're misunderstanding my point.", q("No I'm not.  That's what you said.  Look, the \"bringing people back to life\" option was <em>right there</em>.", a("Shoot.  Can I go back?", q("Too late for that now!", a("Darn."))), a("Are you seriously trying to tell me that you think you know what I meant better than I do?", q("Okay, maybe I'm not being <em>entirely</em> serious.", a("Oh good."))))))), a("The bit about bringing them back to life.", q("But that's the whole point, right?  If their heart is stopped, they're dead.", a("I guess you're right."), a("That's not what \"dead\" means.", q("Well what does it mean then?", a("It means their soul has left their body and they've gone to heaven.", q("And that doesn't happen until later, is what you're saying?", a("Yes.", meandifferent = q("Well okay, then I guess we mean different things.  Sorry about the confusion.", a("Thanks!"))), a("Sometimes.", meandifferent))), a("It means their brain has stopped working.", meandifferent), a("It means they're actually permanently dead!", meandifferent))), a("You can't actually restart someone's heart with CPR!  Why does everybody think that?", q("That's true, you can't.  But you can buy them some time until the professionals show up and actually restart their heart, and that's the next best thing, right?", a("Sure, I guess."), a("Not really, I mean it only makes a difference in like a few percent of cases.", q("You're complaining that a few percent chance is too small?  For saving somebody's life?  By, like, doing a few minutes work or whatever?", a("Well, when you put it that way...."), a("No, what I'm saying is that your argument is bullshit."))))))), a("The bit about simple techniques.", q("You're saying CPR is complicated.", a("Yes."), a("No."))), a("The bit about no special tools.", q("What special tools do you need for CPR?", a("A mask.", q("Oh man, those things are so fiddly though!", a("Yeah but they're important to prevent infection.", butactually = q("But actually what they're recommending now is that you don't bother with the rescue breathing stuff and focus more on chest compressions.", a("Oh, okay."), a("But isn't that only for untrained responders?", q("Sure.  But so like then why didn't you just say \"yes\" when I asked you if you knew what CPR was?", a("Because I wanted to know how you would answer, obviously."), a("Oh well you know, I'm not like technically certified or anything at this point...."))))))), a("An AED.", q("Well that's true, AEDs are super good, but you can still do CPR without an AED.", a("I disagree."), a("I suppose you're right."), a("Yeah but the AED is so much more effective.", q("Well that's true, isn't it.", a("Yes, it is!"), a("No actually I was just saying that for no reason."))))), a("A manikin.", q("I, uh... I mean... those are good for practicing, but, like, in a real situation where you were really doing CPR on someone, you don't actually need one of those.", a("Don't be ridiculous.  They're included in the training for a reason."), a("Hmm, I guess you have a point."), a("Wait I thought we <em>were</em> talking about training.", q("Oh!  Well, no, that's not what I meant.  Sorry for being unclear!", a("That's okay!"), a("You're not getting off that easy, bub."))))), a("A lung bag.", q("A lung bag?  What the heck is a lung bag?", a("Nothing.  Never mind."), a("Go do an image search.", q("Wait, is it that big long thing?  Weird!", a("I know, right?"))))), a("A HALO seal.", waitreallygsw = q("Wait, really?  You use those for CPR?", a("Yes.", q("You sure you're not thinking of a gunshot wound to the chest or something?", a("Nah."), a("Oh maybe."), a("Well sure, I mean why else would you need to give somebody CPR?"))), a("No."))), a("A SAM splint.", q("Wait, really?  You use those for CPR?", a("Yes.", q("You sure you're not thinking of like a broken bone or something?", a("Nah."), a("Oh maybe."), a("Well sure, I mean why else would you need to give somebody CPR?", q("Uhhhh... do you know what CPR is?", a("Yes."))))), a("No."))), a("An oxygen tank.", q("Hmm.  I guess that could be useful.", a("Totally useful!", butactually))), a("A butane lighter.", q("I don't get it.", a("Me either!"))), a("An Israeli bandage.", waitreallygsw), a("A hemostatic sponge.", waitreallygsw))), a("All of it.", q("So you're saying everything I say is wrong?", a("Yes."), a("No.")))))))))), q("Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?", a("Call 911.", q("Nice!  That is exactly correct!  Okay, so you dial and it's ringing and you're getting a recording about being transferred and not to hang up and what are you doing in the meantime?", a("Begin CPR.", q("Actually, if you're in a movie theater, there's a good chance that there's an AED in the lobby.  You might want to grab that first.", a("What's an AED?", q("It's an Automatic External Defribrillator.  It's a little doodad that can sense when a heart is malfunctioning and shock it back into its normal rhythm.", a("Wow, that sounds super handy!  I would totally go look for one.", q("Okay!  You run into the lobby and... what are you looking for exactly?", a("A red heart with a spark in the middle.", redorgreen = q("Could be red or green.", rggotit = a("Got it.", q("Cool.  You find it and bring it back and open it up and it starts talking.  What now?", a("Stick the electrodes on the victim's chest.", q("Sure, there's a little diagram on there, and... wait, these go under the clothes, don't they?", a("Nope!  We're not doing this.  Sorry.", q("That is okay!  Nobody is going to make you do anything you don't feel comfortable doing.", a("Thank you."), a("Aren't you supposed to, like, tell me that they might die if I don't do this?", q("Do you want me to tell you that?", a("Yes.", q("Why?", a("Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it.", q("It's true that someone might die, and it's true that I might like to convince you of something, but....")), a("Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me."), a("Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?"))), a("No.", q("Then I won't.", a("Okay."))), a("Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?"))))), a("No problem, I pull their shirt up."), a("Wow, this is intense.  Maybe I should pay attention to what the voice is saying."))), a("Wait and listen to what the AED is telling me to do."))))), a("A green heart with a lightning bolt in it.", redorgreen), a("A little placard that says AED on it.", q("Yep, and it'll almost certainly have the symbol too, either the red or the green one.", rggotit)), a("Any of the above.", q("Yep, it'll likely have both the letters AED and the red or green symbol.", rggotit)))), a("Yeah, thanks, I'm gonna leave that stuff for the professionals!", q("Actually, AEDs are designed to be used by anyone.  Professional paramedics have way fancier gear.", a("Yeah but I have no idea how to use one."), a("Also isn't it super dangerous to shock someone's heart just because they fell down?  That's just stupid."))))), a("Good idea, I'll go look for it!"), a("Good idea, I'll send someone to fetch it and do CPR in the meantime!"))), a("Go find an employee."), a('Shout "OMG, does anybody know CPR?"'), a("Run around in circles."), a("Scream."), a("Shout."), a("Sit quietly."), a("Panic."))), a('Shout "OMG, does anybody know CPR?"'), a("Go find an employee."), a("Hide."), a("Run."), a("Look for an AED."), a("Stand around doing nothing."), a("Panic."), a("Give CPR."), a("Don't give CPR.")), q("THE END")
+  }, q("Do you know CPR?", a("Yes."), a("No.", q("Would you like to learn?", a("Sure."), a("No thanks.", q("Why not?", a("Sounds boring.", q("It's pretty exciting, actually!", a("Oh well, in that case, let's do this!"))), a("I mean I already kinda know some things, I'm just not, like, certified or anything."), a("Are you seriously offering to teach me CPR right now?", q("Yes.", a("Huh.  All right."))))))), a("What is CPR?", q("Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!", a("Wow, sounds awesome!  Tell me more!"), a("I don't think that's an accurate description.", q("I thought you said you didn't know what CPR was?", a("Good point!  I withdraw my objection."), a("I said no such thing!  I merely asked what it was.", q("Okay so which part of my description is wrong?", a("The bit about somebody being dead.", q("Wait, <em>that's</em> your objection?  People do die, you know.", a("No they don't."), a("I think you're misunderstanding my point.", q("No I'm not.  That's what you said.  Look, the \"bringing people back to life\" option was <em>right there</em>.", a("Shoot.  Can I go back?", q("Too late for that now!", a("Darn."))), a("Are you seriously trying to tell me that you think you know what I meant better than I do?", q("Okay, maybe I'm not being <em>entirely</em> serious.", a("Oh good."))))))), a("The bit about bringing them back to life.", q("But that's the whole point, right?  If their heart is stopped, they're dead.", a("I guess you're right."), a("That's not what \"dead\" means.", q("Well what does it mean then?", a("It means their soul has left their body and they've gone to heaven.", q("And that doesn't happen until later, is what you're saying?", a("Yes.", meandifferent = q("Well okay, then I guess we mean different things.  Sorry about the confusion.", a("Thanks!"))), a("Sometimes.", meandifferent))), a("It means their brain has stopped working.", meandifferent), a("It means they're actually permanently dead!", meandifferent))), a("You can't actually restart someone's heart with CPR!  Why does everybody think that?", q("That's true, you can't.  But you can buy them some time until the professionals show up and actually restart their heart, and that's the next best thing, right?", a("Sure, I guess."), a("Not really, I mean it only makes a difference in like a few percent of cases.", q("You're complaining that a few percent chance is too small?  For saving somebody's life?  By, like, doing a few minutes work or whatever?", a("Well, when you put it that way...."), a("No, what I'm saying is that your argument is bullshit."))))))), a("The bit about simple techniques.", q("You're saying CPR is complicated.", a("Yes."), a("No."))), a("The bit about no special tools.", q("What special tools do you need for CPR?", a("A mask.", q("Oh man, those things are so fiddly though!", a("Yeah but they're important to prevent infection.", butactually = q("But actually what they're recommending now is that you don't bother with the rescue breathing stuff and focus more on chest compressions.", a("Oh, okay."), a("But isn't that only for untrained responders?", q("Sure.  But so like then why didn't you just say \"yes\" when I asked you if you knew what CPR was?", a("Because I wanted to know how you would answer, obviously."), a("Oh well you know, I'm not like technically certified or anything at this point...."))))))), a("An AED.", q("Well that's true, AEDs are super good, but you can still do CPR without an AED.", a("I disagree."), a("I suppose you're right."), a("Yeah but the AED is so much more effective.", q("Well that's true, isn't it.", a("Yes, it is!"), a("No actually I was just saying that for no reason."))))), a("A manikin.", q("I, uh... I mean... those are good for practicing, but, like, in a real situation where you were really doing CPR on someone, you don't actually need one of those.", a("Don't be ridiculous.  They're included in the training for a reason."), a("Hmm, I guess you have a point."), a("Wait I thought we <em>were</em> talking about training.", q("Oh!  Well, no, that's not what I meant.  Sorry for being unclear!", a("That's okay!"), a("You're not getting off that easy, bub."))))), a("A lung bag.", q("A lung bag?  What the heck is a lung bag?", a("Nothing.  Never mind."), a("Go do an image search.", q("Wait, is it that big long thing?  Weird!", a("I know, right?"))))), a("A HALO seal.", waitreallygsw = q("Wait, really?  You use those for CPR?", a("Yes.", q("You sure you're not thinking of a gunshot wound to the chest or something?", a("Nah."), a("Oh maybe."), a("Well sure, I mean why else would you need to give somebody CPR?"))), a("No."))), a("A SAM splint.", q("Wait, really?  You use those for CPR?", a("Yes.", q("You sure you're not thinking of like a broken bone or something?", a("Nah."), a("Oh maybe."), a("Well sure, I mean why else would you need to give somebody CPR?", q("Uhhhh... do you know what CPR is?", a("Yes."))))), a("No."))), a("An oxygen tank.", q("Hmm.  I guess that could be useful.", a("Totally useful!", butactually))), a("A butane lighter.", q("I don't get it.", a("Me either!"))), a("An Israeli bandage.", waitreallygsw), a("A hemostatic sponge.", waitreallygsw))), a("All of it.", q("So you're saying everything I say is wrong?", a("Yes."), a("No.")))))))))), q("Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?", a("Call 911.", q("Nice!  That is exactly correct!  Okay, so you dial and it's ringing and you're getting a recording about being transferred and not to hang up and what are you doing in the meantime?", a("Begin CPR.", q("Actually, if you're in a movie theater, there's a good chance that there's an AED in the lobby.  You might want to grab that first.", a("What's an AED?", q("It's an Automatic External Defribrillator.  It's a little doodad that can sense when a heart is malfunctioning and shock it back into its normal rhythm.", a("Wow, that sounds super handy!  I would totally go look for one.", q("Okay!  You run into the lobby and... what are you looking for exactly?", a("A red heart with a spark in the middle.", redorgreen = q("Could be red or green.", rggotit = a("Got it.", q("Cool.  You find it and bring it back and open it up and it starts talking.  What now?", a("Stick the electrodes on the victim's chest.", q("Sure, there's a little diagram on there, and... wait, these go under the clothes, don't they?", a("Nope!  We're not doing this.  Sorry.", q("That is okay!  Nobody is going to make you do anything you don't feel comfortable doing.", a("Thank you."), a("Aren't you supposed to, like, tell me that they might die if I don't do this?", q("Do you want me to tell you that?", a("Yes.", q("Why?", a("Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it.", q("It's true that someone might die, and it's true that I might like to convince you of something, but....")), a("Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me."), a("Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?"))), a("No.", q("Then I won't.", a("Okay."))), a("Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?"))))), a("No problem, I pull their shirt up."), a("Wow, this is intense.  Maybe I should pay attention to what the voice is saying."))), a("Wait and listen to what the AED is telling me to do."))))), a("A green heart with a lightning bolt in it.", redorgreen), a("A little placard that says AED on it.", q("Yep, and it'll almost certainly have the symbol too, either the red or the green one.", rggotit)), a("Any of the above.", q("Yep, it'll likely have both the letters AED and the red or green symbol.", rggotit)))), a("Yeah, thanks, I'm gonna leave that stuff for the professionals!", q("Actually, AEDs are designed to be used by anyone.  Professional paramedics have way fancier gear.", a("Yeah but I have no idea how to use one."), a("Also isn't it super dangerous to shock someone's heart just because they fell down?  That's just stupid."))))), a("Good idea, I'll go look for it!"), a("Good idea, I'll send someone to fetch it and do CPR in the meantime!"))), a("Go find an employee."), a('Shout "OMG, does anybody know CPR?"'), a("Run around in circles."), a("Scream."), a("Shout."), a("Sit quietly."), a("Panic."))), a('Shout "OMG, does anybody know CPR?"'), a("Go find an employee."), a("Hide."), a("Run."), a("Look for an AED."), a("Stand around doing nothing."), a("Panic."), a("Give CPR."), a("Don't give CPR.")), q("[XXX more stuff goes here]", a("[XXX okay?]")), function() {
+    var goingon, yourscore, youtube;
+    return q("Okay, looks like that's it.  Thank you for playing this game, " + this.fn + ".", a("My pleasure."), a("You're welcome."), a("What a satisfying conclusion!", q("I know, right?", a("Totally.", q("Yep!", a("Uh-huh."))))), a("Hold on, I have a question!", q("What is your question?", a("Is that all there is?", q("Because if that's all there is, my friend...", a("Then let's keep dancing...", q("Who is that from, anyway?", a("Alan Price", (youtube = function() {
+      var aa, id;
+      id = arguments[0], aa = 2 <= arguments.length ? slice.call(arguments, 1) : [];
+      if (aa.length === 0) {
+        aa = [a("Nice.")];
+      }
+      return q.apply(null, ["<iframe width=\"420\" height=\"315\" src=\"https://www.youtube.com/embed/" + id + "?rel=0\" frameborder=\"0\" allowfullscreen></iframe>"].concat(slice.call(aa)));
+    })("Dyg420eUvok")), a("Bette Midler", youtube('Fpn_xu81ySo')), a("The Bobs", youtube('DoEuRa6YyoU')), a("Chaka Khan", youtube('tTVv-ktbvpg')), a("Cristina Monet", youtube('AybvLztacFM')), a("Giant Sand", youtube('1w6bHzvikl8')), a("Firewater", youtube('YTrWOPaCax0')), a("Hecate, goddess of witchcraft", q("Oh man.  Were you there for that?", a("I was.", q("So good, right?", a("YES.", q("Did she...?", a("Yes.", q("OMG I'm so jealous!", a("I know, right?  I can hardly believe it!"))), a("No.", q("Still!", a("Yeah."))))))), a("No, but I heard about it.", q("And are you gonna...?", a("Yes."), a("No."))), a("Actually I have no idea what you're talking about.", q("I am talking about <em>Sleep No More</em>.", a("Okay."))))), a("Lindsay Anderson", youtube('yCgWJqcOQhA')), a("Liz Gillies", youtube('HNnTQbLbtWI')), a("PJ Harvey", youtube('O0ZUAorP0b4')), a("Peggy Lee", youtube('LCRZZC-DH7M')), a("Sandra Bernhard", youtube('ru6d318UlOQ')), a("Tony Bennett", youtube('xr3CcBp6aw0')), a("Uncle Yo", youtube('hu18YKjijEo')))), a("No seriously, wtf"))), a("What is my score?", yourscore = q("Your score?  There is no score in this game.", a("Oh, okay."), a("I want a score dammit.", q("Your score is 0 out of a total of 0 possible points.  This is the only possible score and gives you no rank in particular.  Would you like to RESTORE, RESTART, UNDO the last command, look at the CREDITS, see a list of AMUSING things to do, or QUIT?", a("RESTORE", q("Okay, go ahead and edit the URL now.  Or use a bookmark.  Or your browser's history function.", a("Eh, never mind."))), a("RESTART"), a("UNDO", function() {
+      if (!this.undo) {
+        this.undo = true;
+        return yourscore;
+      } else {
+        return q("Again?!", a("Yes, again!", q("But we just did this.", a("Oh right, I forgot, never mind."), a("But I want to see if something different will happen this time!", q("Nothing different will happen.", a("Well never mind then."), a("But I still want to do it!", q("No.", a("Boooo!"))))))), a("No, forget it."));
+      }
+    }), a("CREDITS", q("This game was written by " + (this.author || "<span class='redacted'>REDACTED</span>") + ".", a("Thanks!"), a("Hey, what about beta-testers?", function() {
+      if (!this.author) {
+        return q("Sorry, you haven't unlocked that achievement in this playthrough, so I can't say anything more.", a("Oh well!"), a("Wait, how do I unlock it?", q("Oh, it's way back at the beginning.  You have to get me to tell you who wrote this game first.", a("Got it, thanks!"))));
+      } else {
+        return q("No beta-testers yet!  Unless... wait, are <em>you</em> a beta tester?", a("Yes.", q("Then be sure to remind me to add your name here!", a("Okay, will do!"))), a("No.", q("Then I guess that's it!", a("Thanks!"))));
+      }
+    }))), a("AMUSING", q("Amusing?  Like what?", function() {
+      if (this.amusing) {
+        return a(this.amusing, q("Oh yeah!  That was pretty okay I guess!", a("Agreed.")));
+      }
+    }, a("I guess I can't think of anything.", q("Yeah, me either.", a("Too bad."))))), a("QUIT"))))), a("What about that thing with the fog and the railroad tracks and the car's engine stalls?", q("Oh right!  Did I ever explain what was supposed to be going on with that?", a("No.", goingon = q("Oh man, it was gonna be so good... see, the fog was actually going to turn out to be chlorine gas....", a("Wait, what?!"), a("Isn't that poisonous?"), a("Doesn't chlorine have a distinctive smell?"), a("Wait but so why were all the car engines dying?", q("Well, you know, they've got internal combustion engines, and if the air intake stops getting oxygen, it can't burn the fuel so the engine conks out.", a("Oh, that makes sense."), a("But I drive an electric car.", q("Wait, really?", a("Yeah, really."), a("No not really but how would you even know if I did or not, I mean it's not like you even asked.", q("But aren't you " + this.fn + " " + this.ln + "?")))))))), a("Definitely not.", goingon))), a("Can I play again?", q("No, unfortunately it's only ever possible to play this game once.", a("Oh well."), a("What's so unfortunate about that?", q("Just that you'll only ever get to read a tiny fraction of the text contained within this game?  It seems like such a waste.", a("Huh, I guess so."), a("I disagree.", q("Why is that?", a("Because it's better to quit after having a somewhat positive experience than to persist until the magic is spoiled.", q("Good point.", a("Thanks!"))), a("Because this game sucks, dude.", q("Well, good thing it's over, right?", a("Thank goodness!"))))))))))));
+  }, q("THE END")
 ]);
 
 
@@ -11681,8 +11711,11 @@ showQuestion = function(letters) {
   }
   render = function(text) {
     text = text.replace("'", '\u2019');
-    text = text.replace(/"([^']+)"/, '\u201c$1\u201d');
-    return text = text.replace('--', '\u2014');
+    text = text.replace('--', '\u2014');
+    if (/(?:^|\s)<\w[^<>"]*"[^<>]*>/.test(text)) {
+      return text;
+    }
+    return text = text.replace(/"([^']+)"/, '\u201c$1\u201d');
   };
   current.q = render(current.q);
   ref = current.aa;
@@ -11806,6 +11839,10 @@ p,
   width: 0.7em;
   height: 1.2em;
   animation: blink 2s linear infinite;
+}
+.question iframe {
+  display: block;
+  margin-bottom: 1em;
 }
 @-moz-keyframes blink {
   25%, 50% {
