@@ -215,19 +215,21 @@ module.exports = qq [
                           q "Yes.  That.",
                             a "Okay.", -> @mindgame = "Like the thing with the judging period and the exposition thing."
                         a "What exposition thing?",
-                          q "Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!",
-                            a "Oh, <em>that</em>!",
-                              q "So you understand my position?",
-                                a "Totally.", -> @mindgame = "Like the thing where you were explaining about the First Quadrennial whatever it is."
-                                a "No, I'm just trying to change the subject.  Can't you take a hint?",
-                                  q "Oh, sorry!  We can talk about something else now.",
-                                    a "Thanks!", -> @mindgame = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!"
-                            a "Never heard of it.",
-                              q "Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.",
-                                a "Uh... sure... whatever you say.",
-                                  ->
-                                    @mindgame = "Like that thing about repeated credible threats."
-                                    @neverheardofexpo = true
+                          ->
+                            @whatexpo = true
+                            q "Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!",
+                              a "Oh, <em>that</em>!",
+                                q "So you understand my position?",
+                                  a "Totally.", -> @mindgame = "Like the thing where you were explaining about the First Quadrennial whatever it is."
+                                  a "No, I'm just trying to change the subject.  Can't you take a hint?",
+                                    q "Oh, sorry!  We can talk about something else now.",
+                                      a "Thanks!", -> @mindgame = "Like that thing where I kept trying to change the subject but you were really slow to take a hint!"
+                              a "Never heard of it.",
+                                q "Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.",
+                                  a "Uh... sure... whatever you say.",
+                                    ->
+                                      @mindgame = "Like that thing about repeated credible threats."
+                                      @neverheardofexpo = true
                 a "Why yes, actually, I am trying to trick you.", betternottell
             a "No.",
               q "Then I won't tell you.",
@@ -678,6 +680,158 @@ module.exports = qq [
     a "0.01720209895" # Gauss's astronomical, applies to the planets
     a "9.8 m/s<sup>2</sup>" # at Earth's surface
     a "1" # natural units
+
+  q "So did you play that game yet where you're a dog?",
+    a "Yes.",
+      q "What did you think of it?",
+        a "It was terrific!",
+          q "Wow, really?  What did you like best about it?",
+            a "I really liked that thing with Not-Your-Person!"
+            a "The squeak toy was super fun!"
+            a "I liked the eating place!"
+        a "It was terrible.",
+          q "Really?  Why do you say that?",
+            a "The graphics were sub-par.",
+              samegame = q "Are you sure we're thinking of the same game?",
+                a "Yes."
+                a "No."
+            a "The soundtrack was no good.", samegame
+            a "The voice acting was terrible!", samegame
+        a "Meh."
+    a "No.",
+      q "Oh well you totally should!  It's really good!",
+        a "Thanks, I'll keep an eye out for it!"
+        a "It doesn't sound like my cup of tea, actually.",
+          ->
+            if @expo
+              q "Well I'm sorry to hear you say that.",
+                a "Yeah, me too."
+                a "Why are you sorry?",
+                  ->
+                    if @ln != "Veeder"
+                      q "Well, you know, as a steward and all, you might have to play it or something.",
+                        a "Eh, it's a sacrifice I'll have to make.",
+                          q "That's very noble of you.",
+                            a "Oh, it's nothing, really."
+                            a "Yes.  Yes it is."
+                        a "Oh, that's okay, I'll just get #{if @fn is 'Emily' then 'Jenni' else 'Emily'} to look at it instead.",
+                          q "What a brilliant idea!  Why didn't I think of that?",
+                            a "That's why they pay me the big bucks!",
+                              q "Wait, really?",
+                                a "Yes, really.",
+                                  q "Wow, that's so cool!",
+                                    a "Agreed."
+                                a "No, not really.",
+                                  q "Wow, you had me going there!",
+                                    a "Heh heh."
+                    else
+                      q "Well, you know, as judge and all... seems kind of unseemly for you to express a negative opinion of it before you've even played it.",
+                        a "Hmm yeah, that's a good point.  I take it back.",
+                          q "Consider it forgotten.",
+                            a "Thanks!"
+                        a "Are you saying I'm biased?",
+                          q "I... guess so?",
+                            a "Well you're right.",
+                              q "Uh... okay....",
+                                a "Good thinking.",
+                                  q "Um... thanks?",
+                                    a "You're welcome!"
+                            a "Well I'm not.",
+                              q "Okay, if you say so.",
+                                a "I do say so."
+                        a "But a positive opinion would have been okay?",
+                          q "Uh... no, I guess not....",
+                            a "Okay, just checking."
+        a "So you played it?",
+          q "Well, no, I haven't played it <em>yet</em>, but, you know, I've heard good things about it!  Rumors, mostly.  Lotta buzz!",
+            a "That seems reasonable!"
+            a "Wait a minute.  Who wrote this dog game?",
+              q "Oh... uh... I'm not sure if I should tell you.",
+                a "Good thinking!  Better not."
+                a "Wait, why not?",
+                  ->
+                    if @ln != 'Veeder'
+                      q "Because what if Ryan Veeder found out?",
+                        a "Good point!  Never mind."
+                        a "Oh come on.  I promise not to tell him.",
+                          q "But how do I know I can trust you?",
+                            a "I'm #{@fn} #{@ln}.  Of course you can trust me!",
+                              q "See, I don't know about that.  I think I'd better not say anything.",
+                                a "As you wish."
+                            a "I'm #{@fn} #{@ln}.  Of course you can't trust me!",
+                              q "See, that's exactly what I'm afraid of.",
+                                a "Ah well, I tried.",
+                                  q "Yes you did.  Good job trying, by the way!",
+                                    a "Gee, thanks!"
+                            a "I guess there's no way of knowing, is there.",
+                              q "No, there really isn't.",
+                                a "Oh well."
+                    else
+                      q "Because you're Ryan Veeder!",
+                        a "So?",
+                          q "Wait -- is the exposition over already?",
+                            a "Yes.",
+                              q "So I can just tell you?",
+                                a "Yes.",
+                                  q "But what if you're lying?",
+                                    a "You're right, I'm lying.",
+                                      q "I knew it!",
+                                        a "Good call!"
+                                    a "You're wrong, I'm telling the truth.",
+                                      q "But, see, you could be lying about that too!",
+                                        a "No I couldn't!",
+                                          q "Nice try, but you won't fool me!",
+                                            a "Curses!  Foiled again!"
+                                        a "Oh, good point.",
+                                          q "I know!",
+                                            a "Yes."
+                                a "No.",
+                                  q "Wait, why not?",
+                                    a "I changed my mind.",
+                                      q "Well, all right.",
+                                        a "Thank you for respecting my right to change my mind about things!",
+                                          q "You're welcome, #{@fn}.  You'er welcome.",
+                                            a "Okay now ask me another question."
+                            a "No.",
+                              q "Then I'd better not tell you.",
+                                a "Fine."
+                                a "Why not?",
+                                  q "Rule 6.  Obviously.",
+                                    a "Oh yeah, rule 6."
+                                    a "Wait, what's rule 6?",
+                                      q "I forget exactly.  Something about pain of forfeit?",
+                                        a "Sounds annoying."
+                            a "What exposition is this?",
+                              ->
+                                if @whatexpo
+                                  q "Don't play dumb with me, #{@fn}!  We've been over this already!  You're clearly just trying to trick me.",
+                                    a "Foiled again!"
+                                else
+                                  q "The First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction!",
+                                    a "Wow, that sounds amazing!",
+                                      q "OMG so amazing!!!",
+                                        a "You sure seem excited about this.",
+                                          q "I am!  This is gonna be so great!!!!",
+                                            a "Well, good luck with that!",
+                                              q "Thanks!",
+                                                a "You're welcome!"
+                                    a "Gosh, that sounds terrible!",
+                                      q "Really?  You think?",
+                                        a "Yes, I really think that.",
+                                          q "I am skeptical of your opinion on this matter.",
+                                            a "All right, be skeptical then."
+                                        a "No, I was just messing with you.",
+                                          q "Oh thank goodness!  I mean wait, what?  Why would you even do that?",
+                                            a "No reason.",
+                                    a "<em>[yawn]</em>",
+                                      q "Am I boring you?  We can talk about something else if you want.",
+                                        a "Please."
+                        a "No I'm not.",
+                          q "Sure you are!  We've been over this.",
+                            a "Oh sorry, I must have forgotten.",
+                              q "You must've.",
+                                a "Yes!"
+                        a "Oh yeah, good point."
 
   -> if @lorem then q "Grumpy wizards make a toxic brew for the jovial...",
     a "...bishop."

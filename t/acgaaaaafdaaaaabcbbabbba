@@ -7,16 +7,19 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
 
 What's your name?
 
-> a. Emily
+  a. Emily
   b. Jenni
-  c. Ryan
+> c. Ryan
 
 And your last name?
 
-> a. Boegheim
-  b. Carroll
-  c. Ryan
-  d. Short
+  a. Burrus
+  b. Freebern
+  c. Holman
+  d. Kinsman
+  e. Weisenberger
+  f. Stevens
+> g. Veeder
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?
 
@@ -27,7 +30,7 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
-Hold on.  Are you the <em>real</em> Emily Boegheim?
+Hold on.  Are you the <em>real</em> Ryan Veeder?
 
 > a. Yes.
   b. No.
@@ -58,33 +61,29 @@ All right, in that case... what does "grue" mean to you?
 
 Very good!  Now, which of these would you rather be?
 
-> a. a cowboy
+  a. a cowboy
   b. a hammer than a nail
   c. able to fly
   d. drinking
   e. eating
-  f. invisible
+> f. invisible
   g. sleeping
   h. with someone I love
 
-Like the song?
-
-> a. Yes, like the song!
-  b. No, I didn't even realize that was a song.
-  c. No, I know the song but that's not why I chose that answer.
-
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
-> a. Heads and tails are equally likely.
+  a. Heads and tails are equally likely.
   b. Heads is much more likely than tails.
   c. Tails is much more likely than heads.
-  d. I don't know.
+> d. I don't know.
 
 Why do you say that?
 
-  a. Because I don't care.
-> b. Because you said it was a fair coin.
-  c. Because there's no way to decide between the two.
+> a. Because that question is unanswerable.
+  b. Because that question is complicated.
+  c. Because that question is difficult.
+  d. Because that question is boring.
+  e. Because that question is bad.
 
 Hmm, yes... maybe we can come back to this later....
 
@@ -98,34 +97,6 @@ What goes between two sentences?
   c. U+200F WIDENED SPACE
   d. Nothing.
   e. It depends.
-
-How much bigger than one tenth is one ninth?
-
-  a. About 1%.
-  b. About 9%.
-  c. About 10%.
-> d. About 11%.
-
-Can you explain why that is?
-
-> a. Sure, it's just... one over nine is point one repeating, and then you just move the decimal and subtract one and....
-  b. Well, it's, like, the ratio is clearly just a little bit bigger than one tenth itself, so....
-  c. I totally could, if these answers didn't suck so much.
-  d. No, not really.
-  e. Eleven is my favorite number!
-
-Mmm, yes, I see... sorry, I just need to make a note here....
-
-> a. Okay....
-  b. Are you done?
-
-Ah yes, there we go.  Where were we?
-
-> a. You, uh, were asking me questions?
-
-Indeed I was!  Shall we get back to that?
-
-> a. Okay.
 
 How do you typically respond to stress?
 
@@ -145,32 +116,52 @@ Lorem ipsum dolor sit...
   g. ...imam.
   h. ...uman.
 
-About how strong is gravity?
-
-> a. 6.674×10<sup>-11</sup> N (m/kg)<sup>2</sup>
-  b. 6.674×10<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>
-  c. 6.674×10<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>
-  d. 4.302×10<sup>-3</sup> pc <i>M</i><sub>☉</sub><sup>-1</sup> (km/s)<sup>2</sup>
-  e. 0.01720209895
-  f. 9.8 m/s<sup>2</sup>
-  g. 1
-
 So did you play that game yet where you're a dog?
 
-> a. Yes.
-  b. No.
+  a. Yes.
+> b. No.
 
-What did you think of it?
+Oh well you totally should!  It's really good!
 
-> a. It was terrific!
-  b. It was terrible.
-  c. Meh.
+  a. Thanks, I'll keep an eye out for it!
+  b. It doesn't sound like my cup of tea, actually.
+> c. So you played it?
 
-Wow, really?  What did you like best about it?
+Well, no, I haven't played it <em>yet</em>, but, you know, I've heard good things about it!  Rumors, mostly.  Lotta buzz!
 
-> a. I really liked that thing with Not-Your-Person!
-  b. The squeak toy was super fun!
-  c. I liked the eating place!
+  a. That seems reasonable!
+> b. Wait a minute.  Who wrote this dog game?
+
+Oh... uh... I'm not sure if I should tell you.
+
+  a. Good thinking!  Better not.
+> b. Wait, why not?
+
+Because you're Ryan Veeder!
+
+> a. So?
+  b. No I'm not.
+  c. Oh yeah, good point.
+
+Wait -- is the exposition over already?
+
+  a. Yes.
+> b. No.
+  c. What exposition is this?
+
+Then I'd better not tell you.
+
+  a. Fine.
+> b. Why not?
+
+Rule 6.  Obviously.
+
+  a. Oh yeah, rule 6.
+> b. Wait, what's rule 6?
+
+I forget exactly.  Something about pain of forfeit?
+
+> a. Sounds annoying.
 
 Do you have friends?
 
