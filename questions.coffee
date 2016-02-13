@@ -399,7 +399,7 @@ module.exports = qq [
                 a "Yep, no question.", howdoyoufeel
                 a "No way, in fact they love me even more!", howdoyoufeel
                 a "Eh, about the same amount.", howdoyoufeel
-                a "No, less than normal.", theyloveyoumore
+            a "No, less than normal.", theyloveyoumore
         a "4 -- OMG so much!", normalamount
         a "5 -- Impossibly much!!!", theyloveyouless
 
@@ -439,10 +439,10 @@ module.exports = qq [
           q "Well, no, I mean... no, that's not what... just bear with me, okay?  We'll get through this.", surewhatevs
 
   q "What goes between two sentences?",
-    a "no space."
     a "One space."
     a "Two spaces."
     a "U+200F WIDENED SPACE"
+    a "Nothing."
     a "It depends.",
       q "On what?",
         a "The medium."
@@ -706,7 +706,7 @@ module.exports = qq [
     a "No."
     a "Kinda?"
 
-  -> if not @nogeo
+  -> if @geo
     q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
       a "...Venezuela."
       a "...Samoa."
@@ -732,6 +732,77 @@ module.exports = qq [
     a "What is CPR?",
       q "Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!",
         a "Wow, sounds awesome!  Tell me more!"
+        a "I don't think that's an accurate description.",
+          q "I thought you said you didn't know what CPR was?",
+            a "Good point!  I withdraw my objection."
+            a "I said no such thing!  I merely asked what it was.",
+              q "Okay so which part of my description is wrong?",
+                a "The bit about somebody being dead."
+                a "The bit about bringing them back to life."
+                a "The bit about simple techniques."
+                a "The bit about no special tools.",
+                  q "What special tools do you need for CPR?",
+                    a "A mask.",
+                      q "Oh man, those things are so fiddly though!",
+                        a "Yeah but they're important to prevent infection.",
+                          butactually = q "But actually what they're recommending now is that you don't bother with the rescue breathing stuff and focus more on chest compressions.",
+                            a "Oh, okay."
+                            a "But isn't that only for untrained responders?",
+                              q "Sure.  But so like then why didn't you just say \"yes\" when I asked you if you knew what CPR was?",
+                                a "Because I wanted to know how you would answer, obviously."
+                                a "Oh well you know, I'm not like technically certified or anything at this point...."
+                    a "An AED.",
+                      q "Well that's true, AEDs are super good, but you can still do CPR without an AED.",
+                        a "I disagree."
+                        a "I suppose you're right."
+                        a "Yeah but the AED is so much more effective.",
+                          q "Well that's true, isn't it.",
+                            a "Yes, it is!"
+                            a "No actually I was just saying that for no reason."
+                    a "A manikin.",
+                      q "I, uh... I mean... those are good for practicing, but, like, in a real situation where you were really doing CPR on someone, you don't actually need one of those.",
+                        a "Don't be ridiculous.  They're included in the training for a reason."
+                        a "Hmm, I guess you have a point."
+                        a "Wait I thought we <em>were</em> talking about training.",
+                          q "Oh!  Well, no, that's not what I meant.  Sorry for being unclear!",
+                            a "That's okay!"
+                            a "You're not getting off that easy, bub."
+                    a "A lung bag.",
+                      q "A lung bag?  What the heck is a lung bag?",
+                        a "Nothing.  Never mind."
+                        a "Go do an image search.",
+                          q "Wait, is it that big long thing?  Weird!",
+                            a "I know, right?"
+                    a "A HALO seal.",
+                      waitreallygsw = q "Wait, really?  You use those for CPR?",
+                        a "Yes.",
+                          q "You sure you're not thinking of a gunshot wound to the chest or something?",
+                            a "Nah."
+                            a "Oh maybe."
+                            a "Well sure, I mean why else would you need to give somebody CPR?"
+                        a "No."
+                    a "A SAM splint.",
+                      q "Wait, really?  You use those for CPR?",
+                        a "Yes.",
+                          q "You sure you're not thinking of like a broken bone or something?",
+                            a "Nah."
+                            a "Oh maybe."
+                            a "Well sure, I mean why else would you need to give somebody CPR?",
+                              q "Uhhhh... do you know what CPR is?",
+                                a "Yes."
+                        a "No."
+                    a "An oxygen tank.",
+                      q "Hmm.  I guess that could be useful.",
+                        a "Totally useful!", butactually
+                    a "A butane lighter.",
+                      q "I don't get it.",
+                        a "Me either!"
+                    a "An Israeli bandage.", waitreallygsw
+                    a "A hemostatic sponge.", waitreallygsw
+                a "All of it.",
+                  q "So you're saying everything I say is wrong?",
+                    a "Yes."
+                    a "No."
 
   q "Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?",
     a "Call 911.",

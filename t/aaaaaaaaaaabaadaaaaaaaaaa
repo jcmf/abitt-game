@@ -93,10 +93,10 @@ Hmm, yes... maybe we can come back to this later....
 
 What goes between two sentences?
 
-> a. no space.
-  b. One space.
-  c. Two spaces.
-  d. U+200F WIDENED SPACE
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
   e. It depends.
 
 How much bigger than one tenth is one ninth?
@@ -161,15 +161,6 @@ Do you have friends?
   b. No.
   c. Kinda?
 
-Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...
-
-> a. ...Venezuela.
-  b. ...Samoa.
-  c. ...Yemen.
-  d. ...South Africa.
-  e. ...Zambia.
-  f. ...Zimbabwe.
-
 Do you know CPR?
 
 > a. Yes.
@@ -178,7 +169,7 @@ Do you know CPR?
 
 Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
 
-  a. Call 911.
+> a. Call 911.
   b. Shout "OMG, does anybody know CPR?"
   c. Go find an employee.
   d. Hide.
@@ -188,4 +179,15 @@ Okay.  Say you're standing in line for the new Star Wars movie, and somebody in 
   h. Panic.
   i. Give CPR.
   j. Don't give CPR.
+
+Nice!  That is exactly correct!  Okay, so you dial and it's ringing and you're getting a recording about being transferred and not to hang up and what are you doing in the meantime?
+
+  a. Begin CPR.
+  b. Go find an employee.
+  c. Shout "OMG, does anybody know CPR?"
+  d. Run around in circles.
+  e. Scream.
+  f. Shout.
+  g. Sit quietly.
+  h. Panic.
 
