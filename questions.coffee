@@ -737,9 +737,41 @@ module.exports = qq [
             a "Good point!  I withdraw my objection."
             a "I said no such thing!  I merely asked what it was.",
               q "Okay so which part of my description is wrong?",
-                a "The bit about somebody being dead."
-                a "The bit about bringing them back to life."
-                a "The bit about simple techniques."
+                a "The bit about somebody being dead.",
+                  q "Wait, <em>that's</em> your objection?  People do die, you know.",
+                    a "No they don't."
+                    a "I think you're misunderstanding my point.",
+                      q "No I'm not.  That's what you said.  Look, the \"bringing people back to life\" option was <em>right there</em>.",
+                        a "Shoot.  Can I go back?",
+                          q "Too late for that now!",
+                            a "Darn."
+                        a "Are you seriously trying to tell me that you think you know what I meant better than I do?",
+                          q "Okay, maybe I'm not being <em>entirely</em> serious.",
+                            a "Oh good."
+                a "The bit about bringing them back to life.",
+                  q "But that's the whole point, right?  If their heart is stopped, they're dead.",
+                    a "I guess you're right."
+                    a "That's not what \"dead\" means.",
+                      q "Well what does it mean then?",
+                        a "It means their soul has left their body and they've gone to heaven.",
+                          q "And that doesn't happen until later, is what you're saying?",
+                            a "Yes.",
+                              meandifferent = q "Well okay, then I guess we mean different things.  Sorry about the confusion.",
+                                a "Thanks!"
+                            a "Sometimes.", meandifferent
+                        a "It means their brain has stopped working.", meandifferent
+                        a "It means they're actually permanently dead!", meandifferent
+                    a "You can't actually restart someone's heart with CPR!  Why does everybody think that?",
+                      q "That's true, you can't.  But you can buy them some time until the professionals show up and actually restart their heart, and that's the next best thing, right?",
+                        a "Sure, I guess."
+                        a "Not really, I mean it only makes a difference in like a few percent of cases.",
+                          q "You're complaining that a few percent chance is too small?  For saving somebody's life?  By, like, doing a few minutes work or whatever?",
+                            a "Well, when you put it that way...."
+                            a "No, what I'm saying is that your argument is bullshit."
+                a "The bit about simple techniques.",
+                  q "You're saying CPR is complicated.",
+                    a "Yes."
+                    a "No."
                 a "The bit about no special tools.",
                   q "What special tools do you need for CPR?",
                     a "A mask.",
