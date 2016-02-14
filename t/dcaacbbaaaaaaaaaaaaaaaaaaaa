@@ -1,0 +1,183 @@
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+  a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+> d. Hold on, I have a question!
+
+What is your question?
+
+  a. How should I indicate which answer I wish to choose?
+  b. What if I choose the wrong answer?
+> c. Who wrote this game?
+
+Are you sure you want to know?
+
+> a. Yes.
+  b. No.
+
+You're not trying to trick me, are you?
+
+> a. Of course not.
+  b. Why yes, actually, I am trying to trick you.
+
+So the judging period is over?
+
+  a. Yes.
+  b. No.
+> c. Uh... judging period?  What?
+
+You know, for the exposition thing.
+
+  a. Oh right, the exposition thing!
+> b. What exposition thing?
+
+Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
+
+  a. Oh, <em>that</em>!
+> b. Never heard of it.
+
+Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
+
+> a. Uh... sure... whatever you say.
+
+What's your name?
+
+> a. Emily
+  b. Jenni
+  c. Ryan
+
+And your last name?
+
+> a. Boegheim
+  b. Carroll
+  c. Ryan
+  d. Short
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+Hold on.  Are you the <em>real</em> Emily Boegheim?
+
+> a. Yes.
+  b. No.
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+Why do you say that?
+
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+Hmm, yes... maybe we can come back to this later....
+
+> a. Okay.
+  b. What if I want to talk about it now?
+
+What goes between two sentences?
+
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
+  e. It depends.
+
+How do you typically respond to stress?
+
+> a. Fight.
+  b. Flee.
+  c. Freeze.
+  d. Dissociate.
+
+Something's been bothering me about some of your earlier answers.
+
+> a. Oh?  What is it?
+  b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
+  c. OMG did I screw up the math question?  I hate math.
+
+Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
+
+> a. So?
+
+So?  You're Emily Boegheim!
+
+> a. So?
+
+You're supposed to be one of the fricking <em>stewards</em>!  How can you not have heard of the competition that you yourself are... uhhh....
+
+> a. ...stewing?
+  b. ...stewarding?
+  c. ...stewardessing?
+  d. ...stewardinessing?
+  e. ...stewardlinessing?
+  f. ...stewardshiplikenessing?
+  g. ...stewardsnesslishippagelikelifallityinessaging?
+
+...huh.  Okay, maybe you <em>are</em> Emily Boegheim.
+
+> a. Told you so!
+
+Lorem ipsum dolor sit...
+
+  a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+

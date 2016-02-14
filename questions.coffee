@@ -622,11 +622,11 @@ module.exports = qq [
                             a "I'll stick paperclips up your toenails!", neversay
                             a "Swarms of angry cyber-bees!", neversay
                     a "I'm a very busy man.",
-                      q "Hmm, yes... the real @{fn} @{ln} would never waste time playing such a trivial game as this!  Isn't he more into, like, parser stuff?  You couldn't possibly be....", besilent
+                      q "Hmm, yes... the real #{@fn} #{@ln} would never waste time playing such a trivial game as this!  Isn't he more into, like, parser stuff?  You couldn't possibly be....", besilent
                 else
                   q "You're supposed to be one of the fricking <em>stewards</em>!  How can you not have heard of the competition that you yourself are... uhhh....",
                     a "...stewing?",
-                      huh = q "...huh.  Okay, maybe you <em>are</em> @{fn} @{ln}.",
+                      huh = q "...huh.  Okay, maybe you <em>are</em> #{@fn} #{@ln}.",
                         a "Told you so!"
                     a "...stewarding?", huh
                     a "...stewardessing?", huh
