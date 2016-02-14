@@ -290,7 +290,7 @@ module.exports = qq [
                               q "Yes???",
                                 (meet = (t, f, l, expo) ->
                                   a "...#{f} #{l}.",
-                                    q (-> [@title, @fn, @ln, @expo] = [t, f, l, expo]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
+                                    q (-> @origname or= "#{@fn} #{@ln}"; [@title, @fn, @ln, @expo] = [t, f, l, expo]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
                                       a "Such as...?"
                                 )('Mr.', 'Graham', 'Nelson'),
                                 meet 'Ms.', 'Hillary', 'Clinton'
@@ -602,6 +602,7 @@ module.exports = qq [
                                   q "Confess, traitor!  What is your true name?",
                                     (meet = (t, f, l) ->
                                       a "#{f} #{l}", ->
+                                        @origname or= "#{@fn} #{@ln}"
                                         [@title, @fn, @ln] = [t, f, l]
                                         q "Holy moly!  I've always wanted to meet you, #{t} #{l}!  If I could just ask you a few questions....",
                                           a "Certainly!"
@@ -1258,12 +1259,54 @@ module.exports = qq [
                 a "Doesn't chlorine have a distinctive smell?" # XXX
                 a "Wait but so why were all the car engines dying?",
                   q "Well, you know, they've got internal combustion engines, and if the air intake stops getting oxygen, it can't burn the fuel so the engine conks out.",
-                    a "Oh, that makes sense."
+                    a "Oh, that makes sense.  Thanks!"
                     a "But I drive an electric car.",
                       q "Wait, really?",
-                        a "Yeah, really." # XXX
+                        a "Yeah, really.",
+                          q "Are you sure?",
+                            a "Of course I'm sure.",
+                              q "And you'd be willing to testify to that effect in small claims court?",
+                                a "Sure, why?",
+                                  q "Because I think this private investigator is going to try to weasel out of refunding my money, is why.  I'll be in touch!  See ya!",
+                                    a "Wait, I --"
+                                a "No way.",
+                                  q "What about an afidavit?",
+                                    a "Well, okay.",
+                                      q "Great!  I'll be in touch.",
+                                        a "Okay?"
+                                    a "Nope.",
+                                      q "Really?  After everything we've been through?  One simple thing I ask of you, and you won't even....",
+                                        a "I really don't think --"
+                                    a "What's that?",
+                                      q "You know, like a sworn statement.  On paper.",
+                                        a "Sure, that doesn't sound so bad."
+                                        a "I don't think so."
+                            a "Um... does a hybrid count?",
+                              q "I, uh... huh.  Maybe?  I'll have to get back to you on that.",
+                                a "Okay, um, how long do you think you'll --"
                         a "No not really but how would you even know if I did or not, I mean it's not like you even asked.",
-                          q "But aren't you #{@fn} #{@ln}?" # XXX ok I need to account for the cases where they changed their story....
+                          if @origname
+                            q "But didn't you say you were #{@origname}?",
+                              a "So?",
+                                q "So #{@origname} doesn't drive an electric car iether.",
+                                  howdoyou = a "Wait, how do you know that?",
+                                    q "Extensive market research?",
+                                      a "Okay, sure, that sounds plausible."
+                                      a "Wait, what exactly do you mean by --"
+                              a "Wait, I thought I was #{@fn} #{@ln}.",
+                                q "Well, sure, I mean, <em>now</em> I know that, but <em>at the time</em> I believed that you were #{@origname}.  And #{@origname} doesn't drive an electric car either.", howdoyou
+                          else
+                            q "But didn't you say you were #{@fn} #{@ln}.",
+                              a "Yes, so?",
+                                q "So #{@fn} #{@ln} doesn't drive an electric car either.", howdoyou
+                              a "But see I'm not actually #{@fn} #{@ln}.",
+                                q "Wait, you're not?!",
+                                  a "Correct.",
+                                    q "But I was still right about you not driving an electric car.",
+                                      a "Well, yes.",
+                                        q "Oh good.  Well, I guess we're done here then.",
+                                          a "I guess."
+                                          a "Wait, I still --"
             a "Definitely not.", goingon
         a "Can I play again?",
           q "No, unfortunately it's only ever possible to play this game once.",
@@ -1275,7 +1318,7 @@ module.exports = qq [
                   q "Why is that?",
                     a "Because it's better to quit after having a somewhat positive experience than to persist until the magic is spoiled.",
                       q "Good point.",
-                        a "Thanks!" # XXX can I do something good here?
+                        a "Thanks!" # XXX
                     a "Because this game sucks, dude.",
                       q "Well, good thing it's over, right?",
                         a "Thank goodness!"
