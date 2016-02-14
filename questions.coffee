@@ -1323,18 +1323,35 @@ module.exports = qq [
           q "Oh right!  Did I ever explain what was supposed to be going on with that?",
             a "No.",
               goingon = q "Oh man, it was gonna be so good... see, the fog was actually going to turn out to be chlorine gas....",
-                a "Wait, what?!" # XXX
-                a "Isn't that poisonous?" # XXX
-                a "Doesn't chlorine have a distinctive smell?" # XXX
+                a "Wait, what?!",
+                  q "Anyway I guess we're out of time.  Have a nice rest of your day!",
+                    a "But --"
+                a "Isn't that poisonous?",
+                  q "Indeed it is!",
+                    a "I thought as much.  So that means --"
+                a "Where would it have come from?",
+                  q "Train wreck.  Tank cars, full of liquefied chlorine gas.",
+                    a "Got it."
+                    a "Wait.  Is that even a real thing?",
+                      q "Oh totally!  It's used for water purification.  This is all based on a real incident.",
+                        a "Wow, this sounds impressively well-researched!  I bet if you --"
+                a "Doesn't chlorine have a distinctive odor?",
+                  q "Sure does!  Smells like a pool at first.  I was considering mentioning, but then I thought I'd have you only notice it in the next bit, to increase the mysteriousness!",
+                    a "Wow, that would have been so much fun!  You should --"
+                    a "That's ridiculous.  I would totally have noticed --"
+                a "Doesn't chlorine have a distinctive color?",
+                  q "Kind of?  It's a bit greenish.  I was considering mentioning, but then I thought I'd have you only notice it in the next bit, to increase the mysteriousness!",
+                    a "Wow, that would have been awesome.  Too bad --"
+                    a "But that's completely unrealistic.  I would definitely have --"
                 a "Wait but so why were all the car engines dying?",
-                  q "Well, you know, they've got internal combustion engines, and if the air intake stops getting oxygen, it can't burn the fuel so the engine conks out.",
+                  q "Well, you know, they've got internal combustion engines, and if the air intake stops feeding oxygen to the thingee, it can't burn the fuel so the engine conks out.",
                     a "Oh, that makes sense.  Thanks!"
                     a "But I drive an electric car.",
                       q "Wait, really?",
                         a "Yeah, really.",
                           q "Are you sure?",
                             a "Of course I'm sure.",
-                              q "And you'd be willing to testify to that effect in small claims court?",
+                              q "And you'd be willing to testify to that effect in a courtroom?",
                                 a "Sure, why?",
                                   q "Because I think this private investigator is going to try to weasel out of refunding my money, is why.  I'll be in touch!  See ya!",
                                     a "Wait, I --"
@@ -1374,8 +1391,15 @@ module.exports = qq [
                                     q "But I was still right about you not driving an electric car.",
                                       a "Well, yes.",
                                         q "Oh good.  Well, I guess we're done here then.",
-                                          a "I guess."
+                                          a "Okay."
                                           a "Wait, I still --"
+                a "How is that <em>good</em>?",
+                  q "Narratively, I mean!  There's no better way to engage the player's interest than by throwing you into the middle of a story like that.",
+                    a "Well, I guess that makes sense."
+                    a "But wouldn't the gas just kill me right away?",
+                      q "Well, probably!  But, you know.  Learn by dying, right?",
+                        a "Oh I see.  Cool!"
+                        a "No no no, you're doing it wrong.  See, if the character keeps dying and the player keeps undoing or restarting the game back to the same situation, then not only is that super boring but it also tends to interfere with the player's sense of --"
             a "Definitely not.", goingon
         a "Can I play again?",
           q "No, unfortunately it's only ever possible to play this game once.",
