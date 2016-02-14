@@ -40,7 +40,7 @@ html(lang='en')
           min-width 1.15em
           padding-left 0
           text-indent 0
-        .author
+        .frontmatter
           font-style italic
         .redacted
           background-color black
@@ -60,8 +60,10 @@ html(lang='en')
     #home-pane.pane.enter-key
       h1 A Brief Introduction To This Game
 
-      .author by #[span.redacted REDACTED]
-      .copyright &copy; 2016
+      .frontmatter
+        .author by #[span.redacted REDACTED]
+        .copyright &copy; 2016
+        .serial s/n #{new Date().getTime()}-😹
 
       :marked
         [Press Enter or click here to begin.](#!)
