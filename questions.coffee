@@ -588,7 +588,7 @@ module.exports = qq [
       a "Oh?  What is it?",
         q "Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!",
           a "So?",
-            q "So?  You're #{@fn} #{@ln}!",
+            q "So?  You told me you were #{@fn} #{@ln}!",
               a "So?",
                 if @fn is 'Ryan'
                   q "You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?",
@@ -636,7 +636,8 @@ module.exports = qq [
                     a "...stewardsnesslishippagelikelifallityinessaging?", huh
       a "It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.",
         q "Great idea!",
-          a "I know, right?"
+          a "It's a gift."
+          a "I have those from time to time."
       a "OMG did I screw up the math question?  I hate math.",
         q "The one ninth one?",
           if not @premath
