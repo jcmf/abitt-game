@@ -74,7 +74,7 @@ module.exports = qq [
                           ->
                             @amusing = "Like when you said let's move on and gave me three increasingly obsequious choices."
                             q "Let's move on, shall we?",
-                              a "Understood.",
+                              a "Understood."
                               a "I hear and obey."
                               a "Your wish is my command."
                     a "I'm not sure.",
@@ -336,7 +336,7 @@ module.exports = qq [
     a "Nunavut"
     a "Ottawa", -> @geo = true
     a "Saskatchewan"
-    a "Skullport"
+    a "Skullport", -> @skullport = true
     a "Toronto"
     a "Vancouver"
 
@@ -406,6 +406,48 @@ module.exports = qq [
             a "No, less than normal.", theyloveyoumore
         a "4 -- OMG so much!", normalamount
         a "5 -- Impossibly much!!!", theyloveyouless
+
+  -> if @skullport
+    q "So the capital of Canada is Skullport, huh?",
+      a "Yep!",
+        q "Okay, just checking!",
+          a "No problem!"
+      a "Wait a minute... are you implying that the capital of Canada <em>isn't</em> Skullport?",
+        q "That... would be what I'm implying, yes.",
+          a "I've been reading too much City of Splendors, haven't I?",
+            possibility = q "Seems like a distinct possibility, yes!",
+              a "Sorry, I'll try to do better next time."
+              a "I have no regrets about my choices in this matter."
+          a "I've been playing too much Forgotten Realms, haven't I?", possibility
+          a "I've been playing too much Lords of Waterdeep, haven't I?", possibility
+          a "Uh... I think you lost me on the above answers.",
+            q "Just try to roll with it.",
+              a "Okay."
+              a "No!",
+                q "Then go look it up, I guess?  I can't stop you from looking things up, you know.",
+                  a "Okay, fine, I looked it up.  It all makes sense now.  Are you happy?"
+                  a "I'm not going to just set this aside and start looking up random things!",
+                    q "Why not?",
+                      a "Eh, too lazy.",
+                        q "Yeah, okay, I can respect that argument.",
+                          a "Really?  Thanks!",
+                            q "No, not really.",
+                              a "Okay, that's fair."
+                              a "Well screw you too then."
+                      a "Because that would be boring.",
+                        q "Fair enough.  Let's move on.",
+                          a "Okay."
+                      a "Because it would break my funky flow here.",
+                        q '"Funky flow," huh?',
+                          a "You have a problem with that?",
+                            q "No, no problem!  No problem at all!",
+                              a "Well good!"
+                              a "I am sensing a certain degree of insincerity here.",
+                                q "Oh, you're sensing it, are you?",
+                                  a "Shut up."
+                      a 'I kinda like option C, but I just want to register my objection to your transparent attempt to put the words "funky flow" in my mouth like that.  That is not how I roll.',
+                        q "Objection noted!",
+                          a "Thank you!"
 
   q "Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?",
     a "Heads and tails are equally likely.",
