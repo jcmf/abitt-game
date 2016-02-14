@@ -876,6 +876,51 @@ module.exports = qq [
                               q "You must've.",
                                 a "Yes!"
                         a "Oh yeah, good point."
+    a "Wait, which one?",
+      q "You know, the other entry in the... thing.",
+        a "Are you referring to the First Quadrennial Ryan Veeder Exposition for Interactive Fiction?",
+          q "Why yes.  Yes I am.  As it happens.",
+            a "Thanks, now I totally understand exactly which game you were referring to earlier.",
+              q "Oh good!  I was worried that I was going to have to explain and it was going to be awkward somehow.",
+                a "Nope, no worries!"
+            a "I was not aware that there was an entry about being a dog.",
+              q "Oh!  Well.  Um.  Never mind then.",
+                a "Okay...."
+            a "Which of the entries about being a dog did you mean?",
+              q "Uh... you know... the one by... um....",
+                a "Go on.",
+                  q "Wait, are there seriously several entries about being a dog?",
+                    a "Yes.",
+                      q "Wow.  I did <em>not</em> see that coming.",
+                        a "Me either."
+                        a "Oh come on, it should have been obvious.",
+                          q "Maybe to you.",
+                            -> a "Well, I <em>am</em> #{@fn} #{@ln}.",
+                              q "Oh yeah that's right, we established that earlier, didn't we?",
+                                a "We certainly did."
+                                a "Eh probably."
+                    a "No.",
+                      q "So you're just messing with me.",
+                        a "Yes."
+                a "Stop right there.",
+                  q "Why?  So you can remind me about rule 6?  What do you care?",
+                    ->
+                      if @expo
+                        a "Because I'm #{@fn} #{@ln}.  Obviously.  It's like my <em>job</em> to care.",
+                          q "Oh, hey, good point!",
+                            a "Thank you, I'm rather proud of it myself."
+                      else
+                        a "I'm just, you know, looking out for you and stuff.  Like, as a fellow....",
+                          q "Ah ah ah!  Don't say it!  Rule 6!",
+                            a "Wait, but I'm not even....",
+                              q "You are complicit in this!  I'll take you down with me, you know!",
+                                a "You wouldn't dare.",
+                                  liketothink = q "Oh, you'd like to think that, wouldn't you?",
+                                    a "Yes."
+                                    a "No."
+                                    a "Maybe?"
+                                a "That doesn't make any sense.", liketothink
+                                a "Um.  <em>Does</em> that make sense?  I have no idea what you're even talking about anymore.", liketothink
 
   -> if @lorem then q "Grumpy wizards make a toxic brew for the jovial...",
     a "...bishop."
@@ -895,7 +940,7 @@ module.exports = qq [
     a "...lord."
     a "...pawn."
     a "...prince."
-    a "...queen.", -> #...
+    a "...queen." # XXX
     a "...rook."
     a "...squire."
 
