@@ -1250,6 +1250,75 @@ module.exports = qq [
                       q "Yeah, me either.",
                         a "Too bad."
                 a "QUIT"
+        a "How can I send feedback to the author?",
+          q 'Simply email <a href="mailto:REDACTED@lolbird.com"><span class="redacted">REDACTED</span>@<span class="redacted">lolbird</span>.com</a>.',
+            a "Thanks!"
+            a "Wait, there's a problem.",
+              q "What seems to be the problem?",
+                a "I'm trying to copy and paste that email address, but it's kinda hard to select the text because of how it's a hyperlink.",
+                  q 'Here you go: <span class="redacted">REDACTED</span>@<span class="redacted">lolbird</span>.com',
+                    a "Thanks!"
+                a "The email address is blacked out!",
+                  q 'My goodness, so it is!  Here, try this one: <a href="mailto:REDACTED@lolbird.com"><span class="redacted">REDACTED</span>@lolbird.com</a>',
+                    a "Thanks!"
+                    a "Hey, um, the first part is still blacked out.",
+                      q 'Oh!  In that case, I recommend you use this one: <a href="mailto:REDACTED@lolbird.com">REDACTED@<span class="redacted">lolbird</span>.com</a>',
+                        a "Thanks!"
+                        a "But now the first part just says REDACTED.",
+                          q "Yes, that's correct.",
+                            a "Thanks!"
+                            a "But that's not going to work, I mean I need the actual email address.",
+                              q "Oh!  Well, just... uh... hey, what's your favorite 19-letter word?",
+                                a "astrometeorological",
+                                  classy = q "Classy!  I bet that'll work great.",
+                                    a "Thanks!"
+                                    a "Wait, so, what was I supposed to --"
+                                a "bronchoconstriction",
+                                  medical = q "Wow, sounds all fancy and medical!  Seems like that ought to do the trick, then!",
+                                    a "Thanks!"
+                                    a "Okay, so all I need now is --"
+                                a "counterintelligence", classy
+                                a "deindustrialization", medical
+                                a "extraterritoriality", classy
+                                a "facioscapulohumeral", medical
+                                a "gastroenterological", medical
+                                a "hypersusceptibility", classy
+                                a "interdenominational", classy
+                                a "jurisprudentialists", classy
+                                a "knowledgeablenesses",
+                                  stretch = q "That's, uh, kind of a stretch, don't you think?",
+                                    a "Yeah, you're right.  Never mind!"
+                                    a "No way, that's totally a legit word.",
+                                      q "Cool.  Try that, then.",
+                                        a "Thanks!"
+                                        a "Wait, uh, what was the second --"
+                                a "lithochromatography", classy
+                                a "mischaracterization", classy
+                                a "nonrepresentational", classy
+                                a "overdiversification", classy
+                                a "plenipotentiaryship", classy
+                                a "quadragintesimality", stretch
+                                a "representationalism", classy
+                                a "straightforwardness",
+                                  q "Wow, that's so... straightforward!  Bound to work!",
+                                    a "Thanks!"
+                                    a "Could you just remind me what the --"
+                                a "theoanthropomorphic", classy
+                                a "unprepossessingness", classy
+                                a "vicissitudinousness", stretch
+                                a "wondermongeringness", stretch
+                                a "xylotypographicness", stretch
+                                a "yohimbinizationists", stretch
+                                a "zygomaticoauricular", medical
+                        a "But now the second part is blacked out.",
+                          q "Well don't you remember it from before?",
+                            a "Yes.",
+                              q "Then you should be all set.",
+                                a "Thanks!"
+                                a '<span class="redacted">!@#$</span> you!'
+                            a "No.",
+                              q "I imagine you'll have a difficult time, then.",
+                                a "Look, could you just give me the --"
         a "What about that thing with the fog and the railroad tracks and the car's engine stalls?",
           q "Oh right!  Did I ever explain what was supposed to be going on with that?",
             a "No.",
