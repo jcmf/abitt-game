@@ -199,7 +199,7 @@ module.exports = qq [
                                 a "Thank you."
                     a "No.",
                       betternottell = q "Then I guess I'd better not tell you!",
-                        a "Well, I respect your decision, even though I disagree with it.",
+                        a "I respect your decision, even though I disagree with it.",
                           q "Thanks!  That's very big of you.",
                             a "Aw shucks.", -> @amusing = "Like that thing where I had to respect your decision even though I disagreed with it."
                         a "Aw cmon.",
@@ -261,7 +261,7 @@ module.exports = qq [
         a "Stevens", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Stevens']
         a "Veeder", -> [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']; @expo = true
 
-  q "You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  You see other cars coming to a stop as well.  What do you do?",
+  q "You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?",
     a "See what the other drivers are doing."
     a "Try to start the car again."
     a "Turn on the radio."
@@ -417,7 +417,9 @@ module.exports = qq [
           a "I've been reading too much City of Splendors, haven't I?",
             possibility = q "Seems like a distinct possibility, yes!",
               a "Sorry, I'll try to do better next time."
-              a "I have no regrets about my choices in this matter."
+              a "I regret nothing.",
+                q "Uh, okay!",
+                  a "Nothing!  You hear me?  <em>Nothing.</em>"
           a "I've been playing too much Forgotten Realms, haven't I?", possibility
           a "I've been playing too much Lords of Waterdeep, haven't I?", possibility
           a "Uh... I think you lost me on the above answers.",
@@ -472,6 +474,7 @@ module.exports = qq [
         a "Because that question is difficult."
         a "Because that question is boring."
         a "Because that question is bad."
+  # XXX just remove this... it's disruptive, though....
   q "Hmm, yes... maybe we can come back to this later....",
     a "Okay."
     a "What if I want to talk about it now?",
