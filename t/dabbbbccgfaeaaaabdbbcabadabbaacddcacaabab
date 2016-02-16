@@ -1,3 +1,5 @@
+#
+
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
   a. Okay.
@@ -5,22 +7,30 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
   c. I consent to this.
 > d. Hold on, I have a question!
 
+#d
+
 What is your question?
 
 > a. How should I indicate which answer I wish to choose?
   b. What if I choose the wrong answer?
   c. Who wrote this game?
 
+#da
+
 Choose an answer by clicking or tapping it, or by typing the appropriate letter.
 
   a. Thanks!
 > b. Wait, there's a problem.
+
+#dab
 
 What seems to be the problem?
 
   a. Clicking doesn't work.
 > b. Tapping doesn't work.
   c. Typing doesn't work.
+
+#dabb
 
 Is the screen you are tapping touch-sensitive?
 
@@ -29,10 +39,14 @@ Is the screen you are tapping touch-sensitive?
   c. I'm not sure.
   d. Screen?  What screen?
 
+#dabbb
+
 Try clicking or typing instead.
 
   a. Well, okay.
 > b. But you said....
+
+#dabbbb
 
 Let's move on, shall we?
 
@@ -40,11 +54,15 @@ Let's move on, shall we?
   b. I hear and obey.
 > c. Your wish is my command.
 
+#dabbbbc
+
 What's your name?
 
   a. Emily
   b. Jenni
 > c. Ryan
+
+#dabbbbcc
 
 And your last name?
 
@@ -56,6 +74,8 @@ And your last name?
   f. Stevens
 > g. Veeder
 
+#dabbbbccg
+
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
   a. See what the other drivers are doing.
@@ -65,10 +85,14 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
 > f. Run.
 
+#dabbbbccgf
+
 Hold on.  Are you the <em>real</em> Ryan Veeder?
 
 > a. Yes.
   b. No.
+
+#dabbbbccgfa
 
 So.  What's the capital of Canada?
 
@@ -80,6 +104,8 @@ So.  What's the capital of Canada?
   f. Toronto
   g. Vancouver
 
+#dabbbbccgfae
+
 And what is an apocalypse?
 
 > a. An Oscar winner.
@@ -87,12 +113,16 @@ And what is an apocalypse?
   c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
+#dabbbbccgfaea
+
 All right, in that case... what does "grue" mean to you?
 
 > a. It's an alternate pronunciation of "glue."
   b. It's an imaginary color that flouts Occam's razor.
   c. It's the root noun from which "gruesome" is derived.
   d. It's a device for preventing adventurers from wandering in the dark.
+
+#dabbbbccgfaeaa
 
 Very good!  Now, which of these would you rather be?
 
@@ -105,16 +135,22 @@ Very good!  Now, which of these would you rather be?
   g. sleeping
   h. with someone I love
 
+#dabbbbccgfaeaaa
+
 Like the song?
 
 > a. Yes, like the song!
   b. No, I didn't even realize that was a song.
   c. No, I know the song but that's not why I chose that answer.
 
+#dabbbbccgfaeaaaa
+
 So the capital of Canada is Skullport, huh?
 
   a. Yep!
 > b. Wait a minute... are you implying that the capital of Canada <em>isn't</em> Skullport?
+
+#dabbbbccgfaeaaaab
 
 That... would be what I'm implying, yes.
 
@@ -123,15 +159,21 @@ That... would be what I'm implying, yes.
   c. I've been playing too much Lords of Waterdeep, haven't I?
 > d. Uh... I think you lost me on the above answers.
 
+#dabbbbccgfaeaaaabd
+
 Just try to roll with it.
 
   a. Okay.
 > b. No!
 
+#dabbbbccgfaeaaaabdb
+
 Then go look it up, I guess?  I can't stop you from looking things up, you know.
 
   a. Okay, fine, I looked it up.  It all makes sense now.  Are you happy?
 > b. I'm not going to just set this aside and start looking up random things!
+
+#dabbbbccgfaeaaaabdbb
 
 Why not?
 
@@ -140,18 +182,26 @@ Why not?
 > c. Because it would break my funky flow here.
   d. I kinda like option C, but I just want to register my objection to your transparent attempt to put the words "funky flow" in my mouth like that.  That is not how I roll.
 
+#dabbbbccgfaeaaaabdbbc
+
 "Funky flow," huh?
 
 > a. You have a problem with that?
+
+#dabbbbccgfaeaaaabdbbca
 
 No, no problem!  No problem at all!
 
   a. Well good!
 > b. I am sensing a certain degree of insincerity here.
 
+#dabbbbccgfaeaaaabdbbcab
+
 Oh, you're sensing it, are you?
 
 > a. Shut up.
+
+#dabbbbccgfaeaaaabdbbcaba
 
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
@@ -159,6 +209,8 @@ Suppose I flip a fair coin 99 times, and get heads each time.  Which of these be
   b. Heads is much more likely than tails.
   c. Tails is much more likely than heads.
 > d. I don't know.
+
+#dabbbbccgfaeaaaabdbbcabad
 
 Why do you say that?
 
@@ -168,23 +220,33 @@ Why do you say that?
   d. Because that question is boring.
   e. Because that question is bad.
 
+#dabbbbccgfaeaaaabdbbcabada
+
 Hmm, yes... maybe we can come back to this later....
 
   a. Okay.
 > b. What if I want to talk about it now?
+
+#dabbbbccgfaeaaaabdbbcabadab
 
 Then I guess you're going to be disappointed, aren't you?
 
   a. I guess.
 > b. Am I?
 
+#dabbbbccgfaeaaaabdbbcabadabb
+
 Well, no, I mean... no, that's not what... just bear with me, okay?  We'll get through this.
 
 > a. Sure, whatever.
 
+#dabbbbccgfaeaaaabdbbcabadabba
+
 No, seriously.  This will be good!  Just a few more questions, okay?
 
 > a. I'm listening.
+
+#dabbbbccgfaeaaaabdbbcabadabbaa
 
 What goes between two sentences?
 
@@ -194,12 +256,16 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
+#dabbbbccgfaeaaaabdbbcabadabbaac
+
 How do you typically respond to stress?
 
   a. Fight.
   b. Flee.
   c. Freeze.
 > d. Dissociate.
+
+#dabbbbccgfaeaaaabdbbcabadabbaacd
 
 Lorem ipsum dolor sit...
 
@@ -212,15 +278,21 @@ Lorem ipsum dolor sit...
   g. ...imam.
   h. ...uman.
 
+#dabbbbccgfaeaaaabdbbcabadabbaacdd
+
 So did you play that game yet where you're a dog?
 
   a. Yes.
   b. No.
 > c. Wait, which one?
 
+#dabbbbccgfaeaaaabdbbcabadabbaacddc
+
 You know, the other entry in the... thing.
 
 > a. Are you referring to the First Quadrennial Ryan Veeder Exposition for Interactive Fiction?
+
+#dabbbbccgfaeaaaabdbbcabadabbaacddca
 
 Why yes.  Yes I am.  As it happens.
 
@@ -228,29 +300,41 @@ Why yes.  Yes I am.  As it happens.
   b. I was not aware that there was an entry about being a dog.
 > c. Which of the entries about being a dog did you mean?
 
+#dabbbbccgfaeaaaabdbbcabadabbaacddcac
+
 Uh... you know... the one by... um....
 
 > a. Go on.
   b. Stop right there.
+
+#dabbbbccgfaeaaaabdbbcabadabbaacddcaca
 
 Wait, are there seriously several entries about being a dog?
 
 > a. Yes.
   b. No.
 
+#dabbbbccgfaeaaaabdbbcabadabbaacddcacaa
+
 Wow.  I did <em>not</em> see that coming.
 
   a. Me either.
 > b. Oh come on, it should have been obvious.
 
+#dabbbbccgfaeaaaabdbbcabadabbaacddcacaab
+
 Maybe to you.
 
 > a. Well, I <em>am</em> Ryan Veeder.
+
+#dabbbbccgfaeaaaabdbbcabadabbaacddcacaaba
 
 Oh yeah that's right, we established that earlier, didn't we?
 
   a. We certainly did.
 > b. Eh probably.
+
+#dabbbbccgfaeaaaabdbbcabadabbaacddcacaabab
 
 Grumpy wizards make a toxic brew for the jovial...
 

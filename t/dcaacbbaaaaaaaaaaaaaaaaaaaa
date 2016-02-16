@@ -1,3 +1,5 @@
+#
+
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
   a. Okay.
@@ -5,21 +7,29 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
   c. I consent to this.
 > d. Hold on, I have a question!
 
+#d
+
 What is your question?
 
   a. How should I indicate which answer I wish to choose?
   b. What if I choose the wrong answer?
 > c. Who wrote this game?
 
+#dc
+
 Are you sure you want to know?
 
 > a. Yes.
   b. No.
 
+#dca
+
 You're not trying to trick me, are you?
 
 > a. Of course not.
   b. Why yes, actually, I am trying to trick you.
+
+#dcaa
 
 So the judging period is over?
 
@@ -27,19 +37,27 @@ So the judging period is over?
   b. No.
 > c. Uh... judging period?  What?
 
+#dcaac
+
 You know, for the exposition thing.
 
   a. Oh right, the exposition thing!
 > b. What exposition thing?
+
+#dcaacb
 
 Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
 
   a. Oh, <em>that</em>!
 > b. Never heard of it.
 
+#dcaacbb
+
 Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
 
 > a. Uh... sure... whatever you say.
+
+#dcaacbba
 
 What's your name?
 
@@ -47,12 +65,16 @@ What's your name?
   b. Jenni
   c. Ryan
 
+#dcaacbbaa
+
 And your last name?
 
 > a. Boegheim
   b. Carroll
   c. Ryan
   d. Short
+
+#dcaacbbaaa
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
@@ -63,10 +85,14 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
+#dcaacbbaaaa
+
 Hold on.  Are you the <em>real</em> Emily Boegheim?
 
 > a. Yes.
   b. No.
+
+#dcaacbbaaaaa
 
 So.  What's the capital of Canada?
 
@@ -78,6 +104,8 @@ So.  What's the capital of Canada?
   f. Toronto
   g. Vancouver
 
+#dcaacbbaaaaaa
+
 And what is an apocalypse?
 
 > a. An Oscar winner.
@@ -85,12 +113,16 @@ And what is an apocalypse?
   c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
+#dcaacbbaaaaaaa
+
 All right, in that case... what does "grue" mean to you?
 
 > a. It's an alternate pronunciation of "glue."
   b. It's an imaginary color that flouts Occam's razor.
   c. It's the root noun from which "gruesome" is derived.
   d. It's a device for preventing adventurers from wandering in the dark.
+
+#dcaacbbaaaaaaaa
 
 Very good!  Now, which of these would you rather be?
 
@@ -103,11 +135,15 @@ Very good!  Now, which of these would you rather be?
   g. sleeping
   h. with someone I love
 
+#dcaacbbaaaaaaaaa
+
 Like the song?
 
 > a. Yes, like the song!
   b. No, I didn't even realize that was a song.
   c. No, I know the song but that's not why I chose that answer.
+
+#dcaacbbaaaaaaaaaa
 
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
@@ -116,16 +152,22 @@ Suppose I flip a fair coin 99 times, and get heads each time.  Which of these be
   c. Tails is much more likely than heads.
   d. I don't know.
 
+#dcaacbbaaaaaaaaaaa
+
 Why do you say that?
 
 > a. Because I don't care.
   b. Because you said it was a fair coin.
   c. Because there's no way to decide between the two.
 
+#dcaacbbaaaaaaaaaaaa
+
 Hmm, yes... maybe we can come back to this later....
 
 > a. Okay.
   b. What if I want to talk about it now?
+
+#dcaacbbaaaaaaaaaaaaa
 
 What goes between two sentences?
 
@@ -135,6 +177,8 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
+#dcaacbbaaaaaaaaaaaaaa
+
 How do you typically respond to stress?
 
 > a. Fight.
@@ -142,19 +186,27 @@ How do you typically respond to stress?
   c. Freeze.
   d. Dissociate.
 
+#dcaacbbaaaaaaaaaaaaaaa
+
 Something's been bothering me about some of your earlier answers.
 
 > a. Oh?  What is it?
   b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
   c. OMG did I screw up the math question?  I hate math.
 
+#dcaacbbaaaaaaaaaaaaaaaa
+
 Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
 
 > a. So?
 
+#dcaacbbaaaaaaaaaaaaaaaaa
+
 So?  You told me you were Emily Boegheim!
 
 > a. So?
+
+#dcaacbbaaaaaaaaaaaaaaaaaa
 
 You're supposed to be one of the fricking <em>stewards</em>!  How can you not have heard of the competition that you yourself are... uhhh....
 
@@ -166,9 +218,13 @@ You're supposed to be one of the fricking <em>stewards</em>!  How can you not ha
   f. ...stewardshiplikenessing?
   g. ...stewardsnesslishippagelikelifallityinessaging?
 
+#dcaacbbaaaaaaaaaaaaaaaaaaa
+
 ...huh.  Okay, maybe you <em>are</em> Emily Boegheim.
 
 > a. Told you so!
+
+#dcaacbbaaaaaaaaaaaaaaaaaaaa
 
 Lorem ipsum dolor sit...
 

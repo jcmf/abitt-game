@@ -6,6 +6,9 @@ for name in fs.readdirSync testdir
   path = "#{testdir}/#{name}"
   pieces = []
   cb = (q) ->
+    pieces.push '#'
+    pieces.push q.letters
+    pieces.push '\n\n'
     pieces.push q.q
     pieces.push '\n\n'
     for a in q.aa

@@ -1,3 +1,5 @@
+#
+
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
 > a. Okay.
@@ -5,11 +7,15 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
   c. I consent to this.
   d. Hold on, I have a question!
 
+#a
+
 What's your name?
 
   a. Emily
   b. Jenni
 > c. Ryan
+
+#ac
 
 And your last name?
 
@@ -21,6 +27,8 @@ And your last name?
   f. Stevens
 > g. Veeder
 
+#acg
+
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
 > a. See what the other drivers are doing.
@@ -30,10 +38,14 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
+#acga
+
 Hold on.  Are you the <em>real</em> Ryan Veeder?
 
 > a. Yes.
   b. No.
+
+#acgaa
 
 So.  What's the capital of Canada?
 
@@ -45,6 +57,8 @@ So.  What's the capital of Canada?
   f. Toronto
   g. Vancouver
 
+#acgaaa
+
 And what is an apocalypse?
 
 > a. An Oscar winner.
@@ -52,12 +66,16 @@ And what is an apocalypse?
   c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
+#acgaaaa
+
 All right, in that case... what does "grue" mean to you?
 
 > a. It's an alternate pronunciation of "glue."
   b. It's an imaginary color that flouts Occam's razor.
   c. It's the root noun from which "gruesome" is derived.
   d. It's a device for preventing adventurers from wandering in the dark.
+
+#acgaaaaa
 
 Very good!  Now, which of these would you rather be?
 
@@ -70,12 +88,16 @@ Very good!  Now, which of these would you rather be?
   g. sleeping
   h. with someone I love
 
+#acgaaaaaf
+
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
   a. Heads and tails are equally likely.
   b. Heads is much more likely than tails.
   c. Tails is much more likely than heads.
 > d. I don't know.
+
+#acgaaaaafd
 
 Why do you say that?
 
@@ -85,10 +107,14 @@ Why do you say that?
   d. Because that question is boring.
   e. Because that question is bad.
 
+#acgaaaaafda
+
 Hmm, yes... maybe we can come back to this later....
 
 > a. Okay.
   b. What if I want to talk about it now?
+
+#acgaaaaafdaa
 
 What goes between two sentences?
 
@@ -98,12 +124,16 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
+#acgaaaaafdaaa
+
 How do you typically respond to stress?
 
 > a. Fight.
   b. Flee.
   c. Freeze.
   d. Dissociate.
+
+#acgaaaaafdaaaa
 
 Lorem ipsum dolor sit...
 
@@ -116,11 +146,15 @@ Lorem ipsum dolor sit...
   g. ...imam.
   h. ...uman.
 
+#acgaaaaafdaaaaa
+
 So did you play that game yet where you're a dog?
 
   a. Yes.
 > b. No.
   c. Wait, which one?
+
+#acgaaaaafdaaaaab
 
 Oh well you totally should!  It's really good!
 
@@ -128,15 +162,21 @@ Oh well you totally should!  It's really good!
   b. It doesn't sound like my cup of tea, actually.
 > c. So you played it?
 
+#acgaaaaafdaaaaabc
+
 Well, no, I haven't played it <em>yet</em>, but, you know, I've heard good things about it!  Rumors, mostly.  Lotta buzz!
 
   a. That seems reasonable!
 > b. Wait a minute.  Who wrote this dog game?
 
+#acgaaaaafdaaaaabcb
+
 Oh... uh... I'm not sure if I should tell you.
 
   a. Good thinking!  Better not.
 > b. Wait, why not?
+
+#acgaaaaafdaaaaabcbb
 
 Because you're Ryan Veeder!
 
@@ -144,29 +184,39 @@ Because you're Ryan Veeder!
   b. No I'm not.
   c. Oh yeah, good point.
 
+#acgaaaaafdaaaaabcbba
+
 Wait -- is the exposition over already?
 
   a. Yes.
 > b. No.
   c. What exposition is this?
 
+#acgaaaaafdaaaaabcbbab
+
 Then I'd better not tell you.
 
   a. Fine.
 > b. Why not?
+
+#acgaaaaafdaaaaabcbbabb
 
 Rule 6.  Obviously.
 
   a. Oh yeah, rule 6.
 > b. Wait, what's rule 6?
 
+#acgaaaaafdaaaaabcbbabbb
+
 I forget exactly.  Something about pain of forfeit?
 
 > a. Sounds annoying.
 
-Do you have friends?
+#acgaaaaafdaaaaabcbbabbba
 
-  a. Yes.
-  b. No.
-  c. Kinda?
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+  a. Pop.
+  b. Soda.
+  c. Coke.
 

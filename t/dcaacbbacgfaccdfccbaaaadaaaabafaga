@@ -1,3 +1,5 @@
+#
+
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
   a. Okay.
@@ -5,21 +7,29 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
   c. I consent to this.
 > d. Hold on, I have a question!
 
+#d
+
 What is your question?
 
   a. How should I indicate which answer I wish to choose?
   b. What if I choose the wrong answer?
 > c. Who wrote this game?
 
+#dc
+
 Are you sure you want to know?
 
 > a. Yes.
   b. No.
 
+#dca
+
 You're not trying to trick me, are you?
 
 > a. Of course not.
   b. Why yes, actually, I am trying to trick you.
+
+#dcaa
 
 So the judging period is over?
 
@@ -27,25 +37,35 @@ So the judging period is over?
   b. No.
 > c. Uh... judging period?  What?
 
+#dcaac
+
 You know, for the exposition thing.
 
   a. Oh right, the exposition thing!
 > b. What exposition thing?
+
+#dcaacb
 
 Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
 
   a. Oh, <em>that</em>!
 > b. Never heard of it.
 
+#dcaacbb
+
 Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
 
 > a. Uh... sure... whatever you say.
+
+#dcaacbba
 
 What's your name?
 
   a. Emily
   b. Jenni
 > c. Ryan
+
+#dcaacbbac
 
 And your last name?
 
@@ -57,6 +77,8 @@ And your last name?
   f. Stevens
 > g. Veeder
 
+#dcaacbbacg
+
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
   a. See what the other drivers are doing.
@@ -66,10 +88,14 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
 > f. Run.
 
+#dcaacbbacgf
+
 Hold on.  Are you the <em>real</em> Ryan Veeder?
 
 > a. Yes.
   b. No.
+
+#dcaacbbacgfa
 
 So.  What's the capital of Canada?
 
@@ -81,6 +107,8 @@ So.  What's the capital of Canada?
   f. Toronto
   g. Vancouver
 
+#dcaacbbacgfac
+
 And what is an apocalypse?
 
   a. An Oscar winner.
@@ -88,12 +116,16 @@ And what is an apocalypse?
 > c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
+#dcaacbbacgfacc
+
 All right, in that case... what does "grue" mean to you?
 
   a. It's an alternate pronunciation of "glue."
   b. It's an imaginary color that flouts Occam's razor.
   c. It's the root noun from which "gruesome" is derived.
 > d. It's a device for preventing adventurers from wandering in the dark.
+
+#dcaacbbacgfaccd
 
 Very good!  Now, which of these would you rather be?
 
@@ -106,6 +138,8 @@ Very good!  Now, which of these would you rather be?
   g. sleeping
   h. with someone I love
 
+#dcaacbbacgfaccdf
+
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
   a. Heads and tails are equally likely.
@@ -113,29 +147,41 @@ Suppose I flip a fair coin 99 times, and get heads each time.  Which of these be
 > c. Tails is much more likely than heads.
   d. I don't know.
 
+#dcaacbbacgfaccdfc
+
 Why do you say that?
 
   a. Because tails is overdue now.
   b. Because that's how a fair coin works.
 > c. Because I'm not even paying attention anymore.
 
+#dcaacbbacgfaccdfcc
+
 Hmm, yes... maybe we can come back to this later....
 
   a. Okay.
 > b. What if I want to talk about it now?
+
+#dcaacbbacgfaccdfccb
 
 Then I guess you're going to be disappointed, aren't you?
 
 > a. I guess.
   b. Am I?
 
+#dcaacbbacgfaccdfccba
+
 Sorry, that came out... I didn't mean to... just bear with me, okay?  We'll get through this.
 
 > a. Sure, whatever.
 
+#dcaacbbacgfaccdfccbaa
+
 No, seriously.  This will be good!  Just a few more questions, okay?
 
 > a. I'm listening.
+
+#dcaacbbacgfaccdfccbaaa
 
 What goes between two sentences?
 
@@ -145,12 +191,16 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
+#dcaacbbacgfaccdfccbaaaa
+
 How do you typically respond to stress?
 
   a. Fight.
   b. Flee.
   c. Freeze.
 > d. Dissociate.
+
+#dcaacbbacgfaccdfccbaaaad
 
 Which country has the highest lowest point?
 
@@ -159,28 +209,40 @@ Which country has the highest lowest point?
   c. Lesotho
   d. Rwanda
 
+#dcaacbbacgfaccdfccbaaaada
+
 Something's been bothering me about some of your earlier answers.
 
 > a. Oh?  What is it?
   b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
   c. OMG did I screw up the math question?  I hate math.
 
+#dcaacbbacgfaccdfccbaaaadaa
+
 Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
 
 > a. So?
 
+#dcaacbbacgfaccdfccbaaaadaaa
+
 So?  You told me you were Ryan Veeder!
 
 > a. So?
+
+#dcaacbbacgfaccdfccbaaaadaaaa
 
 You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?
 
   a. What an impertinent question!
 > b. I'm a very busy man.
 
+#dcaacbbacgfaccdfccbaaaadaaaab
+
 Hmm, yes... the real Ryan Veeder would never waste time playing such a trivial game as this!  Isn't he more into, like, parser stuff?  You couldn't possibly be....
 
 > a. Be silent, or face the consequences!
+
+#dcaacbbacgfaccdfccbaaaadaaaaba
 
 What consequences might those be?
 
@@ -191,9 +253,13 @@ What consequences might those be?
   e. I'll stick paperclips up your toenails!
 > f. Swarms of angry cyber-bees!
 
+#dcaacbbacgfaccdfccbaaaadaaaabaf
+
 Ha!  The <em>real</em> Ryan Veeder would <em>never</em> say that!
 
 > a. Omigosh, you're right!  I've been living a lie!
+
+#dcaacbbacgfaccdfccbaaaadaaaabafa
 
 Confess, traitor!  What is your true name?
 
@@ -206,9 +272,13 @@ Confess, traitor!  What is your true name?
 > g. Dan Ravipinto
   h. Emily Short
 
+#dcaacbbacgfaccdfccbaaaadaaaabafag
+
 Holy moly!  I've always wanted to meet you, Mr. Ravipinto!  If I could just ask you a few questions....
 
 > a. Certainly!
+
+#dcaacbbacgfaccdfccbaaaadaaaabafaga
 
 Which country has the lowest lowest point?
 

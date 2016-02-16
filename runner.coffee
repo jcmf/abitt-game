@@ -31,7 +31,7 @@ exports.run = (letters, cb, error) ->
       if selected then next = cur
       {a: text, codes, selected, next, letter: String.fromCharCode codes[0]}
     current = li is letters.length
-    cb {q, aa, current}
+    cb {q, aa, current, letters: letters[...li]}
     if current then return
     if not next then return error "no match: letters=#{letters} li=#{li}"
     post = evaluate next.post

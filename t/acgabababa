@@ -1,3 +1,5 @@
+#
+
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
 > a. Okay.
@@ -5,11 +7,15 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
   c. I consent to this.
   d. Hold on, I have a question!
 
+#a
+
 What's your name?
 
   a. Emily
   b. Jenni
 > c. Ryan
+
+#ac
 
 And your last name?
 
@@ -21,6 +27,8 @@ And your last name?
   f. Stevens
 > g. Veeder
 
+#acg
+
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
 > a. See what the other drivers are doing.
@@ -30,33 +38,47 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
+#acga
+
 Hold on.  Are you the <em>real</em> Ryan Veeder?
 
   a. Yes.
 > b. No.
+
+#acgab
 
 So you were just lying to my face earlier?
 
 > a. Yes.
   b. No.
 
+#acgaba
+
 But what about just now?  Were you lying just now?
 
   a. Yes.
 > b. No.
 
+#acgabab
+
 Well... can you prove it?
 
 > a. Prove what?
+
+#acgababa
 
 Can you prove that you're not Ryan Veeder!
 
   a. Yes.
 > b. No.
 
+#acgababab
+
 So you <em>are</em> Ryan Veeder!  I knew it!
 
 > a. Yep, you figured it out all right.
+
+#acgabababa
 
 So.  What's the capital of Canada?
 

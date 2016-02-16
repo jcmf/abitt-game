@@ -1,3 +1,5 @@
+#
+
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
 > a. Okay.
@@ -5,11 +7,15 @@ Welcome to this game!  Before we can get started, you'll need to answer a few qu
   c. I consent to this.
   d. Hold on, I have a question!
 
+#a
+
 What's your name?
 
 > a. Emily
   b. Jenni
   c. Ryan
+
+#aa
 
 And your last name?
 
@@ -17,6 +23,8 @@ And your last name?
   b. Carroll
   c. Ryan
   d. Short
+
+#aaa
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
@@ -27,10 +35,14 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
+#aaaa
+
 Hold on.  Are you the <em>real</em> Emily Boegheim?
 
 > a. Yes.
   b. No.
+
+#aaaaa
 
 So.  What's the capital of Canada?
 
@@ -42,6 +54,8 @@ So.  What's the capital of Canada?
   f. Toronto
   g. Vancouver
 
+#aaaaaa
+
 And what is an apocalypse?
 
 > a. An Oscar winner.
@@ -49,12 +63,16 @@ And what is an apocalypse?
   c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
+#aaaaaaa
+
 All right, in that case... what does "grue" mean to you?
 
 > a. It's an alternate pronunciation of "glue."
   b. It's an imaginary color that flouts Occam's razor.
   c. It's the root noun from which "gruesome" is derived.
   d. It's a device for preventing adventurers from wandering in the dark.
+
+#aaaaaaaa
 
 Very good!  Now, which of these would you rather be?
 
@@ -67,11 +85,15 @@ Very good!  Now, which of these would you rather be?
   g. sleeping
   h. with someone I love
 
+#aaaaaaaaa
+
 Like the song?
 
 > a. Yes, like the song!
   b. No, I didn't even realize that was a song.
   c. No, I know the song but that's not why I chose that answer.
+
+#aaaaaaaaaa
 
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
@@ -80,16 +102,22 @@ Suppose I flip a fair coin 99 times, and get heads each time.  Which of these be
   c. Tails is much more likely than heads.
   d. I don't know.
 
+#aaaaaaaaaaa
+
 Why do you say that?
 
   a. Because I don't care.
 > b. Because you said it was a fair coin.
   c. Because there's no way to decide between the two.
 
+#aaaaaaaaaaab
+
 Hmm, yes... maybe we can come back to this later....
 
 > a. Okay.
   b. What if I want to talk about it now?
+
+#aaaaaaaaaaaba
 
 What goes between two sentences?
 
@@ -99,12 +127,16 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
+#aaaaaaaaaaabaa
+
 How much bigger than one tenth is one ninth?
 
   a. About 1%.
   b. About 9%.
   c. About 10%.
 > d. About 11%.
+
+#aaaaaaaaaaabaad
 
 Can you explain why that is?
 
@@ -114,18 +146,26 @@ Can you explain why that is?
   d. No, not really.
   e. Eleven is my favorite number!
 
+#aaaaaaaaaaabaada
+
 Mmm, yes, I see... sorry, I just need to make a note here....
 
 > a. Okay....
   b. Are you done?
 
+#aaaaaaaaaaabaadaa
+
 Ah yes, there we go.  Where were we?
 
 > a. You, uh, were asking me questions?
 
+#aaaaaaaaaaabaadaaa
+
 Indeed I was!  Shall we get back to that?
 
 > a. Okay.
+
+#aaaaaaaaaaabaadaaaa
 
 How do you typically respond to stress?
 
@@ -133,6 +173,8 @@ How do you typically respond to stress?
   b. Flee.
   c. Freeze.
   d. Dissociate.
+
+#aaaaaaaaaaabaadaaaaa
 
 Lorem ipsum dolor sit...
 
@@ -145,6 +187,8 @@ Lorem ipsum dolor sit...
   g. ...imam.
   h. ...uman.
 
+#aaaaaaaaaaabaadaaaaaa
+
 About how strong is gravity?
 
 > a. 6.674×10<sup>-11</sup> N (m/kg)<sup>2</sup>
@@ -155,11 +199,15 @@ About how strong is gravity?
   f. 9.8 m/s<sup>2</sup>
   g. 1
 
+#aaaaaaaaaaabaadaaaaaaa
+
 So did you play that game yet where you're a dog?
 
 > a. Yes.
   b. No.
   c. Wait, which one?
+
+#aaaaaaaaaaabaadaaaaaaaa
 
 What did you think of it?
 
@@ -167,15 +215,19 @@ What did you think of it?
   b. It was terrible.
   c. Meh.
 
+#aaaaaaaaaaabaadaaaaaaaaa
+
 Wow, really?  What did you like best about it?
 
 > a. I really liked that thing with Not-Your-Person!
   b. The squeak toy was super fun!
   c. I liked the eating place!
 
-Do you have friends?
+#aaaaaaaaaaabaadaaaaaaaaaa
 
-  a. Yes.
-  b. No.
-  c. Kinda?
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+  a. Pop.
+  b. Soda.
+  c. Coke.
 
