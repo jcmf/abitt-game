@@ -343,15 +343,15 @@ module.exports = qq [
 
   q "And what is an apocalypse?",
     a "An Oscar winner."
-    a "A revelation from God."
+    a "A revelation from God.", -> @theology = true
     a "A disaster of epic proportions."
     a "A language design document of mainly historical interest."
 
   q 'All right, in that case... what does "grue" mean to you?',
-    a "It's an alternate pronunciation of \"glue.\""
-    a "It's an imaginary color that flouts Occam's razor."
-    a "It's the root noun from which \"gruesome\" is derived."
-    a "It's a device for preventing adventurers from wandering in the dark."
+    a "It's an alternate pronunciation of \"glue.\"", -> @words = true
+    a "It's an imaginary color that flouts Occam's razor.", -> @philosophy = true
+    a "It's the root noun from which \"gruesome\" is derived.", -> @words = true
+    a "It's a device for preventing adventurers from wandering in the dark.", -> @if = true
 
   q "Very good!  Now, which of these would you rather be?",
     a "a cowboy",
@@ -372,7 +372,8 @@ module.exports = qq [
       q "Are you tired right now?",
         a "Yes."
         a "No."
-    a "with someone I love",
+    a "with someone I love", ->
+      @love = true
       q "Think of a person you love.  How would you quantify your love for that person?",
         a "0 -- I can't think of any such person.",
           q "Why not?",
@@ -700,20 +701,21 @@ module.exports = qq [
     a "Nepal"
     a "Tibet"
 
-  q "Lorem ipsum dolor sit...",
-    a "...amah."
-    a "...aman."
-    a "...amen."
-    a "...amet.", -> @lorem = true
-    a "...amin."
-    a "...emim."
-    a "...imam."
-    a "...uman."
+  -> if @words
+    q "Lorem ipsum dolor sit...",
+      a "...amah."
+      a "...aman."
+      a "...amen."
+      a "...amet.", -> @lorem = true
+      a "...amin."
+      a "...emim."
+      a "...imam."
+      a "...uman."
 
   -> if @math then q "About how strong is gravity?",
     a "6.674\u00d710<sup>-11</sup> N (m/kg)<sup>2</sup>" # MKS in terms of force, easier to understand
     a "6.674\u00d710<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>" # MKS, more practical
-    a "6.674\u00d710<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>" # CGS, more theoretical
+    a "6.674\u00d710<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>", -> @theoretical_physics = true # CGS, more theoretical
     a "4.302\u00d710<sup>-3</sup> pc <i>M</i><sub>\u2609</sub><sup>-1</sup> (km/s)<sup>2</sup>" # astronomical
     a "0.01720209895" # Gauss's astronomical, applies to the planets
     a "9.8 m/s<sup>2</sup>" # at Earth's surface
@@ -943,10 +945,56 @@ module.exports = qq [
     a "Soda.", -> @soda = 'soda'
     a "Coke.", -> @soda = 'coke'
 
-  q "Do you have friends?",
-    a "Yes."
-    a "No."
-    a "Kinda?"
+  -> if @math
+    q "Imagine a box with perfectly square corners whose length, width, and depth are exact multiples of 1\".  If the each of the box's six sides has a diagonal measurement that is also an multiple of 1\", what is the smallest possible volume of the box?",
+      a "No such box can exist."
+      a "120 cubic inches."
+      a "About half a TEU.",
+        q "Now imagine that the distances between opposite corners of the box (e.g. front-top-left to back-bottom-right) must also be exact multiples of 1\".  What's the volume of the smallest possible box?",
+          a "No such box can exist."
+            q "But if it did exist, what would you call it?",
+              a "A perfect cuboid.", @moremath = true
+              a "An Euler brick."
+              a "A Halcke solid."
+              a "Arthur."
+          a "Maybe a thousand Olympic swimming pools, give or take."
+          a "There are stars about that size."
+          a "Much larger than the observable universe."
+      a "Bigger than the Earth."
+
+  -> if @love
+    q "Do you have friends?",  # XXX do something with this, maybe tie in to with someone I love answers?
+      a "Yes."
+      a "No."
+      a "Kinda?"
+
+  -> if @philosophy
+    q "If a tree falls in the woods and no one hears it, does it make a sound?",
+      a "Yes.",
+        q "What do you mean, \"yes\"?  How can you possibly know that?",
+          a "Well, I'm not <em>certain</em>, but I <em>am</em> 99.9999% sure."
+          a "Silent treefalls are unheard-of, and I don't hear <em>you</em> proposing a mechanism through which the presence or absence of an observer could make any difference."
+          a "Conservation of energy."
+          a "I left an audio recorder nearby and played it back later."
+      a "No.",
+        q "What do you mean, \"no\"?  How can you possibly be sure?",
+          a "Sound is what you hear.  If nobody hears it, then it isn't sound by definition."
+          a "The situation you describe is impossible, so <em>any</em> answer I give is 100% correct by definition."
+          a "When you say \"no one hears it,\" what you mean is that there is nobody and nothing there to leave behind any evidence of the tree making a sound.  If there's nothing there, then by definition the tree must be falling freely in a perfect vacuum.  And you can't have sound in a vacuum.",
+            q "Slow down there, space cow-person!  What part of \"in the forest\" did you not understand?",
+              a "Hmm, good point, never mind."
+              a "Uh... the \"forest\" part?"
+              a "Well I mean by \"forest\" you clearly meant \"perfect absence of anything and everything other than the one tree.\"  So my point stands."
+              a "Silence!  My logic is unassailable!"
+              # a "Space cow-person?" # XXX
+          a "I meant \"No!\" as in \"Stop talking about this!\"", -> @philosophy = false
+      a "Well, it depends....",
+        q "What does it depend on?",
+          a "It depends on what you mean."
+          a "It depends on the specific situation."
+          a "It depends on how I feel like answering."
+          a "Look, can we talk about something else?", -> @philosophy = false
+      a "Who cares?", -> @philosophy = false
 
   -> if @geo
     q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
@@ -1821,9 +1869,48 @@ module.exports = qq [
                     a "No.", darecall
                 a "No.", darecall
 
-  # XXX more questions from notes2?
-  q "[XXX more stuff goes here]",
-    a "[XXX okay?]"
+  -> if @if
+    q "Which of the following won the most XYZZY awards?",
+      a "Aotearoa"
+      a "Cryptozookeeper"
+      a "Slouching Towards Bedlam"
+      a "Zombie Exodus"
+
+  -> if @theology
+    q "Which of the following English monarchs is also a saint?",
+      a "Edward the Confessor"
+      a "Edward the Martyr"
+      a "Henry VIII"
+      a "James I"
+
+  -> if @theoretical_physics
+    q "Which of the following best explains the decay of black holes?",
+      a "General relativity."
+      a "Quantum electrodynamics."
+      a "The second law of thermodynamics."
+      a "String theory."
+
+  -> if @if
+    q "Which of the following received the most Spring Thing votes?",
+      a "Blue Lacuna"
+      a "Fate"
+      a "Mentula Macanus: Apocolocyntosis"
+      a "The Rocket Man from the Sea"
+
+  -> if @moremath
+    q "What is the smallest odd number (greater than zero: 1, 3, 5...) such that multiplying that number by any integer power of two (greater than one: 2, 4, 8...) and adding 1 always produces a prime result?",
+      a "10223"
+      a "21181"
+      a "55459"
+      a "78557"
+
+  -> if @philosophy
+    q "Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child was crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?",
+      a "Nobody is to blame -- it was an accident."
+      a "The twin who hit the child is to blame."
+      a "The twin who didn't hit the child is to blame."
+      a "Both twins are to blame."
+      a "I blame you for asking me this horrifying question!"
 
   -> q "Okay, looks like that's it.  Thank you for playing this game, #{@fn}.",
     a "My pleasure."
