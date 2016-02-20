@@ -11524,7 +11524,7 @@ module.exports = qq([
         return this.math = true;
       }))))))))));
     }
-  }, q("How do you typically respond to stress?", a("Fight."), a("Flee."), a("Freeze."), a("Dissociate.")), function() {
+  }, function() {
     if (this.geo) {
       return q("Which country has the highest lowest point?", a("Andorra"), a("Burundi"), a("Lesotho"), a("Rwanda"));
     }
@@ -11616,8 +11616,12 @@ module.exports = qq([
   }), a("Coke.", function() {
     return this.soda = 'coke';
   })), function() {
+    var one_inch;
     if (this.math) {
-      return q("Imagine a box with perfectly square corners whose length, width, and depth are exact multiples of 1\".  If the each of the box's six sides has a diagonal measurement that is also an multiple of 1\", what is the smallest possible volume of the box?", a("No such box can exist."), a("120 cubic inches."), a("About half a TEU.", q("Now imagine that the distances between opposite corners of the box (e.g. front-top-left to back-bottom-right) must also be exact multiples of 1\".  What's the volume of the smallest possible box?", a("No such box can exist."), q("But if it did exist, what would you call it?", a("A perfect cuboid.", this.moremath = true), a("An Euler brick."), a("A Halcke solid."), a("Arthur.")), a("Maybe a thousand Olympic swimming pools, give or take."), a("There are stars about that size."), a("Much larger than the observable universe."))), a("Bigger than the Earth."));
+      one_inch = '1\u2033';
+      return q("Imagine a box with perfectly square corners whose length, width, and depth are exact multiples of " + one_inch + ".  If the each of the box's six sides has a diagonal measurement that is also an multiple of " + one_inch + ", what is the smallest possible volume of the box?", a("No such box can exist."), a("120 cubic inches."), a("About half a TEU.", q("Now imagine that the distances between opposite corners of the box (e.g. front-top-left to back-bottom-right) must also be exact multiples of " + one_inch + ".  What's the volume of the smallest possible box?", a("No such box can exist.", q("But if it did exist, what would you call it?", a("A perfect cuboid.", function() {
+        return this.moremath = true;
+      }), a("An Euler brick."), a("A Halcke solid."), a("Arthur."))), a("Maybe a thousand Olympic swimming pools, give or take."), a("There are stars about that size."), a("Much larger than the observable universe."))), a("Bigger than the Earth."));
     }
   }, function() {
     if (this.theology) {
@@ -12030,7 +12034,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14560-063-19291-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14560-072-39591-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>

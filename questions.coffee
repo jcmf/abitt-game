@@ -602,13 +602,6 @@ module.exports = qq [
                   q "Ready for more questions?",
                     a "Totally ready!", -> @math = true
 
-  # XXX don't like this one -- remove?
-  q "How do you typically respond to stress?",
-    a "Fight."
-    a "Flee."
-    a "Freeze."
-    a "Dissociate."
-
   -> if @geo then q "Which country has the highest lowest point?",
     a "Andorra"
     a "Burundi"
@@ -985,14 +978,15 @@ module.exports = qq [
     a "Coke.", -> @soda = 'coke'
 
   -> if @math
-    q "Imagine a box with perfectly square corners whose length, width, and depth are exact multiples of 1\".  If the each of the box's six sides has a diagonal measurement that is also an multiple of 1\", what is the smallest possible volume of the box?",
+    one_inch = '1\u2033'
+    q "Imagine a box with perfectly square corners whose length, width, and depth are exact multiples of #{one_inch}.  If the each of the box's six sides has a diagonal measurement that is also an multiple of #{one_inch}, what is the smallest possible volume of the box?",
       a "No such box can exist."
       a "120 cubic inches."
       a "About half a TEU.",
-        q "Now imagine that the distances between opposite corners of the box (e.g. front-top-left to back-bottom-right) must also be exact multiples of 1\".  What's the volume of the smallest possible box?",
-          a "No such box can exist."
+        q "Now imagine that the distances between opposite corners of the box (e.g. front-top-left to back-bottom-right) must also be exact multiples of #{one_inch}.  What's the volume of the smallest possible box?",
+          a "No such box can exist.",
             q "But if it did exist, what would you call it?",
-              a "A perfect cuboid.", @moremath = true
+              a "A perfect cuboid.", -> @moremath = true
               a "An Euler brick."
               a "A Halcke solid."
               a "Arthur."

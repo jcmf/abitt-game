@@ -1,0 +1,258 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+  a. Emily
+  b. Jenni
+> c. Ryan
+
+#ac
+
+And your last name?
+
+  a. Burrus
+  b. Freebern
+  c. Holman
+  d. Kinsman
+  e. Weisenberger
+  f. Stevens
+> g. Veeder
+
+#acg
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#acga
+
+Hold on.  Are you the <em>real</em> Ryan Veeder?
+
+> a. Yes.
+  b. No.
+
+#acgaa
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#acgaaa
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#acgaaaa
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#acgaaaaa
+
+Very good!  Now, which of these would you rather be?
+
+  a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+> f. invisible
+  g. sleeping
+  h. with someone I love
+
+#acgaaaaaf
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+  a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+> d. I don't know.
+
+#acgaaaaafd
+
+Why do you say that?
+
+> a. Because that question is unanswerable.
+  b. Because that question is complicated.
+  c. Because that question is difficult.
+  d. Because that question is boring.
+  e. Because that question is bad.
+
+#acgaaaaafda
+
+What goes between two sentences?
+
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
+  e. It depends.
+
+#acgaaaaafdaa
+
+A "football" is...
+
+> a. ...an inflated sphere that can be kicked with the feet and head.
+  b. ...a two-pointed air pocket that can be thrown in a spiral pattern.
+  c. ...a folded piece of paper that can be flicked across a classroom.
+  d. ...a bumpy hemisphere one can stand on in order to massage the feet.
+
+#acgaaaaafdaaa
+
+Pick one:
+
+> a. A.
+  b. B.
+  c. C.
+  d. D.
+
+#acgaaaaafdaaaa
+
+Again!
+
+> a. Fit.
+  b. Finish.
+  c. Form.
+  d. Function.
+
+#acgaaaaafdaaaaa
+
+Faster!
+
+> a. Grammarian.
+  b. Ghoulishly.
+  c. Gleamingly.
+  d. Gynecology.
+  e. Glaciation.
+  f. Groundwork.
+  g. Gluttonous.
+  h. Gorgonzola.
+  i. Guillotine.
+  j. Geophysics.
+  k. Guilefully.
+  l. Gunrunning.
+  m. Gastronomy.
+  n. Gamekeeper.
+  o. Graduation.
+  p. Grapefruit.
+  q. Gentlefolk.
+  r. Grisliness.
+  s. Gratuitous.
+  t. Gloominess.
+
+#acgaaaaafdaaaaaa
+
+Lorem ipsum dolor sit...
+
+> a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+#acgaaaaafdaaaaaaa
+
+So did you play that game yet where you're a dog?
+
+  a. Yes.
+> b. No.
+  c. Wait, which one?
+
+#acgaaaaafdaaaaaaab
+
+Oh well you totally should!  It's really good!
+
+  a. Thanks, I'll keep an eye out for it!
+  b. It doesn't sound like my cup of tea, actually.
+> c. So you played it?
+
+#acgaaaaafdaaaaaaabc
+
+Well, no, I haven't played it <em>yet</em>, but, you know, I've heard good things about it!  Rumors, mostly.  Lotta buzz!
+
+  a. That seems reasonable!
+> b. Wait a minute.  Who wrote this dog game?
+
+#acgaaaaafdaaaaaaabcb
+
+Oh... uh... I'm not sure if I should tell you.
+
+  a. Good thinking!  Better not.
+> b. Wait, why not?
+
+#acgaaaaafdaaaaaaabcbb
+
+Because you're Ryan Veeder!
+
+> a. So?
+  b. No I'm not.
+  c. Oh yeah, good point.
+
+#acgaaaaafdaaaaaaabcbba
+
+Wait -- is the exposition over already?
+
+  a. Yes.
+> b. No.
+  c. What exposition is this?
+
+#acgaaaaafdaaaaaaabcbbab
+
+Then I'd better not tell you.
+
+  a. Fine.
+> b. Why not?
+
+#acgaaaaafdaaaaaaabcbbabb
+
+Rule 6.  Obviously.
+
+  a. Oh yeah, rule 6.
+> b. Wait, what's rule 6?
+
+#acgaaaaafdaaaaaaabcbbabbb
+
+I forget exactly.  Something about pain of forfeit?
+
+> a. Sounds annoying.
+
+#acgaaaaafdaaaaaaabcbbabbba
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+  a. Pop.
+  b. Soda.
+  c. Coke.
+

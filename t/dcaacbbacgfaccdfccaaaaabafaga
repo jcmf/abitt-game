@@ -81,89 +81,81 @@ And your last name?
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
-> a. See what the other drivers are doing.
+  a. See what the other drivers are doing.
   b. Try to start the car again.
   c. Turn on the radio.
   d. Find my phone.
   e. Wait.
-  f. Run.
+> f. Run.
 
-#dcaacbbacga
+#dcaacbbacgf
 
 Hold on.  Are you the <em>real</em> Ryan Veeder?
 
 > a. Yes.
   b. No.
 
-#dcaacbbacgaa
+#dcaacbbacgfa
 
 So.  What's the capital of Canada?
 
-> a. Manitoba
+  a. Manitoba
   b. Nunavut
-  c. Ottawa
+> c. Ottawa
   d. Saskatchewan
   e. Skullport
   f. Toronto
   g. Vancouver
 
-#dcaacbbacgaaa
+#dcaacbbacgfac
 
 And what is an apocalypse?
 
-> a. An Oscar winner.
+  a. An Oscar winner.
   b. A revelation from God.
-  c. A disaster of epic proportions.
+> c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
-#dcaacbbacgaaaa
+#dcaacbbacgfacc
 
 All right, in that case... what does "grue" mean to you?
 
-> a. It's an alternate pronunciation of "glue."
+  a. It's an alternate pronunciation of "glue."
   b. It's an imaginary color that flouts Occam's razor.
   c. It's the root noun from which "gruesome" is derived.
-  d. It's a device for preventing adventurers from wandering in the dark.
+> d. It's a device for preventing adventurers from wandering in the dark.
 
-#dcaacbbacgaaaaa
+#dcaacbbacgfaccd
 
 Very good!  Now, which of these would you rather be?
 
-> a. a cowboy
+  a. a cowboy
   b. a hammer than a nail
   c. able to fly
   d. drinking
   e. eating
-  f. invisible
+> f. invisible
   g. sleeping
   h. with someone I love
 
-#dcaacbbacgaaaaaa
-
-Like the song?
-
-> a. Yes, like the song!
-  b. No, I didn't even realize that was a song.
-  c. No, I know the song but that's not why I chose that answer.
-
-#dcaacbbacgaaaaaaa
+#dcaacbbacgfaccdf
 
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
-> a. Heads and tails are equally likely.
+  a. Heads and tails are equally likely.
   b. Heads is much more likely than tails.
-  c. Tails is much more likely than heads.
+> c. Tails is much more likely than heads.
   d. I don't know.
 
-#dcaacbbacgaaaaaaaa
+#dcaacbbacgfaccdfc
 
 Why do you say that?
 
-> a. Because I don't care.
-  b. Because you said it was a fair coin.
-  c. Because there's no way to decide between the two.
+  a. Because tails is overdue now.
+  b. Because that's how a fair coin works.
+> c. Because I'm not even paying attention anymore.
 
-#dcaacbbacgaaaaaaaaa
+#dcaacbbacgfaccdfcc
 
 What goes between two sentences?
 
@@ -173,68 +165,16 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
-#dcaacbbacgaaaaaaaaaa
+#dcaacbbacgfaccdfcca
 
-A "football" is...
+Which country has the highest lowest point?
 
-> a. ...an inflated sphere that can be kicked with the feet and head.
-  b. ...a two-pointed air pocket that can be thrown in a spiral pattern.
-  c. ...a folded piece of paper that can be flicked across a classroom.
-  d. ...a bumpy hemisphere one can stand on in order to massage the feet.
+> a. Andorra
+  b. Burundi
+  c. Lesotho
+  d. Rwanda
 
-#dcaacbbacgaaaaaaaaaaa
-
-Pick one:
-
-> a. A.
-  b. B.
-  c. C.
-  d. D.
-
-#dcaacbbacgaaaaaaaaaaaa
-
-Again!
-
-> a. Fit.
-  b. Finish.
-  c. Form.
-  d. Function.
-
-#dcaacbbacgaaaaaaaaaaaaa
-
-Faster!
-
-> a. Grammarian.
-  b. Ghoulishly.
-  c. Gleamingly.
-  d. Gynecology.
-  e. Glaciation.
-  f. Groundwork.
-  g. Gluttonous.
-  h. Gorgonzola.
-  i. Guillotine.
-  j. Geophysics.
-  k. Guilefully.
-  l. Gunrunning.
-  m. Gastronomy.
-  n. Gamekeeper.
-  o. Graduation.
-  p. Grapefruit.
-  q. Gentlefolk.
-  r. Grisliness.
-  s. Gratuitous.
-  t. Gloominess.
-
-#dcaacbbacgaaaaaaaaaaaaaa
-
-How do you typically respond to stress?
-
-> a. Fight.
-  b. Flee.
-  c. Freeze.
-  d. Dissociate.
-
-#dcaacbbacgaaaaaaaaaaaaaaa
+#dcaacbbacgfaccdfccaa
 
 Something's been bothering me about some of your earlier answers.
 
@@ -242,32 +182,32 @@ Something's been bothering me about some of your earlier answers.
   b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
   c. OMG did I screw up the math question?  I hate math.
 
-#dcaacbbacgaaaaaaaaaaaaaaaa
+#dcaacbbacgfaccdfccaaa
 
 Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
 
 > a. So?
 
-#dcaacbbacgaaaaaaaaaaaaaaaaa
+#dcaacbbacgfaccdfccaaaa
 
 So?  You told me you were Ryan Veeder!
 
 > a. So?
 
-#dcaacbbacgaaaaaaaaaaaaaaaaaa
+#dcaacbbacgfaccdfccaaaaa
 
 You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?
 
-> a. What an impertinent question!
-  b. I'm a very busy man.
+  a. What an impertinent question!
+> b. I'm a very busy man.
 
-#dcaacbbacgaaaaaaaaaaaaaaaaaaa
+#dcaacbbacgfaccdfccaaaaab
 
-I thought it was a pretty good question, actually!
+Hmm, yes... the real Ryan Veeder would never waste time playing such a trivial game as this!  Isn't he more into, like, parser stuff?  You couldn't possibly be....
 
 > a. Be silent, or face the consequences!
 
-#dcaacbbacgaaaaaaaaaaaaaaaaaaaa
+#dcaacbbacgfaccdfccaaaaaba
 
 What consequences might those be?
 
@@ -276,5 +216,39 @@ What consequences might those be?
   c. I'll drive you out of business!
   d. Pain of forfeit!
   e. I'll stick paperclips up your toenails!
-  f. Swarms of angry cyber-bees!
+> f. Swarms of angry cyber-bees!
+
+#dcaacbbacgfaccdfccaaaaabaf
+
+Ha!  The <em>real</em> Ryan Veeder would <em>never</em> say that!
+
+> a. Omigosh, you're right!  I've been living a lie!
+
+#dcaacbbacgfaccdfccaaaaabafa
+
+Confess, traitor!  What is your true name?
+
+  a. Jim Crawford
+  b. Doug Egan
+  c. Jeremy Freese
+  d. Jason McIntosh
+  e. Hamish McIntyre
+  f. Carl Muckenhoupt
+> g. Dan Ravipinto
+  h. Emily Short
+
+#dcaacbbacgfaccdfccaaaaabafag
+
+Holy moly!  I've always wanted to meet you, Mr. Ravipinto!  If I could just ask you a few questions....
+
+> a. Certainly!
+
+#dcaacbbacgfaccdfccaaaaabafaga
+
+Which country has the lowest lowest point?
+
+  a. Djibouti
+  b. Israel
+  c. Jordan
+  d. Syria
 

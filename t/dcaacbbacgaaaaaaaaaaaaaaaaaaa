@@ -2,12 +2,62 @@
 
 Welcome to this game!  Before we can get started, you'll need to answer a few questions.
 
-> a. Okay.
+  a. Okay.
   b. Sounds good.
   c. I consent to this.
-  d. Hold on, I have a question!
+> d. Hold on, I have a question!
 
-#a
+#d
+
+What is your question?
+
+  a. How should I indicate which answer I wish to choose?
+  b. What if I choose the wrong answer?
+> c. Who wrote this game?
+
+#dc
+
+Are you sure you want to know?
+
+> a. Yes.
+  b. No.
+
+#dca
+
+You're not trying to trick me, are you?
+
+> a. Of course not.
+  b. Why yes, actually, I am trying to trick you.
+
+#dcaa
+
+So the judging period is over?
+
+  a. Yes.
+  b. No.
+> c. Uh... judging period?  What?
+
+#dcaac
+
+You know, for the exposition thing.
+
+  a. Oh right, the exposition thing!
+> b. What exposition thing?
+
+#dcaacb
+
+Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
+
+  a. Oh, <em>that</em>!
+> b. Never heard of it.
+
+#dcaacbb
+
+Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
+
+> a. Uh... sure... whatever you say.
+
+#dcaacbba
 
 What's your name?
 
@@ -15,7 +65,7 @@ What's your name?
   b. Jenni
 > c. Ryan
 
-#ac
+#dcaacbbac
 
 And your last name?
 
@@ -27,7 +77,7 @@ And your last name?
   f. Stevens
 > g. Veeder
 
-#acg
+#dcaacbbacg
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
@@ -38,14 +88,14 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
-#acga
+#dcaacbbacga
 
 Hold on.  Are you the <em>real</em> Ryan Veeder?
 
 > a. Yes.
   b. No.
 
-#acgaa
+#dcaacbbacgaa
 
 So.  What's the capital of Canada?
 
@@ -57,7 +107,7 @@ So.  What's the capital of Canada?
   f. Toronto
   g. Vancouver
 
-#acgaaa
+#dcaacbbacgaaa
 
 And what is an apocalypse?
 
@@ -66,7 +116,7 @@ And what is an apocalypse?
   c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
-#acgaaaa
+#dcaacbbacgaaaa
 
 All right, in that case... what does "grue" mean to you?
 
@@ -75,39 +125,45 @@ All right, in that case... what does "grue" mean to you?
   c. It's the root noun from which "gruesome" is derived.
   d. It's a device for preventing adventurers from wandering in the dark.
 
-#acgaaaaa
+#dcaacbbacgaaaaa
 
 Very good!  Now, which of these would you rather be?
 
-  a. a cowboy
+> a. a cowboy
   b. a hammer than a nail
   c. able to fly
   d. drinking
   e. eating
-> f. invisible
+  f. invisible
   g. sleeping
   h. with someone I love
 
-#acgaaaaaf
+#dcaacbbacgaaaaaa
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#dcaacbbacgaaaaaaa
 
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
-  a. Heads and tails are equally likely.
+> a. Heads and tails are equally likely.
   b. Heads is much more likely than tails.
   c. Tails is much more likely than heads.
-> d. I don't know.
+  d. I don't know.
 
-#acgaaaaafd
+#dcaacbbacgaaaaaaaa
 
 Why do you say that?
 
-> a. Because that question is unanswerable.
-  b. Because that question is complicated.
-  c. Because that question is difficult.
-  d. Because that question is boring.
-  e. Because that question is bad.
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
 
-#acgaaaaafda
+#dcaacbbacgaaaaaaaaa
 
 What goes between two sentences?
 
@@ -117,7 +173,7 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
-#acgaaaaafdaa
+#dcaacbbacgaaaaaaaaaa
 
 A "football" is...
 
@@ -126,7 +182,7 @@ A "football" is...
   c. ...a folded piece of paper that can be flicked across a classroom.
   d. ...a bumpy hemisphere one can stand on in order to massage the feet.
 
-#acgaaaaafdaaa
+#dcaacbbacgaaaaaaaaaaa
 
 Pick one:
 
@@ -135,7 +191,7 @@ Pick one:
   c. C.
   d. D.
 
-#acgaaaaafdaaaa
+#dcaacbbacgaaaaaaaaaaaa
 
 Again!
 
@@ -144,7 +200,7 @@ Again!
   c. Form.
   d. Function.
 
-#acgaaaaafdaaaaa
+#dcaacbbacgaaaaaaaaaaaaa
 
 Faster!
 
@@ -169,99 +225,47 @@ Faster!
   s. Gratuitous.
   t. Gloominess.
 
-#acgaaaaafdaaaaaa
+#dcaacbbacgaaaaaaaaaaaaaa
 
-How do you typically respond to stress?
+Something's been bothering me about some of your earlier answers.
 
-> a. Fight.
-  b. Flee.
-  c. Freeze.
-  d. Dissociate.
+> a. Oh?  What is it?
+  b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
+  c. OMG did I screw up the math question?  I hate math.
 
-#acgaaaaafdaaaaaaa
+#dcaacbbacgaaaaaaaaaaaaaaa
 
-Lorem ipsum dolor sit...
-
-> a. ...amah.
-  b. ...aman.
-  c. ...amen.
-  d. ...amet.
-  e. ...amin.
-  f. ...emim.
-  g. ...imam.
-  h. ...uman.
-
-#acgaaaaafdaaaaaaaa
-
-So did you play that game yet where you're a dog?
-
-  a. Yes.
-> b. No.
-  c. Wait, which one?
-
-#acgaaaaafdaaaaaaaab
-
-Oh well you totally should!  It's really good!
-
-  a. Thanks, I'll keep an eye out for it!
-  b. It doesn't sound like my cup of tea, actually.
-> c. So you played it?
-
-#acgaaaaafdaaaaaaaabc
-
-Well, no, I haven't played it <em>yet</em>, but, you know, I've heard good things about it!  Rumors, mostly.  Lotta buzz!
-
-  a. That seems reasonable!
-> b. Wait a minute.  Who wrote this dog game?
-
-#acgaaaaafdaaaaaaaabcb
-
-Oh... uh... I'm not sure if I should tell you.
-
-  a. Good thinking!  Better not.
-> b. Wait, why not?
-
-#acgaaaaafdaaaaaaaabcbb
-
-Because you're Ryan Veeder!
+Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
 
 > a. So?
-  b. No I'm not.
-  c. Oh yeah, good point.
 
-#acgaaaaafdaaaaaaaabcbba
+#dcaacbbacgaaaaaaaaaaaaaaaa
 
-Wait -- is the exposition over already?
+So?  You told me you were Ryan Veeder!
 
-  a. Yes.
-> b. No.
-  c. What exposition is this?
+> a. So?
 
-#acgaaaaafdaaaaaaaabcbbab
+#dcaacbbacgaaaaaaaaaaaaaaaaa
 
-Then I'd better not tell you.
+You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?
 
-  a. Fine.
-> b. Why not?
+> a. What an impertinent question!
+  b. I'm a very busy man.
 
-#acgaaaaafdaaaaaaaabcbbabb
+#dcaacbbacgaaaaaaaaaaaaaaaaaa
 
-Rule 6.  Obviously.
+I thought it was a pretty good question, actually!
 
-  a. Oh yeah, rule 6.
-> b. Wait, what's rule 6?
+> a. Be silent, or face the consequences!
 
-#acgaaaaafdaaaaaaaabcbbabbb
+#dcaacbbacgaaaaaaaaaaaaaaaaaaa
 
-I forget exactly.  Something about pain of forfeit?
+What consequences might those be?
 
-> a. Sounds annoying.
-
-#acgaaaaafdaaaaaaaabcbbabbba
-
-Which of these words would you be most likely to use to describe carbonated soft drinks?
-
-  a. Pop.
-  b. Soda.
-  c. Coke.
+  a. I'll kick your ass!
+  b. A $271 dollar fine!
+  c. I'll drive you out of business!
+  d. Pain of forfeit!
+  e. I'll stick paperclips up your toenails!
+  f. Swarms of angry cyber-bees!
 
