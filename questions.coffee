@@ -477,6 +477,7 @@ module.exports = qq [
         a "Because that question is boring."
         a "Because that question is bad."
 
+  # XXX make this one conditional?
   q "What goes between two sentences?",
     a "One space."
     a "Two spaces."
@@ -488,6 +489,42 @@ module.exports = qq [
         a "Monospaced vs proportional."
         a "The specific typesetting system."
         a "Full justification vs ragged right."
+
+  -> if @real and not @geo and not @skullport and not @premath and not @philosophy
+    more = (w1, w2, w3, w4) ->
+      submore = (words) ->
+        answers = (a word for word in words)
+        q "Faster!", answers...
+      q "Again!",
+        a "Fit.", submore w1
+        a "Finish.", submore w2
+        a "Form.", submore w3
+        a "Function.", submore w4
+    q "A \"football\" is...",
+      a "...an inflated sphere that can be kicked with the feet and head.",
+        q "Pick one:",
+          a "A.", more ['grammarian', 'ghoulishly', 'gleamingly', 'gynecology', 'glaciation', 'groundwork', 'gluttonous', 'gorgonzola', 'guillotine', 'geophysics', 'guilefully', 'gunrunning', 'gastronomy', 'gamekeeper', 'graduation', 'grapefruit', 'gentlefolk', 'grisliness', 'gratuitous', 'gloominess'], ['gravestone', 'goldilocks', 'gloriously', 'ghostwrite', 'gunmanship', 'grooviness', 'galvanized', 'grindstone', 'gorgeously', 'greasiness', 'generosity', 'geodynamic', 'glasshouse', 'grudgingly', 'geriatrics', 'granddaddy', 'geographic', 'gentleness', 'granulated', 'gnarliness'], ['gratifying', 'glareproof', 'generalize', 'guesthouse', 'germicidal', 'goalkeeper', 'gramophone', 'graymalkin', 'gigglingly', 'genderless', 'gingerness', 'gutterally', 'groundless', 'grievously', 'geneticist', 'googolplex', 'gingersnap', 'geocentric', 'gargantuan', 'glimmering'], ['greenhouse', 'gracefully', 'grogginess', 'government', 'geothermal', 'gesticular', 'gymnastics', 'gyroscopic', 'garterless', 'gingivitis', 'gregarious', 'glovemaker', 'gelatinous', 'gravidness', 'garishness', 'geological', 'gatekeeper', 'glistening', 'guardhouse', 'giftedness']
+          a "B.", more ['xanthodont', 'xenophobia', 'xerography', 'xylophonic'],  ['yearnfully', 'yellowtail', 'yesteryear', 'youthfully'], ['yeastiness', 'yeomanlike', 'yieldingly', 'yourselves'], ['zabaglione', 'zenithward', 'zigzaggery', 'zoomimetic']
+          a "C.", more ['juggernaut', 'jauntiness', 'jejuneness', 'journalist', 'jewelsmith', 'junctional', 'joulemeter'], ['johnnycake', 'joyfulness', 'jawbreaker', 'jacketless', 'judicially', 'journeyman', 'jaggedness'], ['jingoistic', 'jailkeeper', 'jardiniere', 'jabberment', 'jeopardize', 'justifying', 'juxtaposit'], ['jinglingly', 'jackassery', 'jocularity', 'jackhammer', 'janitorial', 'jocundness', 'jubilation']
+          a "D.", more ['quakeproof', 'quadrennia', 'queryingly', 'quirkiness', 'quaintness', 'quarreling'], ['quadrilogy', 'quixotical', 'questioner', 'quadriceps', 'quaternary', 'queiscence'], ['quadrangle', 'quaternion', 'quenchable', 'quadrature', 'quantifier', 'quintuplet'], ['quadrupole', 'quadruplet', 'queasiness', 'quizzingly', 'quarantine', 'quadrisect']
+      a "...a two-pointed air pocket that can be thrown in a spiral pattern.",
+        q "Choose:",
+          a "1.", more ['leadership', 'letterhead', 'listlessly', 'lithograph', 'liveliness'], ['lackluster', 'ladyfinger', 'languorous', 'liquidator', 'lubricious'], ['laughingly', 'lavishness', 'loggerhead', 'lumberjack'], ['lackadaisy', 'lamentable', 'landlubber', 'lugubrious']
+          a "2.", more ['lachrymose', 'lawbreaker', 'litigation', 'logistical', 'luminosity'], ['landlocked', 'largemouth', 'licentious', 'lieutenant', 'lifesaving'], ['laceration', 'lebensraum', 'loveliness', 'lymphocyte'], ['leprechaun', 'libelously', 'lifelessly', 'livelihood']
+          a "3.", more ['landholder', 'liberation', 'limitation', 'liverwurst', 'luxuriance'], ['legalistic', 'ligurgical', 'liquescent', 'locomotion', 'loneliness'], ['lengthwise', 'levitation', 'likability', 'lopsidedly'], ['laboratory', 'legitimize', 'lighthouse', 'literalist']
+          a "4.", more ['lanthanide', 'lascivious', 'legislator', 'likelihood', 'lusciously'], ['laryngitis', 'lenticular', 'liberalism', 'locomotive', 'loquatious'], ['lampoonery', 'lawfulness', 'loganberry', 'logrolling'], ['legibility', 'legitimate', 'linguistic', 'literature']
+      a "...a folded piece of paper that can be flicked across a classroom.",
+        q "Select:",
+          a "This one.", more ['victimhood', 'virologist', 'vaccilator', 'vespertine', 'viziership'], ['volitional', 'valorously', 'veiledness', 'vaportight', 'vehemently'], ['vertically', 'vagabondry', 'vacantness', 'vernacular', 'volubility'], ['vinegrower', 'vermicular', 'varnishing', 'volumetric', 'vacationer']
+          a "That one.", more ['voluptuous', 'viscerally', 'vindictive', 'vulnerable', 'vinologist'], ['vigilantly', 'vocabulary', 'villanelle', 'verbalizer', 'variometer'], ['vegetarian', 'verifiable', 'vengefully', 'vaginismus', 'vertebrate'], ['validation', 'vendettist', 'variegated', 'volleyball', 'victimizer']
+          a "The other one.", more ['vasemaking', 'venomously', 'vascularly', 'vassalship', 'visitation'], ['vegetative', 'vanquisher', 'vanishment', 'volatility', 'vagrantism'], ['virginhead', 'vocational', 'victorious', 'vermicelli', 'vacuometer'], ['vituperate', 'voluminous', 'verbomania', 'virtualize', 'vestibular']
+          a "No wait", more ['veterinary', 'visualizer', 'valleyward', 'ventilator', 'virtuosity'], ['vegetation', 'vindicator', 'vociferous', 'vulgarness', 'villainess'], ['virulently', 'vaudeville', 'visibility', 'vibraphone', 'velocipede'], ['vixenishly', 'veneration', 'vexingness', 'virtuously']
+      a "...a bumpy hemisphere one can stand on in order to massage the feet.",
+        q "Which?",
+          a "Red.", more ['whereunder', 'windshield', 'woodenness', 'wieldiness', 'weaponless'], ['woefulness', 'womanishly', 'wheezingly', 'wizardlike', 'wholesaler'], ['whatsoever', 'watchfully', 'windowpane', 'wirelessly'], ['wretchedly', 'wickerwork', 'weasellike', 'watermelon']
+          a "Yellow.", more ['wildebeest', 'wordlessly', 'whipstitch', 'wheelhouse', 'wallflower'], ['watchtower', 'worryingly', 'woodpecker', 'withdrawal'], ['wrongdoing', 'weatherman', 'wearyingly', 'wanderlust'], ['waterfront', 'wintertime', 'woodworker', 'wonderland']
+          a "Green.", more ['widespread', 'watchmaker', 'wantonness', 'windedness', 'wellspring'], ['whispering', 'wonderment', 'wastepaper', 'wildcatter'], ['wilderness', 'withholder', 'whiteboard', 'wickedness'], ['wrathfully', 'waterproof', 'wraithlike', 'woodcutter']
+          a "Blue.", more ['whimpering', 'weakhanded', 'waistcloth', 'witchcraft', 'woundingly'], ['whomsoever', 'wainwright', 'wageworker', 'weightless'], ['worthiness', 'windowless', 'wobbliness', 'westernize'], ['wondrously', 'wagonsmith', 'warehoused', 'windjammer']
 
   # XXX start explaining the solution
   -> if @premath then q "How much bigger than one tenth is one ninth?",
@@ -564,6 +601,7 @@ module.exports = qq [
                   q "Ready for more questions?",
                     a "Totally ready!", -> @math = true
 
+  # XXX don't like this one -- remove?
   q "How do you typically respond to stress?",
     a "Fight."
     a "Flee."
@@ -961,6 +999,13 @@ module.exports = qq [
           a "There are stars about that size."
           a "Much larger than the observable universe."
       a "Bigger than the Earth."
+
+  -> if @theology
+    q "After pouring a clean liquid from a clean bottle into an unclean cup, should the bottle be considered contaminated?",
+      a "Yes."
+      a "No."
+      a "It depends."
+      a "Who cares?"
 
   -> if @love
     q "Do you have friends?",  # XXX do something with this, maybe tie in to with someone I love answers?
