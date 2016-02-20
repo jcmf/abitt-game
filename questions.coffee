@@ -1393,7 +1393,7 @@ module.exports = qq [
                             a "Oh yeah, you're right."
                     a "Begin chest compressions.", compressions
                     a 'Shout "IS THERE A DOCTOR IN THE HOUSE?"',
-                      q "Good plan!  Turns out there is, over by the drinking fountains, and she totally saves the day thanks to your quick thinking!",
+                      q "Good plan!  Turns out there is, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
                         a "Hooray!"
                     a "Whip out my smartphone and ask Siri or Google or whatever how to do CPR.",
                       q "Okay, tell you what -- get out your phone right now and try that and tell me what you think of the result.",
@@ -1716,7 +1716,7 @@ module.exports = qq [
                             a "Entertainment."
                             a "Lifestyle."
         a 'Shout "OMG, does anybody know CPR?"',
-          shoutomg = q "Good plan!  Turns out somebody does, over by the drinking fountains, and she totally saves the day thanks to your quick thinking!",
+          shoutomg = q "Good plan!  Turns out somebody does, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
             a "Hooray!"
         a "Run around in circles." # XXX
         a "Scream." # XXX
