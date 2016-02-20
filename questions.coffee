@@ -184,13 +184,15 @@ module.exports = qq [
                   q "So the judging period is over?",
                     a "Yes.", ->
                       now = new Date()
-                      if now.getTime() < 1460617200000
+                      if (now.getTime() < 1460617200000) is (not window.timetravel)
                         q "Then why does your clock say #{now}?",
                           a "Uhhhh... whatever, never mind.", -> @amusing = "Like that thing where you told me the current date and time."
                       else
                         q "You're sure you want me to reveal this?",
-                          a "Eh... I changed my mind.", -> @amusing = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off."
-                          a "Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.",
+                          a "Eh... I changed my mind.", backedoff = -> @amusing = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off."
+                          a "Definitely not.", backedoff
+                          a "No way.", backedoff
+                          a "Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.  I understand that you will really tell me, without any further stalling, and I promise not to disqualify anyone or anything, retroactively or otherwise, as a result of learning this information, even if I am Ryan Veeder.",
                             ->
                               @author = (String.fromCharCode x for x in [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116]).join ''
                               @amusing = "Like that thing where you took sooooo much convincing to tell me who wrote this."
@@ -1758,14 +1760,10 @@ module.exports = qq [
                             a "Wait, how do I unlock it?",
                               q "Oh, it's way back at the beginning.  You have to get me to tell you who wrote this game first.",
                                 a "Got it, thanks!"
-                        else
-                          q "No beta-testers yet!  Unless... wait, are <em>you</em> a beta tester?",
-                            a "Yes.",
-                              q "Then be sure to remind me to add your name here!",
-                                a "Okay, will do!"
-                            a "No.",
-                              q "Then I guess that's it!",
-                                a "Thanks!"
+                        else ->
+                          testers = (String.fromCharCode x for x in [78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114]).join ''
+                          q "This game was bravely tested by #{testers}.  Any bugs or other inadequacies are the author's fault, not theirs, and are also a figment of your imagination.",
+                            a "Good to know, thanks!"
                 a "AMUSING",
                   q "Amusing?  Like what?",
                     -> if @amusing then a @amusing,
@@ -1899,7 +1897,7 @@ module.exports = qq [
                           if @origname
                             q "But didn't you say you were #{@origname}?",
                               a "So?",
-                                q "So #{@origname} doesn't drive an electric car iether.",
+                                q "So #{@origname} doesn't drive an electric car either.",
                                   howdoyou = a "Wait, how do you know that?",
                                     q "Extensive market research?",
                                       a "Okay, sure, that sounds plausible."
@@ -1940,7 +1938,6 @@ module.exports = qq [
                     a "Because this game sucks, dude.",
                       q "Well, good thing it's over, right?",
                         a "Thank goodness!"
-# XXX add time-travel options, with President's Day vs Presidents' Day vs Presidents Day?
 
   q "THE END"
 ]
