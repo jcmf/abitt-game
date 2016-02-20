@@ -11615,7 +11615,14 @@ module.exports = qq([
         this.undo = true;
         return yourscore;
       } else {
-        return q("Again?!", a("Yes, again!", q("But we just did this.", a("Oh right, I forgot, never mind."), a("But I want to see if something different will happen this time!", q("Nothing different will happen.", a("Well never mind then."), a("But I still want to do it!", q("No.", a("Boooo!"))))))), a("No, forget it."));
+        return q("Again?!", a("Yes, again!", q("But we just did this.", a("Oh right, I forgot, never mind."), a("But I want to see if something different will happen this time!", q("Nothing different will happen.", a("Well never mind then."), a("But I still want to do it!", function() {
+          if (this.undoagain) {
+            return q("No.", a("Boooo!"));
+          } else {
+            this.undoagain = true;
+            return q("Fine.", q("Yay!", q("Nothing different will happen.", a("Well never mind then."), a("But I still want to do it!", q("Too bad.", a("Awwww!"))), a("Hey, um, I don't think you sent me back far enough.", q("Oh right.  Here you go.", a("Thanks!", yourscore))))));
+          }
+        }))))), a("No, forget it."));
       }
     }), a("CREDITS", q("This game was written by " + (this.author || "<span class='redacted'>REDACTED</span>") + ".", a("Thanks!"), a("Hey, what about beta-testers?", function() {
       if (!this.author) {
@@ -11930,7 +11937,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14559-510-46431-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14559-925-74228-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>

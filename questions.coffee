@@ -1470,6 +1470,7 @@ module.exports = qq [
                                                                 a "For stupid reasons I won't get into here."
                                             a "No.", toppings2
                                         a "Vanilla.",
+                                          # XXX change this bit to talk about counterfeit vanilla?
                                           vanilla = q "So are you into BDSM?",
                                             a "Yes.",
                                               q "So would you say that the only vanilla thing about you is your ice cream preference?",
@@ -1899,8 +1900,22 @@ module.exports = qq [
                               q "Nothing different will happen.",
                                 a "Well never mind then."
                                 a "But I still want to do it!",
-                                  q "No.",
-                                    a "Boooo!"
+                                  ->
+                                    if @undoagain
+                                      q "No.",
+                                        a "Boooo!"
+                                    else
+                                      @undoagain = true
+                                      q "Fine.",
+                                        q "Yay!",
+                                          q "Nothing different will happen.",
+                                            a "Well never mind then."
+                                            a "But I still want to do it!",
+                                              q "Too bad.",
+                                                a "Awwww!"
+                                            a "Hey, um, I don't think you sent me back far enough.",
+                                              q "Oh right.  Here you go.",
+                                                a "Thanks!", yourscore
                         a "No, forget it."
                 a "CREDITS",
                   q """This game was written by #{@author or "<span class='redacted'>REDACTED</span>"}.""",
