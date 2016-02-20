@@ -493,7 +493,8 @@ module.exports = qq [
   -> if @real and not @geo and not @skullport and not @premath and not @philosophy
     more = (w1, w2, w3, w4) ->
       submore = (words) ->
-        answers = (a word for word in words)
+        capitalize = (word) -> word.replace /^./, (m) -> m.toUpperCase()
+        answers = (a capitalize word + '.' for word in words)
         q "Faster!", answers...
       q "Again!",
         a "Fit.", submore w1
@@ -520,7 +521,7 @@ module.exports = qq [
           a "The other one.", more ['vasemaking', 'venomously', 'vascularly', 'vassalship', 'visitation'], ['vegetative', 'vanquisher', 'vanishment', 'volatility', 'vagrantism'], ['virginhead', 'vocational', 'victorious', 'vermicelli', 'vacuometer'], ['vituperate', 'voluminous', 'verbomania', 'virtualize', 'vestibular']
           a "No wait", more ['veterinary', 'visualizer', 'valleyward', 'ventilator', 'virtuosity'], ['vegetation', 'vindicator', 'vociferous', 'vulgarness', 'villainess'], ['virulently', 'vaudeville', 'visibility', 'vibraphone', 'velocipede'], ['vixenishly', 'veneration', 'vexingness', 'virtuously']
       a "...a bumpy hemisphere one can stand on in order to massage the feet.",
-        q "Which?",
+        q "Decide:",
           a "Red.", more ['whereunder', 'windshield', 'woodenness', 'wieldiness', 'weaponless'], ['woefulness', 'womanishly', 'wheezingly', 'wizardlike', 'wholesaler'], ['whatsoever', 'watchfully', 'windowpane', 'wirelessly'], ['wretchedly', 'wickerwork', 'weasellike', 'watermelon']
           a "Yellow.", more ['wildebeest', 'wordlessly', 'whipstitch', 'wheelhouse', 'wallflower'], ['watchtower', 'worryingly', 'woodpecker', 'withdrawal'], ['wrongdoing', 'weatherman', 'wearyingly', 'wanderlust'], ['waterfront', 'wintertime', 'woodworker', 'wonderland']
           a "Green.", more ['widespread', 'watchmaker', 'wantonness', 'windedness', 'wellspring'], ['whispering', 'wonderment', 'wastepaper', 'wildcatter'], ['wilderness', 'withholder', 'whiteboard', 'wickedness'], ['wrathfully', 'waterproof', 'wraithlike', 'woodcutter']
