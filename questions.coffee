@@ -1330,7 +1330,7 @@ module.exports = qq [
                               q "Wow!  Good thinking!",
                                 a "Thanks!"
         a "Go find an employee.",
-          q "Hmm.  There's someone at the concession stand.",
+          employee = q "Hmm.  There's someone at the concession stand.",
             a "Perfect!  I get in line.",
               q "The line's pretty long.  It might be a while!",
                 a "Hmm, this doesn't seem worth it.  I guess I give up and go home."
@@ -1626,11 +1626,16 @@ module.exports = qq [
                             a "Sports."
                             a "Entertainment."
                             a "Lifestyle."
-        a 'Shout "OMG, does anybody know CPR?"' # XXX
+        a 'Shout "OMG, does anybody know CPR?"',
+          shoutomg = q "Good plan!  Turns out somebody does, over by the drinking fountains, and she totally saves the day thanks to your quick thinking!",
+            a "Hooray!"
         a "Run around in circles." # XXX
         a "Scream." # XXX
         a "Shout." # XXX
-        a "Sit quietly." # XXX
+        a "Sit quietly.",
+          q "After a minute, somebody picks up.  A few minutes later, the ambulance arrives and whisks their patient away, sirens blaring.  You never find out what happens next.",
+            a "Cool."
+            a "Yikes."
         a "Panic.",
           dontpanic = q "Don't panic!  Take slow, deep breaths.  Slow!  Focus on your breathing.  Slow breaths.  Deep.  That's it.  Close your eyes.  Keep breathing, don't hold your breath, just take it real slow and easy.",
             a "Thanks, I feel a little better now."
@@ -1645,15 +1650,175 @@ module.exports = qq [
                             a "I have no idea what number you're even on!",
                               q "THREE!  Open your eyes!",
                                 a "Wow, I can't believe that worked!"
-    a 'Shout "OMG, does anybody know CPR?"' # XXX
-    a "Go find an employee." # XXX
+    a 'Shout "OMG, does anybody know CPR?"', shoutomg
+    a "Go find an employee.", employee
     a "Hide." # XXX
     a "Run." # XXX
     a "Look for an AED." # XXX
-    a "Stand around doing nothing." # XXX
+    a "Stand around doing nothing.",
+      q "You stand around.  People are looking, but nobody is saying anything.  Everyone seems sort of embarrassed.  Eventually, an ambulance shows up, but by then it's too late.  You have failed!",
+        a "Oh well."
+        a "No, <em>you</em> have failed.",
+          q "That is a false statement.",
+            a "No, <em>you're</am> a false statement!"
+            a "Okay geez fine."
+        a "Can I try again?",
+          q "That depends.  Do you have access to time travel technology?",
+            a "Yes.",
+              q "Then sure, knock yourself out.",
+                a "Thanks, I'll do that!"
+                a "Eh whatever, time travel is boring."
+            a "No.",
+              q "Then I'm afraid you are powerless!",
+                a "Okay."
+                a "Booo!  Hiss!"
     a "Panic.", dontpanic
-    a "Give CPR." # XXX
-    a "Don't give CPR." # XXX
+    a "Give CPR.", cpr
+    a "Don't give CPR.",
+      q "Little do these fools realize that you've been planted here as part of an elaborate large-scale experiment to determine the effectiveness of proper CPR techniques in naturalistic conditions!  You are part of the control group.  Your job is to perform \"sham CPR\" on this unfortunate victim.  What will you do first?",
+        a "Poke them with needles.",
+          q "As you pull the wad of needles from your pocket, you visualize a diagram of the body's nervous system, so as to be ready to avoid accidentally following correct CPR technique.  Gingerly, you insert the first needle...",
+            a "Near the mid-thorax.",
+              q "The victim screams in pain!",
+                a "Keep going.",
+                  q "No, I think you should stop now.",
+                    a "Okay."
+                    a "Too bad, I keep going.",
+                      q "Actually, this is making me kind of uncomfortable.",
+                        a "Fine, we can stop now."
+                        a "I refuse to stop.",
+                          q "Well you just don't understand <em>consent</em> then!",
+                            a "That's true."
+                            a "I understand, I just don't care.",
+                              q "You monster!",
+                                a "Yes, that's me!"
+                                a "Actually I'm not a monster."
+                a "Stop."
+            a "Inside the vena cava.",
+              q "You carefully thread the needle through the vein and into the heart itself.  The crowd gasps!",
+                a "I rotate the needle 90 degrees clockwise.",
+                  q "\"Hey, what are you doing?\" shouts a bystander.  \"That's not how you do CPR!\"",
+                    a "Deny.",
+                      q "\"Yes it is,\" you say.",
+                        a "Rotate again.",
+                          q "This time, no one dares challenge you.",
+                            a "Good."
+                            a "That's kind of disappointing, actually."
+                        a "Enough."
+                    a "Bargain.",
+                      q "You pull a five dollar bill out of your wallet.  \"Make it ten,\" they snarl.",
+                        a "Acquiesce."
+                        a "Defy."
+                    a "Accept.",
+                      q "\"Yes,\" you say.  \"It is so.\"  You withdraw the needle, and allow the police to lead you away in handcuffs.",
+                        a "I am satisfied with this outcome."
+                        a "This turn of events displeases me."
+                a "I pull the needle backwards by 25.4 millimeters.",
+                  q "Oh no!  You've sprung a leak in the auricular ventricle!",
+                    a "Well, shit."
+                    a "No no, I meant to do that."
+                a "I maintain position for a count of six.",
+                  q "The crowd looks on with baited breath.",
+                    a "Cool."
+                    a "No, that is incorrect.",
+                      q "How so?",
+                        a "Misapplied simile."
+                        a "Incorrect diction."
+                        a "Mixed metaphor."
+                        a "Too trite."
+            a "Alongside the epithelium.",
+              q "You plunge your needle into the epicanthic fold.",
+                a "Epithelial fold.",
+                  q "Sorry, <em>epithelial</em> fold.",
+                    a "Thanks."
+                    a "And don't you forget it!"
+                a "And what happens next?"
+                a "I don't like where this is going."
+            a "Deep into the mandibular fossa.",
+              q "Which is located where, exactly?",
+                a "Brazil."
+                a "California."
+                a "Madagascar."
+                a "Mexico."
+            a "A the three-fifths point of the calcineal tuberosity.",
+              q "Which, expressed as a percentage, would be...",
+                a "30%."
+                a "60%."
+                a "90%."
+                a "120%."
+        a "Give them a sugar pill.",
+          q "They immediately awake from their diabetic coma!  Christmas is saved!",
+            a "Woohoo!"
+            a "Meh."
+        a "Connect a saline IV.",
+          q "To which orifice?",
+            a "Navel."
+            a "Ear canal."
+            a "Tear duct."
+            a "Salivary gland."
+        a "Homeopathy.",
+          q "What kind?",
+            a "Nosode."
+            a "Sarcode."
+            a "Radionic."
+            a "Imponderable."
+        a "Pray.",
+          q "To whom will you pray?",
+            a "Baal.",
+              q "It starts raining.  The crop is saved!  You harvest 30 wheat.",
+                a "Thank Baal for his kindness.",
+                  q "\"You're welcome,\" says Baal.",
+                    a "Blush furiously."
+                a "Ask Baal for more wheat.",
+                  q "You explain to Baal that you need at least 50 wheat in order to feed your family this winter.  Baal apologizes for the oversight and hands you 20 additional wheat.",
+                    a "Okay perfect."
+                    a "No no, keep asking for more.",
+                      q "You keep asking for more and more wheat.  Baal complies with all of your demands.  Before you know it, you've cornered the grain futures market and are crowned Emperor of the World.",
+                        a "I earned this through my own hard work and determination."
+                        a "I achieved this outcome largely due to fortunate circumstances outside my control."
+            a "Satan.",
+              q "Which, backwards, is...",
+                a "Dog."
+                a "Santa."
+                a "Nathan."
+                a "Stanis."
+                a ".nataS"
+                a "Jesus."
+                a "شيطان"
+                a "Yes."
+            a "Ryan Veeder.", ->
+              if @ln is 'Veeder'
+                q "You can't pray to yourself!  That would be, like, super embarrassing.",
+                  a "Okay."
+              else
+                q "Ryan Veeder appears and solves all of your problems!",
+                  a "Thanks Ryan Veeder!"
+                  a "But I <em>liked</em> having problems."
+            a "Graham Nelson.",
+              ->
+                msg = if @ln is 'Nelson' then 'Talking to yourself is a sign of impending mental collapse.' else 'You can only do that to something animate.'
+                q msg,
+                  a "Sounds legit."
+                  a "Wait, what?"
+            a "The Flying Spaghetti Monster.",
+              q "Do you even own a colander?",
+                a "Yes.",
+                  q "Are you currently wearing it?",
+                    a "Yes.",
+                      q "Really?",
+                        a "Yes.",
+                          q "Did you just put it on after I started asking about this?",
+                            a "Yes."
+                            a "No."
+                        a "No.",
+                          darecall = q "And you dare call yourself a Pastafarian?",
+                            a "Yes."
+                            a "No.",
+                              q "Oh!  Sorry.  I just assumed.",
+                                a "That's okay."
+                                a "Then assume no more, lest He smite you with His Noodly Appendage!"
+                    a "No.", darecall
+                a "No.", darecall
 
   # XXX more questions from notes2?
   q "[XXX more stuff goes here]",
