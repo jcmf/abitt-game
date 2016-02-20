@@ -1092,7 +1092,7 @@ module.exports = qq [
                       q "So you're saying everything I say is wrong?",
                         a "Yes."
                         a "No."
-        a "No.", liketolearn
+    a "No.", liketolearn
 
   q "Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?",
     a "Call 911.",
