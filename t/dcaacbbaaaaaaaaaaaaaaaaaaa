@@ -61,23 +61,20 @@ Well, the relevant bit is that the organizer has made repeated credible threats 
 
 What's your name?
 
-  a. Emily
+> a. Emily
   b. Jenni
-> c. Ryan
+  c. Ryan
 
-#dcaacbbac
+#dcaacbbaa
 
 And your last name?
 
-  a. Burrus
-  b. Freebern
-  c. Holman
-  d. Kinsman
-  e. Weisenberger
-  f. Stevens
-> g. Veeder
+> a. Boegheim
+  b. Carroll
+  c. Ryan
+  d. Short
 
-#dcaacbbacg
+#dcaacbbaaa
 
 You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
 
@@ -88,26 +85,26 @@ You're driving along the highway, next to some railroad tracks, and it's getting
   e. Wait.
   f. Run.
 
-#dcaacbbacga
+#dcaacbbaaaa
 
-Hold on.  Are you the <em>real</em> Ryan Veeder?
+Hold on.  Are you the <em>real</em> Emily Boegheim?
 
 > a. Yes.
   b. No.
 
-#dcaacbbacgaa
+#dcaacbbaaaaa
 
 So.  What's the capital of Canada?
 
-  a. Manitoba
+> a. Manitoba
   b. Nunavut
-> c. Ottawa
+  c. Ottawa
   d. Saskatchewan
   e. Skullport
   f. Toronto
   g. Vancouver
 
-#dcaacbbacgaac
+#dcaacbbaaaaaa
 
 And what is an apocalypse?
 
@@ -116,7 +113,7 @@ And what is an apocalypse?
   c. A disaster of epic proportions.
   d. A language design document of mainly historical interest.
 
-#dcaacbbacgaaca
+#dcaacbbaaaaaaa
 
 All right, in that case... what does "grue" mean to you?
 
@@ -125,7 +122,7 @@ All right, in that case... what does "grue" mean to you?
   c. It's the root noun from which "gruesome" is derived.
   d. It's a device for preventing adventurers from wandering in the dark.
 
-#dcaacbbacgaacaa
+#dcaacbbaaaaaaaa
 
 Very good!  Now, which of these would you rather be?
 
@@ -138,7 +135,7 @@ Very good!  Now, which of these would you rather be?
   g. sleeping
   h. with someone I love
 
-#dcaacbbacgaacaaa
+#dcaacbbaaaaaaaaa
 
 Like the song?
 
@@ -146,7 +143,7 @@ Like the song?
   b. No, I didn't even realize that was a song.
   c. No, I know the song but that's not why I chose that answer.
 
-#dcaacbbacgaacaaaa
+#dcaacbbaaaaaaaaaa
 
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
@@ -155,7 +152,7 @@ Suppose I flip a fair coin 99 times, and get heads each time.  Which of these be
   c. Tails is much more likely than heads.
   d. I don't know.
 
-#dcaacbbacgaacaaaaa
+#dcaacbbaaaaaaaaaaa
 
 Why do you say that?
 
@@ -163,14 +160,7 @@ Why do you say that?
   b. Because you said it was a fair coin.
   c. Because there's no way to decide between the two.
 
-#dcaacbbacgaacaaaaaa
-
-Hmm, yes... maybe we can come back to this later....
-
-> a. Okay.
-  b. What if I want to talk about it now?
-
-#dcaacbbacgaacaaaaaaa
+#dcaacbbaaaaaaaaaaaa
 
 What goes between two sentences?
 
@@ -180,7 +170,7 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
-#dcaacbbacgaacaaaaaaaa
+#dcaacbbaaaaaaaaaaaaa
 
 How do you typically respond to stress?
 
@@ -189,16 +179,7 @@ How do you typically respond to stress?
   c. Freeze.
   d. Dissociate.
 
-#dcaacbbacgaacaaaaaaaaa
-
-Which country has the highest lowest point?
-
-> a. Andorra
-  b. Burundi
-  c. Lesotho
-  d. Rwanda
-
-#dcaacbbacgaacaaaaaaaaaa
+#dcaacbbaaaaaaaaaaaaaa
 
 Something's been bothering me about some of your earlier answers.
 
@@ -206,73 +187,46 @@ Something's been bothering me about some of your earlier answers.
   b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
   c. OMG did I screw up the math question?  I hate math.
 
-#dcaacbbacgaacaaaaaaaaaaa
+#dcaacbbaaaaaaaaaaaaaaa
 
 Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
 
 > a. So?
 
-#dcaacbbacgaacaaaaaaaaaaaa
+#dcaacbbaaaaaaaaaaaaaaaa
 
-So?  You told me you were Ryan Veeder!
+So?  You told me you were Emily Boegheim!
 
 > a. So?
 
-#dcaacbbacgaacaaaaaaaaaaaaa
+#dcaacbbaaaaaaaaaaaaaaaaa
 
-You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?
+You're supposed to be one of the fricking <em>stewards</em>!  How can you not have heard of the competition that you yourself are... uhhh....
 
-> a. What an impertinent question!
-  b. I'm a very busy man.
+> a. ...stewing?
+  b. ...stewarding?
+  c. ...stewardessing?
+  d. ...stewardinessing?
+  e. ...stewardlinessing?
+  f. ...stewardshiplikenessing?
+  g. ...stewardsnesslishippagelikelifallityinessaging?
 
-#dcaacbbacgaacaaaaaaaaaaaaaa
+#dcaacbbaaaaaaaaaaaaaaaaaa
 
-I thought it was a pretty good question, actually!
+...huh.  Okay, maybe you <em>are</em> Emily Boegheim.
 
-> a. Be silent, or face the consequences!
+> a. Told you so!
 
-#dcaacbbacgaacaaaaaaaaaaaaaaa
+#dcaacbbaaaaaaaaaaaaaaaaaaa
 
-What consequences might those be?
+Lorem ipsum dolor sit...
 
-> a. I'll kick your ass!
-  b. A $271 dollar fine!
-  c. I'll drive you out of business!
-  d. Pain of forfeit!
-  e. I'll stick paperclips up your toenails!
-  f. Swarms of angry cyber-bees!
-
-#dcaacbbacgaacaaaaaaaaaaaaaaaa
-
-Ha!  The <em>real</em> Ryan Veeder would <em>never</em> say that!
-
-> a. Omigosh, you're right!  I've been living a lie!
-
-#dcaacbbacgaacaaaaaaaaaaaaaaaaa
-
-Confess, traitor!  What is your true name?
-
-> a. Jim Crawford
-  b. Doug Egan
-  c. Jeremy Freese
-  d. Jason McIntosh
-  e. Hamish McIntyre
-  f. Carl Muckenhoupt
-  g. Dan Ravipinto
-  h. Emily Short
-
-#dcaacbbacgaacaaaaaaaaaaaaaaaaaa
-
-Holy moly!  I've always wanted to meet you, Mr. Crawford!  If I could just ask you a few questions....
-
-> a. Certainly!
-
-#dcaacbbacgaacaaaaaaaaaaaaaaaaaaa
-
-Which country has the lowest lowest point?
-
-  a. Djibouti
-  b. Israel
-  c. Jordan
-  d. Syria
+  a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
 

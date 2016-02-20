@@ -475,18 +475,6 @@ module.exports = qq [
         a "Because that question is difficult."
         a "Because that question is boring."
         a "Because that question is bad."
-  # XXX just remove this... it's disruptive, though....
-  q "Hmm, yes... maybe we can come back to this later....",
-    a "Okay."
-    a "What if I want to talk about it now?",
-      q "Then I guess you're going to be disappointed, aren't you?",
-        a "I guess.",
-          q "Sorry, that came out... I didn't mean to... just bear with me, okay?  We'll get through this.",
-            surewhatevs = a "Sure, whatever.",
-              q "No, seriously.  This will be good!  Just a few more questions, okay?",
-                a "I'm listening."
-        a "Am I?",
-          q "Well, no, I mean... no, that's not what... just bear with me, okay?  We'll get through this.", surewhatevs
 
   q "What goes between two sentences?",
     a "One space."
