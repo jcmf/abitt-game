@@ -355,7 +355,7 @@ module.exports = qq [
 
   q "Very good!  Now, which of these would you rather be?",
     a "a cowboy",
-      # XXX offer to sing the song, multiple choice lyrics
+      # XXX offer to sing the song, multiple choice lyrics?
       (likesong = (song) -> ->
         @song = song
         q "Like the song?",
@@ -481,18 +481,18 @@ module.exports = qq [
         a "Because that question is boring."
         a "Because that question is bad."
 
-  # XXX make this one conditional?
-  q "What goes between two sentences?",
-    a "One space."
-    a "Two spaces."
-    a "U+200F WIDENED SPACE"
-    a "Nothing."
-    a "It depends.",
-      q "On what?",
-        a "The medium."
-        a "Monospaced vs proportional."
-        a "The specific typesetting system."
-        a "Full justification vs ragged right."
+  -> if @words
+    q "What goes between two sentences?",
+      a "One space."
+      a "Two spaces."
+      a "U+200F WIDENED SPACE"
+      a "Nothing."
+      a "It depends.",
+        q "On what?",
+          a "The medium."
+          a "Monospaced vs proportional."
+          a "The specific typesetting system."
+          a "Full justification vs ragged right."
 
   -> if @real and not @geo and not @skullport and not @premath and not @philosophy
     more = (w1, w2, w3, w4) ->

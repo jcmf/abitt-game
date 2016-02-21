@@ -11488,7 +11488,11 @@ module.exports = qq([
     return this.premath = true;
   }), a("Because I don't care how I answer this."), a("Because you were wrong about it being a fair coin.", function() {
     return this.premath = true;
-  }))), a("Tails is much more likely than heads.", q("Why do you say that?", a("Because tails is overdue now."), a("Because that's how a fair coin works."), a("Because I'm not even paying attention anymore."))), a("I don't know.", q("Why do you say that?", a("Because that question is unanswerable."), a("Because that question is complicated."), a("Because that question is difficult."), a("Because that question is boring."), a("Because that question is bad.")))), q("What goes between two sentences?", a("One space."), a("Two spaces."), a("U+200F WIDENED SPACE"), a("Nothing."), a("It depends.", q("On what?", a("The medium."), a("Monospaced vs proportional."), a("The specific typesetting system."), a("Full justification vs ragged right.")))), function() {
+  }))), a("Tails is much more likely than heads.", q("Why do you say that?", a("Because tails is overdue now."), a("Because that's how a fair coin works."), a("Because I'm not even paying attention anymore."))), a("I don't know.", q("Why do you say that?", a("Because that question is unanswerable."), a("Because that question is complicated."), a("Because that question is difficult."), a("Because that question is boring."), a("Because that question is bad.")))), function() {
+    if (this.words) {
+      return q("What goes between two sentences?", a("One space."), a("Two spaces."), a("U+200F WIDENED SPACE"), a("Nothing."), a("It depends.", q("On what?", a("The medium."), a("Monospaced vs proportional."), a("The specific typesetting system."), a("Full justification vs ragged right."))));
+    }
+  }, function() {
     var more;
     if (this.real && !this.geo && !this.skullport && !this.premath && !this.philosophy) {
       more = function(w1, w2, w3, w4) {
@@ -12073,7 +12077,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14560-350-52446-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14560-358-86364-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>
