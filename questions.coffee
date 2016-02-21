@@ -1912,18 +1912,18 @@ module.exports = qq [
                 a "Retired."
                 a "Unemployed."
         a "In the restroom.", restroom = (msg) ->
-          q msg or """You are in a stall in the {if @title is 'Mr.' then "men's" else "women's"} restroom.  Obvious exits are east and down.""",
-            a "East."
-            if not @flushed then a "Down.", ->
+          q msg or """You are in a stall in the #{if @title is 'Mr.' then "men's" else "women's"} restroom.  Obvious exits are out and down.""",
+            a "Out."
+            -> if not @flushed then a "Down.", ->
               @flushed = true
               restroom "You attempt to flush yourself down the toilet.  It doesn't work.  Now your socks are all wet."
-            if not @waited then a "Wait.", ->
+            -> if not @waited then a "Wait.", ->
               @waited = true
               restroom "Time passes."
-            if not @sang then a "Sing.", ->
+            -> if not @sang then a "Sing.", ->
               @sang = true
               restroom "Your singing is abominable."
-            if not @peed then a "Use toilet.", ->
+            -> if not @peed then a "Use toilet.", ->
               @peed = true
               restroom "Ah, much better."
         a "In plain sight.",

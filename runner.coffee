@@ -22,6 +22,7 @@ exports.run = (letters, cb, error) ->
     next = null
     aa = for a in frame.aa
       cur = evaluate a
+      if not cur then continue
       text = evaluate cur.a
       if not text then continue
       codes = [code0+ai, code0_uc+ai]

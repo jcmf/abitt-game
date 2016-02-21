@@ -11696,19 +11696,35 @@ module.exports = qq([
       return q("You are carrying " + inventory + ".  You have been eaten by a grue!", a("Quit."));
     }), a("Turn on light switch.", q("You can't see any such thing.  You have been eaten by a grue!", a("Quit."))), a("Sit in chair.  Enjoy movie."));
   }), a("East.", q("You can't go that way.", a("Quit."))), a("South.", q("That's plainly inedible.", a("Quit."), a("Send bug report.", q("Days later, you get a response claiming that it's a stylistic choice.", a("Argue."), a("Give up."))))))))), a("East.", closed), a("South.", closed))))))))))), a("Find an employee.", employee), a("Fill out employment application.", q(this.ln + " comma " + this.fn + ", yadda yadda... hmm... there's a blank where you're supposed to put what you see yourself doing five years from now.", a("A minimum-wage movie theater employee."), a("Manager of this entire theater."), a("White collar worker at the corporate office of the company that runs this place."), a("Executive at same."), a("CEO."), a("Movie star."), a("Supporting role actor."), a("Key grip."), a("Producer."), a("Astronaut."), a("Restauranteur."), a("Drug dealer."), a("Retired."), a("Unemployed."))))), a("In the restroom.", restroom = function(msg) {
-    return q(msg || "You are in a stall in the {if @title is 'Mr.' then \"men's\" else \"women's\"} restroom.  Obvious exits are east and down.", a("East."), !this.flushed ? a("Down.", function() {
-      this.flushed = true;
-      return restroom("You attempt to flush yourself down the toilet.  It doesn't work.  Now your socks are all wet.");
-    }) : void 0, !this.waited ? a("Wait.", function() {
-      this.waited = true;
-      return restroom("Time passes.");
-    }) : void 0, !this.sang ? a("Sing.", function() {
-      this.sang = true;
-      return restroom("Your singing is abominable.");
-    }) : void 0, !this.peed ? a("Use toilet.", function() {
-      this.peed = true;
-      return restroom("Ah, much better.");
-    }) : void 0);
+    return q(msg || ("You are in a stall in the " + (this.title === 'Mr.' ? "men's" : "women's") + " restroom.  Obvious exits are out and down."), a("Out."), function() {
+      if (!this.flushed) {
+        return a("Down.", function() {
+          this.flushed = true;
+          return restroom("You attempt to flush yourself down the toilet.  It doesn't work.  Now your socks are all wet.");
+        });
+      }
+    }, function() {
+      if (!this.waited) {
+        return a("Wait.", function() {
+          this.waited = true;
+          return restroom("Time passes.");
+        });
+      }
+    }, function() {
+      if (!this.sang) {
+        return a("Sing.", function() {
+          this.sang = true;
+          return restroom("Your singing is abominable.");
+        });
+      }
+    }, function() {
+      if (!this.peed) {
+        return a("Use toilet.", function() {
+          this.peed = true;
+          return restroom("Ah, much better.");
+        });
+      }
+    });
   }), a("In plain sight.", q("You remain exactly where you are.  Luckily, nobody notices, and you escape detection!", a("Woooooo!"), a("Huh."))), a("Under the linoleum.", q("Your attempts to pry up the flooring succeed only in drawing attention away from the unconscious victim and towards yourself.  You are ejected bodily from the theater.  The victim dies.", a("Oh no!"), a("Eh, that could have gone worse."))), a("I'll just close my eyes -- if I can't see anybody, then nobody can see me!", q("As soon as you close your eyes, the external universe, which turns out to have been a figment of your imagination all along, ceases to exist.", a("Hooray!"), a("Oh dear."))))), a("Run.", q("When you regain consciousness, you're lying face down, a short distance away from your car, which seems to have been engulfed in the greenish fog bank.  It smells like a swimming pool.", a("What a weird dream!"))), a("Look for an AED.", lookforaed), a("Stand around doing nothing.", q("You stand around.  People are looking, but nobody is saying anything.  Everyone seems sort of embarrassed.  Eventually, an ambulance shows up, but by then it's too late.  You have failed!", a("Oh well."), a("No, <em>you</em> have failed.", q("That is a false statement.", a("No, <em>you're</am> a false statement!"), a("Okay geez fine."))), a("Can I try again?", q("That depends.  Do you have access to time travel technology?", a("Yes.", q("Then sure, knock yourself out.", a("Thanks, I'll do that!"), a("Eh whatever, time travel is boring."))), a("No.", q("Then I'm afraid you are powerless!", a("Okay."), a("Booo!  Hiss!"))))))), a("Panic.", dontpanic), a("Give CPR.", cpr), a("Don't give CPR.", q("Little do these fools realize that you've been planted here as part of an elaborate large-scale experiment to determine the effectiveness of proper CPR techniques in naturalistic conditions!  You are part of the control group.  Your job is to perform \"sham CPR\" on this unfortunate victim.  What will you do first?", a("Poke them with needles.", q("As you pull the wad of needles from your pocket, you visualize a diagram of the body's nervous system, so as to be ready to avoid accidentally following correct CPR technique.  Gingerly, you insert the first needle...", a("Near the mid-thorax.", q("The victim screams in pain!", a("Keep going.", q("No, I think you should stop now.", a("Okay."), a("Too bad, I keep going.", q("Actually, this is making me kind of uncomfortable.", a("Fine, we can stop now."), a("I refuse to stop.", q("Well you just don't understand <em>consent</em> then!", a("That's true."), a("I understand, I just don't care.", q("You monster!", a("Yes, that's me!"), a("Actually I'm not a monster."))))))))), a("Stop."))), a("Inside the vena cava.", q("You carefully thread the needle through the vein and into the heart itself.  The crowd gasps!", a("I rotate the needle 90 degrees clockwise.", q("\"Hey, what are you doing?\" shouts a bystander.  \"That's not how you do CPR!\"", a("Deny.", q("\"Yes it is,\" you say.", a("Rotate again.", q("This time, no one dares challenge you.", a("Good."), a("That's kind of disappointing, actually."))), a("Enough."))), a("Bargain.", q("You pull a five dollar bill out of your wallet.  \"Make it ten,\" they snarl.", a("Acquiesce."), a("Defy."))), a("Accept.", q("\"Yes,\" you say.  \"It is so.\"  You withdraw the needle, and allow the police to lead you away in handcuffs.", a("I am satisfied with this outcome."), a("This turn of events displeases me."))))), a("I pull the needle backwards by 25.4 millimeters.", q("Oh no!  You've sprung a leak in the auricular ventricle!", a("Well, shit."), a("No no, I meant to do that."))), a("I maintain position for a count of six.", q("The crowd looks on with baited breath.", a("Cool."), a("No, that is incorrect.", q("How so?", a("Misapplied simile."), a("Incorrect diction."), a("Mixed metaphor."), a("Too trite."))))))), a("Alongside the epithelium.", q("You plunge your needle into the epicanthic fold.", a("Epithelial fold.", q("Sorry, <em>epithelial</em> fold.", a("Thanks."), a("And don't you forget it!"))), a("And what happens next?"), a("I don't like where this is going."))), a("Deep into the mandibular fossa.", q("Which is located where, exactly?", a("Brazil."), a("California."), a("Madagascar."), a("Mexico."))), a("A the three-fifths point of the calcineal tuberosity.", q("Which, expressed as a percentage, would be...", a("30%."), a("60%."), a("90%."), a("120%."))))), a("Give them a sugar pill.", q("They immediately awake from their diabetic coma!  Christmas is saved!", a("Woohoo!"), a("Meh."))), a("Connect a saline IV.", q("To which orifice?", a("Navel."), a("Ear canal."), a("Tear duct."), a("Salivary gland."))), a("Homeopathy.", q("What kind?", a("Nosode."), a("Sarcode."), a("Radionic."), a("Imponderable."))), a("Pray.", q("To whom will you pray?", a("Baal.", q("It starts raining.  The crop is saved!  You harvest 30 wheat.", a("Thank Baal for his kindness.", q("\"You're welcome,\" says Baal.", a("Blush furiously."))), a("Ask Baal for more wheat.", q("You explain to Baal that you need at least 50 wheat in order to feed your family this winter.  Baal apologizes for the oversight and hands you 20 additional wheat.", a("Okay perfect."), a("No no, keep asking for more.", q("You keep asking for more and more wheat.  Baal complies with all of your demands.  Before you know it, you've cornered the grain futures market and are crowned Emperor of the World.", a("I earned this through my own hard work and determination."), a("I achieved this outcome largely due to fortunate circumstances outside my control."))))))), a("Satan.", q("Which, backwards, is...", a("Dog."), a("Santa."), a("Nathan."), a("Stanis."), a(".nataS"), a("Jesus."), a("شيطان"), a("Yes."))), a("Ryan Veeder.", function() {
     if (this.ln === 'Veeder') {
       return q("You can't pray to yourself!  That would be, like, super embarrassing.", a("Okay."));
@@ -11868,6 +11884,9 @@ exports.run = function(letters, cb, error) {
       for (k = 0, len1 = ref1.length; k < len1; k++) {
         a = ref1[k];
         cur = evaluate(a);
+        if (!cur) {
+          continue;
+        }
         text = evaluate(cur.a);
         if (!text) {
           continue;
@@ -12109,7 +12128,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14560-418-65496-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14560-424-16781-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>
