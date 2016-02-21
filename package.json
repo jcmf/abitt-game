@@ -1,6 +1,6 @@
 {
-  "name": "intro",
-  "version": "0.0.0",
+  "name": "abitt-game",
+  "version": "0.0.1",
   "description": "A Brief Introduction To This Game",
   "main": "index.js",
   "browserify": {
@@ -10,14 +10,14 @@
     ]
   },
   "scripts": {
-    "prepublish": "coffee test.coffee && gribbl index.jade",
+    "prepublish": "sh build.sh",
     "test": "coffee test.coffee"
   },
   "author": "Jacques Frechet",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jcmf/intro.git"
+    "url": "https://github.com/jcmf/abitt-game.git"
   },
   "devDependencies": {
     "browserify": "^13.0.0",
