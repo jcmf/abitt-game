@@ -976,8 +976,8 @@ module.exports = qq [
     a "...squire."
 
   q "Which of these words would you be most likely to use to describe carbonated soft drinks?",
-    a "Pop.", -> @soda = 'pop'
     a "Soda.", -> @soda = 'soda'
+    a "Pop.", -> @soda = 'pop'
     a "Coke.", -> @soda = 'coke'
 
   -> if @math
@@ -1497,7 +1497,7 @@ module.exports = qq [
                                     a "No sauce.",
                                       q "That's right, keep it simple!",
                                         a "Yes."
-                                a "Large #{@soda}.",
+                                -> a "Large #{@soda}.",
                                   q "What kind?",
                                     a "Coke."
                                     a "Dr. Pepper."
