@@ -1676,6 +1676,43 @@ module.exports = qq [
                                           q "It has a picture of Elvis on it.",
                                             a "Nice."
                                             a "Meh."
+                                -> if @ln != 'Veeder'
+                                  a "Enormous cupcake.",
+                                    q "What kind?",
+                                      a "Beelzebubblegum."
+                                      a "Cake-o-Lantern Spicy Pumpkin."
+                                      a "Creepy Candy Corn Creature."
+                                      a "Cupcake from the Black Lagoon."
+                                      a "Curse of the S'Mummy's S'Mores."
+                                      a "Double, Double, Toil and Truffle."
+                                      a "Frostingstein's Monster."
+                                      a "Neapolitomb."
+                                      a "Salted Calaveramel."
+                                      a "Scarecrow Guts."
+                                      a "Spookies and Cream."
+                                      a "Strawberry Venomade."
+                                      a "Hey, what's with all this cutesy Halloween-themed stuff?  Doesn't this place have any normal cupcakes?",
+                                        q "It is a joke!  Would you like me to explain it for you?",
+                                          a "Plz expln humor plz!",
+                                            q "I did not come up with any of those names myself -- instead, I blatantly stole them from Ryan Veeder!",
+                                              a "Wow, that's hilarous!  I am laughing so hard right now!"
+                                              a "Oh my gosh!  He's gonna be so pissed when he finds out you did that!",
+                                                q "I'm way ahead of you -- I set it up so that this branch will only be visible to non-Ryan Veeder players!",
+                                                  a "Good thinking!"
+                                                  a "Brilliant!"
+                                                  a "Phew!"
+                                              a "Well the joke's on you because I've actually been Ryan Veeder <em>all along</em>!", ->
+                                                [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
+                                                q "Goodness me!  I did not anticipate this eventuality!  Whatsoever will become of me now?",
+                                                  a "Pain of forfeit, of course!",
+                                                    q "Noooooooooooooooooooooooooo!",
+                                                      a "Yeeeeeeeesssssssssss!"
+                                                      a "Okay fine geez.  I didn't think you were going to be such a wuss about it."
+                                                  a "Oh, don't worry, I'm just going to sue you for copyright infringement.",
+                                                    q "Oh thank goodness!  Thank you so much Mr. Veeder, sir!",
+                                                      a "You're welcome!"
+                                              a "I am unimpressed by these shenanigans."
+                                        a "No thanks."
                                 a "Chicken tenders.", delicious
                                 a "Nachos." # XXX
                                 a "French fries.",
@@ -1902,15 +1939,85 @@ module.exports = qq [
                 a "White collar worker at the corporate office of the company that runs this place."
                 a "Executive at same."
                 a "CEO."
-                a "Movie star."
-                a "Supporting role actor."
-                a "Key grip."
-                a "Producer."
-                a "Astronaut."
-                a "Restauranteur."
-                a "Drug dealer."
-                a "Retired."
-                a "Unemployed."
+                a "Movie star.",
+                  q "Wouldn't you become embittered about the news media?",
+                    a "Yes."
+                    a "No."
+                a "Supporting actor.",
+                  q "Would you win an Oscar?",
+                    a "Yes."
+                    a "No."
+                a "Key grip.",
+                  q "Do you even know what that is?",
+                    a "Yeah, it's the grip who is in charge of all the other grips.",
+                      q "Yeah but what's a grip?",
+                        a "A force that prevents movie cameras everywhere from falling to the ground and shattering into a million pieces."
+                        a "Like a roadie, but for movies instead of rock concerts."
+                        a "A questionably sane electrician."
+                        a "MacGyver, basically."
+                        a "It hardly matters, does it?  I have a very hands-off management style."
+                    a "No."
+                a "Producer.", -> @song = 'kHmYIo7bcUw'
+                a "Restauranteur.",
+                  q "Have you worked at any of the local eating establishments?",
+                    a "Yes.",
+                      q "Which?",
+                        a "Get Your Licks"
+                        a "La Pizzá"
+                        a "Paco's Tacos"
+                        a "Squiggles 'N Dots"
+                        a "Sugar Comma"
+                    a "No."
+                a "Astronaut.", -> @song = 'KaOC9danxNo'
+                a "Pirate.",
+                  q "Do you speak the language?",
+                    a "Aye."
+                    a "No."
+                a "Drug dealer.",
+                  q "Any industry experience?",
+                    a "Sure, you know, I've helped my family run a cartel or two."
+                    a "I'm pretty good at the smuggling part!"
+                    a "Well this one time I sold two Advil to my fifth grade teacher."
+                    a "No."
+                a "Chicken sexer.",
+                  q "Do you have any chicken-sexing experience?",
+                    a "Well no, I've never sexed a chicken before, but how hard could it be?"
+                    a "Yes, I have sexed several chickens!",
+                      q "How many?",
+                        a "One.",
+                          q "That's not several!",
+                            a "Oops, I got confused."
+                            a "Yes it is."
+                        a "Two.",
+                          q "That's not several!",
+                            a "Several just means more than one.  Two is more than one."
+                            a "Sorry, I meant to say a couple."
+                        a "Three or more.",
+                          q "And what was your accuracy rating?",
+                            a "About 1%."
+                            a "About 9%."
+                            a "About 10%."
+                            a "About 11%."
+                a "Vagrant.",
+                  q "Experience?",
+                    a "Sure, I've done some loitering."
+                    a "I, uh, handled a pan once?  Does that count?"
+                    a "My couchsurfing resume is formidable!"
+                    a "I have sailed around the world."
+                    a "Well, I do live in a van."
+                    a "Not really, no."
+                a "Retired.",
+                  q "How many years experience do you have being retired?",
+                    a "Less than fifty."
+                    a "Between fifty and a thousand."
+                    a "Over one thousand years."
+                a "Unemployed.",
+                  q "Any experience being unemployed?",
+                    a "Yes.",
+                      q "Can you provide a professional reference, such as a manager or colleague from that period?",
+                        a "Yes."
+                        a "No."
+                    a "No."
         a "In the restroom.", restroom = (msg) ->
           q msg or """You are in a stall in the #{if @title is 'Mr.' then "men's" else "women's"} restroom.  Obvious exits are out and down.""",
             a "Out."
