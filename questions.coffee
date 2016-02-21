@@ -1718,9 +1718,89 @@ module.exports = qq [
         a 'Shout "OMG, does anybody know CPR?"',
           shoutomg = q "Good plan!  Turns out somebody does, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
             a "Hooray!"
-        a "Run around in circles." # XXX
-        a "Scream." # XXX
-        a "Shout." # XXX
+        a "Run around in circles.",
+          q "Good answer!  The American Heart Association recommends running in circles for thirty minutes a day, five days a week.",
+            a "Hooray, I guessed it!",
+              q "Wait, you were just guessing?  Then I'm sorry, but I'm going to have to take back that award.",
+                a "Okay, here you go.",
+                  q "Thanks for being such a good sport!  Here's another award for that.",
+                    a "Thanks!"
+                    a "Thanks?"
+                    a "You can keep it.  I'm through with your lousy awards."
+                a "Nope, I'm keeping it.",
+                  q "Hmm.  Looks like you win this round!",
+                    a "Yes!"
+                a "What award?",
+                  q "Don't get fresh with me, buster.",
+                    a "Sorry."
+                    a "I'm not."
+                    a "Do you even understand what words mean?"
+            a "But isn't running supposed to be bad for my knees?",
+              q """The American Heart Association doesn't give a <span class="redacted">$@^#</span> about your <span class="redacted">$@^#</span>ing knees.""",
+                a "Fair enough."
+                a "That's discrimination!",
+                  q "Yes.  But it's the good kind.",
+                    a "Oh."
+                    a "No it's not!"
+                a "What about the Arthritis Foundation?",
+                  q "They're too shy to say anything about it to the AHA.",
+                    a "I see."
+        a "Scream.",
+          q "A highly effective strategy!  Others soon take charge of the situation.  You can stop screaming now.",
+            a "Stop screaming."
+            a "Continue to scream.",
+              q "Paramedics arrive.  They give you a look but decide there are more pressing matters to be dealt with first.",
+                a "Scream some more.",
+                  q "Okay well I'm going to skip over some stuff but the upshot is that you wind up in one of those creepy institutions for the criminally insane.",
+                    a "Cool!  Any supervillains here I would have heard of?",
+                      q "Have you heard of Armless Tiger Man?",
+                        a "Yes.",
+                          q "Well, some say he used to be here.  But everyone agrees that he isn't here now.  So no.",
+                            a "Awww."
+                        a "No.",
+                          q "Then there definitely aren't.",
+                            a "Awww."
+                    a "I'm still screaming though, right?",
+                      q "You suppose?  It's gotten kind of hard to tell lately.",
+                        a "Right."
+                    a "Is that even a thing?",
+                      q "It totally is.",
+                        a "Huh!"
+                a "Okay I'm tired of screaming now.",
+                  q "Too late, you remember the wise words your favorite grandrelative imparted to you during your callow youth: <em>Whomsoever proclaimeth themselves tired of screaming, yea, verily, that person be-eth likewise tired of life itselfeth.</em>",
+                    a "Die.",
+                      q "You are now dead.",
+                        a "I am okay with this."
+                        a "More questions?"
+                    a "Don't die.",
+                      q "You never liked that grandrelative anyway.",
+                        a "It's true."
+                        a "Did so."
+        a "Shout.",
+          q "Like in the Tears for Fears song?",
+            a "Yes, exactly like that.",
+              q "So what <em>are</em> the things you can do without?",
+                a "A soul."
+                a "Sunlight."
+                a "Contact with other living beings."
+                a "This line of questioning."
+            a "No!",
+              q "You shout for help!  Somebody over by the drinking fountains comes running over and handles everything.  Good job!",
+                a "I am deserving of this praise."
+                a "Aw shucks, t'weren't nuttin'."
+            a "Actually I was going for more of a Prostetnic Vogon Jeltz impression.",
+              q "Are you serious?  Come on, quit horsing around, somebody's life is ebbing away here.",
+                a "Fine, I... I do CPR and stuff.  Correctly and non-humorously.",
+                  q "Good idea!  Okay, everything is fine now.",
+                    a "Great!"
+                    a "Boring!"
+                a "Well it's hard for me to take anything seriously when you keep presenting me with all of these ridiculous options!",
+                  q "Hmm, that's true, isn't it?",
+                    a "Yes.",
+                      q "You think I should tone it down a bit?",
+                        a "Yes."
+                        a "No."
+                    a "No."
         a "Sit quietly.",
           q "After a minute, somebody picks up.  A few minutes later, the ambulance arrives and whisks their patient away, sirens blaring.  You never find out what happens next.",
             a "Cool."
