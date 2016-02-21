@@ -1450,7 +1450,7 @@ module.exports = qq [
                                       q "Oh, you should check it out!  It's a text-based game, much like this one, only different!",
                                         a "No thanks."
                                         a "Where can I find this game?",
-                                          cb2link = q """It's at <a href="http://candybox2.net/ target="_blank">candybox2.net</a>.""",
+                                          cb2link = q """It's at <a href="http://candybox2.net/" target="_blank">candybox2.net</a>.""",
                                             a "Cool, thanks!"
                                     a "I've heard of it but haven't played it.",
                                       q "Have you played the original Candy Box, at least?",
