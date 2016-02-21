@@ -356,11 +356,14 @@ module.exports = qq [
   q "Very good!  Now, which of these would you rather be?",
     a "a cowboy",
       # XXX offer to sing the song, multiple choice lyrics
-      likesong = q "Like the song?",
-        a "Yes, like the song!"
-        a "No, I didn't even realize that was a song."
-        a "No, I know the song but that's not why I chose that answer."
-    a "a hammer than a nail", likesong
+      (likesong = (song) -> ->
+        @song = song
+        q "Like the song?",
+          a "Yes, like the song!"
+          a "No, I didn't even realize that was a song."
+          a "No, I know the song but that's not why I chose that answer."
+      )('gkA0AsTHUbY')
+    a "a hammer than a nail", likesong 'Fh4K5yAFpNA'
     a "able to fly"
     a "drinking",
       q "Like drinking alcohol?",
@@ -373,6 +376,7 @@ module.exports = qq [
         a "Yes."
         a "No."
     a "with someone I love", ->
+      @song = '0tgYr03o3dE'
       @love = true
       q "Think of a person you love.  How would you quantify your love for that person?",
         a "0 -- I can't think of any such person.",
@@ -1776,7 +1780,8 @@ module.exports = qq [
                       q "You never liked that grandrelative anyway.",
                         a "It's true."
                         a "Did so."
-        a "Shout.",
+        a "Shout.", ->
+          @song = 'NkbL8JxswRc'
           q "Like in the Tears for Fears song?",
             a "Yes, exactly like that.",
               q "So what <em>are</em> the things you can do without?",
@@ -2046,17 +2051,13 @@ module.exports = qq [
           q "Because if that's all there is, my friend...",
             a "Then let's keep dancing...",
               q "Who is that from, anyway?",
-                a "Alan Price",
-                  (youtube = (id, aa...) ->
-                    if aa.length is 0 then aa = [a "Nice."]
-                    q """<iframe width="420" height="315" src="https://www.youtube.com/embed/#{id}?rel=0" frameborder="0" allowfullscreen></iframe>""", aa...
-                  )("Dyg420eUvok")
-                a "Bette Midler", youtube 'Fpn_xu81ySo'
-                a "The Bobs", youtube 'DoEuRa6YyoU'
-                a "Chaka Khan", youtube 'tTVv-ktbvpg'
-                a "Cristina Monet", youtube 'AybvLztacFM'
-                a "Giant Sand", youtube '1w6bHzvikl8'
-                a "Firewater", youtube 'YTrWOPaCax0'
+                a "Alan Price", -> @song = 'Dyg420eUvok'
+                a "Bette Midler", -> @song = 'Fpn_xu81ySo'
+                a "The Bobs", -> @song = 'DoEuRa6YyoU'
+                a "Chaka Khan", -> @song = 'tTVv-ktbvpg'
+                a "Cristina Monet", -> @song = 'AybvLztacFM'
+                a "Giant Sand", -> @song = '1w6bHzvikl8'
+                a "Firewater", -> @song = 'YTrWOPaCax0'
                 a "Hecate, goddess of witchcraft",
                   q "Oh man.  Were you there for that?",
                     a "I was.",
@@ -2076,13 +2077,13 @@ module.exports = qq [
                     a "Actually I have no idea what you're talking about.",
                       q "I am talking about <em>Sleep No More</em>.",
                         a "Okay."
-                a "Lindsay Anderson", youtube 'yCgWJqcOQhA'
-                a "Liz Gillies", youtube 'HNnTQbLbtWI'
-                a "PJ Harvey", youtube 'O0ZUAorP0b4'
-                a "Peggy Lee", youtube 'LCRZZC-DH7M'
-                a "Sandra Bernhard", youtube 'ru6d318UlOQ'
-                a "Tony Bennett", youtube 'xr3CcBp6aw0'
-                a "Uncle Yo", youtube 'hu18YKjijEo'
+                a "Lindsay Anderson", -> @song = 'yCgWJqcOQhA'
+                a "Liz Gillies", -> @song = 'HNnTQbLbtWI'
+                a "PJ Harvey", -> @song = 'O0ZUAorP0b4'
+                a "Peggy Lee", -> @song = 'LCRZZC-DH7M'
+                a "Sandra Bernhard", -> @song = 'ru6d318UlOQ'
+                a "Tony Bennett", -> @song = 'xr3CcBp6aw0'
+                a "Uncle Yo", -> @song = 'hu18YKjijEo'
             a "No seriously, wtf" # XXX
         a "What is my score?",
           yourscore = q "Your score?  There is no score in this game.",
@@ -2217,7 +2218,7 @@ module.exports = qq [
                             a "No.",
                               q "I imagine you'll have a difficult time, then.",
                                 a "Look, could you just give me the --"
-        a "What about that thing with the fog and the railroad tracks and the car's engine stalls?",
+        a "What about that thing with the fog and the railroad tracks and my car's engine stalls?",
           q "Oh right!  Did I ever explain what was supposed to be going on with that?",
             a "No.",
               goingon = q "Oh man, it was gonna be so good... see, the fog was actually going to turn out to be chlorine gas....",
@@ -2308,11 +2309,17 @@ module.exports = qq [
                 a "I disagree.",
                   q "Why is that?",
                     a "Because it's better to quit after having a somewhat positive experience than to persist until the magic is spoiled.",
-                      q "Good point.",
-                        a "Thanks!" # XXX
+                      ->
+                        @song or= 'Qtb11P1FWnc'
+                        q "Good point.",
+                          a "Thanks!"
                     a "Because this game sucks, dude.",
                       q "Well, good thing it's over, right?",
                         a "Thank goodness!"
 
-  q "THE END"
+  ->
+    if not @song
+      q 'THE END'
+    else
+      q """THE END<iframe width="420" height="315" src="https://www.youtube.com/embed/#{@song}?rel=0" frameborder="0" allowfullscreen></iframe>"""
 ]
