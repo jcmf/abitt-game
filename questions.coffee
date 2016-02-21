@@ -531,7 +531,6 @@ module.exports = qq [
           a "Green.", more ['widespread', 'watchmaker', 'wantonness', 'windedness', 'wellspring'], ['whispering', 'wonderment', 'wastepaper', 'wildcatter'], ['wilderness', 'withholder', 'whiteboard', 'wickedness'], ['wrathfully', 'waterproof', 'wraithlike', 'woodcutter']
           a "Blue.", more ['whimpering', 'weakhanded', 'waistcloth', 'witchcraft', 'woundingly'], ['whomsoever', 'wainwright', 'wageworker', 'weightless'], ['worthiness', 'windowless', 'wobbliness', 'westernize'], ['wondrously', 'wagonsmith', 'warehoused', 'windjammer']
 
-  # XXX start explaining the solution
   -> if @premath then q "How much bigger than one tenth is one ninth?",
     a "About 1%.",
       q "And why is that?",
@@ -1184,7 +1183,7 @@ module.exports = qq [
             a "What's an AED?",
               q "It's an Automatic External Defribrillator.  It's a little doodad that can sense when a heart is malfunctioning and shock it back into its normal rhythm.",
                 a "Wow, that sounds super handy!  I would totally go look for one.",
-                  q "Okay!  You run into the lobby and... what are you looking for exactly?",
+                  lookforaed = q "Okay!  You run into the lobby and... what are you looking for exactly?",
                     a "A red heart with a spark in the middle.",
                       redorgreen = q "Could be red or green.",
                         rggotit = a "Got it.",
@@ -1826,9 +1825,123 @@ module.exports = qq [
                                 a "Wow, I can't believe that worked!"
     a 'Shout "OMG, does anybody know CPR?"', shoutomg
     a "Go find an employee.", employee
-    a "Hide." # XXX
-    a "Run." # XXX
-    a "Look for an AED." # XXX
+    a "Hide.",
+      q "Where will you hide?",
+        a "Inside the projection booth.",
+          q "You encounter a sign: EMPLOYEES ONLY.",
+            a "Go in anyway.",
+              q "It's locked.",
+                a "Oh well."
+                a "Unlock door.",
+                  q "With what?",
+                    a "Key.",
+                      q "Which key do you mean: the red key, or the blue key?",
+                        a "Red.",
+                          q "It doesn't fit the lock.",
+                            a "Shake fist at sky.",
+                              q "That's not a verb I recognize.",
+                                a "HINT.",
+                                  q "Hints have been disabled.",
+                                    a "RESTART."
+                                    a "QUIT."
+                                a "XYZZY.",
+                                  q 'A hollow voice says, "Did somebody order pizza?"',
+                                    a "Yes.",
+                                      q "You consume the pizza.",
+                                        a "Yum!"
+                                        a "Yuck!"
+                                    a "No."
+                        a "Blue.",
+                          q "You unlock the door.",
+                            a "Enter door.",
+                              q "Which door do you mean: the north door, the east door, or the south door?",
+                                a "North.",
+                                  closed = q "It's closed.",
+                                    a "Open door.",
+                                      q "Which door do you mean: the north door, the east door, or the south door?",
+                                        a "North.",
+                                          ->
+                                            @song = 'hvkjP6dqpfY'
+                                            q "You are in a dark room.",
+                                              a "Leave."
+                                              a "Inventory.", ->
+                                                items =
+                                                  'Veeder': 'a magnifying glass, a pair of sunglasses, a handgun'
+                                                  'Polodna': 'a shock collar (being worn)'
+                                                  'Short': 'a T-remover, a tub of restoration gel'
+                                                  'Ryan': 'a ballgown (containing six bombs and a cannon) (being worn)'
+                                                  'Boegheim': 'a notebook, an information sheet'
+                                                  'Vedenoja': 'black tape (being worn)'
+                                                  'Freebern': 'a bottle (containing a cork)'
+                                                  'Kinsman': 'a small sword, a blindfold, the Room 203 key'
+                                                  'Nelson': 'a chocolate biscuit, a crumpled piece of paper'
+                                                inventory = if @ln of items then items[@ln] + ', a red key, and a blue key' else 'a red key and a blue key'
+                                                q "You are carrying #{inventory}.  You have been eaten by a grue!",
+                                                  a "Quit."
+                                              a "Turn on light switch.",
+                                                q "You can't see any such thing.  You have been eaten by a grue!",
+                                                  a "Quit."
+                                              a "Sit in chair.  Enjoy movie."
+                                        a "East.",
+                                          q "You can't go that way.",
+                                            a "Quit."
+                                        a "South.",
+                                          q "That's plainly inedible.",
+                                            a "Quit."
+                                            a "Send bug report.",
+                                              q "Days later, you get a response claiming that it's a stylistic choice.",
+                                                a "Argue."
+                                                a "Give up."
+                                a "East.", closed
+                                a "South.", closed
+            a "Find an employee.", employee
+            a "Fill out employment application.",
+              q "#{@ln} comma #{@fn}, yadda yadda... hmm... there's a blank where you're supposed to put what you see yourself doing five years from now.",
+                a "A minimum-wage movie theater employee."
+                a "Manager of this entire theater."
+                a "White collar worker at the corporate office of the company that runs this place."
+                a "Executive at same."
+                a "CEO."
+                a "Movie star."
+                a "Supporting role actor."
+                a "Key grip."
+                a "Producer."
+                a "Astronaut."
+                a "Restauranteur."
+                a "Drug dealer."
+                a "Retired."
+                a "Unemployed."
+        a "In the restroom.", restroom = (msg) ->
+          q msg or """You are in a stall in the {if @title is 'Mr.' then "men's" else "women's"} restroom.  Obvious exits are east and down.""",
+            a "East."
+            if not @flushed then a "Down.", ->
+              @flushed = true
+              restroom "You attempt to flush yourself down the toilet.  It doesn't work.  Now your socks are all wet."
+            if not @waited then a "Wait.", ->
+              @waited = true
+              restroom "Time passes."
+            if not @sang then a "Sing.", ->
+              @sang = true
+              restroom "Your singing is abominable."
+            if not @peed then a "Use toilet.", ->
+              @peed = true
+              restroom "Ah, much better."
+        a "In plain sight.",
+          q "You remain exactly where you are.  Luckily, nobody notices, and you escape detection!",
+            a "Woooooo!"
+            a "Huh."
+        a "Under the linoleum.",
+          q "Your attempts to pry up the flooring succeed only in drawing attention away from the unconscious victim and towards yourself.  You are ejected bodily from the theater.  The victim dies.",
+            a "Oh no!"
+            a "Eh, that could have gone worse."
+        a "I'll just close my eyes -- if I can't see anybody, then nobody can see me!",
+          q "As soon as you close your eyes, the external universe, which turns out to have been a figment of your imagination all along, ceases to exist.",
+            a "Hooray!"
+            a "Oh dear."
+    a "Run.",
+      q "When you regain consciousness, you're lying face down, a short distance away from your car, which seems to have been engulfed in the greenish fog bank.  It smells like a swimming pool.",
+        a "What a weird dream!" # XXX do something with the ending question that refers to this?
+    a "Look for an AED.", lookforaed
     a "Stand around doing nothing.",
       q "You stand around.  People are looking, but nobody is saying anything.  Everyone seems sort of embarrassed.  Eventually, an ambulance shows up, but by then it's too late.  You have failed!",
         a "Oh well."
