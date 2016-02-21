@@ -1940,7 +1940,7 @@ module.exports = qq [
             a "Oh dear."
     a "Run.",
       q "When you regain consciousness, you're lying face down, a short distance away from your car, which seems to have been engulfed in the greenish fog bank.  It smells like a swimming pool.",
-        a "What a weird dream!" # XXX do something with the ending question that refers to this?
+        a "What a weird dream!", -> @dream = true
     a "Look for an AED.", lookforaed
     a "Stand around doing nothing.",
       q "You stand around.  People are looking, but nobody is saying anything.  Everyone seems sort of embarrassed.  Eventually, an ambulance shows up, but by then it's too late.  You have failed!",
@@ -2331,7 +2331,7 @@ module.exports = qq [
                             a "No.",
                               q "I imagine you'll have a difficult time, then.",
                                 a "Look, could you just give me the --"
-        a "What about that thing with the fog and the railroad tracks and my car's engine stalls?",
+        -> if not @dream then a "What about that thing with the fog and the railroad tracks and my car's engine stalls?",
           q "Oh right!  Did I ever explain what was supposed to be going on with that?",
             a "No.",
               goingon = q "Oh man, it was gonna be so good... see, the fog was actually going to turn out to be chlorine gas....",
