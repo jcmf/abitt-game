@@ -1197,14 +1197,17 @@ module.exports = qq [
                                       q "Do you want me to tell you that?",
                                         a "Yes.",
                                           q "Why?",
-                                            a "Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it.",
-                                              q "It's true that someone might die, and it's true that I might like to convince you of something, but...." # XXX
-                                            a "Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me." # XXX
-                                            a "Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?" # XXX
+                                            a "Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it."
+                                            a "Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me."
+                                            a "Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?",
+                                              q "Sure thing.",
+                                                a "Thanks!"
                                         a "No.",
                                           q "Then I won't.",
                                             a "Okay."
-                                        a "Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?" # XXX
+                                        a "Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?",
+                                          q "I think I remember seeing a study somewhere that claimed there was a few percent chance, or else it would up the odds of someone's survival by a few percentage points, or something like that?  Not sure what I did with that paper.  This was for CPR performed by a bystander, mind you, not an AED.  Apparently AEDs are unambiguously super helpful, well into the double digit percentages.",
+                                            a "Huh."
                                 a "No problem, I pull their shirt up.",
                                   q "Nice work!  You win at CPR!",
                                     a "Awesome!"
@@ -1242,7 +1245,7 @@ module.exports = qq [
                           q "Yep!  Pretty awesome, huh?",
                             a "I am grudgingly impressed."
                             a "Should I be insulted?",
-                              q "Hmm, let me see... based on your test results so far... I'm gonna go with yes.", # XXX can I make this for-real adaptive, not just pretend-adaptive?
+                              q "Hmm, let me see... based on your test results so far... I'm gonna go with yes.",
                                 a "Ouch."
                             a "Sounds like crazy talk to me.", aedranout
             a "Good idea, I'll go look for it!",
@@ -1656,7 +1659,7 @@ module.exports = qq [
                                     a "Cylindrical container.",
                                       q "Which flavor?",
                                         a "Vanilla.", vanilla
-                                        a "Rocky road." # XXX
+                                        a "Rocky road.", -> @song = 'beTsDOBRs8I'
                                         a "Mango sorbet.",
                                           q "Why?",
                                             a "Because I enjoy mango-flavored foods."
@@ -1714,7 +1717,6 @@ module.exports = qq [
                                               a "I am unimpressed by these shenanigans."
                                         a "No thanks."
                                 a "Chicken tenders.", delicious
-                                a "Nachos." # XXX
                                 a "French fries.",
                                   q "With what dipping sauce?",
                                     a "Ketchup.",
@@ -2307,7 +2309,9 @@ module.exports = qq [
                 a "Sandra Bernhard", -> @song = 'ru6d318UlOQ'
                 a "Tony Bennett", -> @song = 'xr3CcBp6aw0'
                 a "Uncle Yo", -> @song = 'hu18YKjijEo'
-            a "No seriously, wtf" # XXX
+            a "No seriously, wtf",
+              q "Yep, that's all there is!",
+                a "But what about --"
         a "What is my score?",
           yourscore = q "Your score?  There is no score in this game.",
             a "Oh, okay."
