@@ -1029,7 +1029,18 @@ module.exports = qq [
               a "Uh... the \"forest\" part?"
               a "Well I mean by \"forest\" you clearly meant \"perfect absence of anything and everything other than the one tree.\"  So my point stands."
               a "Silence!  My logic is unassailable!"
-              # a "Space cow-person?" # XXX
+              a "Space cow-person?",
+                q "You know, like space cowboy, only less old-fashioned.",
+                  a "Cool!"
+                  a "What are you, some kind of feminist?",
+                    q "Why yes.  Yes I am.",
+                      a "Good."
+                      a "Feminism is dumb.",
+                        q "Sounds like we disagree, then!",
+                          a "Yep!"
+                      a "Look, just because you used a gender-neutral term doesn't make you an actual feminist.",
+                        q "That's true!",
+                          a "Thank you for acknowledging that."
           a "I meant \"No!\" as in \"Stop talking about this!\"", -> @philosophy = false
       a "Well, it depends....",
         q "What does it depend on?",
@@ -1564,8 +1575,7 @@ module.exports = qq [
                                                                 a "For stupid reasons I won't get into here."
                                             a "No.", toppings2
                                         a "Vanilla.",
-                                          # XXX change this bit to talk about counterfeit vanilla?
-                                          vanilla = q "So are you into BDSM?",
+                                          q "So are you into BDSM?",
                                             a "Yes.",
                                               q "So would you say that the only vanilla thing about you is your ice cream preference?",
                                                 a "Yes, I would say that."
@@ -1574,7 +1584,7 @@ module.exports = qq [
                                             a "No."
                                             a "What is BDSM?",
                                               q "It's, uh... it stands for something... can't you just look it up?",
-                                                a "Okay, I will look it up.",
+                                                a "Okay, I looked it up!",
                                                   q "Where did you look it up?",
                                                     a "Wikipedia.",
                                                       q "Did you look at all the pictures?",
@@ -1611,15 +1621,6 @@ module.exports = qq [
                                                             a "No."
                                                         a "No one."
                                                 a "No, I'd rather not.",
-                                                  q "Okay but I'm still not going to tell you.",
-                                                    a "I am okay with that."
-                                                    a "Why not?",
-                                                      q "Oh, you know, just... uh... trying to keep it G-rated, here.",
-                                                        a "Ah, got it."
-                                                        a "Bullshit.",
-                                                          q "I don't have to justify myself to you!",
-                                                            a "That's true."
-                                                            a "Sure you do."
                                             a "That's none of your business!",
                                               q "That's true.  You don't have to answer.",
                                                 a "Thank you."
@@ -1637,7 +1638,22 @@ module.exports = qq [
                                         a "Milk chocolate nuts vanilla.",
                                           q "Why did you choose that one over the other one?",
                                             a "Because I like milk chocolate better than dark chocolate."
-                                            a "Because I like vanilla ice cream better than chocolate ice cream.", vanilla
+                                            a "Because I like vanilla ice cream better than chocolate ice cream.",
+                                              vanilla = q "Don't you worry about counterfeit vanilla?",
+                                                a "Yes."
+                                                a "No."
+                                                a "Is that a thing?",
+                                                  q "Absolutely!  There's this chemical, coumarin, that has a really intense vanilla flavor, even more intense than actual vanilla.  It's prescribed as a blood thinner, and it's also pretty commonly used as rat poison, because it kills by causing internal bleeding.  And sometimes it's abused by unscrupulous taste-criminals!",
+                                                    a "Wow, neat!"
+                                                    a "Gah, that's horrifying!"
+                                                    a "I think you're confused about the difference between coumarin and coumadin.",
+                                                      q "Wait, really?",
+                                                        a "Yeah, see, couma<em>rin</em> is the thing that shows up in fake vanilla, and couma<em>din</em> (also known as warfarin) is the blood-thinning drug that doubles as rat poison (though it isn't technically poisonous of course, just harmful in large doses, like many drugs).  They're similar, and the one is used to make the other, but they're not actually the same thing.",
+                                                          q "Wow!  So the vanilla stuff is fine, is what you're saying.",
+                                                            a "Oh no!  It causes liver and kidney damage, and it's banned as a food additive by the FDA.  It's legal in Mexico, though.",
+                                                              q "Gosh, I did not realize that!  Thanks, I learned something today!",
+                                                                a "No no, thank <em>you</em>."
+                                                        a "No, not really."
                                             a "Because I like nuts better than no nuts."
                                             a "They both sounded equally good but I went with this one."
                                             a "They both sounded equally bad but I went with this one."
@@ -1704,7 +1720,7 @@ module.exports = qq [
                                                   a "Good thinking!"
                                                   a "Brilliant!"
                                                   a "Phew!"
-                                              a "Well the joke's on you because I've actually been Ryan Veeder <em>all along</em>!", ->
+                                              a "Well the joke's on you, my friend, because I've actually been Ryan Veeder <em>all along</em>!", ->
                                                 [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
                                                 q "Goodness me!  I did not anticipate this eventuality!  Whatsoever will become of me now?",
                                                   a "Pain of forfeit, of course!",
@@ -1715,7 +1731,7 @@ module.exports = qq [
                                                     q "Oh thank goodness!  Thank you so much Mr. Veeder, sir!",
                                                       a "You're welcome!"
                                               a "I am unimpressed by these shenanigans."
-                                        a "No thanks."
+                                          a "No thanks."
                                 a "Chicken tenders.", delicious
                                 a "French fries.",
                                   q "With what dipping sauce?",

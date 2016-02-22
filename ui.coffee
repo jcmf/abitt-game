@@ -26,10 +26,10 @@ showQuestion = (letters) ->
     notFound debug
   if not current then return
   render = (text) ->
-    text = text.replace "'", '\u2019'
-    text = text.replace '--', '\u2014'
+    text = text.replace /'/g, '\u2019'
+    text = text.replace /--/g, '\u2014'
     if /(?:^|\s)<\w[^<>"]*"[^<>]*>/.test text then return text
-    text = text.replace /"([^']+)"/, '\u201c$1\u201d'
+    text = text.replace /"([^']+)"/g, '\u201c$1\u201d'
   current.q = render current.q
   for a in current.aa
     a.a = render a.a

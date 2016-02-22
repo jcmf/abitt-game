@@ -1,0 +1,376 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+> a. Emily
+  b. Jenni
+  c. Ryan
+
+#aa
+
+And your last name?
+
+> a. Boegheim
+  b. Carroll
+  c. Ryan
+  d. Short
+
+#aaa
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#aaaa
+
+Hold on.  Are you the <em>real</em> Emily Boegheim?
+
+> a. Yes.
+  b. No.
+
+#aaaaa
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#aaaaaa
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#aaaaaaa
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#aaaaaaaa
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#aaaaaaaaa
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#aaaaaaaaaa
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#aaaaaaaaaaa
+
+Why do you say that?
+
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#aaaaaaaaaaaa
+
+What goes between two sentences?
+
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
+  e. It depends.
+
+#aaaaaaaaaaaaa
+
+A "football" is...
+
+> a. ...an inflated sphere that can be kicked with the feet and head.
+  b. ...a two-pointed air pocket that can be thrown in a spiral pattern.
+  c. ...a folded piece of paper that can be flicked across a classroom.
+  d. ...a bumpy hemisphere one can stand on in order to massage the feet.
+
+#aaaaaaaaaaaaaa
+
+Pick one:
+
+> a. A.
+  b. B.
+  c. C.
+  d. D.
+
+#aaaaaaaaaaaaaaa
+
+Again!
+
+> a. Fit.
+  b. Finish.
+  c. Form.
+  d. Function.
+
+#aaaaaaaaaaaaaaaa
+
+Faster!
+
+> a. Grammarian.
+  b. Ghoulishly.
+  c. Gleamingly.
+  d. Gynecology.
+  e. Glaciation.
+  f. Groundwork.
+  g. Gluttonous.
+  h. Gorgonzola.
+  i. Guillotine.
+  j. Geophysics.
+  k. Guilefully.
+  l. Gunrunning.
+  m. Gastronomy.
+  n. Gamekeeper.
+  o. Graduation.
+  p. Grapefruit.
+  q. Gentlefolk.
+  r. Grisliness.
+  s. Gratuitous.
+  t. Gloominess.
+
+#aaaaaaaaaaaaaaaaa
+
+Lorem ipsum dolor sit...
+
+> a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+#aaaaaaaaaaaaaaaaaa
+
+So did you play that game yet where you're a dog?
+
+> a. Yes.
+  b. No.
+  c. Wait, which one?
+
+#aaaaaaaaaaaaaaaaaaa
+
+What did you think of it?
+
+> a. It was terrific!
+  b. It was terrible.
+  c. Meh.
+
+#aaaaaaaaaaaaaaaaaaaa
+
+Wow, really?  What did you like best about it?
+
+> a. I really liked that thing with Not-Your-Person!
+  b. The squeak toy was super fun!
+  c. I liked the eating place!
+
+#aaaaaaaaaaaaaaaaaaaaa
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+> a. Soda.
+  b. Pop.
+  c. Coke.
+
+#aaaaaaaaaaaaaaaaaaaaaa
+
+Do you know CPR?
+
+  a. Yes.
+> b. No.
+
+#aaaaaaaaaaaaaaaaaaaaaab
+
+Would you like to learn?
+
+> a. Sure.
+  b. No thanks.
+
+#aaaaaaaaaaaaaaaaaaaaaaba
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+  a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+> c. Go find an employee.
+  d. Hide.
+  e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+  i. Give CPR.
+  j. Don't give CPR.
+
+#aaaaaaaaaaaaaaaaaaaaaabac
+
+Hmm.  There's someone at the concession stand.
+
+> a. Perfect!  I get in line.
+
+#aaaaaaaaaaaaaaaaaaaaaabaca
+
+The line's pretty long.  It might be a while!
+
+  a. Hmm, this doesn't seem worth it.  I guess I give up and go home.
+> b. This is important!  I stay in line.
+
+#aaaaaaaaaaaaaaaaaaaaaabacab
+
+Okay, you're getting closer to the front of the line now.
+
+> a. Good!
+
+#aaaaaaaaaaaaaaaaaaaaaabacaba
+
+It's still pretty far though.
+
+> a. I continue to wait patiently in line.
+  b. I start a conversation with the person in front of me to help make the time pass more quickly.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaa
+
+Time passes.
+
+> a. z.z.z.z.z.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaa
+
+Suddenly you are at the front of the line!  What will you order?
+
+  a. Giant pretzel.
+  b. Popcorn.
+  c. Box of candy.
+  d. Hot dog.
+  e. Pizza.
+  f. Hot wings.
+  g. Mozarella sticks.
+  h. Large soda.
+> i. Ice cream.
+  j. Enormous cupcake.
+  k. Chicken tenders.
+  l. French fries.
+  m. Huge candy bar.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaai
+
+Which kind?
+
+  a. Cone.
+  b. Sundae.
+  c. Sandwich.
+> d. Bar on a stick.
+  e. Bar not on a stick.
+  f. Cylindrical container.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaid
+
+Okay, do you want the one with milk chocolate and nuts on the outside and vanilla ice cream inside, or the one with dark chocolate and no nuts on the outside and chocolate ice cream on the inside?
+
+> a. Milk chocolate nuts vanilla.
+  b. Dark chocolate chocolate.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaida
+
+Why did you choose that one over the other one?
+
+  a. Because I like milk chocolate better than dark chocolate.
+> b. Because I like vanilla ice cream better than chocolate ice cream.
+  c. Because I like nuts better than no nuts.
+  d. They both sounded equally good but I went with this one.
+  e. They both sounded equally bad but I went with this one.
+  f. Eh, no reason.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidab
+
+Don't you worry about counterfeit vanilla?
+
+  a. Yes.
+  b. No.
+> c. Is that a thing?
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidabc
+
+Absolutely!  There's this chemical, coumarin, that has a really intense vanilla flavor, even more intense than actual vanilla.  It's prescribed as a blood thinner, and it's also pretty commonly used as rat poison, because it kills by causing internal bleeding.  And sometimes it's abused by unscrupulous taste-criminals!
+
+  a. Wow, neat!
+  b. Gah, that's horrifying!
+> c. I think you're confused about the difference between coumarin and coumadin.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidabcc
+
+Wait, really?
+
+> a. Yeah, see, couma<em>rin</em> is the thing that shows up in fake vanilla, and couma<em>din</em> (also known as warfarin) is the blood-thinning drug that doubles as rat poison (though it isn't technically poisonous of course, just harmful in large doses, like many drugs).  They're similar, and the one is used to make the other, but they're not actually the same thing.
+  b. No, not really.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidabcca
+
+Wow!  So the vanilla stuff is fine, is what you're saying.
+
+> a. Oh no!  It causes liver and kidney damage, and it's banned as a food additive by the FDA.  It's legal in Mexico, though.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidabccaa
+
+Gosh, I did not realize that!  Thanks, I learned something today!
+
+> a. No no, thank <em>you</em>.
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidabccaaa
+
+Okay, looks like that's it.  Thank you for playing this game, Emily.
+
+> a. My pleasure.
+  b. You're welcome.
+  c. What a satisfying conclusion!
+  d. Hold on, I have a question!
+
+#aaaaaaaaaaaaaaaaaaaaaabacabaaaidabccaaaa
+
+THE END<iframe width="420" height="315" src="https://www.youtube.com/embed/gkA0AsTHUbY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
