@@ -192,7 +192,7 @@ module.exports = qq [
                           a "Eh... I changed my mind.", backedoff = -> @amusing = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off."
                           a "Definitely not.", backedoff
                           a "No way.", backedoff
-                          a "Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.  I understand that you will really tell me, without any further stalling, and I promise not to disqualify anyone or anything, retroactively or otherwise, as a result of learning this information, even if I am Ryan Veeder.",
+                          a "Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.  I understand that you will really tell me, without any further stalling, and I promise not to disqualify any entrant or entry, retroactively or otherwise, as a result of learning this information, even if I later turn out to be Ryan Veeder.",
                             ->
                               @author = (String.fromCharCode x for x in [74, 97, 99, 113, 117, 101, 115, 32, 70, 114, 101, 99, 104, 101, 116]).join ''
                               @amusing = "Like that thing where you took sooooo much convincing to tell me who wrote this."
@@ -2349,7 +2349,7 @@ module.exports = qq [
                                                 a "Thanks!", yourscore
                         a "No, forget it."
                 a "CREDITS",
-                  q """This game was written by #{@author or "<span class='redacted'>REDACTED</span>"}.""",
+                  q """This game was written by #{@author or '<span class="redacted">REDACTED</span>'}.""",
                     a "Thanks!"
                     a "Hey, what about beta-testers?",
                       ->
@@ -2360,7 +2360,14 @@ module.exports = qq [
                               q "Oh, it's way back at the beginning.  You have to get me to tell you who wrote this game first.",
                                 a "Got it, thanks!"
                         else ->
-                          testers = (String.fromCharCode x for x in [78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114]).join ''
+                          testers_list = ((String.fromCharCode x for x in y).join '' for y in [
+                            [78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114],
+                            [77, 97, 114, 99, 32, 70, 114, 101, 99, 104, 101, 116],
+                            [83, 97, 114, 97, 104, 32, 79, 114, 116, 105, 122],
+                          ])
+                          last = testers_list.length - 1
+                          testers_list[last] = 'and ' + testers_list[last]
+                          testers = testers_list.join ', '
                           q "This game was bravely tested by #{testers}.  Any bugs or other inadequacies are the author's fault, not theirs, and are also a figment of your imagination.",
                             a "Good to know, thanks!"
                 a "AMUSING",

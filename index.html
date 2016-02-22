@@ -11334,7 +11334,7 @@ module.exports = qq([
     } else {
       return q("You're sure you want me to reveal this?", a("Eh... I changed my mind.", backedoff = function() {
         return this.amusing = "Like that thing where I wanted to know who wrote this game but you were being all weird about it so I backed off.";
-      }), a("Definitely not.", backedoff), a("No way.", backedoff), a("Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.  I understand that you will really tell me, without any further stalling, and I promise not to disqualify anyone or anything, retroactively or otherwise, as a result of learning this information, even if I am Ryan Veeder.", function() {
+      }), a("Definitely not.", backedoff), a("No way.", backedoff), a("Yes, for the last time, I hereby affirm that I actually want you to tell me the name of the person who wrote this game.  I understand that you will really tell me, without any further stalling, and I promise not to disqualify any entrant or entry, retroactively or otherwise, as a result of learning this information, even if I later turn out to be Ryan Veeder.", function() {
         var x;
         this.author = ((function() {
           var i, len, ref1, results;
@@ -11819,22 +11819,33 @@ module.exports = qq([
           }
         }))))), a("No, forget it."));
       }
-    }), a("CREDITS", q("This game was written by " + (this.author || "<span class='redacted'>REDACTED</span>") + ".", a("Thanks!"), a("Hey, what about beta-testers?", function() {
+    }), a("CREDITS", q("This game was written by " + (this.author || '<span class="redacted">REDACTED</span>') + ".", a("Thanks!"), a("Hey, what about beta-testers?", function() {
       if (!this.author) {
         return q("Sorry, you haven't unlocked that achievement in this playthrough, so I can't say anything more.", a("Oh well!"), a("Wait, how do I unlock it?", q("Oh, it's way back at the beginning.  You have to get me to tell you who wrote this game first.", a("Got it, thanks!"))));
       } else {
         return function() {
-          var testers, x;
-          testers = ((function() {
+          var last, testers, testers_list, x, y;
+          testers_list = (function() {
             var i, len, ref1, results;
-            ref1 = [78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114];
+            ref1 = [[78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114], [77, 97, 114, 99, 32, 70, 114, 101, 99, 104, 101, 116], [83, 97, 114, 97, 104, 32, 79, 114, 116, 105, 122]];
             results = [];
             for (i = 0, len = ref1.length; i < len; i++) {
-              x = ref1[i];
-              results.push(String.fromCharCode(x));
+              y = ref1[i];
+              results.push(((function() {
+                var j, len1, results1;
+                results1 = [];
+                for (j = 0, len1 = y.length; j < len1; j++) {
+                  x = y[j];
+                  results1.push(String.fromCharCode(x));
+                }
+                return results1;
+              })()).join(''));
             }
             return results;
-          })()).join('');
+          })();
+          last = testers_list.length - 1;
+          testers_list[last] = 'and ' + testers_list[last];
+          testers = testers_list.join(', ');
           return q("This game was bravely tested by " + testers + ".  Any bugs or other inadequacies are the author's fault, not theirs, and are also a figment of your imagination.", a("Good to know, thanks!"));
         };
       }
@@ -12149,7 +12160,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14561-141-09037-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14561-153-70014-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>
