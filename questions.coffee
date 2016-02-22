@@ -2002,6 +2002,9 @@ module.exports = qq [
                   q "Experience?",
                     a "Sure, I've done some loitering."
                     a "I, uh, handled a pan once?  Does that count?"
+                    a "The top button of my shirt is unbuttoned.",
+                      q "Whatever you do, <em>don't button it!</em>",
+                        a "Don't worry, I would never do such an obviously disruptive and game-breaking thing."
                     a "My couchsurfing resume is formidable!"
                     a "I have sailed around the world."
                     a "Well, I do live in a van."
