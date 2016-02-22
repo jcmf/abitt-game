@@ -1365,7 +1365,7 @@ module.exports = qq [
                     a "Grab my mask.",
                       q "Wait, you have a mask?",
                         a "Of course!  I keep a CPR mask with me at all times.",
-                          q "You said you weren't trained, though.  The thing about those masks is that even the professionals have a hard time with them sometimes.  I think what you're supposed to do in this situation is to just skip the rescue breathing and go straight to chest compressions."
+                          q "You said you weren't trained, though.  The thing about those masks is that even the professionals have a hard time with them sometimes.  I think what you're supposed to do in this situation is to just skip the rescue breathing and go straight to chest compressions.",
                             a "Okay, I'll try to remember that next time this comes up."
                         a "It's a hypothetical situation.  Can't we just pretend that I happened to have a CPR mask?",
                           q "What, like, by pure coincidence?  Do you even own a CPR mask?",
