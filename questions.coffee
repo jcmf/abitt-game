@@ -1682,15 +1682,23 @@ module.exports = qq [
                                             a "Because I enjoy mango-colored foods."
                                             a "Because I enjoy mango-textured foods."
                                             a "Because it sounded like it might be non-dairy."
-                                        a "Fudge brownie." # XXX
+                                        a "Fudge brownie.",
+                                          q "Mmm, good choice.",
+                                            a "Thank you."
+                                            a "I agree."
                                         a "Espresso bean.",
                                           q "Why?",
                                             a "Because it sounds cool."
                                             a "Because it sounds different."
                                             a "I enjoy the intense flavor."
                                             a "I enjoy the stimulating effect."
-                                        a "Pistachio caramel." # XXX
-                                        a "Peaches and cream." # XXX
+                                        a "Pistachio caramel.",
+                                          q "For the pistashio or for the caramel?",
+                                            a "Pistashios."
+                                            a "Caramel."
+                                            a "Both."
+                                            a "Neither."
+                                        a "Peaches and cream.", -> @song = 'wvAnQqVJ3XQ'
                                         a "Chocolate peanut butter banana.",
                                           q "It has a picture of Elvis on it.",
                                             a "Nice."
@@ -1755,17 +1763,78 @@ module.exports = qq [
                                         a "No."
                                 a "Huge candy bar.",
                                   q "What kind?", # XXX
-                                    a "Baby Ruth"
-                                    a "Butterfinger"
-                                    a "Clark"
-                                    a "Heath"
-                                    a "KitKat"
-                                    a "Milky Way"
-                                    a "Oh Henry"
-                                    a "Payday"
-                                    a "Skor"
-                                    a "Snickers"
-                                    a "Twix"
+                                    a "Baby Ruth",
+                                      q "Who was that named after?",
+                                        a "Babe Ruth, baseball player."
+                                        a "Ruth Cleveland, presidental granddaughter."
+                                        a "Ruth Williamson, granddaughter of a candy company executive."
+                                        a "Beats me."
+                                    a "Butterfinger",
+                                      q "Who appeared in ads for that?",
+                                        a "Bart Simpson."
+                                        a "Spuds MacKenzie."
+                                        a "Steve Urkel."
+                                        a "I have no idea what you're talking about."
+                                    a "Clark",
+                                      q "Who was that named after?",
+                                        a "Otey Clark, baseball pitcher."
+                                        a "David L. Clark, its inventor."
+                                        a "Clark Can't, a pet chinchilla."
+                                        a "Sorry, not a clue."
+                                    a "Heath",
+                                      q "Who was that named after?",
+                                        a "L.S. Heath, a schoolteacher."
+                                        a "Bayard Heath, a confectioner."
+                                        a "Edward Bayard Heath, founder and CEO."
+                                        a "I don't understand why you might think I would know this."
+                                    a "Kit Kat",
+                                      q "Why is it called that, anyway?",
+                                        a "An anonymous factory worker put the name in a suggestion box."
+                                        a "It's named after the Kit-Cat Club in London."
+                                        a "No one seems to know."
+                                        a "I don't know."
+                                    a "Milky Way",
+                                      q "What is that named after?",
+                                        a "A malted milk drink."
+                                        a "A boulevard in Akron."
+                                        a "The galaxy in which we live."
+                                        a "Who knows?"
+                                    a "Oh Henry",
+                                      q "Who was that named after?",
+                                        a "O. Henry, the author."
+                                        a "<em>Henry V</em>, a play by William Shakespeare."
+                                        a "Some boy who flirted with the girls who made the candy."
+                                        a "I am baffled by this question."
+                                    a "Payday",
+                                      q "Why is it called that, anyway?",
+                                        a "Because it happened to be pay day when they named it.  Obviously."
+                                        a "It's named after a movie."
+                                        a "Nobody knows."
+                                        a "Why do you... what... where do these questions even come from?  How would I possibly... I don't get this!  This is ridiculous!"
+                                    a "Skor",
+                                      q "Why is it called that, anyway?",
+                                        a "Because it sounds like the word \"score.\"",
+                                          q "So when someone gives you one, you triumphantly shout out its name?",
+                                            a "Uh... sure."
+                                        a "Because it's Swedish for \"shoes.\"",
+                                          q "That doesn't make any sense!",
+                                            a "Yes it does.",
+                                              q "Explain.",
+                                                a "Shoes are delicious!  They are made of cow, just like hamburgers, which are also delicious."
+                                                a "It's a Swedish delicacy, similar to Cuban <em>ropa vieja</em>, which literally translates to \"old clothes.\"  Except that <em>skor</em> is more of a dessert food, obviously."
+                                                a "I cannot explain this."
+                                            a "No, you're right."
+                                        a "It is a great mystery."
+                                    a "Snickers",
+                                      q "Why is it called that, anyway?",
+                                        a "It's named after a horse.",
+                                          q "Oh.  How'd you know that?",
+                                            a "Well, it was the only choice available."
+                                    a "Twix",
+                                      q "Why is it called that, anyway?",
+                                        a "Uhhhh... because there are two of them?",
+                                          q "I guess that would make sense.",
+                                            a "Probably!"
                         a "I start a conversation with the person in front of me to help make the time pass more quickly.",
                           q "What will you talk about?", # XXX
                             a "News."
