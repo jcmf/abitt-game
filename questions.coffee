@@ -987,7 +987,7 @@ module.exports = qq [
     a "...lord."
     a "...pawn."
     a "...prince."
-    a "...queen.", -> @song or= 'kHI-zRzXm3A'
+    a "...queen.", -> @song or= ['kHI-zRzXm3A', 560]
     a "...rook."
     a "...squire."
 
@@ -1920,7 +1920,7 @@ module.exports = qq [
                         a "It's true."
                         a "Did so."
         a "Shout.", ->
-          @song = 'NkbL8JxswRc'
+          @song = ['NkbL8JxswRc', 560]
           q "Like in the Tears for Fears song?",
             a "Yes, exactly like that.",
               q "So what <em>are</em> the things you can do without?",
@@ -2001,7 +2001,7 @@ module.exports = qq [
                                       q "Which door do you mean: the north door, the east door, or the south door?",
                                         a "North.",
                                           ->
-                                            @song = 'hvkjP6dqpfY'
+                                            @song = ['hvkjP6dqpfY', 560]
                                             q "You are in a dark room.",
                                               a "Leave."
                                               a "Inventory.", ->
@@ -2071,7 +2071,7 @@ module.exports = qq [
                         a "Squiggles 'N Dots"
                         a "Sugar Comma"
                     a "No."
-                a "Astronaut.", -> @song = 'KaOC9danxNo'
+                a "Astronaut.", -> @song = ['KaOC9danxNo', 560]
                 a "Pirate.",
                   q "Do you speak the language?",
                     a "Aye."
@@ -2354,7 +2354,7 @@ module.exports = qq [
     q "Which of the following received the most Spring Thing votes?",
       a "Blue Lacuna"
       a "Fate"
-      a "Mentula Macanus: Apocolocyntosis", -> @song or= 'iR8lVsjSF6M'
+      a "Mentula Macanus: Apocolocyntosis", -> @song or= ['iR8lVsjSF6M', 560]
       a "The Rocket Man from the Sea"
 
   -> if @moremath
@@ -2392,7 +2392,7 @@ module.exports = qq [
                 a "Chaka Khan", -> @song = 'tTVv-ktbvpg'
                 a "Cristina Monet", -> @song = 'AybvLztacFM'
                 a "Giant Sand", -> @song = '1w6bHzvikl8'
-                a "Firewater", -> @song = 'YTrWOPaCax0'
+                a "Firewater", -> @song = ['YTrWOPaCax0', 560]
                 a "Hecate, goddess of witchcraft",
                   q "Oh man.  Were you there for that?",
                     a "I was.",
@@ -2413,12 +2413,12 @@ module.exports = qq [
                       q "I am talking about <em>Sleep No More</em>.",
                         a "Okay."
                 a "Lindsay Anderson", -> @song = 'yCgWJqcOQhA'
-                a "Liz Gillies", -> @song = 'HNnTQbLbtWI'
+                a "Liz Gillies", -> @song = ['HNnTQbLbtWI', 560]
                 a "PJ Harvey", -> @song = 'O0ZUAorP0b4'
                 a "Peggy Lee", -> @song = 'LCRZZC-DH7M'
-                a "Sandra Bernhard", -> @song = 'ru6d318UlOQ'
+                a "Sandra Bernhard", -> @song = ['ru6d318UlOQ', 560]
                 a "Tony Bennett", -> @song = 'xr3CcBp6aw0'
-                a "Uncle Yo", -> @song = 'hu18YKjijEo'
+                a "Uncle Yo", -> @song = ['hu18YKjijEo', 560]
             a "No seriously, wtf",
               q "Yep, that's all there is!",
                 a "But what about --"
@@ -2654,7 +2654,7 @@ module.exports = qq [
                   q "Why is that?",
                     a "Because it's better to quit after having a somewhat positive experience than to persist until the magic is spoiled.",
                       ->
-                        @song or= 'Qtb11P1FWnc'
+                        @song or= ['Ob7nx4BAJb0', 560]
                         q "Good point.",
                           a "Thanks!"
                     a "Because this game sucks, dude.",
@@ -2662,11 +2662,12 @@ module.exports = qq [
                         a "Thank goodness!"
                         a "So... how many endings are there?",
                           q "Hmm.  I'm gonna say... 25ish?",
-                            a "Interesting....", -> @song = 'JYtCeONQN3o'
+                            a "Interesting....", -> @song = ['JYtCeONQN3o', 560]
 
   ->
     if not @song
       q 'THE END'
     else
-      q """THE END<iframe width="420" height="315" src="https://www.youtube.com/embed/#{@song}?rel=0" frameborder="0" allowfullscreen></iframe>"""
+      if 'object' is typeof @song then [@song, width] = @song else width = 420
+      q """THE END<iframe width="#{width}" height="315" src="https://www.youtube.com/embed/#{@song}?rel=0" frameborder="0" allowfullscreen></iframe>"""
 ]
