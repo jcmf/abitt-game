@@ -606,10 +606,10 @@ module.exports = qq [
                     a "Totally ready!", -> @math = true
 
   -> if @geo then q "Which country has the highest lowest point?",
-    a "Andorra"
-    a "Burundi"
-    a "Lesotho"
-    a "Rwanda"
+    a "Andorra", -> @geo = false
+    a "Burundi", -> @geo = false
+    a "Lesotho", -> @geo = true
+    a "Rwanda", -> @geo = false
 
   -> if @expo and @neverheardofexpo
     q "Something's been bothering me about some of your earlier answers.",
@@ -2304,6 +2304,7 @@ module.exports = qq [
                     a "No.", darecall
                 a "No.", darecall
 
+  # XXX add an opt-out answer and maybe some follow-up?
   -> if @if
     q "Which of the following won the most XYZZY awards?",
       a "Aotearoa"
@@ -2325,6 +2326,7 @@ module.exports = qq [
       a "The second law of thermodynamics."
       a "String theory."
 
+  # XXX gate this on willingness to answer the XYZZY award question above.
   -> if @if
     q "Which of the following received the most Spring Thing votes?",
       a "Blue Lacuna"
