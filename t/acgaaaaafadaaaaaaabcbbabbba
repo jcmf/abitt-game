@@ -90,6 +90,13 @@ Very good!  Now, which of these would you rather be?
 
 #acgaaaaaf
 
+So do you feel like the people who choose flight look down on you?
+
+> a. Yes.
+  b. No.
+
+#acgaaaaafa
+
 Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
 
   a. Heads and tails are equally likely.
@@ -97,7 +104,7 @@ Suppose I flip a fair coin 99 times, and get heads each time.  Which of these be
   c. Tails is much more likely than heads.
 > d. I don't know.
 
-#acgaaaaafd
+#acgaaaaafad
 
 Why do you say that?
 
@@ -107,7 +114,7 @@ Why do you say that?
   d. Because that question is boring.
   e. Because that question is bad.
 
-#acgaaaaafda
+#acgaaaaafada
 
 What goes between two sentences?
 
@@ -117,7 +124,7 @@ What goes between two sentences?
   d. Nothing.
   e. It depends.
 
-#acgaaaaafdaa
+#acgaaaaafadaa
 
 A "football" is...
 
@@ -126,7 +133,7 @@ A "football" is...
   c. ...a folded piece of paper that can be flicked across a classroom.
   d. ...a bumpy hemisphere one can stand on in order to massage the feet.
 
-#acgaaaaafdaaa
+#acgaaaaafadaaa
 
 Pick one:
 
@@ -135,7 +142,7 @@ Pick one:
   c. C.
   d. D.
 
-#acgaaaaafdaaaa
+#acgaaaaafadaaaa
 
 Again!
 
@@ -144,7 +151,7 @@ Again!
   c. Form.
   d. Function.
 
-#acgaaaaafdaaaaa
+#acgaaaaafadaaaaa
 
 Faster!
 
@@ -169,7 +176,7 @@ Faster!
   s. Gratuitous.
   t. Gloominess.
 
-#acgaaaaafdaaaaaa
+#acgaaaaafadaaaaaa
 
 Lorem ipsum dolor sit...
 
@@ -182,7 +189,7 @@ Lorem ipsum dolor sit...
   g. ...imam.
   h. ...uman.
 
-#acgaaaaafdaaaaaaa
+#acgaaaaafadaaaaaaa
 
 So did you play that game yet where you're a dog?
 
@@ -190,7 +197,7 @@ So did you play that game yet where you're a dog?
 > b. No.
   c. Wait, which one?
 
-#acgaaaaafdaaaaaaab
+#acgaaaaafadaaaaaaab
 
 Oh well you totally should!  It's really good!
 
@@ -198,21 +205,21 @@ Oh well you totally should!  It's really good!
   b. It doesn't sound like my cup of tea, actually.
 > c. So you played it?
 
-#acgaaaaafdaaaaaaabc
+#acgaaaaafadaaaaaaabc
 
 Well, no, I haven't played it <em>yet</em>, but, you know, I've heard good things about it!  Rumors, mostly.  Lotta buzz!
 
   a. That seems reasonable!
 > b. Wait a minute.  Who wrote this dog game?
 
-#acgaaaaafdaaaaaaabcb
+#acgaaaaafadaaaaaaabcb
 
 Oh... uh... I'm not sure if I should tell you.
 
   a. Good thinking!  Better not.
 > b. Wait, why not?
 
-#acgaaaaafdaaaaaaabcbb
+#acgaaaaafadaaaaaaabcbb
 
 Because you're Ryan Veeder!
 
@@ -220,7 +227,7 @@ Because you're Ryan Veeder!
   b. No I'm not.
   c. Oh yeah, good point.
 
-#acgaaaaafdaaaaaaabcbba
+#acgaaaaafadaaaaaaabcbba
 
 Wait -- is the exposition over already?
 
@@ -228,27 +235,27 @@ Wait -- is the exposition over already?
 > b. No.
   c. What exposition is this?
 
-#acgaaaaafdaaaaaaabcbbab
+#acgaaaaafadaaaaaaabcbbab
 
 Then I'd better not tell you.
 
   a. Fine.
 > b. Why not?
 
-#acgaaaaafdaaaaaaabcbbabb
+#acgaaaaafadaaaaaaabcbbabb
 
 Rule 6.  Obviously.
 
   a. Oh yeah, rule 6.
 > b. Wait, what's rule 6?
 
-#acgaaaaafdaaaaaaabcbbabbb
+#acgaaaaafadaaaaaaabcbbabbb
 
 I forget exactly.  Something about pain of forfeit?
 
 > a. Sounds annoying.
 
-#acgaaaaafdaaaaaaabcbbabbba
+#acgaaaaafadaaaaaaabcbbabbba
 
 Which of these words would you be most likely to use to describe carbonated soft drinks?
 

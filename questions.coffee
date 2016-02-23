@@ -364,16 +364,32 @@ module.exports = qq [
           a "No, I know the song but that's not why I chose that answer."
       )('gkA0AsTHUbY')
     a "a hammer than a nail", likesong 'Fh4K5yAFpNA'
-    a "able to fly"
-    a "drinking",
-      q "Like drinking alcohol?",
+    a "able to fly",
+      q "So do you look down on people who choose invisibility?",
         a "Yes."
         a "No."
-    a "eating"
-    a "invisible"
+    a "drinking",
+      q "Like drinking alcohol?",
+        a "Yes.",
+          q "Do you think of yourself as an alcoholic?",
+            a "Yes."
+            a "No."
+        a "No."
+    a "eating",
+      q "Okay, then here's a tip: Later on, when you get to the movie theater, go find an employee.",
+        a "Thanks!"
+    a "invisible",
+      q "So do you feel like the people who choose flight look down on you?",
+        a "Yes."
+        a "No."
     a "sleeping",
       q "Are you tired right now?",
-        a "Yes."
+        a "Yes.",
+          q "How much sleep did you get last night?",
+            a "Less than four hours."
+            a "Four to eight hours."
+            a "Eight to twelve hours."
+            a "More than twelve hours."
         a "No."
     a "with someone I love", ->
       @song = '0tgYr03o3dE'
