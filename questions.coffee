@@ -2660,6 +2660,9 @@ module.exports = qq [
                     a "Because this game sucks, dude.",
                       q "Well, good thing it's over, right?",
                         a "Thank goodness!"
+                        a "So... how many endings are there?",
+                          q "Hmm.  I'm gonna say... 25ish?",
+                            a "Interesting....", -> @song = 'JYtCeONQN3o'
 
   ->
     if not @song
