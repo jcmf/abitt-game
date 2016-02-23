@@ -11433,6 +11433,7 @@ module.exports = qq([
       var ref1;
       this.origname || (this.origname = this.fn + " " + this.ln);
       ref1 = [t, f, l, expo], this.title = ref1[0], this.fn = ref1[1], this.ln = ref1[2], this.expo = ref1[3];
+      this.nonifer = !expo;
       return "Oh my goodness!  It's such an honor to finally meet you, " + this.title + " " + this.ln + "!  I have so many questions!";
     }), a("Such as...?")));
   })('Mr.', 'Graham', 'Nelson'), meet('Ms.', 'Hillary', 'Clinton'), meet('Mr.', 'Teddy', 'Ruxpin'), meet('Ms.', 'Anastasia', 'Romanov'), function() {
@@ -11767,7 +11768,16 @@ module.exports = qq([
     return q(msg, a("Sounds legit."), a("Wait, what?"));
   }), a("The Flying Spaghetti Monster.", q("Do you even own a colander?", a("Yes.", q("Are you currently wearing it?", a("Yes.", q("Really?", a("Yes.", q("Did you just put it on after I started asking about this?", a("Yes."), a("No."))), a("No.", darecall = q("And you dare call yourself a Pastafarian?", a("Yes."), a("No.", q("Oh!  Sorry.  I just assumed.", a("That's okay."), a("Then assume no more, lest He smite you with His Noodly Appendage!"))))))), a("No.", darecall))), a("No.", darecall)))))))), function() {
     if (this["if"]) {
-      return q("Which of the following won the most XYZZY awards?", a("Aotearoa"), a("Cryptozookeeper"), a("Slouching Towards Bedlam"), a("Zombie Exodus"));
+      return q("Which of the following won the most XYZZY awards?", a("Aotearoa."), a("Cryptozookeeper.", function() {
+        return this["if"] = false;
+      }), a("Slouching Towards Bedlam.", this["if"] = false), a("Zombie Exodus."), a("What's a XYZZY award?", function() {
+        this["if"] = false;
+        if (this.nonifer) {
+          return q("The Oscars of the interactive fiction scene, basically?", a("Okay."), a("Huh."));
+        } else {
+          return q("You're breaking character, " + this.title + " " + this.ln + ".", a("Oops!"));
+        }
+      }));
     }
   }, function() {
     if (this.theology) {
@@ -11779,7 +11789,9 @@ module.exports = qq([
     }
   }, function() {
     if (this["if"]) {
-      return q("Which of the following received the most Spring Thing votes?", a("Blue Lacuna"), a("Fate"), a("Mentula Macanus: Apocolocyntosis"), a("The Rocket Man from the Sea"));
+      return q("Which of the following received the most Spring Thing votes?", a("Blue Lacuna"), a("Fate"), a("Mentula Macanus: Apocolocyntosis", function() {
+        return this.song || (this.song = 'iR8lVsjSF6M');
+      }), a("The Rocket Man from the Sea"));
     }
   }, function() {
     if (this.moremath) {
@@ -12174,7 +12186,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14561-993-23959-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14562-009-52579-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>

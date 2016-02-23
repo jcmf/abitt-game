@@ -291,7 +291,7 @@ module.exports = qq [
                               q "Yes???",
                                 (meet = (t, f, l, expo) ->
                                   a "...#{f} #{l}.",
-                                    q (-> @origname or= "#{@fn} #{@ln}"; [@title, @fn, @ln, @expo] = [t, f, l, expo]; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
+                                    q (-> @origname or= "#{@fn} #{@ln}"; [@title, @fn, @ln, @expo] = [t, f, l, expo]; @nonifer = not expo; "Oh my goodness!  It's such an honor to finally meet you, #{@title} #{@ln}!  I have so many questions!"),
                                       a "Such as...?"
                                 )('Mr.', 'Graham', 'Nelson'),
                                 meet 'Ms.', 'Hillary', 'Clinton'
@@ -1778,7 +1778,7 @@ module.exports = qq [
                                         a "Yes."
                                         a "No."
                                 a "Huge candy bar.",
-                                  q "What kind?", # XXX
+                                  q "What kind?",
                                     a "Baby Ruth",
                                       q "Who was that named after?",
                                         a "Babe Ruth, baseball player."
@@ -2320,13 +2320,21 @@ module.exports = qq [
                     a "No.", darecall
                 a "No.", darecall
 
-  # XXX add an opt-out answer and maybe some follow-up?
   -> if @if
     q "Which of the following won the most XYZZY awards?",
-      a "Aotearoa"
-      a "Cryptozookeeper"
-      a "Slouching Towards Bedlam"
-      a "Zombie Exodus"
+      a "Aotearoa."
+      a "Cryptozookeeper.", -> @if = false
+      a "Slouching Towards Bedlam.", @if = false
+      a "Zombie Exodus."
+      a "What's a XYZZY award?", ->
+        @if = false
+        if @nonifer
+          q "The Oscars of the interactive fiction scene, basically?",
+            a "Okay."
+            a "Huh."
+        else
+          q "You're breaking character, #{@title} #{@ln}.",
+            a "Oops!"
 
   -> if @theology
     q "Which of the following English monarchs is also a saint?",
@@ -2342,12 +2350,11 @@ module.exports = qq [
       a "The second law of thermodynamics."
       a "String theory."
 
-  # XXX gate this on willingness to answer the XYZZY award question above.
   -> if @if
     q "Which of the following received the most Spring Thing votes?",
       a "Blue Lacuna"
       a "Fate"
-      a "Mentula Macanus: Apocolocyntosis"
+      a "Mentula Macanus: Apocolocyntosis", -> @song or= 'iR8lVsjSF6M'
       a "The Rocket Man from the Sea"
 
   -> if @moremath
