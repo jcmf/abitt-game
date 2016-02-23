@@ -11760,13 +11760,18 @@ module.exports = qq([
     if (this.ln === 'Veeder') {
       return q("You can't pray to yourself!  That would be, like, super embarrassing.", a("Okay."));
     } else {
-      return q("Ryan Veeder appears and solves all of your problems!", a("Thanks Ryan Veeder!"), a("But I <em>liked</em> having problems."));
+      return q("Ryan Veeder appears and solves all of your problems!", a("Thanks Ryan Veeder!"), a("But I <em>liked</em> having problems.", q("Well!  In that case, Ryan reaches deep into the folds of his voluminous robe and produces...", a("...a crow."), a("...a goat."), a("...a wolf."), a("...a snake."), a("...a centipede."), a("OH DEAR GOD BEES"))));
     }
   }), a("Graham Nelson.", function() {
     var msg;
-    msg = this.ln === 'Nelson' ? 'Talking to yourself is a sign of impending mental collapse.' : 'You can only do that to something animate.';
+    msg = this.ln === 'Nelson' ? "Talking to yourself is a sign of impending mental collapse." : "You can't see any such thing.";
     return q(msg, a("Sounds legit."), a("Wait, what?"));
-  }), a("The Flying Spaghetti Monster.", q("Do you even own a colander?", a("Yes.", q("Are you currently wearing it?", a("Yes.", q("Really?", a("Yes.", q("Did you just put it on after I started asking about this?", a("Yes."), a("No."))), a("No.", darecall = q("And you dare call yourself a Pastafarian?", a("Yes."), a("No.", q("Oh!  Sorry.  I just assumed.", a("That's okay."), a("Then assume no more, lest He smite you with His Noodly Appendage!"))))))), a("No.", darecall))), a("No.", darecall)))))))), function() {
+  }), a("The Flying Spaghetti Monster.", q("Do you even own a colander?", a("Yes.", q("Are you currently wearing it?", a("Yes.", q("Really?", a("Yes.", q("Did you just put it on after I started asking about this?", a("Yes.", darecall = function() {
+    this.song = 'g1jJ-ttrSd8';
+    return q("And you dare call yourself a Pastafarian?", a("Yes."), a("No.", q("Oh!  Sorry.  I just assumed.", a("That's okay."), a("Then assume no more, lest He smite you with His Noodly Appendage!"))));
+  }), a("No.", function() {
+    return this.song = ['FvDHSCpW0O8', 560];
+  }))), a("No.", darecall))), a("No.", darecall))), a("No.", darecall)))))))), function() {
     if (this["if"]) {
       return q("Which of the following won the most XYZZY awards?", a("Aotearoa."), a("Cryptozookeeper.", function() {
         return this["if"] = false;
@@ -11853,7 +11858,7 @@ module.exports = qq([
           var last, testers, testers_list, x, y;
           testers_list = (function() {
             var i, len, ref1, results;
-            ref1 = [[78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114], [77, 97, 114, 99, 32, 70, 114, 101, 99, 104, 101, 116], [83, 97, 114, 97, 104, 32, 79, 114, 116, 105, 122]];
+            ref1 = [[78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114], [77, 97, 114, 99, 32, 70, 114, 101, 99, 104, 101, 116], [83, 97, 114, 97, 104, 32, 79, 114, 116, 105, 122], [83, 97, 116, 117, 32, 84, 97, 105, 112, 97, 108, 117, 115]];
             results = [];
             for (i = 0, len = ref1.length; i < len; i++) {
               y = ref1[i];
@@ -11887,7 +11892,7 @@ module.exports = qq([
     }, a("Can I play again?", q("No, unfortunately it's only ever possible to play this game once.", a("Oh well."), a("What's so unfortunate about that?", q("Just that you'll only ever get to read a tiny fraction of the text contained within this game?  It seems like such a waste.", a("Huh, I guess so."), a("I disagree.", q("Why is that?", a("Because it's better to quit after having a somewhat positive experience than to persist until the magic is spoiled.", function() {
       this.song || (this.song = ['Ob7nx4BAJb0', 560]);
       return q("Good point.", a("Thanks!"));
-    }), a("Because this game sucks, dude.", q("Well, good thing it's over, right?", a("Thank goodness!"), a("So... how many endings are there?", q("Hmm.  I'm gonna say... 25ish?", a("Interesting....", function() {
+    }), a("Because this game sucks, dude.", q("Well, good thing it's over, right?", a("Thank goodness!"), a("So... how many endings are there?", q("Hmm.  I'm gonna say... 28ish?", a("Interesting....", function() {
       return this.song = ['JYtCeONQN3o', 560];
     }))))))))))))));
   }, function() {
@@ -12194,7 +12199,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14562-066-70601-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14562-088-46434-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><a href="#">Press Enter or click here to start over.</a></p>

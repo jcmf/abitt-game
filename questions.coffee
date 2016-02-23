@@ -2293,10 +2293,17 @@ module.exports = qq [
               else
                 q "Ryan Veeder appears and solves all of your problems!",
                   a "Thanks Ryan Veeder!"
-                  a "But I <em>liked</em> having problems."
+                  a "But I <em>liked</em> having problems.",
+                    q "Well!  In that case, Ryan reaches deep into the folds of his voluminous robe and produces...",
+                      a "...a crow."
+                      a "...a goat."
+                      a "...a wolf."
+                      a "...a snake."
+                      a "...a centipede."
+                      a "OH DEAR GOD BEES"
             a "Graham Nelson.",
               ->
-                msg = if @ln is 'Nelson' then 'Talking to yourself is a sign of impending mental collapse.' else 'You can only do that to something animate.'
+                msg = if @ln is 'Nelson' then "Talking to yourself is a sign of impending mental collapse." else "You can't see any such thing."
                 q msg,
                   a "Sounds legit."
                   a "Wait, what?"
@@ -2308,15 +2315,16 @@ module.exports = qq [
                       q "Really?",
                         a "Yes.",
                           q "Did you just put it on after I started asking about this?",
-                            a "Yes."
-                            a "No."
-                        a "No.",
-                          darecall = q "And you dare call yourself a Pastafarian?",
-                            a "Yes."
-                            a "No.",
-                              q "Oh!  Sorry.  I just assumed.",
-                                a "That's okay."
-                                a "Then assume no more, lest He smite you with His Noodly Appendage!"
+                            a "Yes.", darecall = ->
+                              @song = 'g1jJ-ttrSd8'
+                              q "And you dare call yourself a Pastafarian?",
+                                a "Yes."
+                                a "No.",
+                                  q "Oh!  Sorry.  I just assumed.",
+                                    a "That's okay."
+                                    a "Then assume no more, lest He smite you with His Noodly Appendage!"
+                            a "No.", -> @song = ['FvDHSCpW0O8', 560]
+                        a "No.", darecall
                     a "No.", darecall
                 a "No.", darecall
 
@@ -2478,6 +2486,7 @@ module.exports = qq [
                             [78, 105, 99, 107, 32, 84, 97, 121, 108, 111, 114],
                             [77, 97, 114, 99, 32, 70, 114, 101, 99, 104, 101, 116],
                             [83, 97, 114, 97, 104, 32, 79, 114, 116, 105, 122],
+                            [83, 97, 116, 117, 32, 84, 97, 105, 112, 97, 108, 117, 115],
                           ])
                           last = testers_list.length - 1
                           testers_list[last] = 'and ' + testers_list[last]
@@ -2661,7 +2670,7 @@ module.exports = qq [
                       q "Well, good thing it's over, right?",
                         a "Thank goodness!"
                         a "So... how many endings are there?",
-                          q "Hmm.  I'm gonna say... 25ish?",
+                          q "Hmm.  I'm gonna say... 28ish?",
                             a "Interesting....", -> @song = ['JYtCeONQN3o', 560]
 
   ->
