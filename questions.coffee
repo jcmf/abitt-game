@@ -987,7 +987,7 @@ module.exports = qq [
     a "...lord."
     a "...pawn."
     a "...prince."
-    a "...queen." # XXX
+    a "...queen.", -> @song or= 'kHI-zRzXm3A'
     a "...rook."
     a "...squire."
 
