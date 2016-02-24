@@ -1,0 +1,152 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+  a. Emily
+> b. Jenni
+  c. Ryan
+
+#ab
+
+And your last name?
+
+  a. Earl
+  b. Jorgensen
+  c. Maddox
+  d. Polodna
+> e. Vedenoja
+
+#abe
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+  a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+> d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#abed
+
+Hold on.  Are you the <em>real</em> Jenni Vedenoja?
+
+  a. Yes.
+> b. No.
+
+#abedb
+
+So you were just lying to my face earlier?
+
+  a. Yes.
+> b. No.
+
+#abedbb
+
+So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> Jenni Vedenoja?  Is that it?
+
+  a. Yes.
+> b. No.
+
+#abedbbb
+
+So you <em>are</em> Jenni Vedenoja!  I knew it!
+
+> a. Yep, you figured it out all right.
+
+#abedbbba
+
+So.  What's the capital of Canada?
+
+  a. Manitoba
+  b. Nunavut
+> c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#abedbbbac
+
+And what is an apocalypse?
+
+  a. An Oscar winner.
+  b. A revelation from God.
+> c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#abedbbbacc
+
+All right, in that case... what does "grue" mean to you?
+
+  a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+> d. It's a device for preventing adventurers from wandering in the dark.
+
+#abedbbbaccd
+
+Very good!  Now, which of these would you rather be?
+
+  a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+> h. with someone I love
+
+#abedbbbaccdh
+
+Think of a person you love.  How would you quantify your love for that person?
+
+  a. I can't think of any such person.
+  b. Meh.
+  c. Pretty okay.
+  d. Yep, lots.
+  e. OMG so much!
+> f. Impossibly much!!!  <em>[Note: Do not choose this option.]</em>
+
+#abedbbbaccdhf
+
+Do you feel like they love you less than you love them?
+
+  a. Yep, no question.
+> b. No way, in fact they love me even more!
+  c. Eh, about the same amount.
+
+#abedbbbaccdhfb
+
+How do you feel about this state of affairs?
+
+> a. It's pretty good, actually!
+  b. It kinda sucks, actually!
+  c. Eh, it's okay I guess.
+  d. Eh, it's not the best, but you know, whatever.
+
+#abedbbbaccdhfba
+
+Sounds pretty farfetched to me.
+
+  a. Yeah, I'm just messing with you.
+> b. But it's true!
+
+#abedbbbaccdhfbab
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+  a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+

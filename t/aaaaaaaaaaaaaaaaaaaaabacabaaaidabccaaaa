@@ -197,19 +197,11 @@ So did you play that game yet where you're a dog?
 
 What did you think of it?
 
-> a. It was terrific!
-  b. It was terrible.
-  c. Meh.
+> a. Meh.
+  b. It was terrific!
+  c. It was terrible.
 
 #aaaaaaaaaaaaaaaaaaaa
-
-Wow, really?  What did you like best about it?
-
-> a. I really liked that thing with Not-Your-Person!
-  b. The squeak toy was super fun!
-  c. I liked the eating place!
-
-#aaaaaaaaaaaaaaaaaaaaa
 
 Which of these words would you be most likely to use to describe carbonated soft drinks?
 
@@ -217,25 +209,21 @@ Which of these words would you be most likely to use to describe carbonated soft
   b. Pop.
   c. Coke.
 
-#aaaaaaaaaaaaaaaaaaaaaa
+#aaaaaaaaaaaaaaaaaaaaa
 
 Do you know CPR?
 
-> a. Yes.
-  b. No.
+  a. Yes.
+> b. No.
 
-#aaaaaaaaaaaaaaaaaaaaaaa
+#aaaaaaaaaaaaaaaaaaaaab
 
-So you've, like, been trained and stuff?
+Would you like to learn?
 
-> a. Yep, I'm certified and everything.
-  b. I was certified but it expired.
-  c. I'm not certified, but I like took a course or something.
-  d. No formal training, but I've studied some things and I feel pretty confident.
-  e. Ehhh.. you know what, I don't actually know CPR all that well, if at all.
-  f. What is CPR?
+> a. Sure.
+  b. No thanks.
 
-#aaaaaaaaaaaaaaaaaaaaaaaa
+#aaaaaaaaaaaaaaaaaaaaaba
 
 Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
 
@@ -250,39 +238,39 @@ Okay.  Say you're standing in line for the new Star Wars movie, and somebody in 
   i. Give CPR.
   j. Don't give CPR.
 
-#aaaaaaaaaaaaaaaaaaaaaaaac
+#aaaaaaaaaaaaaaaaaaaaabac
 
 Hmm.  There's someone at the concession stand.
 
 > a. Perfect!  I get in line.
 
-#aaaaaaaaaaaaaaaaaaaaaaaaca
+#aaaaaaaaaaaaaaaaaaaaabaca
 
 The line's pretty long.  It might be a while!
 
   a. Hmm, this doesn't seem worth it.  I guess I give up and go home.
 > b. This is important!  I stay in line.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacab
+#aaaaaaaaaaaaaaaaaaaaabacab
 
 Okay, you're getting closer to the front of the line now.
 
 > a. Good!
 
-#aaaaaaaaaaaaaaaaaaaaaaaacaba
+#aaaaaaaaaaaaaaaaaaaaabacaba
 
 It's still pretty far though.
 
 > a. I continue to wait patiently in line.
   b. I start a conversation with the person in front of me to help make the time pass more quickly.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacabaa
+#aaaaaaaaaaaaaaaaaaaaabacabaa
 
 Time passes.
 
 > a. z.z.z.z.z.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacabaaa
+#aaaaaaaaaaaaaaaaaaaaabacabaaa
 
 Suddenly you are at the front of the line!  What will you order?
 
@@ -294,46 +282,87 @@ Suddenly you are at the front of the line!  What will you order?
   f. Hot wings.
   g. Mozarella sticks.
   h. Large soda.
-  i. Ice cream.
+> i. Ice cream.
   j. Enormous cupcake.
   k. Chicken tenders.
   l. French fries.
-> m. Huge candy bar.
+  m. Huge candy bar.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacabaaam
+#aaaaaaaaaaaaaaaaaaaaabacabaaai
 
-What kind?
+Which kind?
 
-  a. Baby Ruth
-  b. Butterfinger
-  c. Clark
-  d. Heath
-  e. Kit Kat
-  f. Milky Way
-  g. Oh Henry
-  h. Payday
-  i. Skor
-> j. Snickers
-  k. Twix
+  a. Cone.
+  b. Sundae.
+  c. Sandwich.
+> d. Bar on a stick.
+  e. Bar not on a stick.
+  f. Cylindrical container.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacabaaamj
+#aaaaaaaaaaaaaaaaaaaaabacabaaaid
 
-Why is it called that, anyway?
+Okay, do you want the one with milk chocolate and nuts on the outside and vanilla ice cream inside, or the one with dark chocolate and no nuts on the outside and chocolate ice cream on the inside?
 
-> a. It's named after a horse.
+> a. Milk chocolate nuts vanilla.
+  b. Dark chocolate chocolate.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacabaaamja
+#aaaaaaaaaaaaaaaaaaaaabacabaaaida
 
-Oh.  How'd you know that?
+Why did you choose that one over the other one?
 
-> a. Well, it was the only choice available.
+  a. Because I like milk chocolate better than dark chocolate.
+> b. Because I like vanilla ice cream better than chocolate ice cream.
+  c. Because I like nuts better than no nuts.
+  d. They both sounded equally good but I went with this one.
+  e. They both sounded equally bad but I went with this one.
+  f. Eh, no reason.
 
-#aaaaaaaaaaaaaaaaaaaaaaaacabaaamjaa
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidab
+
+Don't you worry about counterfeit vanilla?
+
+  a. Yes.
+  b. No.
+> c. Is that a thing?
+
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidabc
+
+Absolutely!  There's this chemical, coumarin, that has a really intense vanilla flavor, even more intense than actual vanilla.  It's prescribed as a blood thinner, and it's also pretty commonly used as rat poison, because it kills by causing internal bleeding.  And sometimes it's abused by unscrupulous taste-criminals!
+
+  a. Wow, neat!
+  b. Gah, that's horrifying!
+> c. I think you're confused about the difference between coumarin and coumadin.
+
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidabcc
+
+Wait, really?
+
+> a. Yeah, see, couma<em>rin</em> is the thing that shows up in fake vanilla, and couma<em>din</em> (also known as warfarin) is the blood-thinning drug that doubles as rat poison (though it isn't technically poisonous of course, just harmful in large doses, like many drugs).  They're similar, and the one is used to make the other, but they're not actually the same thing.
+  b. No, not really.
+
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidabcca
+
+Wow!  So the vanilla stuff is fine, is what you're saying.
+
+> a. Oh no!  It causes liver and kidney damage, and it's banned as a food additive by the FDA.  It's legal in Mexico, though.
+
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidabccaa
+
+Gosh, I did not realize that!  Thanks, I learned something today!
+
+> a. No no, thank <em>you</em>.
+
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidabccaaa
 
 Okay, looks like that's it.  Thank you for playing this game, Emily.
 
-  a. My pleasure.
+> a. My pleasure.
   b. You're welcome.
   c. What a satisfying conclusion!
   d. Hold on, I have a question!
+
+#aaaaaaaaaaaaaaaaaaaaabacabaaaidabccaaaa
+
+THE END<iframe width="420" height="315" src="https://www.youtube.com/embed/gkA0AsTHUbY?rel=0" frameborder="0" allowfullscreen></iframe>
+
 

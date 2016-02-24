@@ -392,10 +392,9 @@ module.exports = qq [
             a "More than twelve hours."
         a "No."
     a "with someone I love", ->
-      @song = '0tgYr03o3dE'
       @love = true
       q "Think of a person you love.  How would you quantify your love for that person?",
-        a "0 -- I can't think of any such person.",
+        a "I can't think of any such person.",
           q "Why not?",
             a "Because I'm depressed and it's hard to feel things.",
               soundshard = q "Gosh.  That sounds hard.",
@@ -405,7 +404,7 @@ module.exports = qq [
               soundshard
             a "All of the above.", soundshard
             a "None of the above."
-        a "1 -- Meh.",
+        a "Meh.",
           theyloveyoumore = q "Do you feel like they love you more than you love them?",
             a "Yes, absolutely!",
               howdoyoufeel = q "How do you feel about this state of affairs?",
@@ -416,18 +415,26 @@ module.exports = qq [
             a "No way, definitely not.", howdoyoufeel
             a "Eh, maybe kinda mostly.", howdoyoufeel
             a "Not really, no?", howdoyoufeel
-        a "2 -- Pretty okay.", theyloveyoumore
-        a "3 -- Yep, lots.",
+        a "Pretty okay.", theyloveyoumore
+        a "Yep, lots.",
           normalamount = q "So like a normal amount?",
             a "Yes.", theyloveyoumore
             a "No, more than normal.",
               theyloveyouless = q "Do you feel like they love you less than you love them?",
                 a "Yep, no question.", howdoyoufeel
-                a "No way, in fact they love me even more!", howdoyoufeel
+                a "No way, in fact they love me even more!", ->
+                  @evenmore = true
+                  howdoyoufeel
                 a "Eh, about the same amount.", howdoyoufeel
             a "No, less than normal.", theyloveyoumore
-        a "4 -- OMG so much!", normalamount
-        a "5 -- Impossibly much!!!", theyloveyouless
+        a "OMG so much!", normalamount
+        a "Impossibly much!!!  <em>[Note: Do not choose this option.]</em>", ->
+          @impossibly = true
+          theyloveyouless
+  -> if @impossibly and @evenmore
+    q "Sounds pretty farfetched to me.",
+      a "Yeah, I'm just messing with you."
+      a "But it's true!", -> @song = ['aQc6Njdkw-E', 560]
 
   -> if @skullport
     q "So the capital of Canada is Skullport, huh?",
@@ -775,6 +782,7 @@ module.exports = qq [
   q "So did you play that game yet where you're a dog?",
     a "Yes.",
       q "What did you think of it?",
+        a "Meh."
         a "It was terrific!",
           q "Wow, really?  What did you like best about it?",
             a "I really liked that thing with Not-Your-Person!"
@@ -788,7 +796,6 @@ module.exports = qq [
                 a "No."
             a "The soundtrack was no good.", samegame
             a "The voice acting was terrible!", samegame
-        a "Meh."
     a "No.",
       q "Oh well you totally should!  It's really good!",
         a "Thanks, I'll keep an eye out for it!"
@@ -1094,7 +1101,8 @@ module.exports = qq [
                 a "Are you seriously offering to teach me CPR right now?",
                   q "Yes.",
                     a "Huh.  All right.",
-        a "What is CPR?",
+        a "What is CPR?", ->
+          @alreadydead = true
           q "Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!",
             a "Wow, sounds awesome!  Tell me more!"
             a "I don't think that's an accurate description.",
@@ -1203,58 +1211,14 @@ module.exports = qq [
     a "No.", liketolearn
 
   q "Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?",
-    a "Call 911.",
+    a "Call 911.", ->
+      @call911 = true
       q "Nice!  That is exactly correct!  Okay, so you dial and it's ringing and you're getting a recording about being transferred and not to hang up and what are you doing in the meantime?",
         a "Begin CPR.",
           q "Actually, if you're in a movie theater, there's a good chance that there's an AED in the lobby.  You might want to grab that first.",
             a "What's an AED?",
               q "It's an Automatic External Defribrillator.  It's a little doodad that can sense when a heart is malfunctioning and shock it back into its normal rhythm.",
-                a "Wow, that sounds super handy!  I would totally go look for one.",
-                  lookforaed = q "Okay!  You run into the lobby and... what are you looking for exactly?",
-                    a "A red heart with a spark in the middle.",
-                      redorgreen = q "Could be red or green.",
-                        rggotit = a "Got it.",
-                          q "Cool.  You find it and bring it back and open it up and it starts talking.  What now?",
-                            a "Stick the electrodes on the victim's chest.",
-                              q "Sure, there's a little diagram on there, and... wait, these go under the clothes, don't they?",
-                                a "Nope!  We're not doing this.  Sorry.",
-                                  q "That is okay!  Nobody is going to make you do anything you don't feel comfortable doing.",
-                                    a "Thank you."
-                                    a "Aren't you supposed to, like, tell me that they might die if I don't do this?",
-                                      q "Do you want me to tell you that?",
-                                        a "Yes.",
-                                          q "Why?",
-                                            a "Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it."
-                                            a "Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me."
-                                            a "Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?",
-                                              q "Sure thing.",
-                                                a "Thanks!"
-                                        a "No.",
-                                          q "Then I won't.",
-                                            a "Okay."
-                                        a "Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?",
-                                          q "I think I remember seeing a study somewhere that claimed there was a few percent chance, or else it would up the odds of someone's survival by a few percentage points, or something like that?  Not sure what I did with that paper.  This was for CPR performed by a bystander, mind you, not an AED.  Apparently AEDs are unambiguously super helpful, well into the double digit percentages.",
-                                            a "Huh."
-                                a "No problem, I pull their shirt up.",
-                                  q "Nice work!  You win at CPR!",
-                                    a "Awesome!"
-                                a "Wow, this is intense.  Maybe I should pay attention to what the voice is saying.",
-                                  listened = q "An excellent idea!  You know, they did this study where they found that schoolchildren were typically a bit better than adults at AED use because they did a better job of actually following the directions.",
-                                    a "Cool story bro."
-                                    a "Do you have, like, a citation or something?",
-                                      q "Eh, it's probably around here somewhere.",
-                                        a "That's not very convincing.",
-                                          q "Sure it is!  It's an anecdote.  Studies show that anecdotes about purported studies are significantly more effective at changing behaviors than citations.",
-                                            a "Neat."
-                                            a "What are you, like, xkcd or something now?",
-                                              q "Oh man, I wish!",
-                                                a "That makes two of us then."
-                            a "Wait and listen to what the AED is telling me to do.", listened
-                    a "A green heart with a lightning bolt in it.", redorgreen
-                    a "A little placard that says AED on it.",
-                      q "Yep, and it'll almost certainly have the symbol too, either the red or the green one.", rggotit
-                    a "Any of the above.",
-                      q "Yep, it'll likely have both the letters AED and the red or green symbol.", rggotit
+                a "Wow, that sounds super handy!  I would totally go look for one.", lookforaed
                 a "Yeah, thanks, I'm gonna leave that stuff for the professionals!",
                   q "Actually, AEDs are designed to be used by anyone.  Professional paramedics have way fancier gear.",
                     a "Yeah but I have no idea how to use one.",
@@ -1282,585 +1246,9 @@ module.exports = qq [
                   q "Nope!  Doesn't work that way.  You lose!",
                     a "If you say so."
                     a "Well that's dumb."
-            a "Good idea, I'll send someone to fetch it and do CPR in the meantime!",
-              cpr = ->
-                if @trained
-                  q "Okay, well!  You said earlier that you totally know CPR, so I assume that you would do a great job!  Flawless victory!",
-                    a "Gee, thanks!"
-                else
-                  q "Okay!  It's CPR time.  So what are you gonna do first?",
-                    a "Check the airway for obstructions.",
-                      supposedto = q "I think that's what you're supposed to do if you know what you're doing, which is good... wait, I thought you said you didn't know how to do CPR?",
-                        a "Yeah, if that was the right thing to do it was pure coincidence.",
-                          q "Okay, so I think the actual recommendation for someone in your situation is that you skip all the fancy stuff and go straight for chest compressions.  Ready?",
-                            a "Uh, sure....",
-                              compressions = q "Okay!  So you put one hand on top of the other and put the heel of the bottom hand on the person's chest, right about... where?",
-                                a "I don't know!  This is stressful!  I'm in a stressful situation!  Can't you just, like, educate me or whatever?",
-                                  q "Good idea!  So I believe the deal is that you want to put the heel of your hand pretty much exactly between the nipples.",
-                                    a "OK!  What next?"
-                                    a "I am suddenly uncomfortable with this.",
-                                      q "Okay, that's totally fair!  How about if we talk about something else?",
-                                        a "Thanks."
-                                a "Hands have heels now?  I could have sworn heels were for feet.",
-                                  q "Oh yeah!  It's like the front part of the hand, right next to where the wrist is?  Like, if you bend your hand back and pretend you're pressing it into, I don't know, somebody's ribcage, say, then the heel is the part that's in line with your arm, where all the force gets transferred.",
-                                    a "Cool, thanks!"
-                                    a "I'm still confused.",
-                                      picture = q "Yeah, this would be a lot easier if I could show you a picture.  Too bad this is a text adventure, huh?",
-                                        a "Yeah, too bad."
-                                        a "Don't you mean \"interactive fiction\"?",
-                                          q "But this isn't fiction.",
-                                            a "Good point!"
-                                            a "That's not what \"interactive fiction\" means, though.",
-                                              q "Well what does it mean?",
-                                                a "Uh... you know... like... text adventures....",
-                                                  q "Got it!",
-                                                    a "Good!"
-                                                a "I can't really explain it, but I know it when I see it.",
-                                                  q "Like pornography?",
-                                                    a "Yes, like pornography."
-                                                    a "<em>[sigh]</em>"
-                                                a "It's, you know, anything that fits into the pattern established by the pre-existing body of work that is generally agreed upon to already be interactive fiction.",
-                                                  q "Wait, so who decides what fits in and what doesn't?",
-                                                    a "The author.",
-                                                      q "Huh!  Sure, okay.",
-                                                        a "Yep, pretty straightforward."
-                                                    a "Well, see, there's kind of an informal ruling committee....",
-                                                      q "Really?  How's that work?",
-                                                        a "I'd tell you, but... well... you know....",
-                                                          q "Right.",
-                                                            a "Sorry.",
-                                                              q "No no, that's cool.",
-                                                                a "Oh good."
-                                                        a "We meet three times a year in a secret cavern under the Massive Auditorium."
-                                                        a "Basically you just enter your so-called game in IFComp, and if the average score is 4 or higher, it's interactive fiction, and if it's 3 or lower, it's not.",
-                                                          q "What if the average score is somewhere between 3 and 4?",
-                                                            a "Roshambo."
-                                                            a "Cage match."
-                                                            a "Length of longest sentence.",
-                                                              q "So... I'm assuming longer sentences are more IFfy?",
-                                                                a "Obviously."
-                                                    -> a "I, #{@fn} #{@ln}, decide this.",
-                                                      q "Wow!",
-                                                        a "Yep."
-                                                    a "Oh, usually Sam does it.  He's gotten really good at it!",
-                                                      q "Sam Ashwell?",
-                                                        a "Yeah!  Him!"
-                                                        a "No.  Different Sam.  Unrelated."
-                                                    a "Everybody decides for themselves.",
-                                                      q "Sounds a little chaotic.",
-                                                        a "You have no idea."
-                                                        a "Nah, it's pretty chill actually."
-                                                    a "Nobody, silly-head!  Your question is based on false assumptions!",
-                                                      q "Well how would you put it then?",
-                                                        a "I meant \"fit in\" as in physically.  Like a puzzle piece.  This is completely literal and not subject to interpretation.",
-                                                          q "That... uh... wow, sorry, that isn't anything like what I was expecting you to say.  Can you explain what you mean by that?  I'm having trouble picturing?",
-                                                            a "Yeah, it would help if I could show you a diagram."
-                                            a "You're wrong, this <em>is</em> fiction.",
-                                              q "How so?",
-                                                a "Well, like, I'm not <em>actually</em> giving CPR someone right now!  It's just a story.",
-                                                  q "I guess you could look at it that way?  I was thinking more of it being just like a hypothetical example of something.",
-                                                    a "Yeah but that's what fiction <em>is</em>.",
-                                                      q "I guess.",
-                                                        a "Search your feelings!  You know this to be true!"
-                                        a "Actually text adventures are totally allowed to have illustrations.",
-                                          q "Huh, good to know!  I guess I'll have to try including some of those next time.",
-                                            a "You really should!"
-                                            a "Oh, I didn't mean to sound like I was <em>recommending</em> illustrations, I was just pointing out that it's, you know, permissible.  Technically.",
-                                              q "Oh.  Well.  Thanks for the clarification!",
-                                                a "No problem!"
-                                a "Wait, I have to touch an unconscious stranger's chest?",
-                                  q "Hey, nobody's forcing you to do anything here.",
-                                    a "Good, cuz I'm out."
-                                    a "No, no, I should really finish what I started here.",
-                                      q "I don't know!  You seemed pretty squicked out back there.",
-                                        a "Yeah, I guess.  Never mind then."
-                                        a "\"Squicked out\"?",
-                                          q "You've never heard that expression?",
-                                            a "Nope, never.",
-                                              squicksplain = q """I think it was <span="redacted">Heath</span> <span="redacted">Hunnicut</span> who introduced me to the term, actually.  He explained... so you've heard of ear fisting?""",
-                                                a "No and I don't wanna kthxbi"
-                                                a "Please explain!",
-                                                  q "So <em>ear fisting</em> is a purely hypothetical kinky sex act in which you make a fist and stick it entirely into somebody's ear-hole.  Purely for rhetorical purposes, you understand.  And the hypothetical sound that it hypothetically makes when you hypothetically do this is <em>squick</em>, <em>squick</em>, <em>squick</em>.",
-                                                    a "AAAAAAAAAAAAAAAAAAAAAHHH!!!",
-                                                      q "Exactly!",
-                                                        a "Got it."
-                                            a "Sure, but I don't actually know what it means.", squicksplain
-                                a "I'm having trouble visualizing this hand position.", picture
-                                a "Which one is the bottom hand?",
-                                  q "Whichever.  Doesn't matter.",
-                                    a "Okay."
-                                    a "But then how do I know which one to put on their chest?", picture
-                                a "I'm panicking!  I'm panicking!", dontpanic
-                    a "Pull the head back to make space between the chin and the chest.", supposedto
-                    a "Grab my mask.",
-                      q "Wait, you have a mask?",
-                        a "Of course!  I keep a CPR mask with me at all times.",
-                          q "You said you weren't trained, though.  The thing about those masks is that even the professionals have a hard time with them sometimes.  I think what you're supposed to do in this situation is to just skip the rescue breathing and go straight to chest compressions.",
-                            a "Okay, I'll try to remember that next time this comes up."
-                        a "It's a hypothetical situation.  Can't we just pretend that I happened to have a CPR mask?",
-                          q "What, like, by pure coincidence?  Do you even own a CPR mask?",
-                            a "Well, no, but....",
-                              q "Yeah, see, I just don't think this is very realistic.",
-                                a "Fine, just forget it."
-                                a "When did you suddenly become concerned about realism?",
-                                  q "Realism is very important in a game like this!  Otherwise why would anybody play?",
-                                    a "Point taken."
-                                    a "What about fun?  Isn't fun more important than realism?",
-                                      q "I don't know about that.  I mean without realism, anything could happen!  It would just be a big free-for-all!  What are the odds of fun happening in such a chaotic environment?  Sounds pretty unlikely to me!",
-                                        a "Yeah, I guess you're right."
-                    a "Form a seal between their lips and mine.", supposedto
-                    a "Check for a pulse.", supposedto
-                    a "See if they're breathing.", supposedto
-                    a 'Shout "ARE YOU CHOKING?" in a loud voice.',
-                      q "That would totally be the right answer if we were doing the Heimlich maneuver, but we're doing CPR, so....",
-                        a "But I thought you said they collapsed suddenly at a movie theater!  What if they were just choking on a hot dog or something?",
-                          q "Gosh!  I guess... I guess they could be...?",
-                            a "Okay, so I try that!",
-                              q "And it totally works!  You shout so loud that they wake up and spit out the hot dog and the mayor gives you the key to the city and everything!",
-                                a "Hooray!"
-                    a "Apply a tourniquet to the jugular vein.",
-                      q "That is not a recommended medical procedure!",
-                        a "Well phooey."
-                        a "Cmon, I just got this fancy Israeli bandage on Amazon, it's perfect for tourniquets!  What else am I gonna do with this thing?",
-                          q "Aren't you supposed to just keep it in your purse at all times and hope that somebody has a horrible accident right in front of you so you can heroically save them with your preparedness?",
-                            a "Oh yeah, you're right."
-                    a "Begin chest compressions.", compressions
-                    a 'Shout "IS THERE A DOCTOR IN THE HOUSE?"',
-                      q "Good plan!  Turns out there is, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
-                        a "Hooray!"
-                    a "Whip out my smartphone and ask Siri or Google or whatever how to do CPR.",
-                      q "Okay, tell you what -- get out your phone right now and try that and tell me what you think of the result.",
-                        a "Wow, this is great!",
-                          q "Cool!  I guess that was a good plan then!  As long as you get signal inside the movie theater, anyway.",
-                            a "Hmm, good point."
-                            a "Eh, it's probably fine."
-                        a "Hmm, that was pretty disappointing.",
-                          q "Well, I guess that's good to know, isn't it?",
-                            a "I guess so!"
-                        a "I, uh, don't actually have my phone with me right now.",
-                          q "But if this had been an actual emergency, you would definitely have it with you?",
-                            a "Possibly not.",
-                              q "Do you see the problem here?",
-                                a "Yes.",
-                                  q "Try to come up with a better plan next time, all right?",
-                                    a "Okay."
-                                a "No.",
-                                  q "Then I guess everything is fine!",
-                                    a "Awesome!  I win at everything!"
-                            a "Yes, definitely!",
-                              q "Wow!  Good thinking!",
-                                a "Thanks!"
-        a "Go find an employee.",
-          employee = q "Hmm.  There's someone at the concession stand.",
-            a "Perfect!  I get in line.",
-              q "The line's pretty long.  It might be a while!",
-                a "Hmm, this doesn't seem worth it.  I guess I give up and go home."
-                a "This is important!  I stay in line.",
-                  q "Okay, you're getting closer to the front of the line now.",
-                    a "Good!",
-                      q "It's still pretty far though.",
-                        a "I continue to wait patiently in line.",
-                          q "Time passes.",
-                            a "z.z.z.z.z.",
-                              q "Suddenly you are at the front of the line!  What will you order?",
-                                a "Giant pretzel.",
-                                  delicious = q "Delicious!",
-                                    a "What now?"
-                                a "Popcorn.",
-                                  q "With butter?",
-                                    a "Obviously.",
-                                      excellentchoice = q "Excellent choice!",
-                                        a "What next?"
-                                    a "Nope.",
-                                      q "Good thinking!",
-                                        a "What next?"
-                                a "Box of candy.",
-                                  q "Mmmm... so what do you think of Candy Box 2?",
-                                    a "Never heard of it!",
-                                      q "Oh, you should check it out!  It's a text-based game, much like this one, only different!",
-                                        a "No thanks."
-                                        a "Where can I find this game?",
-                                          cb2link = q """It's at <a href="http://candybox2.net/" target="_blank">candybox2.net</a>.""",
-                                            a "Cool, thanks!"
-                                    a "I've heard of it but haven't played it.",
-                                      q "Have you played the original Candy Box, at least?",
-                                        a "Yes.",
-                                          q "What did you think of that one?",
-                                            a "Good!",
-                                              q "Then you should totally check out Candy Box 2!  It's by the same author and everything!",
-                                                a "Maybe later."
-                                                a "OMG show me it!", cb2link
-                                            a "Bad!"
-                                        a "No.",
-                                          q "Oh wow, you should check it out!  It's a text-based game, much like this one, but different!",
-                                            a "I'd rather not."
-                                            a "Cool, how can I find it?",
-                                              q """Just go to <a href="http://candies.aniwey.net/" target="_blank">candies.aniway.net</a>.""",
-                                                a "Thanks for the tip!"
-                                    a "Pretty good!"
-                                    a "Pretty bad!"
-                                a "Hot dog.", excellentchoice
-                                a "Pizza.",
-                                  q "You purchase the pizza, but later discover that this was a terrible, terrible mistake.",
-                                    a "Oh no!"
-                                a "Hot wings.",
-                                  q "Messy and delicious!",
-                                    a "Awww yeah."
-                                a "Mozarella sticks.",
-                                  q "With what sauce?",
-                                    a "Marinara.",
-                                      q "Classic!",
-                                        a "Yay!"
-                                    a "Ranch.",
-                                      q "Nice.",
-                                        a "Mmmmm."
-                                    a "Mayo.",
-                                      q "A bold decision!",
-                                        a "Yep, that's me."
-                                        a "I disagree."
-                                    a "BBQ.",
-                                      q "Good thinking!",
-                                        a "Indeed."
-                                    a "Honey mustard.",
-                                      q "The perfect accompaniment!",
-                                        a "Of course."
-                                    a "No sauce.",
-                                      q "That's right, keep it simple!",
-                                        a "Yes."
-                                -> a "Large #{@soda}.",
-                                  q "What kind?",
-                                    a "Coke."
-                                    a "Dr. Pepper."
-                                    a "Root beer."
-                                    a "Sprite."
-                                    a "Mountain Dew."
-                                    a "Pepsi."
-                                    a "7 Up."
-                                    a "Ginger ale."
-                                    a "Mr. Pibb."
-                                    a "Diet Coke."
-                                    a "Diet Dr. Pepper."
-                                a "Ice cream.",
-                                  q "Which kind?",
-                                    a "Cone.",
-                                      softserve = q "What flavor?",
-                                        a "Chocolate.",
-                                          toppings = q "Do you want hot fudge on that?",
-                                            a "Yes.",
-                                              toppings2 = q "Nuts?",
-                                                a "Yes.",
-                                                  q "Candy sprinkles?",
-                                                    a "Sure.",
-                                                      toppings3 = q "How about whipped cream?",
-                                                        a "Yes please.",
-                                                          q "With a cherry on top?",
-                                                            a "Yes!"
-                                                            a "No."
-#                                                            a "Is it one of those maraschino ones?",
-#                                                              a "Yep.  You want it or not?",
-#                                                                a "Yes."
-#                                                                a "No."
-                                                        a "No thank you."
-                                                    a "No thanks.", toppings3
-                                                a "No.",
-                                                  nutallergy = q "Are you by any chance allergic to tree nuts or other nuts?",
-                                                    a "Yes.",
-                                                      q "Any allergies to medications?",
-                                                        a "Yes."
-                                                        a "No."
-                                                        a "None that I know of...."
-                                                    a "No."
-                                                    a "Maybe.",
-                                                      q "Did you get tested?",
-                                                        a "Yes.",
-                                                          q "So what happened?",
-                                                            a "Results were inconclusive."
-                                                            a "I don't trust them."
-                                                            a "I don't remember."
-                                                            a "Haven't heard back yet."
-                                                        a "No.",
-                                                          q "Are you gonna?",
-                                                            a "Probably."
-                                                            a "Probably not.",
-                                                              q "Why not?",
-                                                                a "Don't wanna."
-                                                                a "Don't have insurance."
-                                                                a "Can't get a referral."
-                                                                a "It's pretty inconvenient."
-                                                                a "For good reasons I won't get into here."
-                                                                a "For stupid reasons I won't get into here."
-                                            a "No.", toppings2
-                                        a "Vanilla.",
-                                          q "So are you into BDSM?",
-                                            a "Yes.",
-                                              q "So would you say that the only vanilla thing about you is your ice cream preference?",
-                                                a "Yes, I would say that."
-                                                a "No, I would not say that."
-                                                a "What are you... what?"
-                                            a "No."
-                                            a "What is BDSM?",
-                                              q "It's, uh... it stands for something... can't you just look it up?",
-                                                a "Okay, I looked it up!",
-                                                  q "Where did you look it up?",
-                                                    a "Wikipedia.",
-                                                      q "Did you look at all the pictures?",
-                                                        a "Yes."
-                                                        a "No.",
-                                                          q "Well?  Are you going to go back and look at them?",
-                                                            a "Yes."
-                                                            a "No."
-                                                    a "Urban Dictionary.",
-                                                      howdthat = q "Yeah?  How'd that work out for you?",
-                                                        a "Surprisingly well."
-                                                        a "About like you'd expect."
-                                                    a "An actual physical dictionary made out of squashed trees.",
-                                                      q "Was it a library book?",
-                                                        a "Yes."
-                                                        a "No."
-                                                        a "It used to be, but it isn't anymore.",
-                                                          q "Because you stole it?",
-                                                            a "Yes, I stole it."
-                                                            a "No, it was, like, decommissioned or whatever."
-                                                    a "Google."
-                                                    a "Yahoo! Answers.", howdthat
-                                                    a "Asked somebody.",
-                                                      q "Who?",
-                                                        a "A friend."
-                                                        a "A family member."
-                                                        a "An acquaintance."
-                                                        a "A stranger."
-                                                        a "Myself.",
-                                                          q "Did the answer sound convincing?",
-                                                            a "Yes.",
-                                                              q "Good job.",
-                                                                a "Thanks."
-                                                            a "No."
-                                                        a "No one."
-                                                a "No, I'd rather not.",
-                                            a "That's none of your business!",
-                                              q "That's true.  You don't have to answer.",
-                                                a "Thank you."
-                                            a "Why are you asking me that?!",
-                                              q "Why do you think?",
-                                                a "Because you want to make me uncomfortable."
-                                                a "Because the idea excites you."
-                                                a "Because you're trying to make a stupid joke about ice cream."
-                                                a "All of the above."
-                                        a "Chocolate vanilla swirl.", toppings
-                                    a "Sundae.", softserve
-                                    a "Sandwich."
-                                    a "Bar on a stick.",
-                                      q "Okay, do you want the one with milk chocolate and nuts on the outside and vanilla ice cream inside, or the one with dark chocolate and no nuts on the outside and chocolate ice cream on the inside?",
-                                        a "Milk chocolate nuts vanilla.",
-                                          q "Why did you choose that one over the other one?",
-                                            a "Because I like milk chocolate better than dark chocolate."
-                                            a "Because I like vanilla ice cream better than chocolate ice cream.",
-                                              vanilla = q "Don't you worry about counterfeit vanilla?",
-                                                a "Yes."
-                                                a "No."
-                                                a "Is that a thing?",
-                                                  q "Absolutely!  There's this chemical, coumarin, that has a really intense vanilla flavor, even more intense than actual vanilla.  It's prescribed as a blood thinner, and it's also pretty commonly used as rat poison, because it kills by causing internal bleeding.  And sometimes it's abused by unscrupulous taste-criminals!",
-                                                    a "Wow, neat!"
-                                                    a "Gah, that's horrifying!"
-                                                    a "I think you're confused about the difference between coumarin and coumadin.",
-                                                      q "Wait, really?",
-                                                        a "Yeah, see, couma<em>rin</em> is the thing that shows up in fake vanilla, and couma<em>din</em> (also known as warfarin) is the blood-thinning drug that doubles as rat poison (though it isn't technically poisonous of course, just harmful in large doses, like many drugs).  They're similar, and the one is used to make the other, but they're not actually the same thing.",
-                                                          q "Wow!  So the vanilla stuff is fine, is what you're saying.",
-                                                            a "Oh no!  It causes liver and kidney damage, and it's banned as a food additive by the FDA.  It's legal in Mexico, though.",
-                                                              q "Gosh, I did not realize that!  Thanks, I learned something today!",
-                                                                a "No no, thank <em>you</em>."
-                                                        a "No, not really."
-                                            a "Because I like nuts better than no nuts."
-                                            a "They both sounded equally good but I went with this one."
-                                            a "They both sounded equally bad but I went with this one."
-                                            a "Eh, no reason."
-                                        a "Dark chocolate chocolate.",
-                                          q "Why did you choose that one over the other one?",
-                                            a "Because I like dark chocolate better than milk chocolate."
-                                            a "Because I like chocolate ice cream better than vanilla ice cream."
-                                            a "Because I like no nuts better than nuts.", nutallergy
-                                            a "They both sounded equally good but I went with this one."
-                                            a "They both sounded equally bad but I went with this one."
-                                            a "Eh, no reason."
-                                    a "Bar not on a stick.",
-                                      q "Hmm, looks like just those Snickers ones then.  Is that what you want?",
-                                        a "Yes.",
-                                          q "It's cold, yet satisfying.",
-                                            a "Okay."
-                                        a "No."
-                                    a "Cylindrical container.",
-                                      q "Which flavor?",
-                                        a "Vanilla.", vanilla
-                                        a "Rocky road.", -> @song = 'beTsDOBRs8I'
-                                        a "Mango sorbet.",
-                                          q "Why?",
-                                            a "Because I enjoy mango-flavored foods."
-                                            a "Because I enjoy mango-colored foods."
-                                            a "Because I enjoy mango-textured foods."
-                                            a "Because it sounded like it might be non-dairy."
-                                        a "Fudge brownie.",
-                                          q "Mmm, good choice.",
-                                            a "Thank you."
-                                            a "I agree."
-                                        a "Espresso bean.",
-                                          q "Why?",
-                                            a "Because it sounds cool."
-                                            a "Because it sounds different."
-                                            a "I enjoy the intense flavor."
-                                            a "I enjoy the stimulating effect."
-                                        a "Pistachio caramel.",
-                                          q "For the pistashio or for the caramel?",
-                                            a "Pistashios."
-                                            a "Caramel."
-                                            a "Both."
-                                            a "Neither."
-                                        a "Peaches and cream.", -> @song = 'wvAnQqVJ3XQ'
-                                        a "Chocolate peanut butter banana.",
-                                          q "It has a picture of Elvis on it.",
-                                            a "Nice."
-                                            a "Meh."
-                                -> if @ln != 'Veeder'
-                                  a "Enormous cupcake.",
-                                    q "What kind?",
-                                      a "Beelzebubblegum."
-                                      a "Cake-o-Lantern Spicy Pumpkin."
-                                      a "Creepy Candy Corn Creature."
-                                      a "Cupcake from the Black Lagoon."
-                                      a "Curse of the S'Mummy's S'Mores."
-                                      a "Double, Double, Toil and Truffle."
-                                      a "Frostingstein's Monster."
-                                      a "Neapolitomb."
-                                      a "Salted Calaveramel."
-                                      a "Scarecrow Guts."
-                                      a "Spookies and Cream."
-                                      a "Strawberry Venomade."
-                                      a "Hey, what's with all this cutesy Halloween-themed stuff?  Doesn't this place have any normal cupcakes?",
-                                        q "It is a joke!  Would you like me to explain it for you?",
-                                          a "Plz expln humor plz!",
-                                            q "I did not come up with any of those names myself -- instead, I blatantly stole them from Ryan Veeder!",
-                                              a "Wow, that's hilarous!  I am laughing so hard right now!"
-                                              a "Oh my gosh!  He's gonna be so pissed when he finds out you did that!",
-                                                q "I'm way ahead of you -- I set it up so that this branch will only be visible to non-Ryan Veeder players!",
-                                                  a "Good thinking!"
-                                                  a "Brilliant!"
-                                                  a "Phew!"
-                                              a "Well the joke's on you, my friend, because I've actually been Ryan Veeder <em>all along</em>!", ->
-                                                [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
-                                                q "Goodness me!  I did not anticipate this eventuality!  Whatsoever will become of me now?",
-                                                  a "Pain of forfeit, of course!",
-                                                    q "Noooooooooooooooooooooooooo!",
-                                                      a "Yeeeeeeeesssssssssss!"
-                                                      a "Okay fine geez.  I didn't think you were going to be such a wuss about it."
-                                                  a "Oh, don't worry, I'm just going to sue you for copyright infringement.",
-                                                    q "Oh thank goodness!  Thank you so much Mr. Veeder, sir!",
-                                                      a "You're welcome!"
-                                              a "I am unimpressed by these shenanigans."
-                                          a "No thanks."
-                                a "Chicken tenders.", delicious
-                                a "French fries.",
-                                  q "With what dipping sauce?",
-                                    a "Ketchup.",
-                                      q "Still the best.",
-                                        a "Yep."
-                                    a "Mayo.",
-                                      q "I'm not here to judge you, but sometimes it's difficult.",
-                                        a "Okay?"
-                                    a "Ketchup and mayo mixed together.",
-                                      q "Satisfactory!",
-                                        a "Okay."
-                                    a "Hot sauce and honey.",
-                                      nothere = q "Yeah... they don't have that here.",
-                                        a "Oh no!"
-                                    a "Malt vinegar.", nothere
-                                    a "Ponzu.", nothere
-                                    a "None.",
-                                      q "Extra salt, perhaps?",
-                                        a "Yes."
-                                        a "No."
-                                a "Huge candy bar.",
-                                  q "What kind?",
-                                    a "Baby Ruth",
-                                      q "Who was that named after?",
-                                        a "Babe Ruth, baseball player."
-                                        a "Ruth Cleveland, presidental granddaughter."
-                                        a "Ruth Williamson, granddaughter of a candy company executive."
-                                        a "Beats me."
-                                    a "Butterfinger",
-                                      q "Who appeared in ads for that?",
-                                        a "Bart Simpson."
-                                        a "Spuds MacKenzie."
-                                        a "Steve Urkel."
-                                        a "I have no idea what you're talking about."
-                                    a "Clark",
-                                      q "Who was that named after?",
-                                        a "Otey Clark, baseball pitcher."
-                                        a "David L. Clark, its inventor."
-                                        a "Clark Can't, a pet chinchilla."
-                                        a "Sorry, not a clue."
-                                    a "Heath",
-                                      q "Who was that named after?",
-                                        a "L.S. Heath, a schoolteacher."
-                                        a "Bayard Heath, a confectioner."
-                                        a "Edward Bayard Heath, founder and CEO."
-                                        a "I don't understand why you might think I would know this."
-                                    a "Kit Kat",
-                                      q "Why is it called that, anyway?",
-                                        a "An anonymous factory worker put the name in a suggestion box."
-                                        a "It's named after the Kit-Cat Club in London."
-                                        a "No one seems to know."
-                                        a "I don't know."
-                                    a "Milky Way",
-                                      q "What is that named after?",
-                                        a "A malted milk drink."
-                                        a "A boulevard in Akron."
-                                        a "The galaxy in which we live."
-                                        a "Who knows?"
-                                    a "Oh Henry",
-                                      q "Who was that named after?",
-                                        a "O. Henry, the author."
-                                        a "<em>Henry V</em>, a play by William Shakespeare."
-                                        a "Some boy who flirted with the girls who made the candy."
-                                        a "I am baffled by this question."
-                                    a "Payday",
-                                      q "Why is it called that, anyway?",
-                                        a "Because it happened to be pay day when they named it.  Obviously."
-                                        a "It's named after a movie."
-                                        a "Nobody knows."
-                                        a "Why do you... what... where do these questions even come from?  How would I possibly... I don't get this!  This is ridiculous!"
-                                    a "Skor",
-                                      q "Why is it called that, anyway?",
-                                        a "Because it sounds like the word \"score.\"",
-                                          q "So when someone gives you one, you triumphantly shout out its name?",
-                                            a "Uh... sure."
-                                        a "Because it's Swedish for \"shoes.\"",
-                                          q "That doesn't make any sense!",
-                                            a "Yes it does.",
-                                              q "Explain.",
-                                                a "Shoes are delicious!  They are made of cow, just like hamburgers, which are also delicious."
-                                                a "It's a Swedish delicacy, similar to Cuban <em>ropa vieja</em>, which literally translates to \"old clothes.\"  Except that <em>skor</em> is more of a dessert food, obviously."
-                                                a "I cannot explain this."
-                                            a "No, you're right."
-                                        a "It is a great mystery."
-                                    a "Snickers",
-                                      q "Why is it called that, anyway?",
-                                        a "It's named after a horse.",
-                                          q "Oh.  How'd you know that?",
-                                            a "Well, it was the only choice available."
-                                    a "Twix",
-                                      q "Why is it called that, anyway?",
-                                        a "Uhhhh... because there are two of them?",
-                                          q "I guess that would make sense.",
-                                            a "Probably!"
-                        a "I start a conversation with the person in front of me to help make the time pass more quickly.",
-                          q "What will you talk about?", # XXX
-                            a "News."
-                            a "Weather."
-                            a "Sports."
-                            a "Entertainment."
-                            a "Lifestyle."
-        a 'Shout "OMG, does anybody know CPR?"',
-          shoutomg = q "Good plan!  Turns out somebody does, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
-            a "Hooray!"
+            a "Good idea, I'll send someone to fetch it and do CPR in the meantime!", cpr
+        a "Go find an employee.", employee
+        a 'Shout "OMG, does anybody know CPR?"', shoutomg
         a "Run around in circles.",
           q "Good answer!  The American Heart Association recommends running in circles for thirty minutes a day, five days a week.",
             a "Hooray, I guessed it!",
@@ -1949,22 +1337,418 @@ module.exports = qq [
           q "After a minute, somebody picks up.  A few minutes later, the ambulance arrives and whisks their patient away, sirens blaring.  You never find out what happens next.",
             a "Cool."
             a "Yikes."
-        a "Panic.",
-          dontpanic = q "Don't panic!  Take slow, deep breaths.  Slow!  Focus on your breathing.  Slow breaths.  Deep.  That's it.  Close your eyes.  Keep breathing, don't hold your breath, just take it real slow and easy.",
-            a "Thanks, I feel a little better now."
-            a "Sorry, I closed my eyes and then I couldn't read the rest of what you said.",
-              q "Wait.  Are you reading this now?",
-                a "No, I'm just blindly selecting choices!  I hope this is working.",
-                  q "Okay, we can do this!  Listen carefully!  On the count of three, I want you to open your eyes again!  Okay?",
-                    a "It's too late for that now!  Just go on without me!",
-                      q "Nonsense!  Okay: ONE!",
-                        a "It's not working!",
-                          q "TWO!",
-                            a "I have no idea what number you're even on!",
-                              q "THREE!  Open your eyes!",
-                                a "Wow, I can't believe that worked!"
-    a 'Shout "OMG, does anybody know CPR?"', shoutomg
-    a "Go find an employee.", employee
+        a "Panic.", dontpanic
+    a 'Shout "OMG, does anybody know CPR?"',
+      shoutomg = q "Good plan!  Turns out somebody does, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
+        a "Hooray!"
+    a "Go find an employee.",
+      employee = q "Hmm.  There's someone at the concession stand.",
+        a "Perfect!  I get in line.",
+          q "The line's pretty long.  It might be a while!",
+            a "Hmm, this doesn't seem worth it.  I guess I give up and go home."
+            a "This is important!  I stay in line.",
+              q "Okay, you're getting closer to the front of the line now.",
+                a "Good!",
+                  q "It's still pretty far though.",
+                    a "I continue to wait patiently in line.",
+                      q "Time passes.",
+                        a "z.z.z.z.z.",
+                          q "Suddenly you are at the front of the line!  What will you order?",
+                            a "Giant pretzel.",
+                              delicious = q "Delicious!",
+                                a "What now?"
+                            a "Popcorn.",
+                              q "With butter?",
+                                a "Obviously.",
+                                  excellentchoice = q "Excellent choice!",
+                                    a "What next?"
+                                a "Nope.",
+                                  q "Good thinking!",
+                                    a "What next?"
+                            a "Box of candy.",
+                              q "Mmmm... so what do you think of Candy Box 2?",
+                                a "Never heard of it!",
+                                  q "Oh, you should check it out!  It's a text-based game, much like this one, only different!",
+                                    a "No thanks."
+                                    a "Where can I find this game?",
+                                      cb2link = q """It's at <a href="http://candybox2.net/" target="_blank">candybox2.net</a>.""",
+                                        a "Cool, thanks!"
+                                a "I've heard of it but haven't played it.",
+                                  q "Have you played the original Candy Box, at least?",
+                                    a "Yes.",
+                                      q "What did you think of that one?",
+                                        a "Good!",
+                                          q "Then you should totally check out Candy Box 2!  It's by the same author and everything!",
+                                            a "Maybe later."
+                                            a "OMG show me it!", cb2link
+                                        a "Bad!"
+                                    a "No.",
+                                      q "Oh wow, you should check it out!  It's a text-based game, much like this one, but different!",
+                                        a "I'd rather not."
+                                        a "Cool, how can I find it?",
+                                          q """Just go to <a href="http://candies.aniwey.net/" target="_blank">candies.aniway.net</a>.""",
+                                            a "Thanks for the tip!"
+                                a "Pretty good!"
+                                a "Pretty bad!"
+                            a "Hot dog.", excellentchoice
+                            a "Pizza.",
+                              q "You purchase the pizza, but later discover that this was a terrible, terrible mistake.",
+                                a "Oh no!"
+                            a "Hot wings.",
+                              q "Messy and delicious!",
+                                a "Awww yeah."
+                            a "Mozarella sticks.",
+                              q "With what sauce?",
+                                a "Marinara.",
+                                  q "Classic!",
+                                    a "Yay!"
+                                a "Ranch.",
+                                  q "Nice.",
+                                    a "Mmmmm."
+                                a "Mayo.",
+                                  q "A bold decision!",
+                                    a "Yep, that's me."
+                                    a "I disagree."
+                                a "BBQ.",
+                                  q "Good thinking!",
+                                    a "Indeed."
+                                a "Honey mustard.",
+                                  q "The perfect accompaniment!",
+                                    a "Of course."
+                                a "No sauce.",
+                                  q "That's right, keep it simple!",
+                                    a "Yes."
+                            -> a "Large #{@soda}.",
+                              q "What kind?",
+                                a "Coke."
+                                a "Dr. Pepper."
+                                a "Root beer."
+                                a "Sprite."
+                                a "Mountain Dew."
+                                a "Pepsi."
+                                a "7 Up."
+                                a "Ginger ale."
+                                a "Mr. Pibb."
+                                a "Diet Coke."
+                                a "Diet Dr. Pepper."
+                            a "Ice cream.",
+                              q "Which kind?",
+                                a "Cone.",
+                                  softserve = q "What flavor?",
+                                    a "Chocolate.",
+                                      toppings = q "Do you want hot fudge on that?",
+                                        a "Yes.",
+                                          toppings2 = q "Nuts?",
+                                            a "Yes.",
+                                              q "Candy sprinkles?",
+                                                a "Sure.",
+                                                  toppings3 = q "How about whipped cream?",
+                                                    a "Yes please.",
+                                                      q "With a cherry on top?",
+                                                        a "Yes!"
+                                                        a "No."
+#                                                            a "Is it one of those maraschino ones?",
+#                                                              a "Yep.  You want it or not?",
+#                                                                a "Yes."
+#                                                                a "No."
+                                                    a "No thank you."
+                                                a "No thanks.", toppings3
+                                            a "No.",
+                                              nutallergy = q "Are you by any chance allergic to tree nuts or other nuts?",
+                                                a "Yes.",
+                                                  q "Any allergies to medications?",
+                                                    a "Yes."
+                                                    a "No."
+                                                    a "None that I know of...."
+                                                a "No."
+                                                a "Maybe.",
+                                                  q "Did you get tested?",
+                                                    a "Yes.",
+                                                      q "So what happened?",
+                                                        a "Results were inconclusive."
+                                                        a "I don't trust them."
+                                                        a "I don't remember."
+                                                        a "Haven't heard back yet."
+                                                    a "No.",
+                                                      q "Are you gonna?",
+                                                        a "Probably."
+                                                        a "Probably not.",
+                                                          q "Why not?",
+                                                            a "Don't wanna."
+                                                            a "Don't have insurance."
+                                                            a "Can't get a referral."
+                                                            a "It's pretty inconvenient."
+                                                            a "For good reasons I won't get into here."
+                                                            a "For stupid reasons I won't get into here."
+                                        a "No.", toppings2
+                                    a "Vanilla.",
+                                      q "So are you into BDSM?",
+                                        a "Yes.",
+                                          q "So would you say that the only vanilla thing about you is your ice cream preference?",
+                                            a "Yes, I would say that."
+                                            a "No, I would not say that."
+                                            a "What are you... what?"
+                                        a "No."
+                                        a "What is BDSM?",
+                                          q "It's, uh... it stands for something... can't you just look it up?",
+                                            a "Okay, I looked it up!",
+                                              q "Where did you look it up?",
+                                                a "Wikipedia.",
+                                                  q "Did you look at all the pictures?",
+                                                    a "Yes."
+                                                    a "No.",
+                                                      q "Well?  Are you going to go back and look at them?",
+                                                        a "Yes."
+                                                        a "No."
+                                                a "Urban Dictionary.",
+                                                  howdthat = q "Yeah?  How'd that work out for you?",
+                                                    a "Surprisingly well."
+                                                    a "About like you'd expect."
+                                                a "An actual physical dictionary made out of squashed trees.",
+                                                  q "Was it a library book?",
+                                                    a "Yes."
+                                                    a "No."
+                                                    a "It used to be, but it isn't anymore.",
+                                                      q "Because you stole it?",
+                                                        a "Yes, I stole it."
+                                                        a "No, it was, like, decommissioned or whatever."
+                                                a "Google."
+                                                a "Yahoo! Answers.", howdthat
+                                                a "Asked somebody.",
+                                                  q "Who?",
+                                                    a "A friend."
+                                                    a "A family member."
+                                                    a "An acquaintance."
+                                                    a "A stranger."
+                                                    a "Myself.",
+                                                      q "Did the answer sound convincing?",
+                                                        a "Yes.",
+                                                          q "Good job.",
+                                                            a "Thanks."
+                                                        a "No."
+                                                    a "No one."
+                                            a "No, I'd rather not.",
+                                        a "That's none of your business!",
+                                          q "That's true.  You don't have to answer.",
+                                            a "Thank you."
+                                        a "Why are you asking me that?!",
+                                          q "Why do you think?",
+                                            a "Because you want to make me uncomfortable."
+                                            a "Because the idea excites you."
+                                            a "Because you're trying to make a stupid joke about ice cream."
+                                            a "All of the above."
+                                    a "Chocolate vanilla swirl.", toppings
+                                a "Sundae.", softserve
+                                a "Sandwich."
+                                a "Bar on a stick.",
+                                  q "Okay, do you want the one with milk chocolate and nuts on the outside and vanilla ice cream inside, or the one with dark chocolate and no nuts on the outside and chocolate ice cream on the inside?",
+                                    a "Milk chocolate nuts vanilla.",
+                                      q "Why did you choose that one over the other one?",
+                                        a "Because I like milk chocolate better than dark chocolate."
+                                        a "Because I like vanilla ice cream better than chocolate ice cream.",
+                                          vanilla = q "Don't you worry about counterfeit vanilla?",
+                                            a "Yes."
+                                            a "No."
+                                            a "Is that a thing?",
+                                              q "Absolutely!  There's this chemical, coumarin, that has a really intense vanilla flavor, even more intense than actual vanilla.  It's prescribed as a blood thinner, and it's also pretty commonly used as rat poison, because it kills by causing internal bleeding.  And sometimes it's abused by unscrupulous taste-criminals!",
+                                                a "Wow, neat!"
+                                                a "Gah, that's horrifying!"
+                                                a "I think you're confused about the difference between coumarin and coumadin.",
+                                                  q "Wait, really?",
+                                                    a "Yeah, see, couma<em>rin</em> is the thing that shows up in fake vanilla, and couma<em>din</em> (also known as warfarin) is the blood-thinning drug that doubles as rat poison (though it isn't technically poisonous of course, just harmful in large doses, like many drugs).  They're similar, and the one is used to make the other, but they're not actually the same thing.",
+                                                      q "Wow!  So the vanilla stuff is fine, is what you're saying.",
+                                                        a "Oh no!  It causes liver and kidney damage, and it's banned as a food additive by the FDA.  It's legal in Mexico, though.",
+                                                          q "Gosh, I did not realize that!  Thanks, I learned something today!",
+                                                            a "No no, thank <em>you</em>."
+                                                    a "No, not really."
+                                        a "Because I like nuts better than no nuts."
+                                        a "They both sounded equally good but I went with this one."
+                                        a "They both sounded equally bad but I went with this one."
+                                        a "Eh, no reason."
+                                    a "Dark chocolate chocolate.",
+                                      q "Why did you choose that one over the other one?",
+                                        a "Because I like dark chocolate better than milk chocolate."
+                                        a "Because I like chocolate ice cream better than vanilla ice cream."
+                                        a "Because I like no nuts better than nuts.", nutallergy
+                                        a "They both sounded equally good but I went with this one."
+                                        a "They both sounded equally bad but I went with this one."
+                                        a "Eh, no reason."
+                                a "Bar not on a stick.",
+                                  q "Hmm, looks like just those Snickers ones then.  Is that what you want?",
+                                    a "Yes.",
+                                      q "It's cold, yet satisfying.",
+                                        a "Okay."
+                                    a "No."
+                                a "Cylindrical container.",
+                                  q "Which flavor?",
+                                    a "Vanilla.", vanilla
+                                    a "Rocky road.", -> @song = 'beTsDOBRs8I'
+                                    a "Mango sorbet.",
+                                      q "Why?",
+                                        a "Because I enjoy mango-flavored foods."
+                                        a "Because I enjoy mango-colored foods."
+                                        a "Because I enjoy mango-textured foods."
+                                        a "Because it sounded like it might be non-dairy."
+                                    a "Fudge brownie.",
+                                      q "Mmm, good choice.",
+                                        a "Thank you."
+                                        a "I agree."
+                                    a "Espresso bean.",
+                                      q "Why?",
+                                        a "Because it sounds cool."
+                                        a "Because it sounds different."
+                                        a "I enjoy the intense flavor."
+                                        a "I enjoy the stimulating effect."
+                                    a "Pistachio caramel.",
+                                      q "For the pistashio or for the caramel?",
+                                        a "Pistashios."
+                                        a "Caramel."
+                                        a "Both."
+                                        a "Neither."
+                                    a "Peaches and cream.", -> @song = 'wvAnQqVJ3XQ'
+                                    a "Chocolate peanut butter banana.",
+                                      q "It has a picture of Elvis on it.",
+                                        a "Nice."
+                                        a "Meh."
+                            -> if @ln != 'Veeder'
+                              a "Enormous cupcake.",
+                                q "What kind?",
+                                  a "Beelzebubblegum."
+                                  a "Cake-o-Lantern Spicy Pumpkin."
+                                  a "Creepy Candy Corn Creature."
+                                  a "Cupcake from the Black Lagoon."
+                                  a "Curse of the S'Mummy's S'Mores."
+                                  a "Double, Double, Toil and Truffle."
+                                  a "Frostingstein's Monster."
+                                  a "Neapolitomb."
+                                  a "Salted Calaveramel."
+                                  a "Scarecrow Guts."
+                                  a "Spookies and Cream."
+                                  a "Strawberry Venomade."
+                                  a "Hey, what's with all this cutesy Halloween-themed stuff?  Doesn't this place have any normal cupcakes?",
+                                    q "It is a joke!  Would you like me to explain it for you?",
+                                      a "Plz expln humor plz!",
+                                        q "I did not come up with any of those names myself -- instead, I blatantly stole them from Ryan Veeder!",
+                                          a "Wow, that's hilarous!  I am laughing so hard right now!"
+                                          a "Oh my gosh!  He's gonna be so pissed when he finds out you did that!",
+                                            q "I'm way ahead of you -- I set it up so that this branch will only be visible to non-Ryan Veeder players!",
+                                              a "Good thinking!"
+                                              a "Brilliant!"
+                                              a "Phew!"
+                                          a "Well the joke's on you, my friend, because I've actually been Ryan Veeder <em>all along</em>!", ->
+                                            [@title, @fn, @ln] = ['Mr.', 'Ryan', 'Veeder']
+                                            q "Goodness me!  I did not anticipate this eventuality!  Whatsoever will become of me now?",
+                                              a "Pain of forfeit, of course!",
+                                                q "Noooooooooooooooooooooooooo!",
+                                                  a "Yeeeeeeeesssssssssss!"
+                                                  a "Okay fine geez.  I didn't think you were going to be such a wuss about it."
+                                              a "Oh, don't worry, I'm just going to sue you for copyright infringement.",
+                                                q "Oh thank goodness!  Thank you so much Mr. Veeder, sir!",
+                                                  a "You're welcome!"
+                                          a "I am unimpressed by these shenanigans."
+                                      a "No thanks."
+                            a "Chicken tenders.", delicious
+                            a "French fries.",
+                              q "With what dipping sauce?",
+                                a "Ketchup.",
+                                  q "Still the best.",
+                                    a "Yep."
+                                a "Mayo.",
+                                  q "I'm not here to judge you, but sometimes it's difficult.",
+                                    a "Okay?"
+                                a "Ketchup and mayo mixed together.",
+                                  q "Satisfactory!",
+                                    a "Okay."
+                                a "Hot sauce and honey.",
+                                  nothere = q "Yeah... they don't have that here.",
+                                    a "Oh no!"
+                                a "Malt vinegar.", nothere
+                                a "Ponzu.", nothere
+                                a "None.",
+                                  q "Extra salt, perhaps?",
+                                    a "Yes."
+                                    a "No."
+                            a "Huge candy bar.",
+                              q "What kind?",
+                                a "Baby Ruth",
+                                  q "Who was that named after?",
+                                    a "Babe Ruth, baseball player."
+                                    a "Ruth Cleveland, presidental granddaughter."
+                                    a "Ruth Williamson, granddaughter of a candy company executive."
+                                    a "Beats me."
+                                a "Butterfinger",
+                                  q "Who appeared in ads for that?",
+                                    a "Bart Simpson."
+                                    a "Spuds MacKenzie."
+                                    a "Steve Urkel."
+                                    a "I have no idea what you're talking about."
+                                a "Clark",
+                                  q "Who was that named after?",
+                                    a "Otey Clark, baseball pitcher."
+                                    a "David L. Clark, its inventor."
+                                    a "Clark Can't, a pet chinchilla."
+                                    a "Sorry, not a clue."
+                                a "Heath",
+                                  q "Who was that named after?",
+                                    a "L.S. Heath, a schoolteacher."
+                                    a "Bayard Heath, a confectioner."
+                                    a "Edward Bayard Heath, founder and CEO."
+                                    a "I don't understand why you might think I would know this."
+                                a "Kit Kat",
+                                  q "Why is it called that, anyway?",
+                                    a "An anonymous factory worker put the name in a suggestion box."
+                                    a "It's named after the Kit-Cat Club in London."
+                                    a "No one seems to know."
+                                    a "I don't know."
+                                a "Milky Way",
+                                  q "What is that named after?",
+                                    a "A malted milk drink."
+                                    a "A boulevard in Akron."
+                                    a "The galaxy in which we live."
+                                    a "Who knows?"
+                                a "Oh Henry",
+                                  q "Who was that named after?",
+                                    a "O. Henry, the author."
+                                    a "<em>Henry V</em>, a play by William Shakespeare."
+                                    a "Some boy who flirted with the girls who made the candy."
+                                    a "I am baffled by this question."
+                                a "Payday",
+                                  q "Why is it called that, anyway?",
+                                    a "Because it happened to be pay day when they named it.  Obviously."
+                                    a "It's named after a movie."
+                                    a "Nobody knows."
+                                    a "Why do you... what... where do these questions even come from?  How would I possibly... I don't get this!  This is ridiculous!"
+                                a "Skor",
+                                  q "Why is it called that, anyway?",
+                                    a "Because it sounds like the word \"score.\"",
+                                      q "So when someone gives you one, you triumphantly shout out its name?",
+                                        a "Uh... sure."
+                                    a "Because it's Swedish for \"shoes.\"",
+                                      q "That doesn't make any sense!",
+                                        a "Yes it does.",
+                                          q "Explain.",
+                                            a "Shoes are delicious!  They are made of cow, just like hamburgers, which are also delicious."
+                                            a "It's a Swedish delicacy, similar to Cuban <em>ropa vieja</em>, which literally translates to \"old clothes.\"  Except that <em>skor</em> is more of a dessert food, obviously."
+                                            a "I cannot explain this."
+                                        a "No, you're right."
+                                    a "It is a great mystery."
+                                a "Snickers",
+                                  q "Why is it called that, anyway?",
+                                    a "It's named after a horse.",
+                                      q "Oh.  How'd you know that?",
+                                        a "Well, it was the only choice available."
+                                a "Twix",
+                                  q "Why is it called that, anyway?",
+                                    a "Uhhhh... because there are two of them?",
+                                      q "I guess that would make sense.",
+                                        a "Probably!"
+                    a "I start a conversation with the person in front of me to help make the time pass more quickly.",
+                      q "What will you talk about?", # XXX
+                        a "News."
+                        a "Weather."
+                        a "Sports."
+                        a "Entertainment."
+                        a "Lifestyle."
     a "Hide.",
       q "Where will you hide?",
         a "Inside the projection booth.",
@@ -2154,7 +1938,52 @@ module.exports = qq [
     a "Run.",
       q "When you regain consciousness, you're lying face down, a short distance away from your car, which seems to have been engulfed in the greenish fog bank.  It smells like a swimming pool.",
         a "What a weird dream!", -> @dream = true
-    a "Look for an AED.", lookforaed
+    a "Look for an AED.",
+      lookforaed = q "Okay!  You run into the lobby and... what are you looking for exactly?",
+        a "A red heart with a spark in the middle.",
+          redorgreen = q "Could be red or green.",
+            rggotit = a "Got it.",
+              q "Cool.  You find it and bring it back and open it up and it starts talking.  What now?",
+                a "Stick the electrodes on the victim's chest.",
+                  q "Sure, there's a little diagram on there, and... wait, these go under the clothes, don't they?",
+                    a "Nope!  We're not doing this.  Sorry.",
+                      q "That is okay!  Nobody is going to make you do anything you don't feel comfortable doing.",
+                        a "Thank you."
+                        a "Aren't you supposed to, like, tell me that they might die if I don't do this?",
+                          q "Do you want me to tell you that?",
+                            a "Yes.",
+                              q "Why?",
+                                a "Because then we know where we stand.  You're trying to convince me to do something I already said don't want to do.  Don't try to pretend that you're not.  This is bullshit, and I want to call you on it."
+                                a "Because I know that I would totally not want to undress some random stranger, probably not even be able to do it, but I fear that maybe this is wrong and bad and I kinda want you to motivate me."
+                                a "Uh, wow, I... gosh.  I, uh, can't really get behind either of the above two options.  Can I just go with \"other\" or something?",
+                                  q "Sure thing.",
+                                    a "Thanks!"
+                            a "No.",
+                              q "Then I won't.",
+                                a "Okay."
+                            a "Well, is it true?  How likely is it, in a real scenario, that my doing this would actually save somebody's life?",
+                              q "I think I remember seeing a study somewhere that claimed there was a few percent chance, or else it would up the odds of someone's survival by a few percentage points, or something like that?  Not sure what I did with that paper.  This was for CPR performed by a bystander, mind you, not an AED.  Apparently AEDs are unambiguously super helpful, well into the double digit percentages.",
+                                a "Huh."
+                    a "No problem, I pull their shirt up.",
+                      q "Nice work!  You win at CPR!",
+                        a "Awesome!"
+                    a "Wow, this is intense.  Maybe I should pay attention to what the voice is saying.",
+                      listened = q "An excellent idea!  You know, they did this study where they found that schoolchildren were typically a bit better than adults at AED use because they did a better job of actually following the directions.",
+                        a "Cool story bro."
+                        a "Do you have, like, a citation or something?",
+                          q "Eh, it's probably around here somewhere.",
+                            a "That's not very convincing.",
+                              q "Sure it is!  It's an anecdote.  Studies show that anecdotes about purported studies are significantly more effective at changing behaviors than citations.",
+                                a "Neat."
+                                a "What are you, like, xkcd or something now?",
+                                  q "Oh man, I wish!",
+                                    a "That makes two of us then."
+                a "Wait and listen to what the AED is telling me to do.", listened
+        a "A green heart with a lightning bolt in it.", redorgreen
+        a "A little placard that says AED on it.",
+          q "Yep, and it'll almost certainly have the symbol too, either the red or the green one.", rggotit
+        a "Any of the above.",
+          q "Yep, it'll likely have both the letters AED and the red or green symbol.", rggotit
     a "Stand around doing nothing.",
       q "You stand around.  People are looking, but nobody is saying anything.  Everyone seems sort of embarrassed.  Eventually, an ambulance shows up, but by then it's too late.  You have failed!",
         a "Oh well."
@@ -2172,8 +2001,254 @@ module.exports = qq [
               q "Then I'm afraid you are powerless!",
                 a "Okay."
                 a "Booo!  Hiss!"
-    a "Panic.", dontpanic
-    a "Give CPR.", cpr
+    a "Panic.",
+      dontpanic = q "Don't panic!  Take slow, deep breaths.  Slow!  Focus on your breathing.  Slow breaths.  Deep.  That's it.  Close your eyes.  Keep breathing, don't hold your breath, just take it real slow and easy.",
+        a "Thanks, I feel a little better now."
+        a "Sorry, I closed my eyes and then I couldn't read the rest of what you said.",
+          q "Wait.  Are you reading this now?",
+            a "No, I'm just blindly selecting choices!  I hope this is working.",
+              q "Okay, we can do this!  Listen carefully!  On the count of three, I want you to open your eyes again!  Okay?",
+                a "It's too late for that now!  Just go on without me!",
+                  q "Nonsense!  Okay: ONE!",
+                    a "It's not working!",
+                      q "TWO!",
+                        a "I have no idea what number you're even on!",
+                          q "THREE!  Open your eyes!",
+                            a "Wow, I can't believe that worked!"
+    a "Give CPR.",
+      cpr = ->
+        if @trained
+          q "Okay, well!  You said earlier that you totally know CPR, so I assume that you would do a great job!  Flawless victory!",
+            a "Gee, thanks!"
+        else
+          q "Okay!  It's CPR time.  So what are you gonna do first?",
+            a "Check the airway for obstructions.",
+              supposedto = q "I think that's what you're supposed to do if you know what you're doing, which is good... wait, I thought you said you didn't know how to do CPR?",
+                a "Yeah, if that was the right thing to do it was pure coincidence.",
+                  q "Okay, so I think the actual recommendation for someone in your situation is that you skip all the fancy stuff and go straight for chest compressions.  Ready?",
+                    a "Uh, sure....",
+                      compressions = q "Okay!  So you put one hand on top of the other and put the heel of the bottom hand on the person's chest, right about... where?",
+                        a "I don't know!  This is stressful!  I'm in a stressful situation!  Can't you just, like, educate me or whatever?",
+                          q "Good idea!  So I believe the deal is that you want to put the heel of your hand pretty much exactly between the nipples.",
+                            a "OK!  What next?",
+                              q "Now all you have to do is press down so hard that you crush their heart.",
+                                a "Got it!  And after that?", ->
+                                  @song = 'I_izvAbhExY'
+                                  if @love then @song = 'ZBR2G-iI3-I'
+                                  q "Keep crushing their heart, to the rhythm of that one song, until the EMTs show up.",
+                                    a "Right, got it."
+                                    a "Which song?",
+                                      q "It's on the tip of my tongue... maybe I'll remember later.",
+                                        a "Okay."
+                                    a "Wait.  EMTs?", ->
+                                      if @call911
+                                        q "Emergency medical technicians.  From when you called 911 earlier.",
+                                          a "Oh, right."
+                                          a "What if they don't show up?", # XXX what about an AED?
+                                            q "Well then whoever this is will most likely die.",
+                                              a "Okay."
+                                              a "But that's horrible!",
+                                                q "Yes.  Yes it is.",
+                                                  a "Thank you for acknowledging that!"
+                                                  a "But it'll be my fault!",
+                                                    q "Nope.  Not your fault.  You did what you could.",
+                                                      a "That's true."
+                                                      a "But I could have done more.",
+                                                        q "We're not even talking about this hypothetical scenario anymore, are we?",
+                                                          a "Yes we are.",
+                                                            youdidyourbest = q "It's always tempting to say \"I could have done more,\" because it always <em>seems</em> like... I mean you can <em>imagine</em> having done more, right?  Just one teeny little thing?  But at a certain point it stops being true.  Just because you can easily imagine something doesn't make it <em>possible</em>.  Much as you might wish otherwise, you can only do so much.  You did your best.  Okay?",
+                                                              a "Yeah, okay.  I did my best."
+                                                              a "No.  It's not okay.  There is nothing about this that is okay.",
+                                                                q "I'm sorry.",
+                                                                  a "Thanks."
+                                                                  a """<span class="redacted">$@^#</span> you."""
+                                                          a "No.  We're not.", youdidyourbest
+                                                          a "I don't even know anymore.", youdidyourbest
+                                              a "But they're going to show up, right?",
+                                                q "Yes.",
+                                                  a "Phew."
+                                      else
+                                        q "Emergency medical technicians.  You remembered to call 911, right?",
+                                          a "Uh...",
+                                            q "It's okay, somebody over by the drinking fountain called them and they're on their way.  But try to remember to get that started earlier next time, okay?  This is not an ideal situation you've gotten yourself into here.",
+                                              a "Okay, I'll remember."
+                                a "You can't be serious.",
+                                  q "I am 100% serious.  The entire point is to press so hard that you squeeze the blood out of the heart and into the arteries, and then when you let go more blood rushes in from the veins, and so on.  To pump blood through the body.  So they don't die.",
+                                    a "Yeah well that's not the same thing as <em>crushing</em> their heart!"
+                                    a "I thought you said they were already dead?", ->
+                                      if not @alreadydead
+                                        q "Not in this playthrough, I didn't.",
+                                          a "Oh snap!"
+                                      else
+                                        q "Well so they don't get any deader, then.  So more bits of them don't die.",
+                                          a "Okay, that makes sense."
+                                          a "Like the kidneys?",
+                                            q "Yes, actually!  Kidneys are important.  I mean you can survive without them, but it's not exactly convenient.",
+                                              a "Huh."
+                                          a "Like the brain?",
+                                            q "Yes, that is an excellent example of an organ that people get pretty attached to.",
+                                              a "Got it."
+                                          a "Like the heart?",
+                                            q "Yes, actually -- pumping blood through the heart keeps the heart muscle from dying.  Which is important in this situation.",
+                                              a "Makes sense."
+                                              a "That doesn't make any sense.  Isn't the heart already dead at this point?",
+                                                q "No, it's not.  This person collapsed a few seconds ago, right?  It takes a bit longer than that for the heart to die.  Often what's going on in these situations is that the heart is fibrillating -- it's sort of sitting there twitching ineffectively, but it's not dead yet.",
+                                                  a "I see."
+                                          a "Like the hair?",
+                                            q "No, not like that.  That doesn't count.  Hair is not alive.",
+                                              a "You're no fun."
+                            a "I am suddenly uncomfortable with this.",
+                              q "Okay, that's totally fair!  How about if we talk about something else?",
+                                a "Thanks."
+                        a "Hands have heels now?  I could have sworn heels were for feet.",
+                          q "Oh yeah!  It's like the front part of the hand, right next to where the wrist is?  Like, if you bend your hand back and pretend you're pressing it into, I don't know, somebody's ribcage, say, then the heel is the part that's in line with your arm, where all the force gets transferred.",
+                            a "Cool, thanks!"
+                            a "I'm still confused.",
+                              picture = q "Yeah, this would be a lot easier if I could show you a picture.  Too bad this is a text adventure, huh?",
+                                a "Yeah, too bad."
+                                a "Don't you mean \"interactive fiction\"?",
+                                  q "But this isn't fiction.",
+                                    a "Good point!"
+                                    a "That's not what \"interactive fiction\" means, though.",
+                                      q "Well what does it mean?",
+                                        a "Uh... you know... like... text adventures....",
+                                          q "Got it!",
+                                            a "Good!"
+                                        a "I can't really explain it, but I know it when I see it.",
+                                          q "Like pornography?",
+                                            a "Yes, like pornography."
+                                            a "<em>[sigh]</em>"
+                                        a "It's, you know, anything that fits into the pattern established by the pre-existing body of work that is generally agreed upon to already be interactive fiction.",
+                                          q "Wait, so who decides what fits in and what doesn't?",
+                                            a "The author.",
+                                              q "Huh!  Sure, okay.",
+                                                a "Yep, pretty straightforward."
+                                            a "Well, see, there's kind of an informal ruling committee....",
+                                              q "Really?  How's that work?",
+                                                a "I'd tell you, but... well... you know....",
+                                                  q "Right.",
+                                                    a "Sorry.",
+                                                      q "No no, that's cool.",
+                                                        a "Oh good."
+                                                a "We meet three times a year in a secret cavern under the Massive Auditorium."
+                                                a "Basically you just enter your so-called game in IFComp, and if the average score is 4 or higher, it's interactive fiction, and if it's 3 or lower, it's not.",
+                                                  q "What if the average score is somewhere between 3 and 4?",
+                                                    a "Roshambo."
+                                                    a "Cage match."
+                                                    a "Length of longest sentence.",
+                                                      q "So... I'm assuming longer sentences are more IFfy?",
+                                                        a "Obviously."
+                                            -> a "I, #{@fn} #{@ln}, decide this.",
+                                              q "Wow!",
+                                                a "Yep."
+                                            a "Oh, usually Sam does it.  He's gotten really good at it!",
+                                              q "Sam Ashwell?",
+                                                a "Yeah!  Him!"
+                                                a "No.  Different Sam.  Unrelated."
+                                            a "Everybody decides for themselves.",
+                                              q "Sounds a little chaotic.",
+                                                a "You have no idea."
+                                                a "Nah, it's pretty chill actually."
+                                            a "Nobody, silly-head!  Your question is based on false assumptions!",
+                                              q "Well how would you put it then?",
+                                                a "I meant \"fit in\" as in physically.  Like a puzzle piece.  This is completely literal and not subject to interpretation.",
+                                                  q "That... uh... wow, sorry, that isn't anything like what I was expecting you to say.  Can you explain what you mean by that?  I'm having trouble picturing?",
+                                                    a "Yeah, it would help if I could show you a diagram."
+                                    a "You're wrong, this <em>is</em> fiction.",
+                                      q "How so?",
+                                        a "Well, like, I'm not <em>actually</em> giving CPR someone right now!  It's just a story.",
+                                          q "I guess you could look at it that way?  I was thinking more of it being just like a hypothetical example of something.",
+                                            a "Yeah but that's what fiction <em>is</em>.",
+                                              q "I guess.",
+                                                a "Search your feelings!  You know this to be true!"
+                                a "Actually text adventures are totally allowed to have illustrations.",
+                                  q "Huh, good to know!  I guess I'll have to try including some of those next time.",
+                                    a "You really should!"
+                                    a "Oh, I didn't mean to sound like I was <em>recommending</em> illustrations, I was just pointing out that it's, you know, permissible.  Technically.",
+                                      q "Oh.  Well.  Thanks for the clarification!",
+                                        a "No problem!"
+                        a "Wait, I have to touch an unconscious stranger's chest?",
+                          q "Hey, nobody's forcing you to do anything here.",
+                            a "Good, cuz I'm out."
+                            a "No, no, I should really finish what I started here.",
+                              q "I don't know!  You seemed pretty squicked out back there.",
+                                a "Yeah, I guess.  Never mind then."
+                                a "\"Squicked out\"?",
+                                  q "You've never heard that expression?",
+                                    a "Nope, never.",
+                                      squicksplain = q """I think it was <span="redacted">Heath</span> <span="redacted">Hunnicut</span> who introduced me to the term, actually.  He explained... so you've heard of ear fisting?""",
+                                        a "No and I don't wanna kthxbi"
+                                        a "Please explain!",
+                                          q "So <em>ear fisting</em> is a purely hypothetical kinky sex act in which you make a fist and stick it entirely into somebody's ear-hole.  Purely for rhetorical purposes, you understand.  And the hypothetical sound that it hypothetically makes when you hypothetically do this is <em>squick</em>, <em>squick</em>, <em>squick</em>.",
+                                            a "AAAAAAAAAAAAAAAAAAAAAHHH!!!",
+                                              q "Exactly!",
+                                                a "Got it."
+                                    a "Sure, but I don't actually know what it means.", squicksplain
+                        a "I'm having trouble visualizing this hand position.", picture
+                        a "Which one is the bottom hand?",
+                          q "Whichever.  Doesn't matter.",
+                            a "Okay."
+                            a "But then how do I know which one to put on their chest?", picture
+                        a "I'm panicking!  I'm panicking!", dontpanic
+            a "Pull the head back to make space between the chin and the chest.", supposedto
+            a "Grab my mask.",
+              q "Wait, you have a mask?",
+                a "Of course!  I keep a CPR mask with me at all times.",
+                  q "You said you weren't trained, though.  The thing about those masks is that even the professionals have a hard time with them sometimes.  I think what you're supposed to do in this situation is to just skip the rescue breathing and go straight to chest compressions.",
+                    a "Okay, I'll try to remember that next time this comes up."
+                a "It's a hypothetical situation.  Can't we just pretend that I happened to have a CPR mask?",
+                  q "What, like, by pure coincidence?  Do you even own a CPR mask?",
+                    a "Well, no, but....",
+                      q "Yeah, see, I just don't think this is very realistic.",
+                        a "Fine, just forget it."
+                        a "When did you suddenly become concerned about realism?",
+                          q "Realism is very important in a game like this!  Otherwise why would anybody play?",
+                            a "Point taken."
+                            a "What about fun?  Isn't fun more important than realism?",
+                              q "I don't know about that.  I mean without realism, anything could happen!  It would just be a big free-for-all!  What are the odds of fun happening in such a chaotic environment?  Sounds pretty unlikely to me!",
+                                a "Yeah, I guess you're right."
+            a "Form a seal between their lips and mine.", supposedto
+            a "Check for a pulse.", supposedto
+            a "See if they're breathing.", supposedto
+            a 'Shout "ARE YOU CHOKING?" in a loud voice.',
+              q "That would totally be the right answer if we were doing the Heimlich maneuver, but we're doing CPR, so....",
+                a "But I thought you said they collapsed suddenly at a movie theater!  What if they were just choking on a hot dog or something?",
+                  q "Gosh!  I guess... I guess they could be...?",
+                    a "Okay, so I try that!",
+                      q "And it totally works!  You shout so loud that they wake up and spit out the hot dog and the mayor gives you the key to the city and everything!",
+                        a "Hooray!"
+            a "Apply a tourniquet to the jugular vein.",
+              q "That is not a recommended medical procedure!",
+                a "Well phooey."
+                a "Cmon, I just got this fancy Israeli bandage on Amazon, it's perfect for tourniquets!  What else am I gonna do with this thing?",
+                  q "Aren't you supposed to just keep it in your purse at all times and hope that somebody has a horrible accident right in front of you so you can heroically save them with your preparedness?",
+                    a "Oh yeah, you're right."
+            a "Begin chest compressions.", compressions
+            a 'Shout "IS THERE A DOCTOR IN THE HOUSE?"',
+              q "Good plan!  Turns out there is, over by the drinking fountains, and they totally save the day thanks to your quick thinking!",
+                a "Hooray!"
+            a "Whip out my smartphone and ask Siri or Google or whatever how to do CPR.",
+              q "Okay, tell you what -- get out your phone right now and try that and tell me what you think of the result.",
+                a "Wow, this is great!",
+                  q "Cool!  I guess that was a good plan then!  As long as you get signal inside the movie theater, anyway.",
+                    a "Hmm, good point."
+                    a "Eh, it's probably fine."
+                a "Hmm, that was pretty disappointing.",
+                  q "Well, I guess that's good to know, isn't it?",
+                    a "I guess so!"
+                a "I, uh, don't actually have my phone with me right now.",
+                  q "But if this had been an actual emergency, you would definitely have it with you?",
+                    a "Possibly not.",
+                      q "Do you see the problem here?",
+                        a "Yes.",
+                          q "Try to come up with a better plan next time, all right?",
+                            a "Okay."
+                        a "No.",
+                          q "Then I guess everything is fine!",
+                            a "Awesome!  I win at everything!"
+                    a "Yes, definitely!",
+                      q "Wow!  Good thinking!",
+                        a "Thanks!"
     a "Don't give CPR.",
       q "Little do these fools realize that you've been planted here as part of an elaborate large-scale experiment to determine the effectiveness of proper CPR techniques in naturalistic conditions!  You are part of the control group.  Your job is to perform \"sham CPR\" on this unfortunate victim.  What will you do first?",
         a "Poke them with needles.",
@@ -2292,7 +2367,7 @@ module.exports = qq [
                   a "Okay."
               else
                 q "Ryan Veeder appears and solves all of your problems!",
-                  a "Thanks Ryan Veeder!"
+                  a "Thanks, Ryan Veeder!"
                   a "But I <em>liked</em> having problems.",
                     q "Well!  In that case, Ryan reaches deep into the folds of his voluminous robe and produces...",
                       a "...a crow."

@@ -1,0 +1,331 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+> a. Emily
+  b. Jenni
+  c. Ryan
+
+#aa
+
+And your last name?
+
+> a. Boegheim
+  b. Carroll
+  c. Ryan
+  d. Short
+
+#aaa
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#aaaa
+
+Hold on.  Are you the <em>real</em> Emily Boegheim?
+
+> a. Yes.
+  b. No.
+
+#aaaaa
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#aaaaaa
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#aaaaaaa
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#aaaaaaaa
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#aaaaaaaaa
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#aaaaaaaaaa
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#aaaaaaaaaaa
+
+Why do you say that?
+
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#aaaaaaaaaaaa
+
+What goes between two sentences?
+
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
+  e. It depends.
+
+#aaaaaaaaaaaaa
+
+A "football" is...
+
+> a. ...an inflated sphere that can be kicked with the feet and head.
+  b. ...a two-pointed air pocket that can be thrown in a spiral pattern.
+  c. ...a folded piece of paper that can be flicked across a classroom.
+  d. ...a bumpy hemisphere one can stand on in order to massage the feet.
+
+#aaaaaaaaaaaaaa
+
+Pick one:
+
+> a. A.
+  b. B.
+  c. C.
+  d. D.
+
+#aaaaaaaaaaaaaaa
+
+Again!
+
+> a. Fit.
+  b. Finish.
+  c. Form.
+  d. Function.
+
+#aaaaaaaaaaaaaaaa
+
+Faster!
+
+> a. Grammarian.
+  b. Ghoulishly.
+  c. Gleamingly.
+  d. Gynecology.
+  e. Glaciation.
+  f. Groundwork.
+  g. Gluttonous.
+  h. Gorgonzola.
+  i. Guillotine.
+  j. Geophysics.
+  k. Guilefully.
+  l. Gunrunning.
+  m. Gastronomy.
+  n. Gamekeeper.
+  o. Graduation.
+  p. Grapefruit.
+  q. Gentlefolk.
+  r. Grisliness.
+  s. Gratuitous.
+  t. Gloominess.
+
+#aaaaaaaaaaaaaaaaa
+
+Lorem ipsum dolor sit...
+
+> a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+#aaaaaaaaaaaaaaaaaa
+
+So did you play that game yet where you're a dog?
+
+> a. Yes.
+  b. No.
+  c. Wait, which one?
+
+#aaaaaaaaaaaaaaaaaaa
+
+What did you think of it?
+
+> a. Meh.
+  b. It was terrific!
+  c. It was terrible.
+
+#aaaaaaaaaaaaaaaaaaaa
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+> a. Soda.
+  b. Pop.
+  c. Coke.
+
+#aaaaaaaaaaaaaaaaaaaaa
+
+Do you know CPR?
+
+> a. Yes.
+  b. No.
+
+#aaaaaaaaaaaaaaaaaaaaaa
+
+So you've, like, been trained and stuff?
+
+> a. Yep, I'm certified and everything.
+  b. I was certified but it expired.
+  c. I'm not certified, but I like took a course or something.
+  d. No formal training, but I've studied some things and I feel pretty confident.
+  e. Ehhh.. you know what, I don't actually know CPR all that well, if at all.
+  f. What is CPR?
+
+#aaaaaaaaaaaaaaaaaaaaaaa
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+  a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+> c. Go find an employee.
+  d. Hide.
+  e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+  i. Give CPR.
+  j. Don't give CPR.
+
+#aaaaaaaaaaaaaaaaaaaaaaac
+
+Hmm.  There's someone at the concession stand.
+
+> a. Perfect!  I get in line.
+
+#aaaaaaaaaaaaaaaaaaaaaaaca
+
+The line's pretty long.  It might be a while!
+
+  a. Hmm, this doesn't seem worth it.  I guess I give up and go home.
+> b. This is important!  I stay in line.
+
+#aaaaaaaaaaaaaaaaaaaaaaacab
+
+Okay, you're getting closer to the front of the line now.
+
+> a. Good!
+
+#aaaaaaaaaaaaaaaaaaaaaaacaba
+
+It's still pretty far though.
+
+> a. I continue to wait patiently in line.
+  b. I start a conversation with the person in front of me to help make the time pass more quickly.
+
+#aaaaaaaaaaaaaaaaaaaaaaacabaa
+
+Time passes.
+
+> a. z.z.z.z.z.
+
+#aaaaaaaaaaaaaaaaaaaaaaacabaaa
+
+Suddenly you are at the front of the line!  What will you order?
+
+  a. Giant pretzel.
+  b. Popcorn.
+  c. Box of candy.
+  d. Hot dog.
+  e. Pizza.
+  f. Hot wings.
+  g. Mozarella sticks.
+  h. Large soda.
+  i. Ice cream.
+  j. Enormous cupcake.
+  k. Chicken tenders.
+  l. French fries.
+> m. Huge candy bar.
+
+#aaaaaaaaaaaaaaaaaaaaaaacabaaam
+
+What kind?
+
+  a. Baby Ruth
+  b. Butterfinger
+  c. Clark
+  d. Heath
+  e. Kit Kat
+  f. Milky Way
+  g. Oh Henry
+  h. Payday
+  i. Skor
+> j. Snickers
+  k. Twix
+
+#aaaaaaaaaaaaaaaaaaaaaaacabaaamj
+
+Why is it called that, anyway?
+
+> a. It's named after a horse.
+
+#aaaaaaaaaaaaaaaaaaaaaaacabaaamja
+
+Oh.  How'd you know that?
+
+> a. Well, it was the only choice available.
+
+#aaaaaaaaaaaaaaaaaaaaaaacabaaamjaa
+
+Okay, looks like that's it.  Thank you for playing this game, Emily.
+
+  a. My pleasure.
+  b. You're welcome.
+  c. What a satisfying conclusion!
+  d. Hold on, I have a question!
+

@@ -1,0 +1,349 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+  a. Emily
+> b. Jenni
+  c. Ryan
+
+#ab
+
+And your last name?
+
+  a. Earl
+  b. Jorgensen
+  c. Maddox
+  d. Polodna
+> e. Vedenoja
+
+#abe
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+  a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+> d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#abed
+
+Hold on.  Are you the <em>real</em> Jenni Vedenoja?
+
+  a. Yes.
+> b. No.
+
+#abedb
+
+So you were just lying to my face earlier?
+
+  a. Yes.
+> b. No.
+
+#abedbb
+
+So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> Jenni Vedenoja?  Is that it?
+
+  a. Yes.
+> b. No.
+
+#abedbbb
+
+So you <em>are</em> Jenni Vedenoja!  I knew it!
+
+> a. Yep, you figured it out all right.
+
+#abedbbba
+
+So.  What's the capital of Canada?
+
+  a. Manitoba
+  b. Nunavut
+> c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#abedbbbac
+
+And what is an apocalypse?
+
+  a. An Oscar winner.
+  b. A revelation from God.
+> c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#abedbbbacc
+
+All right, in that case... what does "grue" mean to you?
+
+  a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+> d. It's a device for preventing adventurers from wandering in the dark.
+
+#abedbbbaccd
+
+Very good!  Now, which of these would you rather be?
+
+  a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+> h. with someone I love
+
+#abedbbbaccdh
+
+Think of a person you love.  How would you quantify your love for that person?
+
+  a. I can't think of any such person.
+  b. Meh.
+  c. Pretty okay.
+  d. Yep, lots.
+  e. OMG so much!
+> f. Impossibly much!!!  <em>[Note: Do not choose this option.]</em>
+
+#abedbbbaccdhf
+
+Do you feel like they love you less than you love them?
+
+  a. Yep, no question.
+> b. No way, in fact they love me even more!
+  c. Eh, about the same amount.
+
+#abedbbbaccdhfb
+
+How do you feel about this state of affairs?
+
+> a. It's pretty good, actually!
+  b. It kinda sucks, actually!
+  c. Eh, it's okay I guess.
+  d. Eh, it's not the best, but you know, whatever.
+
+#abedbbbaccdhfba
+
+Sounds pretty farfetched to me.
+
+  a. Yeah, I'm just messing with you.
+> b. But it's true!
+
+#abedbbbaccdhfbab
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#abedbbbaccdhfbaba
+
+Why do you say that?
+
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#abedbbbaccdhfbabaa
+
+Which country has the highest lowest point?
+
+> a. Andorra
+  b. Burundi
+  c. Lesotho
+  d. Rwanda
+
+#abedbbbaccdhfbabaaa
+
+So did you play that game yet where you're a dog?
+
+> a. Yes.
+  b. No.
+  c. Wait, which one?
+
+#abedbbbaccdhfbabaaaa
+
+What did you think of it?
+
+> a. Meh.
+  b. It was terrific!
+  c. It was terrible.
+
+#abedbbbaccdhfbabaaaaa
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+> a. Soda.
+  b. Pop.
+  c. Coke.
+
+#abedbbbaccdhfbabaaaaaa
+
+Do you have friends?
+
+> a. Yes.
+  b. No.
+  c. Kinda?
+
+#abedbbbaccdhfbabaaaaaaa
+
+Do you know CPR?
+
+> a. Yes.
+  b. No.
+
+#abedbbbaccdhfbabaaaaaaaa
+
+So you've, like, been trained and stuff?
+
+  a. Yep, I'm certified and everything.
+  b. I was certified but it expired.
+  c. I'm not certified, but I like took a course or something.
+  d. No formal training, but I've studied some things and I feel pretty confident.
+  e. Ehhh.. you know what, I don't actually know CPR all that well, if at all.
+> f. What is CPR?
+
+#abedbbbaccdhfbabaaaaaaaaf
+
+Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!
+
+  a. Wow, sounds awesome!  Tell me more!
+> b. I don't think that's an accurate description.
+
+#abedbbbaccdhfbabaaaaaaaafb
+
+I thought you said you didn't know what CPR was?
+
+  a. Good point!  I withdraw my objection.
+> b. I said no such thing!  I merely asked what it was.
+
+#abedbbbaccdhfbabaaaaaaaafbb
+
+Okay so which part of my description is wrong?
+
+> a. The bit about somebody being dead.
+  b. The bit about bringing them back to life.
+  c. The bit about simple techniques.
+  d. The bit about no special tools.
+  e. All of it.
+
+#abedbbbaccdhfbabaaaaaaaafbba
+
+Wait, <em>that's</em> your objection?  People do die, you know.
+
+  a. No they don't.
+> b. I think you're misunderstanding my point.
+
+#abedbbbaccdhfbabaaaaaaaafbbab
+
+No I'm not.  That's what you said.  Look, the "bringing people back to life" option was <em>right there</em>.
+
+  a. Shoot.  Can I go back?
+> b. Are you seriously trying to tell me that you think you know what I meant better than I do?
+
+#abedbbbaccdhfbabaaaaaaaafbbabb
+
+Okay, maybe I'm not being <em>entirely</em> serious.
+
+> a. Oh good.
+
+#abedbbbaccdhfbabaaaaaaaafbbabba
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+  a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+  c. Go find an employee.
+  d. Hide.
+  e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+> i. Give CPR.
+  j. Don't give CPR.
+
+#abedbbbaccdhfbabaaaaaaaafbbabbai
+
+Okay!  It's CPR time.  So what are you gonna do first?
+
+  a. Check the airway for obstructions.
+  b. Pull the head back to make space between the chin and the chest.
+  c. Grab my mask.
+  d. Form a seal between their lips and mine.
+  e. Check for a pulse.
+  f. See if they're breathing.
+  g. Shout "ARE YOU CHOKING?" in a loud voice.
+  h. Apply a tourniquet to the jugular vein.
+> i. Begin chest compressions.
+  j. Shout "IS THERE A DOCTOR IN THE HOUSE?"
+  k. Whip out my smartphone and ask Siri or Google or whatever how to do CPR.
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaii
+
+Okay!  So you put one hand on top of the other and put the heel of the bottom hand on the person's chest, right about... where?
+
+> a. I don't know!  This is stressful!  I'm in a stressful situation!  Can't you just, like, educate me or whatever?
+  b. Hands have heels now?  I could have sworn heels were for feet.
+  c. Wait, I have to touch an unconscious stranger's chest?
+  d. I'm having trouble visualizing this hand position.
+  e. Which one is the bottom hand?
+  f. I'm panicking!  I'm panicking!
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaiia
+
+Good idea!  So I believe the deal is that you want to put the heel of your hand pretty much exactly between the nipples.
+
+> a. OK!  What next?
+  b. I am suddenly uncomfortable with this.
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaiiaa
+
+Now all you have to do is press down so hard that you crush their heart.
+
+> a. Got it!  And after that?
+  b. You can't be serious.
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaiiaaa
+
+Keep crushing their heart, to the rhythm of that one song, until the EMTs show up.
+
+  a. Right, got it.
+  b. Which song?
+> c. Wait.  EMTs?
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaiiaaac
+
+Emergency medical technicians.  You remembered to call 911, right?
+
+> a. Uh...
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaiiaaaca
+
+It's okay, somebody over by the drinking fountain called them and they're on their way.  But try to remember to get that started earlier next time, okay?  This is not an ideal situation you've gotten yourself into here.
+
+> a. Okay, I'll remember.
+
+#abedbbbaccdhfbabaaaaaaaafbbabbaiiaaacaa
+
+Which of the following won the most XYZZY awards?
+
+  a. Aotearoa.
+  b. Cryptozookeeper.
+  c. Slouching Towards Bedlam.
+  d. Zombie Exodus.
+  e. What's a XYZZY award?
+
