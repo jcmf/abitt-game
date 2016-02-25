@@ -1076,132 +1076,147 @@ module.exports = qq [
       a "...Zimbabwe."
 
   q "Do you know CPR?",
+    a "What is CPR?", ->
+      @alreadydead = true
+      q "Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!",
+        a "Wow, sounds awesome!  Tell me more!"
+        a "I don't think that's an accurate description.",
+          q "Okay so which part of my description is wrong?",
+            a "The bit about somebody being dead.",
+              q "Wait, <em>that's</em> your objection?  People do die, you know.",
+                a "No they don't."
+                a "I think you're misunderstanding my point.",
+                  q "No I'm not.  That's what you said.  Look, the \"bringing people back to life\" option was <em>right there</em>.",
+                    a "Shoot.  Can I go back?",
+                      q "Too late for that now!",
+                        a "Darn."
+                    a "Are you seriously trying to tell me that you think you know what I meant better than I do?",
+                      q "Okay, maybe I'm not being <em>entirely</em> serious.",
+                        a "Oh good."
+            a "The bit about bringing them back to life.",
+              q "But that's the whole point, right?  If their heart is stopped, they're dead.",
+                a "I guess you're right."
+                a "That's not what \"dead\" means.",
+                  q "Well what does it mean then?",
+                    a "It means their soul has left their body and they've gone to heaven.",
+                      q "And that doesn't happen until later, is what you're saying?",
+                        a "Yes.",
+                          meandifferent = q "Well okay, then I guess we mean different things.  Sorry about the confusion.",
+                            a "Thanks!"
+                        a "Sometimes.", meandifferent
+                    a "It means their brain has stopped working.", meandifferent
+                    a "It means they're actually permanently dead!", meandifferent
+                a "You can't actually restart someone's heart with CPR!  Why does everybody think that?",
+                  q "That's true, you can't.  But you can buy them some time until the professionals show up and actually restart their heart, and that's the next best thing, right?",
+                    a "Sure, I guess."
+                    a "Not really, I mean it only makes a difference in like a few percent of cases.",
+                      q "You're complaining that a few percent chance is too small?  For saving somebody's life?  By, like, doing a few minutes work or whatever?",
+                        a "Well, when you put it that way...."
+                        a "No, what I'm saying is that your argument is bullshit."
+            a "The bit about simple techniques.",
+              q "You're saying CPR is complicated.",
+                a "Yes."
+                a "No."
+            a "The bit about no special tools.",
+              q "What special tools do you need for CPR?",
+                a "A mask.",
+                  q "Oh man, those things are so fiddly though!",
+                    a "Yeah but they're important to prevent infection.",
+                      butactually = q "But actually what they're recommending now is that you don't bother with the rescue breathing stuff and focus more on chest compressions.",
+                        a "Oh, okay."
+                        a "But isn't that only for untrained responders?",
+                          q "Sure.  But so like then why didn't you just say \"yes\" when I asked you if you knew what CPR was?",
+                            a "Because I wanted to know how you would answer, obviously."
+                            a "Oh well you know, I'm not like technically certified or anything at this point...."
+                a "An AED.",
+                  q "Well that's true, AEDs are super good, but you can still do CPR without an AED.",
+                    a "I disagree."
+                    a "I suppose you're right."
+                    a "Yeah but the AED is so much more effective.",
+                      q "Well that's true, isn't it.",
+                        a "Yes, it is!"
+                        a "No actually I was just saying that for no reason."
+                a "A manikin.",
+                  q "I, uh... I mean... those are good for practicing, but, like, in a real situation where you were really doing CPR on someone, you don't actually need one of those.",
+                    a "Don't be ridiculous.  They're included in the training for a reason."
+                    a "Hmm, I guess you have a point."
+                    a "Wait I thought we <em>were</em> talking about training.",
+                      q "Oh!  Well, no, that's not what I meant.  Sorry for being unclear!",
+                        a "That's okay!"
+                        a "You're not getting off that easy, bub."
+                a "A lung bag.",
+                  q "A lung bag?  What the heck is a lung bag?",
+                    a "Nothing.  Never mind."
+                    a "Go do an image search.",
+                      q "Wait, is it that big long thing?  Weird!",
+                        a "I know, right?"
+                a "A HALO seal.",
+                  waitreallygsw = q "Wait, really?  You use those for CPR?",
+                    a "Yes.",
+                      q "You sure you're not thinking of a gunshot wound to the chest or something?",
+                        a "Nah."
+                        a "Oh maybe."
+                        a "Well sure, I mean why else would you need to give somebody CPR?",
+                          q "There could be other reasons!",
+                            a "Like what?"
+                    a "No."
+                a "A SAM splint.",
+                  q "Wait, really?  You use those for CPR?",
+                    a "Yes.",
+                      q "You sure you're not thinking of like a broken bone or something?",
+                        a "Nah."
+                        a "Oh maybe."
+                        a "Well sure, I mean why else would you need to give somebody CPR?",
+                          q "Uhhhh... do you know what CPR even is?",
+                            a "Yes."
+                            a "Of course I do."
+                            a "You already asked me this earlier."
+                    a "No."
+                a "An oxygen tank.",
+                  q "Hmm.  I guess that could be useful.",
+                    a "Totally useful!", butactually
+                a "A butane lighter.",
+                  q "I don't get it.",
+                    a "Me either!"
+                a "An Israeli bandage.", waitreallygsw
+                a "A hemostatic sponge.", waitreallygsw
+            a "All of it.",
+              q "So you're saying everything I say is wrong?",
+                a "Yes."
+                a "No."
+        a "Ahem... so... do the letters in \"CPR\" <em>stand</em> for anything?",
+          q "Oh!  Yes.  Those letters stand for \"cardiopulmonary resuscitation.\"",
+            a "Thanks!"
+            a "Shouldn't it just be \"CR,\" then?",
+              q "Hmm... what if I were to instead claim that \"CPR\" stands for \"Cardio-Pulmonary Resuscitation?\"  Would that work for you?",
+                a "I suppose that would be acceptable."
+                a "No way.  That hyphenation is totally gross."
+                a "Sorry, too much capitalization."
+                a "I don't like that you put the question mark inside the quotation marks like that."
+                a "I was going to choose D but it called those things \"quotation marks\" instead of \"inverted commas\" like it should have done so I'm going with E instead because E is better."
+                a "Shouldn't answer E have more regular commas in it???"
+                a "Whoa, F has <em>way</em> too many question marks!!!!!"
+                a "omg all of these answers are terrible smh"
+                a "Don't even try to weasel out of this.  I'm on to you."
+    a "No.",
+      liketolearn = q "Would you like to learn?",
+        a "Sure."
+        a "No thanks.",
+          q "Why not?",
+            a "Sounds boring.",
+              q "It's pretty exciting, actually!",
+                a "Oh well, in that case, let's do this!",
+            a "I mean I already kinda know quite a bit, I'm just not, like, officially certified or anything.", -> @trained = true
+            a "Are you seriously offering to teach me CPR right now?",
+              q "Yes.",
+                a "Huh.  All right.",
     a "Yes.",
       q "So you've, like, been trained and stuff?",
         a "Yep, I'm certified and everything.", -> @trained = true
         a "I was certified but it expired.", -> @trained = true
         a "I'm not certified, but I like took a course or something.", -> @trained = true
-        a "No formal training, but I've studied some things and I feel pretty confident.", -> @trained = true
-        a "Ehhh.. you know what, I don't actually know CPR all that well, if at all.",
-          liketolearn = q "Would you like to learn?",
-            a "Sure."
-            a "No thanks.",
-              q "Why not?",
-                a "Sounds boring.",
-                  q "It's pretty exciting, actually!",
-                    a "Oh well, in that case, let's do this!",
-                a "I mean I already kinda know some things, I'm just not, like, certified or anything.", -> @trained = true
-                a "Are you seriously offering to teach me CPR right now?",
-                  q "Yes.",
-                    a "Huh.  All right.",
-        a "What is CPR?", ->
-          @alreadydead = true
-          q "Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!",
-            a "Wow, sounds awesome!  Tell me more!"
-            a "I don't think that's an accurate description.",
-              q "I thought you said you didn't know what CPR was?",
-                a "Good point!  I withdraw my objection."
-                a "I said no such thing!  I merely asked what it was.",
-                  q "Okay so which part of my description is wrong?",
-                    a "The bit about somebody being dead.",
-                      q "Wait, <em>that's</em> your objection?  People do die, you know.",
-                        a "No they don't."
-                        a "I think you're misunderstanding my point.",
-                          q "No I'm not.  That's what you said.  Look, the \"bringing people back to life\" option was <em>right there</em>.",
-                            a "Shoot.  Can I go back?",
-                              q "Too late for that now!",
-                                a "Darn."
-                            a "Are you seriously trying to tell me that you think you know what I meant better than I do?",
-                              q "Okay, maybe I'm not being <em>entirely</em> serious.",
-                                a "Oh good."
-                    a "The bit about bringing them back to life.",
-                      q "But that's the whole point, right?  If their heart is stopped, they're dead.",
-                        a "I guess you're right."
-                        a "That's not what \"dead\" means.",
-                          q "Well what does it mean then?",
-                            a "It means their soul has left their body and they've gone to heaven.",
-                              q "And that doesn't happen until later, is what you're saying?",
-                                a "Yes.",
-                                  meandifferent = q "Well okay, then I guess we mean different things.  Sorry about the confusion.",
-                                    a "Thanks!"
-                                a "Sometimes.", meandifferent
-                            a "It means their brain has stopped working.", meandifferent
-                            a "It means they're actually permanently dead!", meandifferent
-                        a "You can't actually restart someone's heart with CPR!  Why does everybody think that?",
-                          q "That's true, you can't.  But you can buy them some time until the professionals show up and actually restart their heart, and that's the next best thing, right?",
-                            a "Sure, I guess."
-                            a "Not really, I mean it only makes a difference in like a few percent of cases.",
-                              q "You're complaining that a few percent chance is too small?  For saving somebody's life?  By, like, doing a few minutes work or whatever?",
-                                a "Well, when you put it that way...."
-                                a "No, what I'm saying is that your argument is bullshit."
-                    a "The bit about simple techniques.",
-                      q "You're saying CPR is complicated.",
-                        a "Yes."
-                        a "No."
-                    a "The bit about no special tools.",
-                      q "What special tools do you need for CPR?",
-                        a "A mask.",
-                          q "Oh man, those things are so fiddly though!",
-                            a "Yeah but they're important to prevent infection.",
-                              butactually = q "But actually what they're recommending now is that you don't bother with the rescue breathing stuff and focus more on chest compressions.",
-                                a "Oh, okay."
-                                a "But isn't that only for untrained responders?",
-                                  q "Sure.  But so like then why didn't you just say \"yes\" when I asked you if you knew what CPR was?",
-                                    a "Because I wanted to know how you would answer, obviously."
-                                    a "Oh well you know, I'm not like technically certified or anything at this point...."
-                        a "An AED.",
-                          q "Well that's true, AEDs are super good, but you can still do CPR without an AED.",
-                            a "I disagree."
-                            a "I suppose you're right."
-                            a "Yeah but the AED is so much more effective.",
-                              q "Well that's true, isn't it.",
-                                a "Yes, it is!"
-                                a "No actually I was just saying that for no reason."
-                        a "A manikin.",
-                          q "I, uh... I mean... those are good for practicing, but, like, in a real situation where you were really doing CPR on someone, you don't actually need one of those.",
-                            a "Don't be ridiculous.  They're included in the training for a reason."
-                            a "Hmm, I guess you have a point."
-                            a "Wait I thought we <em>were</em> talking about training.",
-                              q "Oh!  Well, no, that's not what I meant.  Sorry for being unclear!",
-                                a "That's okay!"
-                                a "You're not getting off that easy, bub."
-                        a "A lung bag.",
-                          q "A lung bag?  What the heck is a lung bag?",
-                            a "Nothing.  Never mind."
-                            a "Go do an image search.",
-                              q "Wait, is it that big long thing?  Weird!",
-                                a "I know, right?"
-                        a "A HALO seal.",
-                          waitreallygsw = q "Wait, really?  You use those for CPR?",
-                            a "Yes.",
-                              q "You sure you're not thinking of a gunshot wound to the chest or something?",
-                                a "Nah."
-                                a "Oh maybe."
-                                a "Well sure, I mean why else would you need to give somebody CPR?"
-                            a "No."
-                        a "A SAM splint.",
-                          q "Wait, really?  You use those for CPR?",
-                            a "Yes.",
-                              q "You sure you're not thinking of like a broken bone or something?",
-                                a "Nah."
-                                a "Oh maybe."
-                                a "Well sure, I mean why else would you need to give somebody CPR?",
-                                  q "Uhhhh... do you know what CPR is?",
-                                    a "Yes."
-                            a "No."
-                        a "An oxygen tank.",
-                          q "Hmm.  I guess that could be useful.",
-                            a "Totally useful!", butactually
-                        a "A butane lighter.",
-                          q "I don't get it.",
-                            a "Me either!"
-                        a "An Israeli bandage.", waitreallygsw
-                        a "A hemostatic sponge.", waitreallygsw
-                    a "All of it.",
-                      q "So you're saying everything I say is wrong?",
-                        a "Yes."
-                        a "No."
-    a "No.", liketolearn
+        a "No formal training, but I've studied some things on my own and I feel pretty confident.", -> @trained = true
+        a "Ehhh.. you know what, I don't actually know CPR all that well, if at all.", liketolearn
 
   q "Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?",
     a "Call 911.", ->
