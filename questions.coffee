@@ -355,7 +355,6 @@ module.exports = qq [
 
   q "Very good!  Now, which of these would you rather be?",
     a "a cowboy",
-      # XXX offer to sing the song, multiple choice lyrics?
       (likesong = (song) -> ->
         @song = song
         q "Like the song?",
@@ -1027,12 +1026,6 @@ module.exports = qq [
       a "No."
       a "It depends."
       a "Who cares?"
-
-  -> if @love
-    q "Do you have friends?",  # XXX do something with this, maybe tie in to with someone I love answers?
-      a "Yes."
-      a "No."
-      a "Kinda?"
 
   -> if @philosophy
     q "If a tree falls in the woods and no one hears it, does it make a sound?",
