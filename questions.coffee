@@ -1,4 +1,5 @@
 {qq, q, a} = require './dsl.coffee'
+frack = '<span class="redacted">$@^#</span>'
 
 module.exports = qq [
   q "Welcome to this game!  Before we can get started, you'll need to answer a few questions.",
@@ -1254,7 +1255,7 @@ module.exports = qq [
                   q "Nope!  Doesn't work that way.  You lose!",
                     a "If you say so."
                     a "Well that's dumb."
-            a "Good idea, I'll send someone to fetch it and do CPR in the meantime!", cpr
+            a "Good idea, I'll send someone to fetch it and do CPR in the meantime!", -> @getaed = true; cpr
         a "Go find an employee.", employee
         a 'Shout "OMG, does anybody know CPR?"', shoutomg
         a "Run around in circles.",
@@ -1275,7 +1276,7 @@ module.exports = qq [
                     a "I'm not."
                     a "Do you even understand what words mean?"
             a "But isn't running supposed to be bad for my knees?",
-              q """The American Heart Association doesn't give a <span class="redacted">$@^#</span> about your <span class="redacted">$@^#</span>ing knees.""",
+              q "The American Heart Association doesn't give a #{frack} about your #{frack}ing knees.",
                 a "Fair enough."
                 a "That's discrimination!",
                   q "Yes.  But it's the good kind.",
@@ -2052,34 +2053,52 @@ module.exports = qq [
                                       if @call911
                                         q "Emergency medical technicians.  From when you called 911 earlier.",
                                           a "Oh, right."
-                                          a "What if they don't show up?", # XXX what about an AED?
-                                            q "Well then whoever this is will most likely die.",
-                                              a "Okay."
-                                              a "But that's horrible!",
-                                                q "Yes.  Yes it is.",
-                                                  a "Thank you for acknowledging that!"
-                                                  a "But it'll be my fault!",
-                                                    q "Nope.  Not your fault.  You did what you could.",
-                                                      a "That's true."
-                                                      a "But I could have done more.",
-                                                        q "We're not even talking about this hypothetical scenario anymore, are we?",
-                                                          a "Yes we are.",
-                                                            youdidyourbest = q "It's always tempting to say \"I could have done more,\" because it always <em>seems</em> like... I mean you can <em>imagine</em> having done more, right?  Just one teeny little thing?  But at a certain point it stops being true.  Just because you can easily imagine something doesn't make it <em>possible</em>.  Much as you might wish otherwise, you can only do so much.  You did your best.  Okay?",
-                                                              a "Yeah, okay.  I did my best."
-                                                              a "No.  It's not okay.  There is nothing about this that is okay.",
-                                                                q "I'm sorry.",
-                                                                  a "Thanks."
-                                                                  a """<span class="redacted">$@^#</span> you."""
-                                                          a "No.  We're not.", youdidyourbest
-                                                          a "I don't even know anymore.", youdidyourbest
-                                              a "But they're going to show up, right?",
-                                                q "Yes.",
-                                                  a "Phew."
+                                          a "What if they don't show up in time?",
+                                            q "You sent somebody to fetch an AED, remember?  A lot of places like this have one.  Those things have a pretty good chance of getting a heart beating properly again.",
+                                              a "Oh good."
+                                              a "But what if this particular place doesn't have an AED?",
+                                                q "It does, though.  Look, they're coming back with it now.  See?",
+                                                  a "Thank goodness!"
+                                                  a "But what if something like this were to happen in a place with no AED and no way to get help?",
+                                                    q "Well then whoever it was would most likely die.",
+                                                      a "Okay."
+                                                      a "But that's horrible!",
+                                                        q "Yes.  Yes it is.",
+                                                          a "Thank you for acknowledging that."
+                                                          a "You said they're coming though, right?",
+                                                            q "Yep.  Everything's going to be fine!",
+                                                              a "Thanks."
                                       else
                                         q "Emergency medical technicians.  You remembered to call 911, right?",
                                           a "Uh...",
                                             q "It's okay, somebody over by the drinking fountain called them and they're on their way.  But try to remember to get that started earlier next time, okay?  This is not an ideal situation you've gotten yourself into here.",
                                               a "Okay, I'll remember."
+                                              a "I #{frack}ed up, didn't I?  This person's going to die now and it's going to be my fault because I #{frack}ed it up.  #{frack}!",
+                                                q "First off, no, they're not going to die.  And second, even if they somehow did, it wouldn't be your fault.  You are doing the best you can here.",
+                                                  a "I guess that's true, isn't it?",
+                                                    q "Yes.  It is.",
+                                                      a "Okay."
+                                                  a "Bullshit.  I could have done better.  I could have remembered to call 911.  How hard is it to remember something like that?",
+                                                    q "Pretty hard!  It can be hard to think of stuff like that in the moment.  You don't have to be so hard on yourself, though.  It's not like you set out to murder this person by doing the wrong thing, is it?",
+                                                      a "I guess not.",
+                                                        q "Then you did your best!  Plus it totally worked, you saved their life by doing CPR until help arrived, and now you're basically a hero.  Are you okay with that?",
+                                                          a "Yes."
+                                                          a "No.",
+                                                            q "What do you want, then?  A pony?",
+                                                              a "Yes.", ->
+                                                                @song = ['Bb4rR9fN0ho', 560]
+                                                                q "Okay!  You are now the proud owner of a pretty pink pony!  Your pony loves you so much!",
+                                                                  a "Thanks!"
+                                                                  a "But I wanted a blue pony.",
+                                                                    q "Too bad.  There's no such thing.",
+                                                                      a "Zounds!"
+                                                              a "No."
+                                                      a "Actually....",
+                                                        q "Well then you're a really incompetent murderer because this person totally survives thanks to your doing CPR on them until help arrives.",
+                                                          a "Rats!"
+                                                          a "I am secretly glad about this.",
+                                                            q "Well don't worry!  I won't tell anyone.",
+                                                              a "Thanks!"
                                 a "You can't be serious.",
                                   q "I am 100% serious.  The entire point is to press so hard that you squeeze the blood out of the heart and into the arteries, and then when you let go more blood rushes in from the veins, and so on.  To pump blood through the body.  So they don't die.",
                                     a "Yeah well that's not the same thing as <em>crushing</em> their heart!"
