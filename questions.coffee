@@ -1752,12 +1752,27 @@ module.exports = qq [
                                       q "I guess that would make sense.",
                                         a "Probably!"
                     a "I start a conversation with the person in front of me to help make the time pass more quickly.",
-                      q "What will you talk about?", # XXX
-                        a "News."
-                        a "Weather."
-                        a "Sports."
-                        a "Entertainment."
-                        a "Lifestyle."
+                      q "What will you talk about?",
+                        a "News.",
+                          q "\"Hey,\" you say, trying to direct your words to the person standing ahead of you in line, \"did you hear about that person who collapsed just now?  I think they were probably having a heart attack!\"  No one seems to be listening to you, however.",
+                            a "Oh well."
+                        a "Weather.",
+                          q "\"Hey,\" you say, to nobody in particular, \"lots of weather we've been having lately, huh?  Huh?\"  You elicit no reaction.",
+                            a "Meh."
+                        a "Sports.",
+                          q "\"Hey,\" you say to the back of the head of the person in front of you, \"how about that local sports team?\"  They ignore you, however.",
+                            a "Bah."
+                        a "Entertainment.",
+                          q "\"Hey,\" you say, \"have you seen this movie yet?  Because I have!  Let me tell you what happens!\"",
+                            a "Abort!  Abort!"
+                        a "Lifestyle.",
+                          q "\"Hey,\" you say to the person in front of you, \"are you into BDSM, by any chance?  Because I sure am!\"  And it turns out they are too!  Also they are super attractive!  You have a delightful conversation, sit next to each other during the movie, miss most of it, get kicked out by the ushers afterwards, and embark on a beautiful and mutually fulfilling relationship.",
+                            a "Well <em>that</em> escalated quickly.",
+                              q "Sure did.  Nice work!",
+                                a "Thanks?"
+                            a "Actually, I'm married.",
+                              q "A beautiful <em>polyamorous</em> relationship, with the full knowledge and enthusiastic consent of all parties!",
+                                a "Got it!"
     a "Hide.",
       q "Where will you hide?",
         a "Inside the projection booth.",
