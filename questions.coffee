@@ -1770,7 +1770,7 @@ module.exports = qq [
                             a "Well <em>that</em> escalated quickly.",
                               q "Sure did.  Nice work!",
                                 a "Thanks?"
-                            a "Actually, I'm married.",
+                            a "Er, actually, I already have a romantic partner.",
                               q "A beautiful <em>polyamorous</em> relationship, with the full knowledge and enthusiastic consent of all parties!",
                                 a "Got it!"
     a "Hide.",
