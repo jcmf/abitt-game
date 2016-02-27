@@ -1,0 +1,304 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+> a. Emily
+  b. Jenni
+  c. Ryan
+
+#aa
+
+And your last name?
+
+  a. Boegheim
+> b. Carroll
+  c. Ryan
+  d. Short
+
+#aab
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+  a. See what the other drivers are doing.
+  b. Try to start the car again.
+> c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#aabc
+
+Hold on.  Are you the <em>real</em> Emily Carroll?
+
+  a. Yes.
+> b. No.
+
+#aabcb
+
+So you were just lying to my face earlier?
+
+  a. Yes.
+> b. No.
+
+#aabcbb
+
+So what you're saying is that you were telling the truth about... wait... so... you're just <em>an</em> Emily Carroll?  Is that it?
+
+> a. Yes.
+  b. No.
+
+#aabcbba
+
+Well but so um, gosh, can't I just, like, <em>pretend</em> that you're the real Emily Carroll?
+
+> a. Yes.
+  b. No.
+
+#aabcbbaa
+
+Cool!  Thanks Emily!  Uh... can I call you Emily?
+
+  a. Yes.
+> b. No.
+
+#aabcbbaab
+
+Sorry Ms. Carroll!  Sorry!  My mistake!
+
+  a. Don't worry about it.
+> b. Don't let it happen again!
+
+#aabcbbaabb
+
+So.  What's the capital of Canada?
+
+  a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+> f. Toronto
+  g. Vancouver
+
+#aabcbbaabbf
+
+And what is an apocalypse?
+
+  a. An Oscar winner.
+  b. A revelation from God.
+> c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#aabcbbaabbfc
+
+All right, in that case... what does "grue" mean to you?
+
+  a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+> d. It's a device for preventing adventurers from wandering in the dark.
+
+#aabcbbaabbfcd
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#aabcbbaabbfcda
+
+Like the song?
+
+  a. Yes, like the song!
+> b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#aabcbbaabbfcdab
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#aabcbbaabbfcdaba
+
+Why do you say that?
+
+  a. Because I don't care.
+> b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#aabcbbaabbfcdabab
+
+How much bigger than one tenth is one ninth?
+
+  a. About 1%.
+> b. About 9%.
+  c. About 10%.
+  d. About 11%.
+
+#aabcbbaabbfcdababb
+
+Is it?  Why do you think that?
+
+  a. It's, um... wait....
+  b. I'm, uh, not sure if....
+  c. I'm sorry, I take it back, I take it back!
+> d. Please forgive me.
+
+#aabcbbaabbfcdababbd
+
+Do you promise not to do it again?
+
+  a. Yes.
+> b. No.
+
+#aabcbbaabbfcdababbdb
+
+But you expect me to forgive you anyway?
+
+  a. Yes.
+> b. No.
+
+#aabcbbaabbfcdababbdbb
+
+Then I believe we have an understanding.
+
+> a. Yes.
+
+#aabcbbaabbfcdababbdbba
+
+Good
+
+> a. Can I go now?
+
+#aabcbbaabbfcdababbdbbaa
+
+Sure, just... I need to ask just a few more questions....
+
+> a. Okay....
+
+#aabcbbaabbfcdababbdbbaaa
+
+So did you play that game yet where you're a dog?
+
+  a. Yes.
+  b. No.
+> c. Wait, which one?
+
+#aabcbbaabbfcdababbdbbaaac
+
+You know, the other entry in the... thing.
+
+> a. Are you referring to the First Quadrennial Ryan Veeder Exposition for Interactive Fiction?
+
+#aabcbbaabbfcdababbdbbaaaca
+
+Why yes.  Yes I am.  As it happens.
+
+> a. Thanks, now I totally understand exactly which game you were referring to earlier.
+  b. I was not aware that there was an entry about being a dog.
+  c. Which of the entries about being a dog did you mean?
+
+#aabcbbaabbfcdababbdbbaaacaa
+
+Oh good!  I was worried that I was going to have to explain and it was going to be awkward somehow.
+
+> a. Nope, no worries!
+
+#aabcbbaabbfcdababbdbbaaacaaa
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+  a. Soda.
+> b. Pop.
+  c. Coke.
+
+#aabcbbaabbfcdababbdbbaaacaaab
+
+Do you know CPR?
+
+> a. What is CPR?
+  b. No.
+  c. Yes.
+
+#aabcbbaabbfcdababbdbbaaacaaaba
+
+Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!
+
+> a. Wow, sounds awesome!  Tell me more!
+  b. I don't think that's an accurate description.
+  c. Ahem... so... do the letters in "CPR" <em>stand</em> for anything?
+
+#aabcbbaabbfcdababbdbbaaacaaabaa
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+  a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+  c. Go find an employee.
+> d. Hide.
+  e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+  i. Give CPR.
+  j. Don't give CPR.
+
+#aabcbbaabbfcdababbdbbaaacaaabaad
+
+Where will you hide?
+
+> a. Inside the projection booth.
+  b. In the restroom.
+  c. In plain sight.
+  d. Under the linoleum.
+  e. I'll just close my eyes -- if I can't see anybody, then nobody can see me!
+
+#aabcbbaabbfcdababbdbbaaacaaabaada
+
+You encounter a sign: EMPLOYEES ONLY.
+
+  a. Go in anyway.
+  b. Find an employee.
+> c. Fill out employment application.
+
+#aabcbbaabbfcdababbdbbaaacaaabaadac
+
+Carroll comma Emily, yadda yadda... hmm... there's a blank where you're supposed to put what you see yourself doing five years from now.
+
+  a. A minimum-wage movie theater employee.
+  b. Manager of this entire theater.
+  c. White collar worker at the corporate office of the company that runs this place.
+  d. Executive at same.
+  e. CEO.
+  f. Movie star.
+  g. Supporting actor.
+  h. Key grip.
+  i. Producer.
+  j. Restauranteur.
+  k. Astronaut.
+  l. Pirate.
+  m. Drug dealer.
+  n. Chicken sexer.
+  o. Vagrant.
+  p. Retired.
+  q. Unemployed.
+

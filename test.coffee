@@ -23,3 +23,24 @@ for name in fs.readdirSync testdir
     pieces.push debug
     pieces.push '\n'
   fs.writeFileSync path, pieces.join ''
+
+{start} = require './runner.coffee'
+for i in [0...1000]
+  letters = []
+  checkText = (text) ->
+    if /undefined|\[object/.test text
+      throw new Error 'suspicious text: ' + text
+  cur = start()
+  try
+    while true
+      if not cur then throw new Error 'game ended unexpectedly'
+      checkText cur.q
+      if not cur.aa.length then break
+      for a in cur.aa
+        checkText a.a
+      choice = cur.aa[Math.floor Math.random() * cur.aa.length]
+      letters.push choice.letter
+      cur = choice.fn()
+  catch e
+    console.error "#!#{letters.join ''}"
+    throw e

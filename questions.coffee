@@ -185,7 +185,7 @@ module.exports = qq [
                   q "So the judging period is over?",
                     a "Yes.", ->
                       now = new Date()
-                      if (now.getTime() < 1460617200000) is (not window.timetravel)
+                      if (now.getTime() < 1460617200000) is (not window?.timetravel)
                         q "Then why does your clock say #{now}?",
                           a "Uhhhh... whatever, never mind.", -> @amusing = "Like that thing where you told me the current date and time."
                       else
@@ -715,7 +715,7 @@ module.exports = qq [
                   a "That's very considerate of you!",
                     q "Thanks!",
                       a "You're welcome!",
-                        q "You are also welcome!"
+                        q "You are also welcome!",
                           a "Thanks!"
                   a "I'm kind of annoyed now, but I would probably be even more annoyed if you'd asked me more questions like that, so maybe it's just as well."
                   a "No way, you HAVE to ask me the follow-up question!",
@@ -1843,7 +1843,7 @@ module.exports = qq [
                                 a "East.", closed
                                 a "South.", closed
             a "Find an employee.", employee
-            a "Fill out employment application.",
+            a "Fill out employment application.", ->
               q "#{@ln} comma #{@fn}, yadda yadda... hmm... there's a blank where you're supposed to put what you see yourself doing five years from now.",
                 a "A minimum-wage movie theater employee."
                 a "Manager of this entire theater."

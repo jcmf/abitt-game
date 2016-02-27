@@ -1,0 +1,298 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+  a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+> d. Hold on, I have a question!
+
+#d
+
+What is your question?
+
+  a. How should I indicate which answer I wish to choose?
+  b. What if I choose the wrong answer?
+> c. Who wrote this game?
+
+#dc
+
+Are you sure you want to know?
+
+> a. Yes.
+  b. No.
+
+#dca
+
+You're not trying to trick me, are you?
+
+> a. Of course not.
+  b. Why yes, actually, I am trying to trick you.
+
+#dcaa
+
+So the judging period is over?
+
+  a. Yes.
+  b. No.
+> c. Uh... judging period?  What?
+
+#dcaac
+
+You know, for the exposition thing.
+
+  a. Oh right, the exposition thing!
+> b. What exposition thing?
+
+#dcaacb
+
+Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
+
+  a. Oh, <em>that</em>!
+> b. Never heard of it.
+
+#dcaacbb
+
+Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
+
+> a. Uh... sure... whatever you say.
+
+#dcaacbba
+
+What's your name?
+
+  a. Emily
+  b. Jenni
+> c. Ryan
+
+#dcaacbbac
+
+And your last name?
+
+  a. Burrus
+  b. Freebern
+  c. Holman
+  d. Kinsman
+  e. Weisenberger
+  f. Stevens
+> g. Veeder
+
+#dcaacbbacg
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+  a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+> d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#dcaacbbacgd
+
+Hold on.  Are you the <em>real</em> Ryan Veeder?
+
+  a. Yes.
+> b. No.
+
+#dcaacbbacgdb
+
+So you were just lying to my face earlier?
+
+  a. Yes.
+> b. No.
+
+#dcaacbbacgdbb
+
+So what you're saying is that you were telling the truth about... wait... so... you're just <em>a</em> Ryan Veeder?  Is that it?
+
+> a. Yes.
+  b. No.
+
+#dcaacbbacgdbba
+
+Well but so um, gosh, can't I just, like, <em>pretend</em> that you're the real Ryan Veeder?
+
+> a. Yes.
+  b. No.
+
+#dcaacbbacgdbbaa
+
+Cool!  Thanks Ryan!  Uh... can I call you Ryan?
+
+  a. Yes.
+> b. No.
+
+#dcaacbbacgdbbaab
+
+Sorry Mr. Veeder!  Sorry!  My mistake!
+
+  a. Don't worry about it.
+> b. Don't let it happen again!
+
+#dcaacbbacgdbbaabb
+
+So.  What's the capital of Canada?
+
+  a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+> e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#dcaacbbacgdbbaabbe
+
+And what is an apocalypse?
+
+  a. An Oscar winner.
+> b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#dcaacbbacgdbbaabbeb
+
+All right, in that case... what does "grue" mean to you?
+
+  a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+> c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#dcaacbbacgdbbaabbebc
+
+Very good!  Now, which of these would you rather be?
+
+  a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+> h. with someone I love
+
+#dcaacbbacgdbbaabbebch
+
+Think of a person you love.  How would you quantify your love for that person?
+
+  a. I can't think of any such person.
+  b. Meh.
+  c. Pretty okay.
+> d. Yep, lots.
+  e. OMG so much!
+  f. Impossibly much!!!  <em>[Note: Do not choose this option.]</em>
+
+#dcaacbbacgdbbaabbebchd
+
+So like a normal amount?
+
+> a. Yes.
+  b. No, more than normal.
+  c. No, less than normal.
+
+#dcaacbbacgdbbaabbebchda
+
+Do you feel like they love you more than you love them?
+
+> a. Yes, absolutely!
+  b. No way, definitely not.
+  c. Eh, maybe kinda mostly.
+  d. Not really, no?
+
+#dcaacbbacgdbbaabbebchdaa
+
+How do you feel about this state of affairs?
+
+  a. It's pretty good, actually!
+> b. It kinda sucks, actually!
+  c. Eh, it's okay I guess.
+  d. Eh, it's not the best, but you know, whatever.
+
+#dcaacbbacgdbbaabbebchdaab
+
+So the capital of Canada is Skullport, huh?
+
+> a. Yep!
+  b. Wait a minute... are you implying that the capital of Canada <em>isn't</em> Skullport?
+
+#dcaacbbacgdbbaabbebchdaaba
+
+Okay, just checking!
+
+> a. No problem!
+
+#dcaacbbacgdbbaabbebchdaabaa
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+  a. Heads and tails are equally likely.
+> b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#dcaacbbacgdbbaabbebchdaabaab
+
+Why do you say that?
+
+> a. Because you rigged this game somehow.
+  b. Because I don't care how I answer this.
+  c. Because you were wrong about it being a fair coin.
+
+#dcaacbbacgdbbaabbebchdaabaaba
+
+What goes between two sentences?
+
+  a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+> d. Nothing.
+  e. It depends.
+
+#dcaacbbacgdbbaabbebchdaabaabad
+
+How much bigger than one tenth is one ninth?
+
+  a. About 1%.
+  b. About 9%.
+  c. About 10%.
+> d. About 11%.
+
+#dcaacbbacgdbbaabbebchdaabaabadd
+
+Can you explain why that is?
+
+  a. Sure, it's just... one over nine is point one repeating, and then you just move the decimal and subtract one and....
+  b. Well, it's, like, the ratio is clearly just a little bit bigger than one tenth itself, so....
+  c. I totally could, if these answers didn't suck so much.
+> d. No, not really.
+  e. Eleven is my favorite number!
+
+#dcaacbbacgdbbaabbebchdaabaabaddd
+
+Mmm, yes, I see... sorry, I just need to make a note here....
+
+  a. Okay....
+> b. Are you done?
+
+#dcaacbbacgdbbaabbebchdaabaabadddb
+
+Ah yes, there we go.  Where were we?
+
+> a. You, uh, were asking me questions?
+
+#dcaacbbacgdbbaabbebchdaabaabadddba
+
+Indeed I was!  Shall we get back to that?
+
+> a. Okay.
+
+#dcaacbbacgdbbaabbebchdaabaabadddbaa
+
+Something's been bothering me about some of your earlier answers.
+
+  a. Oh?  What is it?
+  b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
+  c. OMG did I screw up the math question?  I hate math.
+
