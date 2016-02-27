@@ -26,7 +26,7 @@ exports.updateTestFiles = (testdir = "#{__dirname}/t") ->
 exports.randomTests = (n = 1000) ->
   {start} = require './runner.coffee'
   t0 = new Date()
-  for i in [0...n]
+  for i in [0...Number n]
     letters = []
     checkText = (text) ->
       if /undefined|\[object/.test text
@@ -51,4 +51,4 @@ exports.randomTests = (n = 1000) ->
 
 if module is require.main
   exports.updateTestFiles()
-  exports.randomTests()
+  exports.randomTests process.env.NUM_TESTS
