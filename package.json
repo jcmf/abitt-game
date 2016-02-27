@@ -11,7 +11,7 @@
   },
   "scripts": {
     "prepublish": "sh build.sh",
-    "test": "coffee test.coffee"
+    "test": "NUM_TESTS=100000 coffee test.coffee"
   },
   "author": "Jacques Frechet",
   "license": "MIT",
