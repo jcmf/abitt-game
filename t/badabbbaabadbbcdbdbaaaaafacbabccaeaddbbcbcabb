@@ -1,0 +1,388 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+  a. Okay.
+> b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#b
+
+What's your name?
+
+> a. Emily
+  b. Jenni
+  c. Ryan
+
+#ba
+
+And your last name?
+
+  a. Boegheim
+  b. Carroll
+  c. Ryan
+> d. Short
+
+#bad
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#bada
+
+Hold on.  Are you the <em>real</em> Emily Short?
+
+  a. Yes.
+> b. No.
+
+#badab
+
+So you were just lying to my face earlier?
+
+  a. Yes.
+> b. No.
+
+#badabb
+
+So what you're saying is that you were telling the truth about... wait... so... you're just <em>an</em> Emily Short?  Is that it?
+
+  a. Yes.
+> b. No.
+
+#badabbb
+
+So you <em>are</em> Emily Short!  I knew it!
+
+> a. Yep, you figured it out all right.
+
+#badabbba
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#badabbbaa
+
+And what is an apocalypse?
+
+  a. An Oscar winner.
+> b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#badabbbaab
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#badabbbaaba
+
+Very good!  Now, which of these would you rather be?
+
+  a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+> d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#badabbbaabad
+
+Like drinking alcohol?
+
+  a. Yes.
+> b. No.
+
+#badabbbaabadb
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+  a. Heads and tails are equally likely.
+> b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#badabbbaabadbb
+
+Why do you say that?
+
+  a. Because you rigged this game somehow.
+  b. Because I don't care how I answer this.
+> c. Because you were wrong about it being a fair coin.
+
+#badabbbaabadbbc
+
+What goes between two sentences?
+
+  a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+> d. Nothing.
+  e. It depends.
+
+#badabbbaabadbbcd
+
+How much bigger than one tenth is one ninth?
+
+  a. About 1%.
+> b. About 9%.
+  c. About 10%.
+  d. About 11%.
+
+#badabbbaabadbbcdb
+
+Is it?  Why do you think that?
+
+  a. It's, um... wait....
+  b. I'm, uh, not sure if....
+  c. I'm sorry, I take it back, I take it back!
+> d. Please forgive me.
+
+#badabbbaabadbbcdbd
+
+Do you promise not to do it again?
+
+  a. Yes.
+> b. No.
+
+#badabbbaabadbbcdbdb
+
+But you expect me to forgive you anyway?
+
+> a. Yes.
+  b. No.
+
+#badabbbaabadbbcdbdba
+
+Well... you're right!
+
+> a. Thanks!
+
+#badabbbaabadbbcdbdbaa
+
+I don't mean about the original question, I mean....
+
+> a. No no, I get it.
+  b. Wait, what do you mean?
+
+#badabbbaabadbbcdbdbaaa
+
+Good
+
+> a. Can I go now?
+
+#badabbbaabadbbcdbdbaaaa
+
+Sure, just... I need to ask just a few more questions....
+
+> a. Okay....
+
+#badabbbaabadbbcdbdbaaaaa
+
+Lorem ipsum dolor sit...
+
+  a. ...amah.
+  b. ...aman.
+  c. ...amen.
+  d. ...amet.
+  e. ...amin.
+> f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+#badabbbaabadbbcdbdbaaaaaf
+
+So did you play that game yet where you're a dog?
+
+> a. Yes.
+  b. No.
+  c. Wait, which one?
+
+#badabbbaabadbbcdbdbaaaaafa
+
+What did you think of it?
+
+  a. Meh.
+  b. It was terrific!
+> c. It was terrible.
+
+#badabbbaabadbbcdbdbaaaaafac
+
+Really?  Why do you say that?
+
+  a. The graphics were sub-par.
+> b. The soundtrack was no good.
+  c. The voice acting was terrible!
+
+#badabbbaabadbbcdbdbaaaaafacb
+
+Are you sure we're thinking of the same game?
+
+> a. Yes.
+  b. No.
+
+#badabbbaabadbbcdbdbaaaaafacba
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+  a. Soda.
+> b. Pop.
+  c. Coke.
+
+#badabbbaabadbbcdbdbaaaaafacbab
+
+After pouring a clean liquid from a clean bottle into an unclean cup, should the bottle be considered contaminated?
+
+  a. Yes.
+  b. No.
+> c. It depends.
+  d. Who cares?
+
+#badabbbaabadbbcdbdbaaaaafacbabc
+
+Do you know CPR?
+
+  a. What is CPR?
+  b. No.
+> c. Yes.
+
+#badabbbaabadbbcdbdbaaaaafacbabcc
+
+So you've, like, been trained and stuff?
+
+> a. Yep, I'm certified and everything.
+  b. I was certified but it expired.
+  c. I'm not certified, but I like took a course or something.
+  d. No formal training, but I've studied some things on my own and I feel pretty confident.
+  e. Ehhh.. you know what, I don't actually know CPR all that well, if at all.
+
+#badabbbaabadbbcdbdbaaaaafacbabcca
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+  a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+  c. Go find an employee.
+  d. Hide.
+> e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+  i. Give CPR.
+  j. Don't give CPR.
+
+#badabbbaabadbbcdbdbaaaaafacbabccae
+
+When you regain consciousness, you're lying face down, a short distance away from your car, which seems to have been engulfed in the greenish fog bank.  It smells like a swimming pool.
+
+> a. What a weird dream!
+
+#badabbbaabadbbcdbdbaaaaafacbabccaea
+
+Which of the following English monarchs is also a saint?
+
+  a. Edward the Confessor
+  b. Edward the Martyr
+  c. Henry VIII
+> d. James I
+
+#badabbbaabadbbcdbdbaaaaafacbabccaead
+
+Okay, looks like that's it.  Thank you for playing this game, Emily.
+
+  a. My pleasure.
+  b. You're welcome.
+  c. What a satisfying conclusion!
+> d. Hold on, I have a question!
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeadd
+
+What is your question?
+
+  a. Is that all there is?
+> b. What is my score?
+  c. How can I send feedback to the author?
+  d. Can I play again?
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddb
+
+Your score?  There is no score in this game.
+
+  a. Oh, okay.
+> b. I want a score dammit.
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbb
+
+Your score is 0 out of a total of 0 possible points.  This is the only possible score and gives you no rank in particular.  Would you like to RESTORE, RESTART, UNDO the last command, look at the CREDITS, see a list of AMUSING things to do, or QUIT?
+
+  a. RESTORE
+  b. RESTART
+> c. UNDO
+  d. CREDITS
+  e. AMUSING
+  f. QUIT
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbbc
+
+Your score?  There is no score in this game.
+
+  a. Oh, okay.
+> b. I want a score dammit.
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbbcb
+
+Your score is 0 out of a total of 0 possible points.  This is the only possible score and gives you no rank in particular.  Would you like to RESTORE, RESTART, UNDO the last command, look at the CREDITS, see a list of AMUSING things to do, or QUIT?
+
+  a. RESTORE
+  b. RESTART
+> c. UNDO
+  d. CREDITS
+  e. AMUSING
+  f. QUIT
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbbcbc
+
+Again?!
+
+> a. Yes, again!
+  b. No, forget it.
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbbcbca
+
+But we just did this.
+
+  a. Oh right, I forgot, never mind.
+> b. But I want to see if something different will happen this time!
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbbcbcab
+
+Nothing different will happen.
+
+  a. Well never mind then.
+> b. But I still want to do it!
+
+#badabbbaabadbbcdbdbaaaaafacbabccaeaddbbcbcabb
+
+Fine.
+
+  a. Yay!
+

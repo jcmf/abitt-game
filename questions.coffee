@@ -2577,7 +2577,7 @@ module.exports = qq [
                                     else
                                       @undoagain = true
                                       q "Fine.",
-                                        q "Yay!",
+                                        a "Yay!",
                                           q "Nothing different will happen.",
                                             a "Well never mind then."
                                             a "But I still want to do it!",
