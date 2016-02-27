@@ -1,7 +1,10 @@
 questions = require './questions.coffee'
 assert = require 'assert'
 
-exports.run = (letters, cb, error) ->
+code0 = 'a'.charCodeAt 0
+code0_uc = 'A'.charCodeAt 0
+
+exports.start = ->
   stack = require('./questions.coffee')[..]
   stack.reverse()
   state = {}
@@ -10,31 +13,48 @@ exports.run = (letters, cb, error) ->
       if 'function' != typeof x then return x
       x = x.call state
     throw new Error "too many layers: #{x}"
-  code0 = 'a'.charCodeAt 0
-  code0_uc = 'A'.charCodeAt 0
-  for letter, li in letters + '\u0000'
+  generate = ->
     q = null
     while not q
-      if not stack.length then return error "end: letters=#{letters} li=#{li}"
+      if not stack.length then return
       frame = evaluate stack.pop()
       q = evaluate frame?.q
     ai = 0
-    next = null
+    called = false
     aa = for a in frame.aa
-      cur = evaluate a
-      if not cur then continue
-      text = evaluate cur.a
-      if not text then continue
-      codes = [code0+ai, code0_uc+ai]
-      al = String.fromCharCode codes[0]
-      ai += 1
-      selected = letter is al
-      if selected then next = cur
-      {a: text, codes, selected, next, letter: String.fromCharCode codes[0]}
-    current = li is letters.length
-    cb {q, aa, current, letters: letters[...li]}
-    if current then return
+      result = do ->
+        cur = evaluate a
+        if not cur then return
+        text = evaluate cur.a
+        if not text then return
+        codes = [code0+ai, code0_uc+ai]
+        letter = String.fromCharCode codes[0]
+        ai += 1
+        fn = ->
+          if called then throw new Error 'already called'
+          called = true
+          post = evaluate cur.post
+          if post and post.q then stack.push post
+          generate()
+        {a: text, codes, letter, fn}
+      if not result then continue
+      result
+    {q, aa}
+  generate()
+
+exports.run = (letters, cb, error) ->
+  cur = exports.start()
+  for letter, li in letters + '\u0000'
+    if not cur then return error "end: letters=#{letters} li=#{li}"
+    next = null
+    for a in cur.aa
+      a.selected = a.letter is letter
+      if a.selected then next = a.fn
+      delete a.fn
+    cur.letters = letters[...li]
+    cur.current = li == letters.length
+    cb cur
+    if cur.current then return
     if not next then return error "no match: letters=#{letters} li=#{li}"
-    post = evaluate next.post
-    if post and post.q then stack.push post
+    cur = next()
   assert false

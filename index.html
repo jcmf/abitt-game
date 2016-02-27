@@ -11953,14 +11953,18 @@ module.exports = qq([
 
 
 },{"./dsl.coffee":1}],12:[function(require,module,exports){
-var assert, questions;
+var assert, code0, code0_uc, questions;
 
 questions = require('./questions.coffee');
 
 assert = require('assert');
 
-exports.run = function(letters, cb, error) {
-  var a, aa, ai, al, code0, code0_uc, codes, cur, current, evaluate, frame, j, len, letter, li, next, post, q, ref, selected, stack, state, text;
+code0 = 'a'.charCodeAt(0);
+
+code0_uc = 'A'.charCodeAt(0);
+
+exports.start = function() {
+  var evaluate, generate, stack, state;
   stack = require('./questions.coffee').slice(0);
   stack.reverse();
   state = {};
@@ -11974,69 +11978,100 @@ exports.run = function(letters, cb, error) {
     }
     throw new Error("too many layers: " + x);
   };
-  code0 = 'a'.charCodeAt(0);
-  code0_uc = 'A'.charCodeAt(0);
-  ref = letters + '\u0000';
-  for (li = j = 0, len = ref.length; j < len; li = ++j) {
-    letter = ref[li];
+  generate = function() {
+    var a, aa, ai, called, frame, q, result;
     q = null;
     while (!q) {
       if (!stack.length) {
-        return error("end: letters=" + letters + " li=" + li);
+        return;
       }
       frame = evaluate(stack.pop());
       q = evaluate(frame != null ? frame.q : void 0);
     }
     ai = 0;
-    next = null;
+    called = false;
     aa = (function() {
-      var k, len1, ref1, results;
-      ref1 = frame.aa;
+      var j, len, ref, results;
+      ref = frame.aa;
       results = [];
-      for (k = 0, len1 = ref1.length; k < len1; k++) {
-        a = ref1[k];
-        cur = evaluate(a);
-        if (!cur) {
+      for (j = 0, len = ref.length; j < len; j++) {
+        a = ref[j];
+        result = (function() {
+          var codes, cur, fn, letter, text;
+          cur = evaluate(a);
+          if (!cur) {
+            return;
+          }
+          text = evaluate(cur.a);
+          if (!text) {
+            return;
+          }
+          codes = [code0 + ai, code0_uc + ai];
+          letter = String.fromCharCode(codes[0]);
+          ai += 1;
+          fn = function() {
+            var post;
+            if (called) {
+              throw new Error('already called');
+            }
+            called = true;
+            post = evaluate(cur.post);
+            if (post && post.q) {
+              stack.push(post);
+            }
+            return generate();
+          };
+          return {
+            a: text,
+            codes: codes,
+            letter: letter,
+            fn: fn
+          };
+        })();
+        if (!result) {
           continue;
         }
-        text = evaluate(cur.a);
-        if (!text) {
-          continue;
-        }
-        codes = [code0 + ai, code0_uc + ai];
-        al = String.fromCharCode(codes[0]);
-        ai += 1;
-        selected = letter === al;
-        if (selected) {
-          next = cur;
-        }
-        results.push({
-          a: text,
-          codes: codes,
-          selected: selected,
-          next: next,
-          letter: String.fromCharCode(codes[0])
-        });
+        results.push(result);
       }
       return results;
     })();
-    current = li === letters.length;
-    cb({
+    return {
       q: q,
-      aa: aa,
-      current: current,
-      letters: letters.slice(0, li)
-    });
-    if (current) {
+      aa: aa
+    };
+  };
+  return generate();
+};
+
+exports.run = function(letters, cb, error) {
+  var a, cur, j, k, len, len1, letter, li, next, ref, ref1;
+  cur = exports.start();
+  ref = letters + '\u0000';
+  for (li = j = 0, len = ref.length; j < len; li = ++j) {
+    letter = ref[li];
+    if (!cur) {
+      return error("end: letters=" + letters + " li=" + li);
+    }
+    next = null;
+    ref1 = cur.aa;
+    for (k = 0, len1 = ref1.length; k < len1; k++) {
+      a = ref1[k];
+      a.selected = a.letter === letter;
+      if (a.selected) {
+        next = a.fn;
+      }
+      delete a.fn;
+    }
+    cur.letters = letters.slice(0, li);
+    cur.current = li === letters.length;
+    cb(cur);
+    if (cur.current) {
       return;
     }
     if (!next) {
       return error("no match: letters=" + letters + " li=" + li);
     }
-    post = evaluate(next.post);
-    if (post && post.q) {
-      stack.push(post);
-    }
+    cur = next();
   }
   return assert(false);
 };
@@ -12240,7 +12275,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14563-815-74280-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14565-439-86811-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><em>Quoth the Raven, &#x201C;404.&#x201D;</em></p>
