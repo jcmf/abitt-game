@@ -25,7 +25,9 @@ for name in fs.readdirSync testdir
   fs.writeFileSync path, pieces.join ''
 
 {start} = require './runner.coffee'
-for i in [0...1000]
+t0 = new Date()
+n = 1000
+for i in [0...n]
   letters = []
   checkText = (text) ->
     if /undefined|\[object/.test text
@@ -44,3 +46,6 @@ for i in [0...1000]
   catch e
     console.error "#!#{letters.join ''}"
     throw e
+t1 = new Date()
+dt = (t1.getTime() - t0.getTime()) / 1000
+console.log "#{n} random playthoughs in #{dt}s [#{dt/n}s each = #{Math.round n/dt}/s]"
