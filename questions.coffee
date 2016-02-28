@@ -1076,6 +1076,58 @@ module.exports = qq [
       a "...Zambia."
       a "...Zimbabwe."
 
+  -> if @if
+    q "Which of the following won the most XYZZY awards?",
+      a "Aotearoa."
+      a "Cryptozookeeper.", -> @if = false
+      a "Slouching Towards Bedlam.", @if = false
+      a "Zombie Exodus."
+      a "What's a XYZZY award?", ->
+        @if = false
+        if @nonifer
+          q "The Oscars of the interactive fiction scene, basically?",
+            a "Okay."
+            a "Huh."
+        else
+          q "You're breaking character, #{@title} #{@ln}.",
+            a "Oops!"
+
+  -> if @theology
+    q "Which of the following English monarchs is also a saint?",
+      a "Edward the Confessor"
+      a "Edward the Martyr"
+      a "Henry VIII"
+      a "James I"
+
+  -> if @theoretical_physics
+    q "Which of the following best explains the decay of black holes?",
+      a "General relativity."
+      a "Quantum electrodynamics."
+      a "The second law of thermodynamics."
+      a "String theory."
+
+  -> if @if
+    q "Which of the following received the most Spring Thing votes?",
+      a "Blue Lacuna"
+      a "Fate"
+      a "Mentula Macanus: Apocolocyntosis", -> @song or= ['iR8lVsjSF6M', 560]
+      a "The Rocket Man from the Sea"
+
+  -> if @moremath
+    q "What is the smallest odd number (greater than zero: 1, 3, 5...) such that multiplying that number by any integer power of two (greater than one: 2, 4, 8...) and adding 1 always produces a prime result?",
+      a "10223"
+      a "21181"
+      a "55459"
+      a "78557"
+
+  -> if @philosophy
+    q "Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child is crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?",
+      a "Nobody is to blame -- it was an accident." # XXX
+      a "The twin who hit the child is to blame."
+      a "The twin who didn't hit the child is to blame."
+      a "Both twins are to blame."
+      a "I blame you for asking me this horrifying question!"
+
   q "Do you know CPR?",
     a "What is CPR?", ->
       @alreadydead = true
@@ -2444,58 +2496,6 @@ module.exports = qq [
                         a "No.", darecall
                     a "No.", darecall
                 a "No.", darecall
-
-  -> if @if
-    q "Which of the following won the most XYZZY awards?",
-      a "Aotearoa."
-      a "Cryptozookeeper.", -> @if = false
-      a "Slouching Towards Bedlam.", @if = false
-      a "Zombie Exodus."
-      a "What's a XYZZY award?", ->
-        @if = false
-        if @nonifer
-          q "The Oscars of the interactive fiction scene, basically?",
-            a "Okay."
-            a "Huh."
-        else
-          q "You're breaking character, #{@title} #{@ln}.",
-            a "Oops!"
-
-  -> if @theology
-    q "Which of the following English monarchs is also a saint?",
-      a "Edward the Confessor"
-      a "Edward the Martyr"
-      a "Henry VIII"
-      a "James I"
-
-  -> if @theoretical_physics
-    q "Which of the following best explains the decay of black holes?",
-      a "General relativity."
-      a "Quantum electrodynamics."
-      a "The second law of thermodynamics."
-      a "String theory."
-
-  -> if @if
-    q "Which of the following received the most Spring Thing votes?",
-      a "Blue Lacuna"
-      a "Fate"
-      a "Mentula Macanus: Apocolocyntosis", -> @song or= ['iR8lVsjSF6M', 560]
-      a "The Rocket Man from the Sea"
-
-  -> if @moremath
-    q "What is the smallest odd number (greater than zero: 1, 3, 5...) such that multiplying that number by any integer power of two (greater than one: 2, 4, 8...) and adding 1 always produces a prime result?",
-      a "10223"
-      a "21181"
-      a "55459"
-      a "78557"
-
-  -> if @philosophy
-    q "Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child was crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?",
-      a "Nobody is to blame -- it was an accident."
-      a "The twin who hit the child is to blame."
-      a "The twin who didn't hit the child is to blame."
-      a "Both twins are to blame."
-      a "I blame you for asking me this horrifying question!"
 
   -> q "Okay, looks like that's it.  Thank you for playing this game, #{@fn}.",
     a "My pleasure."

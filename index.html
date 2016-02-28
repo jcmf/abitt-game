@@ -11675,6 +11675,41 @@ module.exports = qq([
     if (this.geo) {
       return q("Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...", a("...Venezuela."), a("...Samoa."), a("...Yemen."), a("...South Africa."), a("...Zambia."), a("...Zimbabwe."));
     }
+  }, function() {
+    if (this["if"]) {
+      return q("Which of the following won the most XYZZY awards?", a("Aotearoa."), a("Cryptozookeeper.", function() {
+        return this["if"] = false;
+      }), a("Slouching Towards Bedlam.", this["if"] = false), a("Zombie Exodus."), a("What's a XYZZY award?", function() {
+        this["if"] = false;
+        if (this.nonifer) {
+          return q("The Oscars of the interactive fiction scene, basically?", a("Okay."), a("Huh."));
+        } else {
+          return q("You're breaking character, " + this.title + " " + this.ln + ".", a("Oops!"));
+        }
+      }));
+    }
+  }, function() {
+    if (this.theology) {
+      return q("Which of the following English monarchs is also a saint?", a("Edward the Confessor"), a("Edward the Martyr"), a("Henry VIII"), a("James I"));
+    }
+  }, function() {
+    if (this.theoretical_physics) {
+      return q("Which of the following best explains the decay of black holes?", a("General relativity."), a("Quantum electrodynamics."), a("The second law of thermodynamics."), a("String theory."));
+    }
+  }, function() {
+    if (this["if"]) {
+      return q("Which of the following received the most Spring Thing votes?", a("Blue Lacuna"), a("Fate"), a("Mentula Macanus: Apocolocyntosis", function() {
+        return this.song || (this.song = ['iR8lVsjSF6M', 560]);
+      }), a("The Rocket Man from the Sea"));
+    }
+  }, function() {
+    if (this.moremath) {
+      return q("What is the smallest odd number (greater than zero: 1, 3, 5...) such that multiplying that number by any integer power of two (greater than one: 2, 4, 8...) and adding 1 always produces a prime result?", a("10223"), a("21181"), a("55459"), a("78557"));
+    }
+  }, function() {
+    if (this.philosophy) {
+      return q("Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child is crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?", a("Nobody is to blame -- it was an accident."), a("The twin who hit the child is to blame."), a("The twin who didn't hit the child is to blame."), a("Both twins are to blame."), a("I blame you for asking me this horrifying question!"));
+    }
   }, q("Do you know CPR?", a("What is CPR?", function() {
     var butactually, meandifferent, waitreallygsw;
     this.alreadydead = true;
@@ -11815,41 +11850,6 @@ module.exports = qq([
   }), a("No.", function() {
     return this.song = ['FvDHSCpW0O8', 560];
   }))), a("No.", darecall))), a("No.", darecall))), a("No.", darecall)))))))), function() {
-    if (this["if"]) {
-      return q("Which of the following won the most XYZZY awards?", a("Aotearoa."), a("Cryptozookeeper.", function() {
-        return this["if"] = false;
-      }), a("Slouching Towards Bedlam.", this["if"] = false), a("Zombie Exodus."), a("What's a XYZZY award?", function() {
-        this["if"] = false;
-        if (this.nonifer) {
-          return q("The Oscars of the interactive fiction scene, basically?", a("Okay."), a("Huh."));
-        } else {
-          return q("You're breaking character, " + this.title + " " + this.ln + ".", a("Oops!"));
-        }
-      }));
-    }
-  }, function() {
-    if (this.theology) {
-      return q("Which of the following English monarchs is also a saint?", a("Edward the Confessor"), a("Edward the Martyr"), a("Henry VIII"), a("James I"));
-    }
-  }, function() {
-    if (this.theoretical_physics) {
-      return q("Which of the following best explains the decay of black holes?", a("General relativity."), a("Quantum electrodynamics."), a("The second law of thermodynamics."), a("String theory."));
-    }
-  }, function() {
-    if (this["if"]) {
-      return q("Which of the following received the most Spring Thing votes?", a("Blue Lacuna"), a("Fate"), a("Mentula Macanus: Apocolocyntosis", function() {
-        return this.song || (this.song = ['iR8lVsjSF6M', 560]);
-      }), a("The Rocket Man from the Sea"));
-    }
-  }, function() {
-    if (this.moremath) {
-      return q("What is the smallest odd number (greater than zero: 1, 3, 5...) such that multiplying that number by any integer power of two (greater than one: 2, 4, 8...) and adding 1 always produces a prime result?", a("10223"), a("21181"), a("55459"), a("78557"));
-    }
-  }, function() {
-    if (this.philosophy) {
-      return q("Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child was crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?", a("Nobody is to blame -- it was an accident."), a("The twin who hit the child is to blame."), a("The twin who didn't hit the child is to blame."), a("Both twins are to blame."), a("I blame you for asking me this horrifying question!"));
-    }
-  }, function() {
     var classy, medical, stretch, yourscore;
     return q("Okay, looks like that's it.  Thank you for playing this game, " + this.fn + ".", a("My pleasure."), a("You're welcome."), a("What a satisfying conclusion!", q("I know, right?", a("Totally.", q("Yep!", a("Uh-huh."))))), a("Hold on, I have a question!", q("What is your question?", a("Is that all there is?", q("Because if that's all there is, my friend...", a("Then let's keep dancing...", q("Who is that from, anyway?", a("Alan Price", function() {
       return this.song = 'Dyg420eUvok';
@@ -12277,7 +12277,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14566-308-27843-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14566-323-03038-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><em>Quoth the Raven, &#x201C;404.&#x201D;</em></p>
