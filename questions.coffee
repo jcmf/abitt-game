@@ -637,6 +637,7 @@ module.exports = qq [
     a "Rwanda", -> @geo = false
 
   -> if @expo and @neverheardofexpo
+    @nextamusing = "I don't know... maybe something involving vanilla ice cream?"
     q "Something's been bothering me about some of your earlier answers.",
       a "Oh?  What is it?",
         q "Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!",
@@ -1709,7 +1710,8 @@ module.exports = qq [
                                                             a "For good reasons I won't get into here."
                                                             a "For stupid reasons I won't get into here."
                                         a "No.", toppings2
-                                    a "Vanilla.",
+                                    a "Vanilla.", ->
+                                      @nextamusing = "Like that thing with the vanilla ice cream... but what if it were a different <em>kind</em> of vanilla ice cream?"
                                       q "So are you into BDSM?",
                                         a "Yes.",
                                           q "So would you say that the only vanilla thing about you is your ice cream preference?",
@@ -1773,8 +1775,8 @@ module.exports = qq [
                                     a "Milk chocolate nuts vanilla.",
                                       q "Why did you choose that one over the other one?",
                                         a "Because I like milk chocolate better than dark chocolate."
-                                        a "Because I like vanilla ice cream better than chocolate ice cream.",
-                                          vanilla = q "Don't you worry about counterfeit vanilla?",
+                                        a "Because I like vanilla ice cream better than chocolate ice cream.", vanilla = ->
+                                          q "Don't you worry about counterfeit vanilla?",
                                             a "Yes."
                                             a "No."
                                             a "Is that a thing?",
@@ -1994,7 +1996,8 @@ module.exports = qq [
                                 a "Got it!"
     a "Hide.",
       q "Where will you hide?",
-        a "Inside the projection booth.",
+        a "Inside the projection booth.", ->
+          @nextamusing = "Well like what if, instead of doing CPR, I could just pray to Ryan Veeder?"
           q "You encounter a sign: EMPLOYEES ONLY.",
             a "Go in anyway.",
               q "It's locked.",
@@ -2623,6 +2626,7 @@ module.exports = qq [
                 a "شيطان"
                 a "Yes."
             a "Ryan Veeder.", ->
+              @nextamusing = "Like if I tried to find out who wrote this game but then it turned out that I had never even heard of the Exposition but it later also turned out that I was one of the people involved in putting it on."
               if @ln is 'Veeder'
                 q "You can't pray to yourself!  That would be, like, super embarrassing.",
                   a "Okay."
@@ -2795,6 +2799,9 @@ module.exports = qq [
                     -> if @amusing then a @amusing,
                       q "Oh yeah!  That was pretty okay I guess!",
                         a "Agreed."
+                    a @nextamusing or "Well, I've always wondered about what it would be like to go inside one of those projection booths at a movie theater.",
+                      q "Sure, I guess you could try to do something like that if you wanted.  If the game weren't over already, I mean.",
+                        a "Oh well."
                     a "I guess I can't think of anything.",
                       q "Yeah, me either.",
                         a "Too bad."
