@@ -1122,11 +1122,89 @@ module.exports = qq [
 
   -> if @philosophy
     q "Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child is crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?",
-      a "Nobody is to blame -- it was an accident." # XXX
-      a "The twin who hit the child is to blame."
-      a "The twin who didn't hit the child is to blame."
-      a "Both twins are to blame."
-      a "I blame you for asking me this horrifying question!"
+      a "Nobody is to blame -- it was an accident.",
+        q "How so?",
+          a "The twins got drunk by accident.",
+            q "What?  Why do you think that?",
+              a "It was clear from the way you told the story that they were trying to stay sober, but <em>fate</em> intervened!",
+                q "Okay but what if I told you a similar story about a similar set of twins only <em>these</em> twins were <em>definitely</em> trying to get drunk?",
+                  a "I guess that would be different."
+                  a "Then I'd say you're lying.  It's impossible to get drunk on purpose.",
+                    q "Hmm.  Have you ever tried to get drunk?",
+                      a "Yes, but I failed."
+                      a "No."
+                      a "Only accidentally."
+          a "The twins got drunk on purpose, but then got in the car by accident.",
+            q "How do you figure?",
+              a "Those cars were totally asking for it.",
+                q "Wait... how does....",
+                  a "If the cars didn't want to be entered by drunk twins, they shouldn't have been out at a bar dressed like that.",
+                    q "I... that's... yes.",
+                      a "Woooooo I win yay me."
+                      a "Ha ha you're so gullible."
+              a "Drunk people can't do things on purpose.",
+                q "That is an interesting way of looking at things.",
+                  a "Yes it is."
+                  a "You're wrong!  It's boring."
+          a "The twins were driving drunk on purpose, but the fact that the child happened to be crossing just then was an accident."
+          a "I don't like any of those answers."
+      a "The twin who hit the child is to blame.",
+        q "But they both did the same thing!",
+          a "No, one of them killed somebody and the other didn't.",
+            q "But they could have!",
+              a "But they didn't."
+              a "Oh good point never mind."
+      a "The twin who didn't hit the child is to blame.",
+        q "Really?",
+          a "Sorry, wasn't paying attention."
+          a "No, I was just being ridiculous."
+          a "Wait, which option did I just choose?"
+          a "Oh, uh, sorry, I think I chose the wrong thing by mistake."
+          a "Yes, really.",
+            q "I... I'm sorry, I... I don't have a response prepared for that.",
+              a "Yeah, you think you're so smart but I sure showed you, didn't I?",
+                q "You sure did!",
+                  a "I am so sorry about that."
+                  a "Good."
+      a "Both twins are to blame.",
+        q "Even the one who didn't kill anybody?",
+          a "Yes."
+          a "Oh my goodness, I hadn't thought of that.  Can I still change my mind?",
+            q "Well... okay, just this once, I will allow it.",
+              a "Thanks!"
+              a "Aw man, I was secretly hoping that you wouldn't.",
+                q "Well it's too late now.  Your mind has been irrevocably changed.",
+                  a "Well that's okay because I'm secretly glad that --"
+      a "I blame you for asking me this horrifying question!",
+        q "Then you're going to <em>love</em> this next one.",
+          a "Am I?",
+            q "Yes.",
+              a "OK, what is the next one?"
+          a "OK, what is it?"
+          a "Wait, I bet I know what it is.",
+            q "How do you know?",
+              a "Because I cheated.",
+                q "Cool!  Keep up the good work.",
+                  a "Okay, I will!"
+              a "Because I'm psychic.",
+                q "That is very impressive and also hard to believe.",
+                  a "Yes it is."
+                  a "It's true though."
+              a "Because I'm a really good guesser.",
+                q "Good job guessing!",
+                  a "Gosh thanks."
+                  a "But I haven't even told you my guess yet!  Okay, you're going to ask me --"
+              a "Because I've played this game before.",
+                q "I'm afraid you are mistaken.",
+                  a "Oh okay well forget I said anything then."
+                  a "No I'm not.  You are."
+                  a "Is this a reference to the thing that's going to happen later where I can ask about playing again?",
+                    q "I don't know what you're talking about.",
+                      a "Sure you don't."
+                      a "Oh never mind then, my mistake.",
+                        q "That's what I was saying!",
+                          a "Huh, I guess so."
+                          a "No it wasn't."
 
   q "Do you know CPR?",
     a "What is CPR?", ->
