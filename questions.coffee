@@ -521,7 +521,9 @@ module.exports = qq [
     more = (w1, w2, w3, w4) ->
       submore = (words) ->
         capitalize = (word) -> word.replace /^./, (m) -> m.toUpperCase()
-        answers = (a capitalize word + '.' for word in words)
+        submoreanswer = (word) ->
+          a "#{capitalize word}.", -> @word = word
+        answers = (submoreanswer word for word in words)
         q "Faster!", answers...
       q "Again!",
         a "Fit.", submore w1
@@ -2634,6 +2636,18 @@ module.exports = qq [
                       a "...a wolf."
                       a "...a snake."
                       a "...a centipede."
+                      a "...a piece of paper.",
+                        q "You take the paper and unfold it.",
+                          a "And...?", ->
+                            if @word
+                              q "It just has the word <em>#{@word.toUpperCase()}</em> written on it.",
+                                a "Huh?"
+                                a "Whatever."
+                                a "Oh right, that."
+                            else
+                              q "It's blank.",
+                                a "Mysterious!"
+                                a "Boring!"
                       a "OH DEAR GOD BEES"
             a "Graham Nelson.",
               ->

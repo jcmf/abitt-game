@@ -11512,10 +11512,15 @@ module.exports = qq([
       more = function(w1, w2, w3, w4) {
         var submore;
         submore = function(words) {
-          var answers, capitalize, word;
+          var answers, capitalize, submoreanswer, word;
           capitalize = function(word) {
             return word.replace(/^./, function(m) {
               return m.toUpperCase();
+            });
+          };
+          submoreanswer = function(word) {
+            return a((capitalize(word)) + ".", function() {
+              return this.word = word;
             });
           };
           answers = (function() {
@@ -11523,7 +11528,7 @@ module.exports = qq([
             results = [];
             for (i = 0, len = words.length; i < len; i++) {
               word = words[i];
-              results.push(a(capitalize(word + '.')));
+              results.push(submoreanswer(word));
             }
             return results;
           })();
@@ -11841,7 +11846,13 @@ module.exports = qq([
     if (this.ln === 'Veeder') {
       return q("You can't pray to yourself!  That would be, like, super embarrassing.", a("Okay."));
     } else {
-      return q("Ryan Veeder appears and solves all of your problems!", a("Thanks, Ryan Veeder!"), a("But I <em>liked</em> having problems.", q("Well!  In that case, Ryan reaches deep into the folds of his voluminous robe and produces...", a("...a crow."), a("...a goat."), a("...a wolf."), a("...a snake."), a("...a centipede."), a("OH DEAR GOD BEES"))));
+      return q("Ryan Veeder appears and solves all of your problems!", a("Thanks, Ryan Veeder!"), a("But I <em>liked</em> having problems.", q("Well!  In that case, Ryan reaches deep into the folds of his voluminous robe and produces...", a("...a crow."), a("...a goat."), a("...a wolf."), a("...a snake."), a("...a centipede."), a("...a piece of paper.", q("You take the paper and unfold it.", a("And...?", function() {
+        if (this.word) {
+          return q("It just has the word <em>" + (this.word.toUpperCase()) + "</em> written on it.", a("Huh?"), a("Whatever."), a("Oh right, that."));
+        } else {
+          return q("It's blank.", a("Mysterious!"), a("Boring!"));
+        }
+      }))), a("OH DEAR GOD BEES"))));
     }
   }), a("Graham Nelson.", function() {
     var msg;
@@ -12280,7 +12291,7 @@ p,
     background-color: #000;
   }
 }
-</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14566-865-41173-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
+</style></head><body><div id="home-pane" class="pane enter-key"><h1>A Brief Introduction To This Game</h1><div class="frontmatter"><div class="author">by <span class="redacted">REDACTED</span></div><div class="copyright">&#xA9; 2016</div><div class="serial">s/n 14566-883-97113-6/12&#x1F639;</div></div><p><a href="#!">Press Enter or click here to begin.</a></p>
 <div class="cursor"></div></div><div id="loading" style="display: none;"><p>Loading....</p>
 </div><div id="404-pane" style="display: none;" class="pane enter-key"><h2 id="page-not-found">Page Not Found</h2>
 <p><em>Quoth the Raven, &#x201C;404.&#x201D;</em></p>
