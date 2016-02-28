@@ -718,7 +718,7 @@ module.exports = qq [
                         q "You are also welcome!",
                           a "Thanks!"
                   a "I'm kind of annoyed now, but I would probably be even more annoyed if you'd asked me more questions like that, so maybe it's just as well."
-                  a "No way, you HAVE to ask me the follow-up question!",
+                  a "No way, you <em>have</em> to ask me the follow-up question!",
                     q "Well, okay.  But not right away.",
                       a "All right.", -> @math = true
           a "No no, the one with the 99 heads.",
