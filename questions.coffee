@@ -1115,10 +1115,72 @@ module.exports = qq [
 
   -> if @moremath
     q "What is the smallest odd number (greater than zero: 1, 3, 5...) such that multiplying that number by any integer power of two (greater than one: 2, 4, 8...) and adding 1 always produces a prime result?",
-      a "10223"
-      a "21181"
-      a "55459"
-      a "78557"
+      a "10223",
+        (smallestodd = (msg, letter) -> q "Why did you choose that answer?",
+          a msg
+          a "Because I like to choose #{letter} when I don't know the answer."
+          a "I chose it at random."
+          a "It looked nice.",
+            q "In what way?",
+              a "Oh, you know, the way the digits sort of repeat like that."
+              a "It's a pretty color.",
+                q "Oh?  What color is it?",
+                  a "Teal."
+                  a "Mauve."
+                  a "Indigo."
+                  a "Crimson."
+                  a "Veridian."
+                  a "Octarine."
+                  a "Chartreuse."
+                  a "Ultraviolet."
+              a "It kind of looks a bit like this other number that I have a crush on.",
+                q "Which number?",
+                  a "It's... I'm too embarrassed to say."
+          a "Because it's the right answer.",
+            q "How do you know?",
+              a "Because I guessed it!"
+              a "Because I looked it up on the Internet."
+              a "Because I devised this fiendishly clever proof.  Wanna see it?",
+                q "Yes.",
+                  a "Well too bad, because I'm not going to show you."
+                  a "Okay, hold on, I'm going to... uh... you want me to, like, type it in?",
+                    q "No, that would take too long.  Just, hmm, think about it real hard, and I'll try to read your mind.  Okay?",
+                      a "Okay!  Thinking... thinking... done!  Did you get it?",
+                        q "No.",
+                          a "Well too bad because I'm not doing <em>that</em> again."
+                          a "Okay, let's try again!  Thinking... thinking... more thinking... okay did you get it this time???",
+                            q "Yeah, I guess, probably.",
+                              a "Cool."
+                              a "What's wrong?",
+                                q "I don't really understand this proof.",
+                                  a "Oh no!  Maybe it's wrong.",
+                                    q "Yeah, maybe.",
+                                      a "Maybe I can get one of my peers to review it or something.",
+                                        q "Sounds like a great idea.",
+                                          a "Thanks, I thought of it myself!"
+                                      a "Math sure is hard."
+                                  a "Do you want me to explain it?",
+                                    q "Not really, no.",
+                                      a "Oh.  Okay."
+                                  a "Maybe we should try again.  I could think slower this time!",
+                                    q "I have a different suggestion.  Instead of doing that, we could just, you know, not do that.",
+                                      a "Great idea!  That will save a ton of time!"
+                                      a "I like the way you think."
+                                      a "Brilliant!"
+                      a "On second thought I'd rather keep this to myself."
+                      a "That's the stupidest thing I've ever heard.",
+                        q "Yay!  I win!",
+                          a "Yep, you win at being stupid!"
+                          a "You sure are stupid."
+                          a "Good job."
+                      a "Among the things I have ever heard, the thing you just said is in the 99th percentile for how stupid it is.",
+                        q "Well.  Gosh.  I feel pretty... nonplussed about that.",
+                          a "Good."
+                          a "Sorry."
+        )("You asked for the smallest one, and that was the smallest available.", "A")
+      a "21181", smallestodd "Well, 10223 turned out not to work, and this is the next smallest option, so....", "B"
+      a "55459", smallestodd "I tried 10223 and 21181 and neither of those meets the criteria, so clearly it's gotta be this one.", "C"
+      a "78557", smallestodd "Process of elimination -- the first three are definitely no good, and this is the only one left to choose.", "D"
 
   -> if @philosophy
     q "Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child is crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?",
