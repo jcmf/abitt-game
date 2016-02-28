@@ -1,0 +1,355 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+  a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+> d. Hold on, I have a question!
+
+#d
+
+What is your question?
+
+  a. How should I indicate which answer I wish to choose?
+  b. What if I choose the wrong answer?
+> c. Who wrote this game?
+
+#dc
+
+Are you sure you want to know?
+
+> a. Yes.
+  b. No.
+
+#dca
+
+You're not trying to trick me, are you?
+
+> a. Of course not.
+  b. Why yes, actually, I am trying to trick you.
+
+#dcaa
+
+So the judging period is over?
+
+  a. Yes.
+  b. No.
+> c. Uh... judging period?  What?
+
+#dcaac
+
+You know, for the exposition thing.
+
+  a. Oh right, the exposition thing!
+> b. What exposition thing?
+
+#dcaacb
+
+Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
+
+  a. Oh, <em>that</em>!
+> b. Never heard of it.
+
+#dcaacbb
+
+Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
+
+> a. Uh... sure... whatever you say.
+
+#dcaacbba
+
+What's your name?
+
+  a. Emily
+  b. Jenni
+> c. Ryan
+
+#dcaacbbac
+
+And your last name?
+
+  a. Burrus
+  b. Freebern
+  c. Holman
+  d. Kinsman
+  e. Weisenberger
+  f. Stevens
+> g. Veeder
+
+#dcaacbbacg
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#dcaacbbacga
+
+Hold on.  Are you the <em>real</em> Ryan Veeder?
+
+> a. Yes.
+  b. No.
+
+#dcaacbbacgaa
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#dcaacbbacgaaa
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#dcaacbbacgaaaa
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#dcaacbbacgaaaaa
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#dcaacbbacgaaaaaa
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#dcaacbbacgaaaaaaa
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#dcaacbbacgaaaaaaaa
+
+Why do you say that?
+
+  a. Because I don't care.
+> b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#dcaacbbacgaaaaaaaab
+
+What goes between two sentences?
+
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
+  e. It depends.
+
+#dcaacbbacgaaaaaaaaba
+
+How much bigger than one tenth is one ninth?
+
+> a. About 1%.
+  b. About 9%.
+  c. About 10%.
+  d. About 11%.
+
+#dcaacbbacgaaaaaaaabaa
+
+And why is that?
+
+> a. You just, uh, add together, the, like....
+  b. It, uh, I mean, if you subtract, um....
+  c. I think you can, like, multiply them and, er....
+  d. Well you just, er, divide one by the, uh....
+  e. Pass!  Can I pass?
+
+#dcaacbbacgaaaaaaaabaaa
+
+Mmm, yes, I see... sorry, I just need to make a note here....
+
+> a. Okay....
+  b. Are you done?
+
+#dcaacbbacgaaaaaaaabaaaa
+
+Ah yes, there we go.  Where were we?
+
+> a. You, uh, were asking me questions?
+
+#dcaacbbacgaaaaaaaabaaaaa
+
+Indeed I was!  Shall we get back to that?
+
+> a. Okay.
+
+#dcaacbbacgaaaaaaaabaaaaaa
+
+Something's been bothering me about some of your earlier answers.
+
+  a. Oh?  What is it?
+  b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
+> c. OMG did I screw up the math question?  I hate math.
+
+#dcaacbbacgaaaaaaaabaaaaaac
+
+The one ninth one?
+
+  a. Yeah, that one!
+> b. No no, the one with the 99 heads.
+
+#dcaacbbacgaaaaaaaabaaaaaacb
+
+Oh, that one!  You did fine on that one.
+
+> a. But not the other one?
+
+#dcaacbbacgaaaaaaaabaaaaaacba
+
+Well, kinda?  I mean I was sort of planning on skipping the follow-up question.  Just, you know, I didn't want to, like, annoy you.
+
+  a. That's very considerate of you!
+  b. I'm kind of annoyed now, but I would probably be even more annoyed if you'd asked me more questions like that, so maybe it's just as well.
+> c. No way, you <em>have</em> to ask me the follow-up question!
+
+#dcaacbbacgaaaaaaaabaaaaaacbac
+
+Well, okay.  But not right away.
+
+> a. All right.
+
+#dcaacbbacgaaaaaaaabaaaaaacbaca
+
+Lorem ipsum dolor sit...
+
+  a. ...amah.
+  b. ...aman.
+  c. ...amen.
+> d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacad
+
+About how strong is gravity?
+
+  a. 6.674×10<sup>-11</sup> N (m/kg)<sup>2</sup>
+  b. 6.674×10<sup>-11</sup> m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>
+  c. 6.674×10<sup>-8</sup> cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup>
+  d. 4.302×10<sup>-3</sup> pc <i>M</i><sub>☉</sub><sup>-1</sup> (km/s)<sup>2</sup>
+  e. 0.01720209895
+  f. 9.8 m/s<sup>2</sup>
+> g. 1
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadg
+
+So did you play that game yet where you're a dog?
+
+> a. Yes.
+  b. No.
+  c. Wait, which one?
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadga
+
+What did you think of it?
+
+> a. Meh.
+  b. It was terrific!
+  c. It was terrible.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadgaa
+
+Grumpy wizards make a toxic brew for the jovial...
+
+  a. ...bishop.
+  b. ...duchess.
+  c. ...duke.
+  d. ...earl.
+  e. ...fool.
+  f. ...footman.
+  g. ...jack.
+  h. ...joker.
+  i. ...king.
+  j. ...knave.
+  k. ...knight.
+  l. ...lady.
+  m. ...lord.
+  n. ...pawn.
+  o. ...prince.
+> p. ...queen.
+  q. ...rook.
+  r. ...squire.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadgaap
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+> a. Soda.
+  b. Pop.
+  c. Coke.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadgaapa
+
+Imagine a box with perfectly square corners whose length, width, and depth are exact multiples of 1″.  If the each of the box's six sides has a diagonal measurement that is also an multiple of 1″, what is the smallest possible volume of the box?
+
+  a. No such box can exist.
+  b. 120 cubic inches.
+> c. About half a TEU.
+  d. Bigger than the Earth.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadgaapac
+
+Now imagine that the distances between opposite corners of the box (e.g. front-top-left to back-bottom-right) must also be exact multiples of 1″.  What's the volume of the smallest possible box?
+
+> a. No such box can exist.
+  b. Maybe a thousand Olympic swimming pools, give or take.
+  c. There are stars about that size.
+  d. Much larger than the observable universe.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadgaapaca
+
+But if it did exist, what would you call it?
+
+> a. A perfect cuboid.
+  b. An Euler brick.
+  c. A Halcke solid.
+  d. Arthur.
+
+#dcaacbbacgaaaaaaaabaaaaaacbacadgaapacaa
+
+Do you know CPR?
+
+  a. What is CPR?
+  b. No.
+  c. Yes.
+
