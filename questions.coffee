@@ -976,6 +976,45 @@ module.exports = qq [
                                 a "That doesn't make any sense.", liketothink
                                 a "Um.  <em>Does</em> that make sense?  I have no idea what you're even talking about anymore.", liketothink
 
+  -> if @philosophy
+    q "If a tree falls in the woods and no one hears it, does it make a sound?",
+      a "Yes.",
+        q "What do you mean, \"yes\"?  How can you possibly know that?",
+          a "Well, I'm not <em>certain</em>, but I <em>am</em> 99.9999% sure."
+          a "Silent treefalls are unheard-of, and I don't hear <em>you</em> proposing a mechanism through which the presence or absence of an observer could make any difference."
+          a "Conservation of energy."
+          a "I left an audio recorder nearby and played it back later."
+      a "No.",
+        q "What do you mean, \"no\"?  How can you possibly be sure?",
+          a "Sound is what you hear.  If nobody hears it, then it isn't sound by definition."
+          a "The situation you describe is impossible, so <em>any</em> answer I give is 100% correct by definition."
+          a "When you say \"no one hears it,\" what you mean is that there is nobody and nothing there to leave behind any evidence of the tree making a sound.  If there's nothing there, then by definition the tree must be falling freely in a perfect vacuum.  And you can't have sound in a vacuum.",
+            q "Slow down there, space cow-person!  What part of \"in the forest\" did you not understand?",
+              a "Hmm, good point, never mind."
+              a "Uh... the \"forest\" part?"
+              a "Well I mean by \"forest\" you clearly meant \"perfect absence of anything and everything other than the one tree.\"  So my point stands."
+              a "Silence!  My logic is unassailable!"
+              a "Space cow-person?",
+                q "You know, like space cowboy, only less old-fashioned.",
+                  a "Cool!"
+                  a "What are you, some kind of feminist?",
+                    q "Why yes.  Yes I am.",
+                      a "Good."
+                      a "Feminism is dumb.",
+                        q "Sounds like we disagree, then!",
+                          a "Yep!"
+                      a "Look, just because you used a gender-neutral term doesn't make you an actual feminist.",
+                        q "That's true!",
+                          a "Thank you for acknowledging that."
+          a "I meant \"No!\" as in \"Stop talking about this!\"", -> @philosophy = false
+      a "Well, it depends....",
+        q "What does it depend on?",
+          a "It depends on what you mean."
+          a "It depends on the specific situation."
+          a "It depends on how I feel like answering."
+          a "Look, can we talk about something else?", -> @philosophy = false
+      a "Who cares?", -> @philosophy = false
+
   -> if @lorem then q "Grumpy wizards make a toxic brew for the jovial...",
     a "...bishop."
     a "...duchess."
@@ -1027,45 +1066,6 @@ module.exports = qq [
       a "No."
       a "It depends."
       a "Who cares?"
-
-  -> if @philosophy
-    q "If a tree falls in the woods and no one hears it, does it make a sound?",
-      a "Yes.",
-        q "What do you mean, \"yes\"?  How can you possibly know that?",
-          a "Well, I'm not <em>certain</em>, but I <em>am</em> 99.9999% sure."
-          a "Silent treefalls are unheard-of, and I don't hear <em>you</em> proposing a mechanism through which the presence or absence of an observer could make any difference."
-          a "Conservation of energy."
-          a "I left an audio recorder nearby and played it back later."
-      a "No.",
-        q "What do you mean, \"no\"?  How can you possibly be sure?",
-          a "Sound is what you hear.  If nobody hears it, then it isn't sound by definition."
-          a "The situation you describe is impossible, so <em>any</em> answer I give is 100% correct by definition."
-          a "When you say \"no one hears it,\" what you mean is that there is nobody and nothing there to leave behind any evidence of the tree making a sound.  If there's nothing there, then by definition the tree must be falling freely in a perfect vacuum.  And you can't have sound in a vacuum.",
-            q "Slow down there, space cow-person!  What part of \"in the forest\" did you not understand?",
-              a "Hmm, good point, never mind."
-              a "Uh... the \"forest\" part?"
-              a "Well I mean by \"forest\" you clearly meant \"perfect absence of anything and everything other than the one tree.\"  So my point stands."
-              a "Silence!  My logic is unassailable!"
-              a "Space cow-person?",
-                q "You know, like space cowboy, only less old-fashioned.",
-                  a "Cool!"
-                  a "What are you, some kind of feminist?",
-                    q "Why yes.  Yes I am.",
-                      a "Good."
-                      a "Feminism is dumb.",
-                        q "Sounds like we disagree, then!",
-                          a "Yep!"
-                      a "Look, just because you used a gender-neutral term doesn't make you an actual feminist.",
-                        q "That's true!",
-                          a "Thank you for acknowledging that."
-          a "I meant \"No!\" as in \"Stop talking about this!\"", -> @philosophy = false
-      a "Well, it depends....",
-        q "What does it depend on?",
-          a "It depends on what you mean."
-          a "It depends on the specific situation."
-          a "It depends on how I feel like answering."
-          a "Look, can we talk about something else?", -> @philosophy = false
-      a "Who cares?", -> @philosophy = false
 
   -> if @geo
     q "Bangladesh, Cape Verde, Ethiopia, France, Honduras, Israel, Japan, Kyrgyzstan, Mexico, Qatar, Somalia, Uruguay...",
@@ -1146,7 +1146,21 @@ module.exports = qq [
                 q "That is an interesting way of looking at things.",
                   a "Yes it is."
                   a "You're wrong!  It's boring."
-          a "The twins were driving drunk on purpose, but the fact that the child happened to be crossing just then was an accident."
+          a "The twins were driving drunk on purpose, but the fact that the child happened to be crossing just then was an accident.",
+            q "I guess that's true.  Wait, is that true?  Let me think about this.",
+              a "Are you done thinking yet?",
+                q "No.",
+                  a "How about now?",
+                    q "Still thinking!",
+                      a "Okay, how about --"
+              a "Quit thinking and ask me another question already."
+          a "The twins and the child deliberately conspired to engineer this scenario, but it was only meant to result in light bruising.",
+            q "Hold on, I'm writing this down... light bruising, got it.",
+              a "Excellent."
+              a "Actually could you change that to say \"gunshot wound to the chest?\"",
+                q "Yes, that seems reasonable.  There we go!  All set.",
+                  a "Thanks!"
+                  a "Okay now change it back."
           a "I don't like any of those answers."
       a "The twin who hit the child is to blame.",
         q "But they both did the same thing!",
@@ -1168,7 +1182,18 @@ module.exports = qq [
                   a "Good."
       a "Both twins are to blame.",
         q "Even the one who didn't kill anybody?",
-          a "Yes."
+          a "Yes.",
+            q "Congratulations, that's the correct answer.  All of the other answers are wrong.",
+              a "I knew it!"
+              a "Wait, no they're not.",
+                q "Then why didn't you choose them?",
+                  a "Because this one is right too.",
+                    q "No no no, I think you are misunderstanding how questions work.  A question can only have one <em>right</em> answer.",
+                      a "Oh."
+                      a "Okay."
+                  a "I did choose them.",
+                    q "What, like in some alternate timeline beyond my feeble comprehension?",
+                      a "Uh... sure."
           a "Oh my goodness, I hadn't thought of that.  Can I still change my mind?",
             q "Well... okay, just this once, I will allow it.",
               a "Thanks!"
@@ -1193,7 +1218,7 @@ module.exports = qq [
               a "Because I'm a really good guesser.",
                 q "Good job guessing!",
                   a "Gosh thanks."
-                  a "But I haven't even told you my guess yet!  Okay, you're going to ask me --"
+                  a "But I haven't even told you my guess yet!  Okay: You're going to ask me --"
               a "Because I've played this game before.",
                 q "I'm afraid you are mistaken.",
                   a "Oh okay well forget I said anything then."
