@@ -1,0 +1,495 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+  a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+> d. Hold on, I have a question!
+
+#d
+
+What is your question?
+
+  a. How should I indicate which answer I wish to choose?
+  b. What if I choose the wrong answer?
+> c. Who wrote this game?
+
+#dc
+
+Are you sure you want to know?
+
+> a. Yes.
+  b. No.
+
+#dca
+
+You're not trying to trick me, are you?
+
+> a. Of course not.
+  b. Why yes, actually, I am trying to trick you.
+
+#dcaa
+
+So the judging period is over?
+
+  a. Yes.
+  b. No.
+> c. Uh... judging period?  What?
+
+#dcaac
+
+You know, for the exposition thing.
+
+  a. Oh right, the exposition thing!
+> b. What exposition thing?
+
+#dcaacb
+
+Why, the First Quadrennial Ryan Veeder Exposition for Good Interactive Fiction, of course!
+
+  a. Oh, <em>that</em>!
+> b. Never heard of it.
+
+#dcaacbb
+
+Well, the relevant bit is that the organizer has made repeated credible threats to disqualify any entrant whose anonymity is compromised.  So you understand my reluctance.
+
+> a. Uh... sure... whatever you say.
+
+#dcaacbba
+
+What's your name?
+
+  a. Emily
+  b. Jenni
+> c. Ryan
+
+#dcaacbbac
+
+And your last name?
+
+  a. Burrus
+  b. Freebern
+  c. Holman
+  d. Kinsman
+  e. Weisenberger
+  f. Stevens
+> g. Veeder
+
+#dcaacbbacg
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#dcaacbbacga
+
+Hold on.  Are you the <em>real</em> Ryan Veeder?
+
+> a. Yes.
+  b. No.
+
+#dcaacbbacgaa
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#dcaacbbacgaaa
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#dcaacbbacgaaaa
+
+All right, in that case... what does "grue" mean to you?
+
+> a. It's an alternate pronunciation of "glue."
+  b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#dcaacbbacgaaaaa
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#dcaacbbacgaaaaaa
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#dcaacbbacgaaaaaaa
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#dcaacbbacgaaaaaaaa
+
+Why do you say that?
+
+  a. Because I don't care.
+> b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#dcaacbbacgaaaaaaaab
+
+What goes between two sentences?
+
+> a. One space.
+  b. Two spaces.
+  c. U+200F WIDENED SPACE
+  d. Nothing.
+  e. It depends.
+
+#dcaacbbacgaaaaaaaaba
+
+How much bigger than one tenth is one ninth?
+
+> a. About 1%.
+  b. About 9%.
+  c. About 10%.
+  d. About 11%.
+
+#dcaacbbacgaaaaaaaabaa
+
+And why is that?
+
+> a. You just, uh, add together, the, like....
+  b. It, uh, I mean, if you subtract, um....
+  c. I think you can, like, multiply them and, er....
+  d. Well you just, er, divide one by the, uh....
+  e. Pass!  Can I pass?
+
+#dcaacbbacgaaaaaaaabaaa
+
+Mmm, yes, I see... sorry, I just need to make a note here....
+
+> a. Okay....
+  b. Are you done?
+
+#dcaacbbacgaaaaaaaabaaaa
+
+Ah yes, there we go.  Where were we?
+
+> a. You, uh, were asking me questions?
+
+#dcaacbbacgaaaaaaaabaaaaa
+
+Indeed I was!  Shall we get back to that?
+
+> a. Okay.
+
+#dcaacbbacgaaaaaaaabaaaaaa
+
+Something's been bothering me about some of your earlier answers.
+
+> a. Oh?  What is it?
+  b. It's probably nothing.  You should just ignore whatever feelings you might think you have on that topic.
+  c. OMG did I screw up the math question?  I hate math.
+
+#dcaacbbacgaaaaaaaabaaaaaaa
+
+Well... you were asking me who wrote this game... and then it turned out you'd never heard of the Exposition!
+
+> a. So?
+
+#dcaacbbacgaaaaaaaabaaaaaaaa
+
+So?  You told me you were Ryan Veeder!
+
+> a. So?
+
+#dcaacbbacgaaaaaaaabaaaaaaaaa
+
+You're supposed to be the fricking organizer!  How can you not have heard of the competition that you yourself <em>invented</em>?
+
+> a. What an impertinent question!
+  b. I'm a very busy man.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaa
+
+I thought it was a pretty good question, actually!
+
+> a. Be silent, or face the consequences!
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaa
+
+What consequences might those be?
+
+> a. I'll kick your ass!
+  b. A $271 dollar fine!
+  c. I'll drive you out of business!
+  d. Pain of forfeit!
+  e. I'll stick paperclips up your toenails!
+  f. Swarms of angry cyber-bees!
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaa
+
+Ha!  The <em>real</em> Ryan Veeder would <em>never</em> say that!
+
+> a. Omigosh, you're right!  I've been living a lie!
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaa
+
+Confess, traitor!  What is your true name?
+
+  a. Jim Crawford
+  b. Doug Egan
+  c. Jeremy Freese
+  d. Jason McIntosh
+  e. Hamish McIntyre
+> f. Carl Muckenhoupt
+  g. Dan Ravipinto
+  h. Emily Short
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaaf
+
+Holy moly!  I've always wanted to meet you, Mr. Muckenhoupt!  If I could just ask you a few questions....
+
+> a. Certainly!
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafa
+
+Lorem ipsum dolor sit...
+
+  a. ...amah.
+  b. ...aman.
+  c. ...amen.
+> d. ...amet.
+  e. ...amin.
+  f. ...emim.
+  g. ...imam.
+  h. ...uman.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafad
+
+So did you play that game yet where you're a dog?
+
+  a. Yes.
+  b. No.
+> c. Wait, which one?
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadc
+
+You know, the other entry in the... thing.
+
+> a. Are you referring to the First Quadrennial Ryan Veeder Exposition for Interactive Fiction?
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadca
+
+Why yes.  Yes I am.  As it happens.
+
+  a. Thanks, now I totally understand exactly which game you were referring to earlier.
+  b. I was not aware that there was an entry about being a dog.
+> c. Which of the entries about being a dog did you mean?
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcac
+
+Uh... you know... the one by... um....
+
+> a. Go on.
+  b. Stop right there.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcaca
+
+Wait, are there seriously several entries about being a dog?
+
+> a. Yes.
+  b. No.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaa
+
+Wow.  I did <em>not</em> see that coming.
+
+  a. Me either.
+> b. Oh come on, it should have been obvious.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaab
+
+Maybe to you.
+
+> a. Well, I <em>am</em> Carl Muckenhoupt.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaaba
+
+Oh yeah that's right, we established that earlier, didn't we?
+
+  a. We certainly did.
+> b. Eh probably.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaabab
+
+Grumpy wizards make a toxic brew for the jovial...
+
+  a. ...bishop.
+  b. ...duchess.
+  c. ...duke.
+  d. ...earl.
+  e. ...fool.
+  f. ...footman.
+  g. ...jack.
+  h. ...joker.
+  i. ...king.
+  j. ...knave.
+  k. ...knight.
+  l. ...lady.
+  m. ...lord.
+  n. ...pawn.
+  o. ...prince.
+> p. ...queen.
+  q. ...rook.
+  r. ...squire.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababp
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+  a. Soda.
+  b. Pop.
+> c. Coke.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpc
+
+Do you know CPR?
+
+  a. What is CPR?
+> b. No.
+  c. Yes.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcb
+
+Would you like to learn?
+
+> a. Sure.
+  b. No thanks.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcba
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+  a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+  c. Go find an employee.
+> d. Hide.
+  e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+  i. Give CPR.
+  j. Don't give CPR.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbad
+
+Where will you hide?
+
+> a. Inside the projection booth.
+  b. In the restroom.
+  c. In plain sight.
+  d. Under the linoleum.
+  e. I'll just close my eyes -- if I can't see anybody, then nobody can see me!
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbada
+
+You encounter a sign: EMPLOYEES ONLY.
+
+  a. Go in anyway.
+  b. Find an employee.
+> c. Fill out employment application.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadac
+
+Muckenhoupt comma Carl, yadda yadda... hmm... there's a blank where you're supposed to put what you see yourself doing five years from now.
+
+  a. A minimum-wage movie theater employee.
+  b. Manager of this entire theater.
+  c. White collar worker at the corporate office of the company that runs this place.
+  d. Executive at same.
+  e. CEO.
+  f. Movie star.
+  g. Supporting actor.
+  h. Key grip.
+  i. Producer.
+> j. Restauranteur.
+  k. Astronaut.
+  l. Pirate.
+  m. Drug dealer.
+  n. Chicken sexer.
+  o. Vagrant.
+  p. Retired.
+  q. Unemployed.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadacj
+
+Have you worked at any of the local eating establishments?
+
+> a. Yes.
+  b. No.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadacja
+
+Which?
+
+  a. Get Your Licks
+  b. La Pizzá
+  c. Paco's Tacos
+  d. Squiggles 'N Dots
+> e. Sugar Comma
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadacjae
+
+Okay, looks like that's it.  Thank you for playing this game, Carl.
+
+  a. My pleasure.
+  b. You're welcome.
+> c. What a satisfying conclusion!
+  d. Hold on, I have a question!
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadacjaec
+
+I know, right?
+
+> a. Totally.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadacjaeca
+
+Yep!
+
+> a. Uh-huh.
+
+#dcaacbbacgaaaaaaaabaaaaaaaaaaaaafadcacaababpcbadacjaecaa
+
+THE END<iframe width="420" height="315" src="https://www.youtube.com/embed/gkA0AsTHUbY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
