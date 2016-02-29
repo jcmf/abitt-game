@@ -2736,7 +2736,20 @@ module.exports = qq [
             a "I want a score dammit.",
               q "Your score is 0 out of a total of 0 possible points.  This is the only possible score and gives you no rank in particular.  Would you like to RESTORE, RESTART, UNDO the last command, look at the CREDITS, see a list of AMUSING things to do, or QUIT?",
                 a "RESTORE",
-                  q "Okay, go ahead and edit the URL now.  Or use a bookmark.  Or your browser's history function.",
+                  q "Okay, go ahead and paste a previously copied URL into the URL bar now.  Or use a bookmark.  Or your browser's history function.",
+                    a "Okay, I did it!",
+                      q "No you didn't.",
+                        a "Oh wait, you're right, never mind."
+                        a "Yes I did!",
+                          q "Well then you must have restored to the same point in the game that you were already at.",
+                            a "Yes, and I'm feeling very clever about it."
+                            a "Nope, I was previously at a <em>different</em> point in the game, but then I restored to over here!",
+                              q "OMG, mind blown!",
+                                a "Ha ha ha I'm awesome."
+                            a "Hey, did you just end a sentence with a preposition?",
+                              q "Yes, why?",
+                                a "Just curious."
+                                a "Because that is something up with which I will not put."
                     a "Eh, never mind."
                 a "RESTART"
                 a "UNDO",
@@ -2794,6 +2807,22 @@ module.exports = qq [
                           testers = testers_list.join ', '
                           q "This game was bravely tested by #{testers}.  Any bugs or other inadequacies are the author's fault, not theirs, and are also a figment of your imagination.",
                             a "Good to know, thanks!"
+                    a "What about source code?  Is that published anywhere?",
+                      q """It might be, depending on when you're reading this.  Here, see if <a target="_blank" href="http://oolookatme.com/icanhazsourcecodeplz">this link</a> takes you anywhere useful.""",
+                        a "Yep, it totally works!",
+                          q "Cool.",
+                            a "Thanks again!"
+                            a "Wow, this code is really ugly."
+                        a "Nope, just says \"not found.\"",
+                          q "Well, maybe the judging period is still in progress.  Try again later, I guess!",
+                            a "Okay, I will!"
+                            a "Nope, judging period ended a long time ago.",
+                              q "Well, gosh, I don't know what to tell you.  Maybe try getting in touch with the author or searching for the name of this game or something.",
+                                a "Thanks for your advice!"
+                        a "What link?",
+                          q """Oh, the words "this link" in that previous sentence were a link.  I guess it was kinda hard to see.  Anyway it's too late now I guess.  Sorry!""",
+                            a "My bad."
+                            a "Boo!  Hiss!"
                 a "AMUSING",
                   q "Amusing?  Like what?",
                     -> if @amusing then a @amusing,
@@ -2823,49 +2852,54 @@ module.exports = qq [
                         a "But now the first part just says REDACTED.",
                           q "Yes, that's correct.",
                             a "Thanks!"
-                            a "But that's not going to work, I mean I need the actual email address.",
-                              q "Oh!  Well, just... uh... hey, what's your favorite 19-letter word?",
-                                a "astrometeorological",
-                                  classy = q "Classy!  I bet that'll work great.",
-                                    a "Thanks!"
-                                    a "Wait, so, what was I supposed to --"
-                                a "bronchoconstriction",
-                                  medical = q "Wow, sounds all fancy and medical!  Seems like that ought to do the trick, then!",
-                                    a "Thanks!"
-                                    a "Okay, so all I need now is --"
-                                a "counterintelligence", classy
-                                a "deindustrialization", medical
-                                a "extraterritoriality", classy
-                                a "facioscapulohumeral", medical
-                                a "gastroenterological", medical
-                                a "hypersusceptibility", classy
-                                a "interdenominational", classy
-                                a "jurisprudentialists", classy
-                                a "knowledgeablenesses",
-                                  stretch = q "That's, uh, kind of a stretch, don't you think?",
-                                    a "Yeah, you're right.  Never mind!"
-                                    a "No way, that's totally a legit word.",
-                                      q "Cool.  Try that, then.",
-                                        a "Thanks!"
-                                        a "Wait, uh, what was the second --"
-                                a "lithochromatography", classy
-                                a "mischaracterization", classy
-                                a "nonrepresentational", classy
-                                a "overdiversification", classy
-                                a "plenipotentiaryship", classy
-                                a "quadragintesimality", stretch
-                                a "representationalism", classy
-                                a "straightforwardness",
-                                  q "Wow, that's so... straightforward!  Bound to work!",
-                                    a "Thanks!"
-                                    a "Could you just remind me what the --"
-                                a "theoanthropomorphic", classy
-                                a "unprepossessingness", classy
-                                a "vicissitudinousness", stretch
-                                a "wondermongeringness", stretch
-                                a "xylotypographicness", stretch
-                                a "yohimbinizationists", stretch
-                                a "zygomaticoauricular", medical
+                            a "But that's not going to work, I mean I need the actual email address.", ->
+                              if @word
+                                q """Just... gosh... try emailing <a href="mailto:#{@word}@oolookatme.com">#{@word}@oolookatme.com</a>, maybe?  I mean that's bound to work, right?""",
+                                  a "Awesome, thanks!"
+                                  a "Look, you can't just make up random --"
+                              else
+                                q "Oh!  Well, just... uh... hey, what's your favorite 19-letter word?",
+                                  a "astrometeorological",
+                                    classy = q "Classy!  I bet that'll work great.",
+                                      a "Thanks!"
+                                      a "Wait, so, what was I supposed to --"
+                                  a "bronchoconstriction",
+                                    medical = q "Wow, sounds all fancy and medical!  Seems like that ought to do the trick, then!",
+                                      a "Thanks!"
+                                      a "Okay, so all I need now is --"
+                                  a "counterintelligence", classy
+                                  a "deindustrialization", medical
+                                  a "extraterritoriality", classy
+                                  a "facioscapulohumeral", medical
+                                  a "gastroenterological", medical
+                                  a "hypersusceptibility", classy
+                                  a "interdenominational", classy
+                                  a "jurisprudentialists", classy
+                                  a "knowledgeablenesses",
+                                    stretch = q "That's, uh, kind of a stretch, don't you think?",
+                                      a "Yeah, you're right.  Never mind!"
+                                      a "No way, that's totally a legit word.",
+                                        q "Cool.  Try that, then.",
+                                          a "Thanks!"
+                                          a "Wait, uh, what was the second --"
+                                  a "lithochromatography", classy
+                                  a "mischaracterization", classy
+                                  a "nonrepresentational", classy
+                                  a "overdiversification", classy
+                                  a "plenipotentiaryship", classy
+                                  a "quadragintesimality", stretch
+                                  a "representationalism", classy
+                                  a "straightforwardness",
+                                    q "Wow, that's so... straightforward!  Bound to work!",
+                                      a "Thanks!"
+                                      a "Could you just remind me what the --"
+                                  a "theoanthropomorphic", classy
+                                  a "unprepossessingness", classy
+                                  a "vicissitudinousness", stretch
+                                  a "wondermongeringness", stretch
+                                  a "xylotypographicness", stretch
+                                  a "yohimbinizationists", stretch
+                                  a "zygomaticoauricular", medical
                         a "But now the second part is blacked out.",
                           q "Well don't you remember it from before?",
                             a "Yes.",

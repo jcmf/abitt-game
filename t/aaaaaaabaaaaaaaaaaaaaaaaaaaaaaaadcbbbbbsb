@@ -1,0 +1,381 @@
+#
+
+Welcome to this game!  Before we can get started, you'll need to answer a few questions.
+
+> a. Okay.
+  b. Sounds good.
+  c. I consent to this.
+  d. Hold on, I have a question!
+
+#a
+
+What's your name?
+
+> a. Emily
+  b. Jenni
+  c. Ryan
+
+#aa
+
+And your last name?
+
+> a. Boegheim
+  b. Carroll
+  c. Ryan
+  d. Short
+
+#aaa
+
+You're driving along the highway, next to some railroad tracks, and it's getting a bit foggy but nothing that you can't see through, and all of a sudden your car's engine stalls.  The cars you can see are all coming to a stop as well.  What do you do?
+
+> a. See what the other drivers are doing.
+  b. Try to start the car again.
+  c. Turn on the radio.
+  d. Find my phone.
+  e. Wait.
+  f. Run.
+
+#aaaa
+
+Hold on.  Are you the <em>real</em> Emily Boegheim?
+
+> a. Yes.
+  b. No.
+
+#aaaaa
+
+So.  What's the capital of Canada?
+
+> a. Manitoba
+  b. Nunavut
+  c. Ottawa
+  d. Saskatchewan
+  e. Skullport
+  f. Toronto
+  g. Vancouver
+
+#aaaaaa
+
+And what is an apocalypse?
+
+> a. An Oscar winner.
+  b. A revelation from God.
+  c. A disaster of epic proportions.
+  d. A language design document of mainly historical interest.
+
+#aaaaaaa
+
+All right, in that case... what does "grue" mean to you?
+
+  a. It's an alternate pronunciation of "glue."
+> b. It's an imaginary color that flouts Occam's razor.
+  c. It's the root noun from which "gruesome" is derived.
+  d. It's a device for preventing adventurers from wandering in the dark.
+
+#aaaaaaab
+
+Very good!  Now, which of these would you rather be?
+
+> a. a cowboy
+  b. a hammer than a nail
+  c. able to fly
+  d. drinking
+  e. eating
+  f. invisible
+  g. sleeping
+  h. with someone I love
+
+#aaaaaaaba
+
+Like the song?
+
+> a. Yes, like the song!
+  b. No, I didn't even realize that was a song.
+  c. No, I know the song but that's not why I chose that answer.
+
+#aaaaaaabaa
+
+Suppose I flip a fair coin 99 times, and get heads each time.  Which of these best describes what will happen on the 100th flip?
+
+> a. Heads and tails are equally likely.
+  b. Heads is much more likely than tails.
+  c. Tails is much more likely than heads.
+  d. I don't know.
+
+#aaaaaaabaaa
+
+Why do you say that?
+
+> a. Because I don't care.
+  b. Because you said it was a fair coin.
+  c. Because there's no way to decide between the two.
+
+#aaaaaaabaaaa
+
+So did you play that game yet where you're a dog?
+
+> a. Yes.
+  b. No.
+  c. Wait, which one?
+
+#aaaaaaabaaaaa
+
+What did you think of it?
+
+> a. Meh.
+  b. It was terrific!
+  c. It was terrible.
+
+#aaaaaaabaaaaaa
+
+If a tree falls in the woods and no one hears it, does it make a sound?
+
+> a. Yes.
+  b. No.
+  c. Well, it depends....
+  d. Who cares?
+
+#aaaaaaabaaaaaaa
+
+What do you mean, "yes"?  How can you possibly know that?
+
+> a. Well, I'm not <em>certain</em>, but I <em>am</em> 99.9999% sure.
+  b. Silent treefalls are unheard-of, and I don't hear <em>you</em> proposing a mechanism through which the presence or absence of an observer could make any difference.
+  c. Conservation of energy.
+  d. I left an audio recorder nearby and played it back later.
+
+#aaaaaaabaaaaaaaa
+
+Which of these words would you be most likely to use to describe carbonated soft drinks?
+
+> a. Soda.
+  b. Pop.
+  c. Coke.
+
+#aaaaaaabaaaaaaaaa
+
+Two identical twins go out to a bar, drink identical drink after identical drink, and while identically roaring drunk decide to drive back to their identical homes in their identical cars.  As they drive home, side by side (they are neighbors), they happen to run a red light.  Unfortunately a small child is crossing the street!  At the last moment, both twins see the child and brake and swerve and take every possible evasive action, but sadly it is too late and the first twin hits and kills the child!!!  The second twin comes safely to a stop without hitting anybody.  Who is to blame for the child's death?
+
+> a. Nobody is to blame -- it was an accident.
+  b. The twin who hit the child is to blame.
+  c. The twin who didn't hit the child is to blame.
+  d. Both twins are to blame.
+  e. I blame you for asking me this horrifying question!
+
+#aaaaaaabaaaaaaaaaa
+
+How so?
+
+> a. The twins got drunk by accident.
+  b. The twins got drunk on purpose, but then got in the car by accident.
+  c. The twins were driving drunk on purpose, but the fact that the child happened to be crossing just then was an accident.
+  d. The twins and the child deliberately conspired to engineer this scenario, but it was only meant to result in light bruising.
+  e. I don't like any of those answers.
+
+#aaaaaaabaaaaaaaaaaa
+
+What?  Why do you think that?
+
+> a. It was clear from the way you told the story that they were trying to stay sober, but <em>fate</em> intervened!
+
+#aaaaaaabaaaaaaaaaaaa
+
+Okay but what if I told you a similar story about a similar set of twins only <em>these</em> twins were <em>definitely</em> trying to get drunk?
+
+> a. I guess that would be different.
+  b. Then I'd say you're lying.  It's impossible to get drunk on purpose.
+
+#aaaaaaabaaaaaaaaaaaaa
+
+Do you know CPR?
+
+> a. What is CPR?
+  b. No.
+  c. Yes.
+
+#aaaaaaabaaaaaaaaaaaaaa
+
+Oh, you know, just that thing where somebody is dead and then you bring them back to life using a few simple techniques that can be taught in a few minutes and performed without any special tools!
+
+> a. Wow, sounds awesome!  Tell me more!
+  b. I don't think that's an accurate description.
+  c. Ahem... so... do the letters in "CPR" <em>stand</em> for anything?
+
+#aaaaaaabaaaaaaaaaaaaaaa
+
+Okay.  Say you're standing in line for the new Star Wars movie, and somebody in front of you starts complaining about chest pain, and then collapses.  What do you do first?
+
+> a. Call 911.
+  b. Shout "OMG, does anybody know CPR?"
+  c. Go find an employee.
+  d. Hide.
+  e. Run.
+  f. Look for an AED.
+  g. Stand around doing nothing.
+  h. Panic.
+  i. Give CPR.
+  j. Don't give CPR.
+
+#aaaaaaabaaaaaaaaaaaaaaaa
+
+Nice!  That is exactly correct!  Okay, so you dial and it's ringing and you're getting a recording about being transferred and not to hang up and what are you doing in the meantime?
+
+> a. Begin CPR.
+  b. Go find an employee.
+  c. Shout "OMG, does anybody know CPR?"
+  d. Run around in circles.
+  e. Scream.
+  f. Shout.
+  g. Sit quietly.
+  h. Panic.
+
+#aaaaaaabaaaaaaaaaaaaaaaaa
+
+Actually, if you're in a movie theater, there's a good chance that there's an AED in the lobby.  You might want to grab that first.
+
+> a. What's an AED?
+  b. Good idea, I'll go look for it!
+  c. Good idea, I'll send someone to fetch it and do CPR in the meantime!
+
+#aaaaaaabaaaaaaaaaaaaaaaaaa
+
+It's an Automatic External Defribrillator.  It's a little doodad that can sense when a heart is malfunctioning and shock it back into its normal rhythm.
+
+> a. Wow, that sounds super handy!  I would totally go look for one.
+  b. Yeah, thanks, I'm gonna leave that stuff for the professionals!
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaa
+
+Okay!  You run into the lobby and... what are you looking for exactly?
+
+> a. A red heart with a spark in the middle.
+  b. A green heart with a lightning bolt in it.
+  c. A little placard that says AED on it.
+  d. Any of the above.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaa
+
+Could be red or green.
+
+> a. Got it.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaa
+
+Cool.  You find it and bring it back and open it up and it starts talking.  What now?
+
+> a. Stick the electrodes on the victim's chest.
+  b. Wait and listen to what the AED is telling me to do.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaa
+
+Sure, there's a little diagram on there, and... wait, these go under the clothes, don't they?
+
+> a. Nope!  We're not doing this.  Sorry.
+  b. No problem, I pull their shirt up.
+  c. Wow, this is intense.  Maybe I should pay attention to what the voice is saying.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaa
+
+That is okay!  Nobody is going to make you do anything you don't feel comfortable doing.
+
+> a. Thank you.
+  b. Aren't you supposed to, like, tell me that they might die if I don't do this?
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaa
+
+Okay, looks like that's it.  Thank you for playing this game, Emily.
+
+  a. My pleasure.
+  b. You're welcome.
+  c. What a satisfying conclusion!
+> d. Hold on, I have a question!
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaad
+
+What is your question?
+
+  a. Is that all there is?
+  b. What is my score?
+> c. How can I send feedback to the author?
+  d. What about that thing with the fog and the railroad tracks and my car's engine stalls?
+  e. Can I play again?
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadc
+
+Simply email <a href="mailto:REDACTED@lolbird.com"><span class="redacted">REDACTED</span>@<span class="redacted">lolbird</span>.com</a>.
+
+  a. Thanks!
+> b. Wait, there's a problem.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcb
+
+What seems to be the problem?
+
+  a. I'm trying to copy and paste that email address, but it's kinda hard to select the text because of how it's a hyperlink.
+> b. The email address is blacked out!
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcbb
+
+My goodness, so it is!  Here, try this one: <a href="mailto:REDACTED@lolbird.com"><span class="redacted">REDACTED</span>@lolbird.com</a>
+
+  a. Thanks!
+> b. Hey, um, the first part is still blacked out.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcbbb
+
+Oh!  In that case, I recommend you use this one: <a href="mailto:REDACTED@lolbird.com">REDACTED@<span class="redacted">lolbird</span>.com</a>
+
+  a. Thanks!
+> b. But now the first part just says REDACTED.
+  c. But now the second part is blacked out.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcbbbb
+
+Yes, that's correct.
+
+  a. Thanks!
+> b. But that's not going to work, I mean I need the actual email address.
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcbbbbb
+
+Oh!  Well, just... uh... hey, what's your favorite 19-letter word?
+
+  a. astrometeorological
+  b. bronchoconstriction
+  c. counterintelligence
+  d. deindustrialization
+  e. extraterritoriality
+  f. facioscapulohumeral
+  g. gastroenterological
+  h. hypersusceptibility
+  i. interdenominational
+  j. jurisprudentialists
+  k. knowledgeablenesses
+  l. lithochromatography
+  m. mischaracterization
+  n. nonrepresentational
+  o. overdiversification
+  p. plenipotentiaryship
+  q. quadragintesimality
+  r. representationalism
+> s. straightforwardness
+  t. theoanthropomorphic
+  u. unprepossessingness
+  v. vicissitudinousness
+  w. wondermongeringness
+  x. xylotypographicness
+  y. yohimbinizationists
+  z. zygomaticoauricular
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcbbbbbs
+
+Wow, that's so... straightforward!  Bound to work!
+
+  a. Thanks!
+> b. Could you just remind me what the --
+
+#aaaaaaabaaaaaaaaaaaaaaaaaaaaaaaadcbbbbbsb
+
+THE END<iframe width="420" height="315" src="https://www.youtube.com/embed/gkA0AsTHUbY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
