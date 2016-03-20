@@ -185,7 +185,7 @@ module.exports = qq [
                   q "So the judging period is over?",
                     a "Yes.", ->
                       now = new Date()
-                      if (now.getTime() < 1460617200000) is (not window?.timetravel)
+                      if (now.getTime() < 1457938800000) is (not window?.timetravel)
                         q "Then why does your clock say #{now}?",
                           a "Uhhhh... whatever, never mind.", -> @amusing = "Like that thing where you told me the current date and time."
                       else
